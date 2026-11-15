@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BUG-002 · 第 3 天同一补给页的经验值显示不一致</title>
+<style>body{max-width:1000px;margin:2rem auto;padding:0 1rem;font:16px/1.7 system-ui,sans-serif;color:#173b33;background:#f6f6ee}img{width:100%;height:auto}figure{margin:1.5rem 0}a{color:inherit}</style>
+<a href="../../rsi-workflow.html">← 试玩工作流</a><h1>同一补给页的经验显示成 0/8，推进后恢复 2/14</h1>
+<p>BUG-002 · 显示异常，出现一次，触发条件待复测。Windows Steam Demo，2026-11-15。第 3 天，Lv.05、1 胜 1 负、49 金币，装备与补给事件一致。</p>
+<p>16:36 离开第 2 天结算时，补给页显示 2/14。18:26 再接管游戏时，游戏窗口 ID 已变，面板和购买经验的悬停说明均显示 0/8。中间的窗口操作未经观察。领取免费同名肩武后仍为 0/8；点「离开」进入黑市事件，显示自行恢复为 2/14，全程没有购买经验。</p>
+<p>预期同等级、同进度的两个界面显示相同经验。影响是可能误判升级成本。未观察到经验实际丢失。回归时可在同一事件记录读数，重新进入，再对照推进一个事件前后的面板及悬停读数。</p>
+<figure><a href="01-checkpoint.jpg"><img src="01-checkpoint.jpg" alt="原停点第 3 天 Lv.05，经验 2/14"></a><figcaption>原停点显示 2/14。</figcaption></figure>
+<figure><a href="02-tooltip.jpg"><img src="02-tooltip.jpg" alt="同一补给页的经验提示变为 0/8"></a><figcaption>再次接管时面板与提示都显示 0/8。</figcaption></figure>
+<figure><a href="03-refreshed.jpg"><img src="03-refreshed.jpg" alt="离开补给页后经验恢复 2/14"></a><figcaption>推进到黑市事件后恢复 2/14。</figcaption></figure></html>

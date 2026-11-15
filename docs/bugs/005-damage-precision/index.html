@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>战后武器说明显示六位小数的伤害</title><style>body{max-width:960px;margin:2rem auto;padding:0 4%;font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif;color:#173b33;background:#f5f5ed}img{width:100%;height:auto}a{color:inherit}figure{margin:1rem 0}h1{line-height:1.25}</style></head>
+<body><main><a href="../../rsi-workflow.html">← 试玩工作流</a><h1>战后武器说明显示六位小数的伤害</h1><p>BUG-005 · 数值格式问题，单场观察。Windows Steam Demo 1.0.0.2218，Build 26644085，2026-11-15。</p>
+<h2>操作与观察</h2><p>从第 10 天末战结算打开统计，悬停对方的 S 级手武 MP-T00「虚空撕裂」，再对照己方手武的说明。</p><p>对方说明写「造成 7 次 2399.679688 伤害」，同页我方手武说明显示「造成 9 次 1,019 伤害」。</p><h2>预期及复测方法</h2><p>同类武器说明的伤害数字应采用一致且便于阅读的精度。当前现象影响阅读，本局没有测到它影响结算。</p><p>用同类型装备叠出有小数的伤害后再查看说明，检查是否只在特定成长属性或战后界面出现。</p>
+<figure><a href="01-weapon.jpg"><img src="01-weapon.jpg" alt="敌方手武，伤害显示 2399.679688" width="1920" height="1080"></a><figcaption>敌方手武，伤害显示 2399.679688</figcaption></figure>
+<figure><a href="02-comparison.jpg"><img src="02-comparison.jpg" alt="同页对照，己方手武显示 1,019" width="1920" height="1080"></a><figcaption>同页对照，己方手武显示 1,019</figcaption></figure>
+</main></body></html>

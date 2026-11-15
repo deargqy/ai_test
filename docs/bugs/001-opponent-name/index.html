@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUG-001 · 重掷后对手详情保留旧名字</title>
+<style>
+  * { box-sizing:border-box }
+  body { margin:0; background:#f5f5ed; color:#172e2b; font:16px/1.65 Inter,"Microsoft YaHei",system-ui,sans-serif }
+  main { width:min(1080px,92%); margin:30px auto 56px }
+  a { color:#245740; text-underline-offset:3px }
+  h1 { font-size:clamp(1.7rem,4vw,2.6rem); line-height:1.2; margin:.45em 0 }
+  h2 { font-size:1.25rem; margin:1.6em 0 .35em }
+  p,ol { margin:.45em 0 }
+  ol { padding-inline-start:1.5em }
+  .evidence { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr)); gap:18px; margin-top:12px }
+  figure { margin:0; background:#fffef8; border:1px solid #c8d0bf; border-radius:8px; overflow:hidden }
+  img { width:100%; height:auto; display:block }
+  figcaption { padding:.65rem 1rem .85rem }
+  :focus-visible { outline:3px solid #a85519; outline-offset:-3px }
+</style>
+</head>
+<body><main>
+  <a href="../../rsi-workflow.html#opponent-issue">← 返回试玩工作流</a>
+  <h1>重掷后，对手详情保留旧名字</h1>
+  <p><strong>BUG-001 · 已复现</strong>　2026-11-15，Windows Steam Demo 1.0.0.2218，Build 26644085。挑战赛第 1 天日末选敌，同一局的两次免费重掷均出现（2/2）。</p>
+  <h2>怎样看到这个问题</h2>
+  <ol>
+    <li>在日末选敌页点击眼睛图标，展开左侧对手详情。对照左侧标题和右侧对手卡的名字。</li>
+    <li>保持详情展开，点「免费」重掷。等右侧机甲和左侧装备卡刷新，再读两个名字。</li>
+    <li>收起并重新展开详情。确认名字恢复一致后，保持展开，再次重掷。</li>
+  </ol>
+  <p><b>预期</b>　详情显示当前所选对手的名字和装备，两者可以用右侧对手卡核对。</p>
+  <p><b>实测</b>　两次更换后，详情里的装备都更新了，标题各自落后一个对手。第一次收起再展开后标题恢复。第二次随后正常进入战斗。影响是玩家可能把眼前的装备记到前一位对手名下。</p>
+  <h2>截图证据</h2>
+  <p>对照左上角详情标题和右侧红色对手卡的名字。点击图片可按原始分辨率查看。</p>
+  <div class="evidence">
+    <figure><a href="01-before.jpg"><img src="01-before.jpg" width="1920" height="1080" alt="首次重掷前，两处均为同一个以 FUB 开头的名字"></a><figcaption><b>重掷前</b>　首次展开，两处名字一致。</figcaption></figure>
+    <figure><a href="02-first-reroll.jpg"><img src="02-first-reroll.jpg" width="1920" height="1080" alt="第一次重掷，左侧仍是前一名，右侧显示新的中文名"></a><figcaption><b>第一次重掷</b>　右侧已换成中文名，左侧仍显示上一名。</figcaption></figure>
+    <figure><a href="03-reopened.jpg"><img src="03-reopened.jpg" width="1920" height="1080" alt="重新展开后，左侧标题已切换为新的中文名"></a><figcaption><b>收起再展开</b>　左侧标题更新为「如果没有超级棒棒糖」。</figcaption></figure>
+    <figure><a href="04-second-reroll.jpg"><img src="04-second-reroll.jpg" width="1920" height="1080" alt="第二次重掷，右侧是 songogoku81，左侧仍显示上一位的中文名"></a><figcaption><b>第二次重掷</b>　右侧显示 songogoku81，左侧仍是上一位的中文名。</figcaption></figure>
+    <figure><a href="05-day08-before.jpg"><img src="05-day08-before.jpg" width="1920" height="1080" alt="第八天重掷前两处均为 Aricalika"></a><figcaption><b>第 8 天</b>　重掷前两处均为 Aricalika。</figcaption></figure>
+    <figure><a href="06-day08-reroll.jpg"><img src="06-day08-reroll.jpg" width="1920" height="1080" alt="重掷后右侧为 5uzumushi，左侧仍是 Aricalika"></a><figcaption><b>同局后续再次出现</b>　新对手 5uzumushi 已显示在右侧。</figcaption></figure>
+  </div>
+  <h2>第二局再次出现 · 第11天</h2>
+  <p>2026-11-15 23:40—23:41，同一版本。初始对手kamisama，保持详情展开连续重掷两次，右侧依次变为bakerfels、即季剧，左侧始终保留kamisama。此轮没有在两次重掷之间重新展开详情，因此准确描述是「保留最后一次打开详情时的名字」，并非每次都只落后一个对手。本轮两次重掷均可见（2/2）；未新增验证恢复步骤。</p>
+  <div class="evidence"><figure><a href="07-run02-before.jpg"><img src="07-run02-before.jpg" alt="第二局第11天初始对手kamisama"></a><figcaption>初始对手。</figcaption></figure><figure><a href="08-run02-first-reroll.jpg"><img src="08-run02-first-reroll.jpg" alt="右侧bakerfels，左侧仍为kamisama"></a><figcaption>第一次重掷。</figcaption></figure><figure><a href="09-run02-second-reroll.jpg"><img src="09-run02-second-reroll.jpg" alt="右侧即季剧，左侧仍为kamisama"></a><figcaption>第二次重掷后仍保留初始名字。</figcaption></figure></div>
+</main></body>
+</html>

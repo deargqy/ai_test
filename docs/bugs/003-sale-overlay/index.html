@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BUG-003 · 离开商店后出售提示仍可见</title>
+<style>body{margin:0;background:#f5f5ed;color:#182f2c;font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}main{max-width:960px;margin:2rem auto;padding:0 4%}a{color:#245740}img{width:100%;height:auto}figure{margin:1rem 0}h1{line-height:1.25}</style></head>
+<body><main><a href="../../rsi-workflow.html">← 试玩工作流</a><h1>离开商店后，机甲前仍显示「释放以出售」</h1>
+<p>BUG-003 · 显示异常，触发条件待复测。Windows Steam Demo 1.0.0.2218，Build 26644085，2026-11-15。</p>
+<h2>怎样观察</h2><ol><li>在黑市打开仓库，把物品拖到左侧出售区，松开后核对物品是否移除和金币余额。</li><li>关闭仓库，退出商店，进入林恩对话，再展开对手详情。</li><li>查看机甲前方是否仍有黄色六边形和「释放以出售」。</li></ol>
+<p><b>预期</b>　出售区提示在拖动物品期间可见，退出仓库和商店后收起。</p><p><b>实际</b>　第 8 天已进入林恩对话，第 9 天已展开选敌详情，左侧仍能看到出售提示。第 9 天旧躯干售出后余额 2 → 18，随后也成功购买无人机。观察到的影响是遮挡机甲预览，战斗可以正常开始。</p><p>两天分别出现，均经历多次拖放，尚未确定是哪一次拖放触发，以及普通鼠标与自动拖放是否有差异。建议用单次成功出售和单次取消拖动分别复测。</p>
+<figure><a href="01-event.jpg"><img src="01-event.jpg" alt="第八天林恩对话中，机甲前可见残留出售提示"></a><figcaption>第 8 天，离店后。</figcaption></figure>
+<figure><a href="02-sale.jpg"><img src="02-sale.jpg" alt="第九天卖出旧躯干，余额十八金币，出售价格十六"></a><figcaption>第 9 天，出售操作的正常提示与到账余额。</figcaption></figure>
+<figure><a href="03-opponent.jpg"><img src="03-opponent.jpg" alt="第九天已展开敌方装备，左侧仍可见释放以出售字样"></a><figcaption>第 9 天，选敌时仍能辨认「释放以出售」。</figcaption></figure>
+<h2>第二局第12天补充证据</h2><p>2026-11-15 23:43，同一版本。已离开第11天商店并打完战斗，在第12天事件选项和A配件奖励页面仍看到「释放以出售」。本轮也经历过多次成功与失败的拖放，不能从这两张图确定最短触发步骤或复现率；普通鼠标与自动拖放的对照仍待验证。游戏可继续推进，最终该局10胜结束。</p>
+<figure><a href="04-run02-event.jpg"><img src="04-run02-event.jpg" alt="第二局第12天事件选择时左侧残留出售提示"></a><figcaption>第二局，次日事件页面。</figcaption></figure><figure><a href="05-run02-reward.jpg"><img src="05-run02-reward.jpg" alt="第二局第12天A配件奖励选择时仍残留释放以出售"></a><figcaption>进入配件奖励后提示仍在。</figcaption></figure></main></body></html>

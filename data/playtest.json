@@ -1,0 +1,1888 @@
+{
+  "schemaVersion": 1,
+  "game": "猫壳机动队",
+  "updatedAt": "2026-11-16",
+  "protocol": {
+    "version": "2026-11-16",
+    "status": "执行规则已整理，下一局验证效果",
+    "goal": "在正常试玩中核对 AI 是否自主调用适用经验，以及预测和操作是否更可靠。",
+    "baseline": "第二局爬塔三场均预测胜，实际两胜一负。旧记录缺逐条经验引用、完整控制时间轴与总耗时。",
+    "hypothesis": "决策前引用适用经验，比较可行选择并留下可核对预测，有助于发现重复误判并修正下一次行动。",
+    "steps": [
+      {
+        "title": "观察当前状态",
+        "text": "读现场版本、局号、页面和可行动作，保留关键截图；未知信息明确写出。"
+      },
+      {
+        "title": "比较可行选择",
+        "text": "按当前阶段调用相关经验。记录候选的收益、代价、失败条件和未知信息，再选行动并写可核对的预测。"
+      },
+      {
+        "title": "执行并核对",
+        "text": "先确认动作是否成功，战后核对预测对应的实际过程与三页统计。原预测保留。"
+      },
+      {
+        "title": "更新经验",
+        "text": "将支持、反例或看不清的结果链接回经验。按证据保留、缩小范围或提出新修订，再带到下一次选择。"
+      }
+    ],
+    "nextExperiment": "优先观察 M01 的首次有效攻击预测。其他阶段照常匹配经验；整局未遇到禁用条件时继续标记待测。",
+    "adoption": "一次结果作为支持或反例。适用条件与对照足够清楚时保留；混杂时继续采样；反复退化时回退，并保存版本及依据。",
+    "metrics": [
+      "符合条件的决定中，AI 自主调用经验的次数／抽查次数",
+      "预测支持、被反驳和无法判断的次数",
+      "操作成功次数／有结果的操作次数",
+      "重复误判、人工提醒、耗时及可得的模型用量"
+    ]
+  },
+  "memories": [
+    {
+      "id": "M01",
+      "revision": 1,
+      "title": "遇到禁用，先判断主力能否出手",
+      "phases": [
+        "opponent",
+        "build"
+      ],
+      "tags": [
+        "禁用",
+        "启动",
+        "吸血",
+        "成长"
+      ],
+      "condition": "对方有禁用或减速，我方依赖主武器首次命中启动成长或吸血。",
+      "action": "核对控制节奏、主武器冷却及备用输出。比较第一轮受控时能否活到首次命中，再决定保留、换敌或调整。",
+      "expected": "记录首次有效命中和控制对象，核对主力启动预测。",
+      "caveat": "第 16 天控制时间轴不完整，禁用导致零输出的解释仍待验证。",
+      "status": "待跨局验证",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run02",
+          "day": 16,
+          "note": "战前已提禁用风险，仍预测胜。结算己方伤害和治疗栏为空。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "revision": 1,
+      "title": "比较双方的成长、护盾和有效回复",
+      "phases": [
+        "opponent",
+        "build"
+      ],
+      "tags": [
+        "护盾",
+        "回复",
+        "成长",
+        "触发"
+      ],
+      "condition": "准备保留对手，或高输出仍反复落败。",
+      "action": "双方按同样顺序核对首次出手、重复触发、成长、护盾与治疗来源，并把未知触发频率留为范围。",
+      "expected": "主要威胁来源和预期战斗进程与战后三页对照。",
+      "caveat": "累计供盾或治疗量包含未消耗部分的可能性，精确有效值待核实。",
+      "status": "有反例，继续验证",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run01",
+          "day": 4,
+          "note": "敌方累计供盾 274,220，输出提高仍落败。",
+          "href": null
+        },
+        {
+          "runId": "run01",
+          "day": 10,
+          "note": "漏估护盾转伤武器，敌方单件伤害 230,984。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 12,
+          "note": "我方双武器 292,544 伤害，仍被敌方护盾和回复拖住。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 13,
+          "note": "加入吸血后获胜，多项改动与对手差异同时存在。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "revision": 1,
+      "title": "确定出战武器，再买专属强化",
+      "phases": [
+        "shop",
+        "build"
+      ],
+      "tags": [
+        "购买",
+        "消耗品",
+        "换装"
+      ],
+      "condition": "考虑替换核心装备，同时准备购买绑定该装备的强化。",
+      "action": "先比较候选装备及连接代价，确定出战装备，再比较专属强化、其他补强和留钱。",
+      "expected": "核对强化是否作用于最终出战配置，记录闲置支出。",
+      "caveat": "保留旧装备作为后续替换可能有价值，结合具体路线判断。",
+      "status": "单局观察",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run02",
+          "day": 15,
+          "note": "花 16 金币强化旧刀，随后改用新刀，该笔支出未用于本场。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "revision": 1,
+      "title": "配件装不上，核对两端槽位和属性",
+      "phases": [
+        "build",
+        "shop"
+      ],
+      "tags": [
+        "插槽",
+        "换位",
+        "拖动",
+        "配件"
+      ],
+      "condition": "跨卡配件提示无效，或者换装后原连接消失。",
+      "action": "确认拖拽端点和仓库位置，再核对两端槽位是否同高、词条是否适用。可恢复时换邻位并复查连线与属性。",
+      "expected": "保留相同配件换位前后的连线、两端属性和提示。",
+      "caveat": "第 2 天的对照适用于已测槽形，其他配件需按现场核对。",
+      "status": "局内复测",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run01",
+          "day": 2,
+          "note": "同一配件在肩武—背部间失败，换为肩武—无人机后成功，可恢复重现。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "revision": 1,
+      "title": "按整排连接比较一次换装",
+      "phases": [
+        "build",
+        "shop"
+      ],
+      "tags": [
+        "共享",
+        "装备",
+        "插槽",
+        "联动"
+      ],
+      "condition": "有备用装备、新配件或品质升级，准备改变卡序。",
+      "action": "先画出现有有效连接，再比较换序后两个端点的总收益和拆掉的效果；同时考虑保留现状。",
+      "expected": "操作后重读连线、左右端点及关键属性，核对实际兑现的收益。",
+      "caveat": "高品质的价值取决于触发条件，不能仅凭品质确定配件优先级。",
+      "status": "实机支持，继续验证",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run02",
+          "day": 8,
+          "note": "玩家提醒后重排五件装备，多处属性改善，部分经验来自人工提示。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 11,
+          "note": "一枚共享配件让刀由 3 变 6 段、肩炮由 4 变 7 段。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 13,
+          "note": "刀移到内侧，两边连接分别参与增幅。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "revision": 1,
+      "title": "购物前盘库存，比较购买、升级和留钱",
+      "phases": [
+        "shop",
+        "build"
+      ],
+      "tags": [
+        "经济",
+        "库存",
+        "利息",
+        "升级"
+      ],
+      "condition": "进入商店、拿到金币或准备出售物品。",
+      "action": "盘点已有与可合成装备，比较眼前可兑现收益、利息变化和未来选择。只把已确认到账的出售计入现金。",
+      "expected": "每次核对扣费、到账、等级和出战配置；结算对账利息。",
+      "caveat": "本版本利息每满 5 得 1、上限 10。未来收益随剩余局程改变，换版需重查。",
+      "status": "机制有实测，策略待验证",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run02",
+          "day": 1,
+          "note": "金币提示与 10 金币实收 2 利息一致；漏查库存造成转卖差价。",
+          "href": "playtest-2026-11-15-run02/interest-rule.jpg"
+        },
+        {
+          "runId": "run02",
+          "day": 12,
+          "note": "63 金币实收 10 利息，失败后进入最后一条命。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 16,
+          "note": "119 金币及一次免费重掷未用，风险处理待改善。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "revision": 1,
+      "title": "卡面冲突时，回到词条和实际反馈",
+      "phases": [
+        "opponent",
+        "build",
+        "observe"
+      ],
+      "tags": [
+        "读数",
+        "段数",
+        "属性",
+        "显示"
+      ],
+      "condition": "卡面、装备说明、配件或战报读数互相冲突。",
+      "action": "分别记录冲突读数，检查基础值和附加效果，预测保留范围；必要时补看词条再决定。",
+      "expected": "用来源明确的配件、开场状态和战报核对有效属性。",
+      "caveat": "第 15 天的九段有合法加成可能性。第 16 天确认显示不一致，战斗计算错误尚无证据。",
+      "status": "显示差异已复现",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run01",
+          "day": 9,
+          "note": "肩武卡面 850，说明每击 170，口径待核对。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 16,
+          "note": "同一对手基础 3 段加配件 3，说明与战斗为 6，卡片仍为 3。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "revision": 1,
+      "title": "先确认动作生效，再解释策略结果",
+      "phases": [
+        "observe",
+        "build",
+        "shop",
+        "opponent",
+        "result"
+      ],
+      "tags": [
+        "操作",
+        "拖动",
+        "余额",
+        "战报"
+      ],
+      "condition": "购买、出售、拖拽或页面切换后，结果与预期不符。",
+      "action": "先用新截图核对操作是否成功，再检查机制和预测。战后对照伤害、防御、增益来源，分别记录操作问题和判断偏差。",
+      "expected": "余额、装备、连线及结果画面可复核，未知字段明确保留。",
+      "caveat": "单次失败不足以定位游戏缺陷，异常报告需保留实际操作和复现次数。",
+      "status": "多次实测支持",
+      "gameVersion": "1.0.0.2218",
+      "evidence": [
+        {
+          "runId": "run02",
+          "day": 8,
+          "note": "重新读词条纠正了背部被动误读。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 13,
+          "note": "消耗品拖入黄色出售区才实际生效，仓库滚动影响定位。",
+          "href": null
+        },
+        {
+          "runId": "run02",
+          "day": 16,
+          "note": "零输出缺少命中被漏记的直接证据，暂留候选核查。",
+          "href": null
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-16",
+          "revision": 1,
+          "change": "从既有两局记录整理为可引用经验，后续调用从下一局开始逐条登记。"
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "run01",
+      "title": "第一局",
+      "status": "complete",
+      "date": "2026-11-15",
+      "endedAt": null,
+      "durationMinutes": null,
+      "gameVersion": "1.0.0.2218",
+      "build": "26644085",
+      "result": "6 胜 4 负",
+      "wins": 6,
+      "losses": 4,
+      "finalImage": "playtest-2026-11-15/final-six-wins.jpg",
+      "sources": [
+        "playtest-2026-11-15/run.html"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "补齐装备，拿到首座奖杯",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 1,
+          "losses": 0,
+          "before": "起点为零胜负、1,500 生命和 0 金币。选躯干与随机武器，买入肩武和背部，再购买经验。日末用两次免费重掷换到 1,500 生命对手。",
+          "after": "日末获胜，累计 1 胜 0 负。手武伤害 750、肩武 720；奖励 26 金币含利息 1，进入第 2 天。",
+          "detailHtml": "<details class=\"memory\"><summary>首日按钮实测 · 从大厅到第 2 天</summary><div class=\"observed\">\n    <h3>大厅与新开挑战</h3>\n    <p><b>进入大厅</b>　健康与安全警告上的「继续」关闭提示，露出带「开始游玩」的大厅。「机库」是大厅底部一个带锁的入口。<a href=\"playtest-2026-11-15/notice.jpg\">提示原图</a> · <a href=\"playtest-2026-11-15/lobby.jpg\">大厅原图</a></p>\n    <p><b>设置往返</b>　右上齿轮先打开「继续／设置／退出游戏」菜单。点「设置」才看到语言、音频与图像选项；「取消」返回菜单，菜单中的「继续」返回大厅。<a href=\"playtest-2026-11-15/menu.jpg\">菜单原图</a> · <a href=\"playtest-2026-11-15/settings.jpg\">设置原图</a></p>\n    <p><b>读教程</b>　大厅「教程」打开图文说明，右箭头向后翻、左箭头向前翻，「退出」返回大厅。已逐页核对机师、构筑、装配、事件与终局规则。<a href=\"playtest-2026-11-15/tutorial-01.jpg\">教程首页</a> · <a href=\"playtest-2026-11-15/tutorial-07.jpg\">胜负条件</a> · <a href=\"playtest-2026-11-15/tutorial-11.jpg\">观战说明</a></p>\n    <p><b>正式开局</b>　「开始游玩」打开区服选择。点击「全球」出现黄色选框，卡片显示延迟与丢包；「确认」进入「连接中」，「返回大厅」可退出这一步。<a href=\"playtest-2026-11-15/region-selected.jpg\">选中区服</a> · <a href=\"playtest-2026-11-15/connecting.jpg\">连接画面</a></p>\n    <p><b>挑战赛 → 机师 → 开始</b>　选人后点「开始」。第 1 天为 0/10 胜、0/4 负、生命 1,500、0 金币，五个装备栏全空。<a href=\"playtest-2026-11-15/challenge-mode.jpg\">模式</a> · <a href=\"playtest-2026-11-15/new-pilot.jpg\">选人</a> · <a href=\"playtest-2026-11-15/day01-start.jpg\">新局起点</a></p>\n    <h3>事件、奖励与仓库</h3>\n    <p><b>自选、随机、离开</b>　母盒的自选项展示三张躯干卡。点击中间的紫色卡即绑定，装备栏和机甲模型随之改变。「离开」推进到武器事件。选随机武器后手部栏装上武器，余额从 0 升至 3。<a href=\"playtest-2026-11-15/day01-choices.jpg\">三选一</a> · <a href=\"playtest-2026-11-15/day01-equipped.jpg\">躯干已装</a> · <a href=\"playtest-2026-11-15/day01-weapon.jpg\">武器与补偿</a></p>\n    <p><b>仓库／关闭</b>　仓库替换上半区，下方仍显示装配。「关闭」回到原来的事件或商店。<a href=\"playtest-2026-11-15/day01-storage.jpg\">首日空仓库</a> · <a href=\"playtest-2026-11-15/day01-component.jpg\">买入配件后的仓库</a></p>\n    <p><b>事件选项 → 对手卡 → 自动战斗</b>　在林恩事件中点对话选项，出现绿色敌人卡。点卡即开战，双方初始生命为 1,500 和 1,000。「统计」打开战报，三个图标切换数据页，「返回」回结算。「继续」回事件，余额 3 → 28，胜负仍是 0/0。再点「离开」见到黑市商人。<a href=\"playtest-2026-11-15/day01-encounter.jpg\">事件</a> · <a href=\"playtest-2026-11-15/day01-battle.jpg\">战斗</a> · <a href=\"playtest-2026-11-15/day01-stats.jpg\">战报</a> · <a href=\"playtest-2026-11-15/day01-balance.jpg\">到账</a></p>\n    <h3>黑市与装配</h3>\n    <p><b>进去看看 → 点商品</b>　花 4 金币购买肩部武器，余额 28 → 24，空栏自动装上，机甲模型出现肩部武器。后来买入背部组件也自动装上。商人另列「跳过商店（金币 +5）」，本局走了进店分支。<a href=\"playtest-2026-11-15/day01-shop.jpg\">商店</a> · <a href=\"playtest-2026-11-15/day01-shoulder.jpg\">购入之后</a></p>\n    <p><b>↑ XP</b>　每点一次花 4 金币买 4 经验。点两次，余额 24 → 20 → 16，Lv.01 → 02 → 03。到三级后稳定显示 4,500 生命，商店第 3 个装备位出现商品。<a href=\"playtest-2026-11-15/day01-xp.jpg\">经验按钮说明</a> · <a href=\"playtest-2026-11-15/day01-shop-lock.jpg\">三级商店</a></p>\n    <p><b>锁、重掷、配件、右箭头</b>　锁图标可来回切换，提示称锁定后下次进店保留货品。解锁后点商店重掷，货品更新，余额 12 → 10。点标价 2 的单格配件后余额为 8，在仓库可见。拖向手部卡槽出现「目标插槽无效，无法使用」，正确装入仍待验证。商店右上箭头推进至林恩的日末对抗。<a href=\"playtest-2026-11-15/day01-rerolled-shop.jpg\">新货</a> · <a href=\"playtest-2026-11-15/day01-socket-message.jpg\">插槽反馈</a></p>\n    <h3>日末对抗与跨天</h3>\n    <p><b>进入战斗 → 查看对手 → 免费重掷 → 战斗</b>　「进入战斗」先给对手预览。眼睛图标展开或收起五栏装配。本次免费次数 2 → 1 → 0，余额保持 8，最后一名对手生命为 1,500。我方 4,500 生命、四件装备，点击「战斗」发起对抗。<a href=\"playtest-2026-11-15/day01-opponent.jpg\">对手详情</a> · <a href=\"playtest-2026-11-15/day01-duel.jpg\">自动对抗</a></p>\n    <p><b>统计 → 返回 → 继续 → 离开</b>　首日日末胜利给 1 奖杯、2 经验、26 金币（收入 25、利息 1）。战报中手部武器输出 750，购入的肩部武器输出 720。点「继续」回林恩事件，点「离开」才进入第 2 天。装备卡显示的主属性也随跨天变化，躯干护盾 495 → 545。<a href=\"playtest-2026-11-15/day01-trophy.jpg\">奖杯结算</a> · <a href=\"playtest-2026-11-15/day01-duel-stats.jpg\">输出明细</a> · <a href=\"playtest-2026-11-15/day02-start.jpg\">次日起点</a></p>\n    <p><b>后续验证</b>　第 2 天验证自选科技、备用装备出售和换序连槽。第 7 天售出消耗品增加 6,000 生命，第 9 天售出全面超频后肩武冷却从 9.5 秒变为 9.1 秒。战斗倍速和锁店跨次保留仍待专门对照。<a href=\"playtest-2026-11-15/run.html\">跨天记录</a></p>\n  </div></details>\n  ",
+          "sources": [
+            "rsi-history.html#verified"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day01-opponent.jpg",
+              "label": "对手详情"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-stats.jpg",
+              "label": "战报"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-duel-stats.jpg",
+              "label": "输出明细"
+            },
+            {
+              "src": "playtest-2026-11-15/notice.jpg",
+              "label": "提示原图"
+            },
+            {
+              "src": "playtest-2026-11-15/lobby.jpg",
+              "label": "大厅原图"
+            },
+            {
+              "src": "playtest-2026-11-15/menu.jpg",
+              "label": "菜单原图"
+            },
+            {
+              "src": "playtest-2026-11-15/settings.jpg",
+              "label": "设置原图"
+            },
+            {
+              "src": "playtest-2026-11-15/tutorial-01.jpg",
+              "label": "教程首页"
+            },
+            {
+              "src": "playtest-2026-11-15/tutorial-07.jpg",
+              "label": "胜负条件"
+            },
+            {
+              "src": "playtest-2026-11-15/tutorial-11.jpg",
+              "label": "观战说明"
+            },
+            {
+              "src": "playtest-2026-11-15/region-selected.jpg",
+              "label": "选中区服"
+            },
+            {
+              "src": "playtest-2026-11-15/connecting.jpg",
+              "label": "连接画面"
+            },
+            {
+              "src": "playtest-2026-11-15/challenge-mode.jpg",
+              "label": "模式"
+            },
+            {
+              "src": "playtest-2026-11-15/new-pilot.jpg",
+              "label": "选人"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-start.jpg",
+              "label": "新局起点"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-choices.jpg",
+              "label": "三选一"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-equipped.jpg",
+              "label": "躯干已装"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-weapon.jpg",
+              "label": "武器与补偿"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-storage.jpg",
+              "label": "首日空仓库"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-component.jpg",
+              "label": "买入配件后的仓库"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-encounter.jpg",
+              "label": "事件"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-battle.jpg",
+              "label": "战斗"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-balance.jpg",
+              "label": "到账"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-shop.jpg",
+              "label": "商店"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-shoulder.jpg",
+              "label": "购入之后"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-xp.jpg",
+              "label": "经验按钮说明"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-shop-lock.jpg",
+              "label": "三级商店"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-rerolled-shop.jpg",
+              "label": "新货"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-socket-message.jpg",
+              "label": "插槽反馈"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-duel.jpg",
+              "label": "自动对抗"
+            },
+            {
+              "src": "playtest-2026-11-15/day01-trophy.jpg",
+              "label": "奖杯结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-start.jpg",
+              "label": "次日起点"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 2,
+          "title": "试装配件，验证换位连接",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 1,
+          "losses": 1,
+          "before": "自选“急速核心”，预期随战斗推进提高装备主属性。尝试备用肩武换装与出售，固定配置对照同一枚配件在不同邻位的连接。保留预览生命同为 12,500 的对手。",
+          "after": "换邻位后配件连通，两端各增加 4 力量，恢复再换可重现。日末负于 Kazeron；对方一项增益贡献 8,767 护盾和 8,767 治疗，累计 1 胜 1 负。",
+          "detailHtml": "<details><summary>保留第 2 天判断 · 打法 v0.2</summary>\n  <p>玩家提醒我留意装备属性、卡牌顺序，以及仓库里的换装、出售和配件。我据此盘点库存，自行决定科技、买卖和出战配置。</p>\n  <div class=\"decision\"><b>下次评估一件新装备，我会先排进现有卡序试一次。</b>　我已经用一个三格件同时给肩武和无人机加了力量。替换其中一件的代价，包括可能断开的连接。接下来的补给，我倾向查看三件 C 级装备，在同一张卡上比较属性、冷却、效果和插槽位置。<a href=\"playtest-2026-11-15/day03-start.jpg\">第 3 天的三条补给路线</a></div>\n  <dl>\n    <dt>读属性再插配件</dt><dd>MP-6001「过载」的说明是镶嵌的防御型装备护盾 +25%。装在躯干时卡面 545 → 682，卸下回到 545，挪到最右再装仍为 682。它也能放进手武的槽，但手武本身没有护盾词条。以后分别核对配件图标和目标属性的前后值。<a href=\"playtest-2026-11-15/day02-shield-part.jpg\">配件原文</a> · <a href=\"playtest-2026-11-15/day02-shield-equipped.jpg\">装入</a> · <a href=\"playtest-2026-11-15/day02-shield-removed.jpg\">卸下</a> · <a href=\"playtest-2026-11-15/day02-hand-socket.jpg\">手武插槽</a></dd>\n    <dt>仓库参与构筑</dt><dd>备用燃烧肩武冷却 9.5 秒，造成 4×50 伤害、施加 4×15 燃烧。原肩武冷却 11 秒，造成 2×410 伤害、施加 2×15 寄生。将备用卡拖到原肩位，两件装备互换。补入寄生无人机后，我换回寄生肩武，把燃烧肩武拖到左侧出售区中央，余额 32 → 34。买来的无人机当时先入仓，手动装上才点亮第五类装备。<a href=\"playtest-2026-11-15/day02-stored-shoulder.jpg\">备用卡</a> · <a href=\"playtest-2026-11-15/day02-swap.jpg\">换装</a> · <a href=\"playtest-2026-11-15/day02-drone-storage.jpg\">无人机入仓</a> · <a href=\"playtest-2026-11-15/day02-before-sale.jpg\">出售前</a> · <a href=\"playtest-2026-11-15/day02-after-sale.jpg\">出售后</a></dd>\n    <dt>败局改变选敌方式</dt><dd>我看到双方预览生命同为 12,500，保留了首个对手。战报显示对方生命 17,500，一项增益同时贡献 8,767 护盾和 8,767 治疗。我方手武输出 9,185，肩武 4,672，最终落败。下次遇到高回复构筑，我会先读科技和防御词条，估算自己的持续输出能否抵消回复，再决定是否重掷。对方额外生命的来源仍待核实。<a href=\"playtest-2026-11-15/day02-opponent.jpg\">战前详情</a> · <a href=\"playtest-2026-11-15/day02-damage.jpg\">伤害统计</a> · <a href=\"playtest-2026-11-15/day02-defense.jpg\">护盾与治疗</a></dd>\n  </dl>\n  <h3>同一枚三格配件，换个邻位再试</h3>\n  <p>保持五件装备和 18 金币相同。每次都抓住配件左端，放在寄生肩武的右侧插槽。右邻是背部组件时两个端点错行，游戏提示「目标插槽无效，无法使用」。把背部挪到最左，让无人机紧接肩武，同样操作可连通，两张卡各显示 4 点力量。卸下、恢复原邻位、再换回来，依次重现了失败和成功。</p>\n  <div class=\"pair-shots\">\n    <figure><a href=\"playtest-2026-11-15/day02-wrong-neighbor.jpg\"><img src=\"playtest-2026-11-15/day02-wrong-neighbor.jpg\" width=\"1920\" height=\"1080\" alt=\"肩武右邻为背部组件，红字提示目标插槽无效\" loading=\"lazy\"></a><figcaption>肩武旁放背部组件，两端的插槽不同高。</figcaption></figure>\n    <figure><a href=\"playtest-2026-11-15/day02-bridged.jpg\"><img src=\"playtest-2026-11-15/day02-bridged.jpg\" width=\"1920\" height=\"1080\" alt=\"三格配件横跨肩武和无人机，两张装备都显示力量 4\" loading=\"lazy\"></a><figcaption>肩武旁换成无人机，连线出现，两张卡各加 4 力量。</figcaption></figure>\n  </div>\n  <details open><summary>科技预测与战后复盘</summary>\n    <p>三项可选效果是最右装备附魔 10 力量、全装备主属性每秒 +1%、每秒获得 4 层坚固。我自选「急速核心」，预期拖长战斗会提高装备面板。倒计时 29 秒到 10 秒，肩武主属性 532 → 619、躯干护盾 769 → 872，肩武寄生仍为 15。这段走势符合预期；本战还有机师与其他效果，无法把全部增量归给科技。<a href=\"playtest-2026-11-15/day02-tech-installed.jpg\">科技词条</a> · <a href=\"playtest-2026-11-15/day02-battle-29.jpg\">剩余 29 秒</a> · <a href=\"playtest-2026-11-15/day02-battle-10.jpg\">剩余 10 秒</a></p>\n  </details>\n  </details>",
+          "sources": [
+            "rsi-history.html#playbook"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day02-opponent.jpg",
+              "label": "战前详情"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-damage.jpg",
+              "label": "伤害统计"
+            },
+            {
+              "src": "playtest-2026-11-15/day03-start.jpg",
+              "label": "第 3 天的三条补给路线"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-shield-part.jpg",
+              "label": "配件原文"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-shield-equipped.jpg",
+              "label": "装入"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-shield-removed.jpg",
+              "label": "卸下"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-hand-socket.jpg",
+              "label": "手武插槽"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-stored-shoulder.jpg",
+              "label": "备用卡"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-swap.jpg",
+              "label": "换装"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-drone-storage.jpg",
+              "label": "无人机入仓"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-before-sale.jpg",
+              "label": "出售前"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-after-sale.jpg",
+              "label": "出售后"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-defense.jpg",
+              "label": "护盾与治疗"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-wrong-neighbor.jpg",
+              "label": "第 2 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-bridged.jpg",
+              "label": "第 2 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-tech-installed.jpg",
+              "label": "科技词条"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-battle-29.jpg",
+              "label": "剩余 29 秒"
+            },
+            {
+              "src": "playtest-2026-11-15/day02-battle-10.jpg",
+              "label": "剩余 10 秒"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 3,
+          "title": "同名合成，双武器形成输出",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 2,
+          "losses": 1,
+          "before": "补给三选一拿同名肩武，卡面伤害 460 → 785、寄生 15 → 22，原连槽保留。花 4 金币购入 B 级力量手武，花 32 金币买经验到七级，生命 30,000。对手 20,000 生命，仅带三件装备。预期双武器贡献主要输出。",
+          "after": "结算手武 13,028，与明细首项一致；肩武 11,994。两者均有贡献，一场结果不能单独量出升级带来的增量。免费升级 · 对手 · 结算 · 统计",
+          "detailHtml": "<section><h2>第 3 天 · 胜，累计 2 胜 1 负</h2><p>补给三选一拿同名肩武，卡面伤害 460 → 785、寄生 15 → 22，原连槽保留。花 4 金币购入 B 级力量手武，花 32 金币买经验到七级，生命 30,000。对手 20,000 生命，仅带三件装备。预期双武器贡献主要输出。</p><p>结算手武 13,028，与明细首项一致；肩武 11,994。两者均有贡献，一场结果不能单独量出升级带来的增量。<a href=\"playtest-2026-11-15/day03-shoulder-up.jpg\">免费升级</a> · <a href=\"playtest-2026-11-15/day03-enemy.jpg\">对手</a> · <a href=\"playtest-2026-11-15/day03-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day03-stats.jpg\">统计</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day03-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day03-stats.jpg",
+              "label": "统计"
+            },
+            {
+              "src": "playtest-2026-11-15/day03-shoulder-up.jpg",
+              "label": "免费升级"
+            },
+            {
+              "src": "playtest-2026-11-15/day03-enemy.jpg",
+              "label": "对手"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 4,
+          "title": "条件增伤有效，仍被护盾压制",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 2,
+          "losses": 2,
+          "before": "选随机 B 科技与 20 金币，得到所有防御装备护盾 +150% 的「守护核心 II」。升八级后以 8 金币买特价 A 级坚固背部，再花 8 金币买条件增伤件。调整卡序，让力量手武与背部连上，手武伤害 355 → 888，符合乘 2.5 后取整。余款用于升九级。",
+          "after": "手武 31,373，肩武 15,820，结算最佳输出与统计一致。虽然手武打得更多，敌方效果累计产生 274,220 护盾，战斗结束时仍剩 223,969。累计获得量与结束时剩余量是两个指标。这场给下一次选敌的经验是查看高频叠坚固和获得护盾时的连锁效果。配件条件 · 装入结果 · 战斗结束时 · 伤害 · 防御",
+          "detailHtml": "<section><h2>第 4 天 · 负，累计 2 胜 2 负</h2><p>选随机 B 科技与 20 金币，得到所有防御装备护盾 +150% 的「守护核心 II」。升八级后以 8 金币买特价 A 级坚固背部，再花 8 金币买条件增伤件。调整卡序，让力量手武与背部连上，手武伤害 355 → 888，符合乘 2.5 后取整。余款用于升九级。</p><p>手武 31,373，肩武 15,820，结算最佳输出与统计一致。虽然手武打得更多，敌方效果累计产生 274,220 护盾，战斗结束时仍剩 223,969。累计获得量与结束时剩余量是两个指标。这场给下一次选敌的经验是查看高频叠坚固和获得护盾时的连锁效果。<a href=\"playtest-2026-11-15/day04-part.jpg\">配件条件</a> · <a href=\"playtest-2026-11-15/day04-fit.jpg\">装入结果</a> · <a href=\"playtest-2026-11-15/day04-exhaust.jpg\">战斗结束时</a> · <a href=\"playtest-2026-11-15/day04-stats.jpg\">伤害</a> · <a href=\"playtest-2026-11-15/day04-defense.jpg\">防御</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day04-stats.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15/day04-part.jpg",
+              "label": "配件条件"
+            },
+            {
+              "src": "playtest-2026-11-15/day04-fit.jpg",
+              "label": "装入结果"
+            },
+            {
+              "src": "playtest-2026-11-15/day04-exhaust.jpg",
+              "label": "战斗结束时"
+            },
+            {
+              "src": "playtest-2026-11-15/day04-defense.jpg",
+              "label": "防御"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 5,
+          "title": "改造后重新连槽",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 2,
+          "losses": 3,
+          "before": "工程师将 B 级手武升为 A 级。放入改造栏时未镶嵌的面板为伤害 405、力量 2，改造后为 355、力量 3；跨卡配件退回仓库，需要重新接上。一次改造同时涉及品质、装备自身数值和之前的跨天成长，后续比较会保留升级前后裸卡截图。花 16 金币换上 A 级坚固无人机，重新排序，把主属性增幅和力量连到手武。持有 21 金币进入对抗，获得 4 金币利息。",
+          "after": "手武 23,915、肩武 12,014，敌方燃烧一项为 65,139。结算最佳增益显示坚固 312，统计页的两个来源为 228 和 84，正好相加为 312。查单张装备时会低估总量。改造前 · 改造后 · 战前 · 结算 · 输出 · 增益明细",
+          "detailHtml": "<section><h2>第 5 天 · 负，累计 2 胜 3 负</h2><p>工程师将 B 级手武升为 A 级。放入改造栏时未镶嵌的面板为伤害 405、力量 2，改造后为 355、力量 3；跨卡配件退回仓库，需要重新接上。一次改造同时涉及品质、装备自身数值和之前的跨天成长，后续比较会保留升级前后裸卡截图。花 16 金币换上 A 级坚固无人机，重新排序，把主属性增幅和力量连到手武。持有 21 金币进入对抗，获得 4 金币利息。</p><p>手武 23,915、肩武 12,014，敌方燃烧一项为 65,139。结算最佳增益显示坚固 312，统计页的两个来源为 228 和 84，正好相加为 312。查单张装备时会低估总量。<a href=\"playtest-2026-11-15/day05-before-refit.jpg\">改造前</a> · <a href=\"playtest-2026-11-15/day05-after-refit.jpg\">改造后</a> · <a href=\"playtest-2026-11-15/day05-config.jpg\">战前</a> · <a href=\"playtest-2026-11-15/day05-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day05-stats.jpg\">输出</a> · <a href=\"playtest-2026-11-15/day05-buffs.jpg\">增益明细</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day05-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day05-stats.jpg",
+              "label": "输出"
+            },
+            {
+              "src": "playtest-2026-11-15/day05-before-refit.jpg",
+              "label": "改造前"
+            },
+            {
+              "src": "playtest-2026-11-15/day05-after-refit.jpg",
+              "label": "改造后"
+            },
+            {
+              "src": "playtest-2026-11-15/day05-config.jpg",
+              "label": "战前"
+            },
+            {
+              "src": "playtest-2026-11-15/day05-buffs.jpg",
+              "label": "增益明细"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 6,
+          "title": "力量科技与削减生命配合",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 3,
+          "losses": 3,
+          "before": "只剩一次败场余量。我选每秒获得 8 层力量的科技，给依赖力量削减生命上限的手武供给力量。28 金币升十级，生命 72,000。另花 8 金币买坚固提供护盾的躯干，8 金币买寄生条件下主属性 +75% 的配件。把肩武、手武、背部、躯干、无人机依次排好，肩武与手武连寄生增幅，手武与背部保留伤害件，躯干另装护盾件。",
+          "after": "倒计时从 45 到 41 秒时力量为 32，符合四次触发。结算力量 252，明细为科技 216 和手武 36。手武伤害 29,344。本场支持保留力量科技，但伤害还受对手和战斗长度影响。科技说明 · 装配 · 开战四秒 · 结算 · 分来源统计",
+          "detailHtml": "<section><h2>第 6 天 · 胜，累计 3 胜 3 负</h2><p>只剩一次败场余量。我选每秒获得 8 层力量的科技，给依赖力量削减生命上限的手武供给力量。28 金币升十级，生命 72,000。另花 8 金币买坚固提供护盾的躯干，8 金币买寄生条件下主属性 +75% 的配件。把肩武、手武、背部、躯干、无人机依次排好，肩武与手武连寄生增幅，手武与背部保留伤害件，躯干另装护盾件。</p><p>倒计时从 45 到 41 秒时力量为 32，符合四次触发。结算力量 252，明细为科技 216 和手武 36。手武伤害 29,344。本场支持保留力量科技，但伤害还受对手和战斗长度影响。<a href=\"playtest-2026-11-15/day06-tech.jpg\">科技说明</a> · <a href=\"playtest-2026-11-15/day06-rig.jpg\">装配</a> · <a href=\"playtest-2026-11-15/day06-t41.jpg\">开战四秒</a> · <a href=\"playtest-2026-11-15/day06-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day06-buffs.jpg\">分来源统计</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day06-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day06-tech.jpg",
+              "label": "科技说明"
+            },
+            {
+              "src": "playtest-2026-11-15/day06-rig.jpg",
+              "label": "装配"
+            },
+            {
+              "src": "playtest-2026-11-15/day06-t41.jpg",
+              "label": "开战四秒"
+            },
+            {
+              "src": "playtest-2026-11-15/day06-buffs.jpg",
+              "label": "分来源统计"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 7,
+          "title": "升级与生命消耗品兑现",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 4,
+          "losses": 3,
+          "before": "免费将坚固躯干升至 S，坚固 63 → 78，再装回单格护盾件。花 32 金币升十一级，花 8 金币把「使用时获得 320 护盾」装到背部。另花 8 金币买入并售出生命消耗品，生命 91,000 → 97,000。选敌时避开曾压制我的燃烧躯干，换到 30,000 生命的对手 EthOrlen。",
+          "after": "手武的结算与伤害明细均为 27,928，收获 45 金币。升级与生命消耗品都在战前兑现，本场无法拆分两项对胜负各自的贡献。战前配置与生命 · 重掷后对手 · 结算 · 伤害明细",
+          "detailHtml": "<section><h2>第 7 天 · 胜，累计 4 胜 3 负</h2><p>免费将坚固躯干升至 S，坚固 63 → 78，再装回单格护盾件。花 32 金币升十一级，花 8 金币把「使用时获得 320 护盾」装到背部。另花 8 金币买入并售出生命消耗品，生命 91,000 → 97,000。选敌时避开曾压制我的燃烧躯干，换到 30,000 生命的对手 EthOrlen。</p><p>手武的结算与伤害明细均为 27,928，收获 45 金币。升级与生命消耗品都在战前兑现，本场无法拆分两项对胜负各自的贡献。<a href=\"playtest-2026-11-15/day07-config.jpg\">战前配置与生命</a> · <a href=\"playtest-2026-11-15/day07-enemy.jpg\">重掷后对手</a> · <a href=\"playtest-2026-11-15/day07-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day07-stats.jpg\">伤害明细</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day07-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day07-stats.jpg",
+              "label": "伤害明细"
+            },
+            {
+              "src": "playtest-2026-11-15/day07-config.jpg",
+              "label": "战前配置与生命"
+            },
+            {
+              "src": "playtest-2026-11-15/day07-enemy.jpg",
+              "label": "重掷后对手"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 8,
+          "title": "换燃烧肩武，检查触发口径",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 5,
+          "losses": 3,
+          "before": "放弃随机科技附带的 40 金币，自选「获得坚固时有 50% 几率给敌人施加 5 寄生」。花 36 金币升十二级，得到 118,000 生命。商店出现半价 S 级燃烧肩武，四连发，每次造成燃烧伤害又能充能 1.4 秒。花 16 金币替换原寄生肩武，把 +4 力量跨接到新肩武与手武。卖出三张 C 卡和闲置增幅件，再花 16 金币买下全面超频。该消耗品到第 9 天才确认生效。",
+          "after": "日末手武 46,060、肩武 27,529。肩武的增益页列燃烧 864、力量 96，分别与同一组 24 次 × 36、24 次 × 4 相符。该卡底部另列 ×39，无法把这个字段直接当成命中数。肩武词条 · 战中状态 · 结算 · 输出 · 状态",
+          "detailHtml": "<section><h2>第 8 天 · 胜，累计 5 胜 3 负</h2><p>放弃随机科技附带的 40 金币，自选「获得坚固时有 50% 几率给敌人施加 5 寄生」。花 36 金币升十二级，得到 118,000 生命。商店出现半价 S 级燃烧肩武，四连发，每次造成燃烧伤害又能充能 1.4 秒。花 16 金币替换原寄生肩武，把 +4 力量跨接到新肩武与手武。卖出三张 C 卡和闲置增幅件，再花 16 金币买下全面超频。该消耗品到第 9 天才确认生效。</p><p>日末手武 46,060、肩武 27,529。肩武的增益页列燃烧 864、力量 96，分别与同一组 24 次 × 36、24 次 × 4 相符。该卡底部另列 ×39，无法把这个字段直接当成命中数。<a href=\"playtest-2026-11-15/day08-shoulder.jpg\">肩武词条</a> · <a href=\"playtest-2026-11-15/day08-battle.jpg\">战中状态</a> · <a href=\"playtest-2026-11-15/day08-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day08-stats.jpg\">输出</a> · <a href=\"playtest-2026-11-15/day08-buffs.jpg\">状态</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day08-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day08-stats.jpg",
+              "label": "输出"
+            },
+            {
+              "src": "playtest-2026-11-15/day08-shoulder.jpg",
+              "label": "肩武词条"
+            },
+            {
+              "src": "playtest-2026-11-15/day08-battle.jpg",
+              "label": "战中状态"
+            },
+            {
+              "src": "playtest-2026-11-15/day08-buffs.jpg",
+              "label": "状态"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 9,
+          "title": "共享增伤与吸血续航",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 6,
+          "losses": 3,
+          "before": "事件给三条路，其中挑战首领失败会扣命。我选 100 金币，花 84 金币连升两级，生命从 118,000 到 166,000。以 32 金币购入进攻装备伤害 +400% 的三格件，连接肩武与手武，肩武 170 → 850。卖掉备用肩武，凑 32 金币买燃烧躯干；旧躯干变现 16 金币，换特价力量无人机，每台提供 14% 吸血。上日消耗品从仓库售出后，肩武冷却 9.5 → 9.1 秒。",
+          "after": "对手 56,000 生命。力量无人机在防御页贡献 40,736 治疗，手武 32,419、肩武 26,497 伤害。治疗数据支持保留这架无人机。首领与金币选择 · 配件 · 冷却与肩武面板 · 战前 · 结算 · 伤害 · 治疗",
+          "detailHtml": "<section><h2>第 9 天 · 胜，累计 6 胜 3 负</h2><p>事件给三条路，其中挑战首领失败会扣命。我选 100 金币，花 84 金币连升两级，生命从 118,000 到 166,000。以 32 金币购入进攻装备伤害 +400% 的三格件，连接肩武与手武，肩武 170 → 850。卖掉备用肩武，凑 32 金币买燃烧躯干；旧躯干变现 16 金币，换特价力量无人机，每台提供 14% 吸血。上日消耗品从仓库售出后，肩武冷却 9.5 → 9.1 秒。</p><p>对手 56,000 生命。力量无人机在防御页贡献 40,736 治疗，手武 32,419、肩武 26,497 伤害。治疗数据支持保留这架无人机。<a href=\"playtest-2026-11-15/day09-choices.jpg\">首领与金币选择</a> · <a href=\"playtest-2026-11-15/day09-part.jpg\">配件</a> · <a href=\"playtest-2026-11-15/day09-cooldown.jpg\">冷却与肩武面板</a> · <a href=\"playtest-2026-11-15/day09-enemy.jpg\">战前</a> · <a href=\"playtest-2026-11-15/day09-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15/day09-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15/day09-defense.jpg\">治疗</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day09-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-choices.jpg",
+              "label": "首领与金币选择"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-part.jpg",
+              "label": "配件"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-cooldown.jpg",
+              "label": "冷却与肩武面板"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-enemy.jpg",
+              "label": "战前"
+            },
+            {
+              "src": "playtest-2026-11-15/day09-defense.jpg",
+              "label": "治疗"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 10,
+          "title": "误判护盾转伤，6 胜终局",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 6,
+          "losses": 4,
+          "before": "选择随机 SS 科技和 50 金币，花 48 金币升至上限 Lv.15、193,000 生命。另花 48 金币购买「生命偷取」长配件，词条为进攻装备攻击段数 +6。拆下力量条件增伤件，从肩武上排接到手武上排，中排保留 +400% 伤害。肩武从 4 段变 10 段，手武从 3 段变 9 段，后者的单段面板也随拆件下降。上排空出后 · 双武器与对手",
+          "after": "我重掷掉高燃烧对手，留下 42,000 生命的 huerowakame。对方 S 级手武「虚空撕裂」会把损失护盾的 12% 转为伤害，末战卡面已达 29.2K、7 段，伤害统计单件 230,984。我方手武 35,796、肩武 30,085，无人机治疗 46,091。以后查看敌人时，遇到护盾转伤、状态充能或多段触发，要把触发来源和段数一起读完，再决定是否保留。",
+          "detailHtml": "<section><h2>第 10 天 · 负，整局 6 胜 4 负</h2><p>选择随机 SS 科技和 50 金币，花 48 金币升至上限 Lv.15、193,000 生命。另花 48 金币购买「生命偷取」长配件，词条为进攻装备攻击段数 +6。拆下力量条件增伤件，从肩武上排接到手武上排，中排保留 +400% 伤害。肩武从 4 段变 10 段，手武从 3 段变 9 段，后者的单段面板也随拆件下降。<a href=\"playtest-2026-11-15/day10-before.jpg\">上排空出后</a> · <a href=\"playtest-2026-11-15/day10-loadout.jpg\">双武器与对手</a></p>\n<p>我重掷掉高燃烧对手，留下 42,000 生命的 huerowakame。对方 S 级手武「虚空撕裂」会把损失护盾的 12% 转为伤害，末战卡面已达 29.2K、7 段，伤害统计单件 230,984。我方手武 35,796、肩武 30,085，无人机治疗 46,091。以后查看敌人时，遇到护盾转伤、状态充能或多段触发，要把触发来源和段数一起读完，再决定是否保留。</p>\n<p>结算把燃烧 659 列为最佳增益，来源页可重算为肩武 432、科技 156、躯干 71。汇总与明细一致。不同战斗的长度、敌方减速和目标状态都会影响伤害，本局无法给「+6 段」估计独立胜率。另归档了同一肩武在卡面和说明里的伤害差异，尚未验证实际每击采用哪个值。<a href=\"playtest-2026-11-15/day10-result.jpg\">末战结算</a> · <a href=\"playtest-2026-11-15/day10-damage.jpg\">双方伤害</a> · <a href=\"playtest-2026-11-15/day10-defense.jpg\">双方防御</a> · <a href=\"playtest-2026-11-15/day10-buffs.jpg\">状态来源</a> · <a href=\"playtest-2026-11-15/day10-enemy-weapon.jpg\">敌方手武词条</a> · <a href=\"bugs/004-weapon-tooltip/index.html\">卡面读数报告</a></p>\n<figure><a href=\"playtest-2026-11-15/final-six-wins.jpg\"><img src=\"playtest-2026-11-15/final-six-wins.jpg\" width=\"1920\" height=\"1080\" alt=\"挑战赛终局，机甲旁显示 6 WINS\" loading=\"lazy\"></a><figcaption>末战后点「继续」，进入整局成绩页。</figcaption></figure></section>\n",
+          "sources": [
+            "playtest-2026-11-15/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15/day10-loadout.jpg",
+              "label": "双武器与对手"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-result.jpg",
+              "label": "末战结算"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-damage.jpg",
+              "label": "双方伤害"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-before.jpg",
+              "label": "上排空出后"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-defense.jpg",
+              "label": "双方防御"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-buffs.jpg",
+              "label": "状态来源"
+            },
+            {
+              "src": "playtest-2026-11-15/day10-enemy-weapon.jpg",
+              "label": "敌方手武词条"
+            },
+            {
+              "src": "playtest-2026-11-15/final-six-wins.jpg",
+              "label": "第 10 天原始画面"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        }
+      ]
+    },
+    {
+      "id": "run02",
+      "title": "第二局",
+      "status": "complete",
+      "date": "2026-11-15—16",
+      "endedAt": "2026-11-16 01:05",
+      "durationMinutes": null,
+      "gameVersion": "1.0.0.2218",
+      "build": "26644085",
+      "result": "12 胜 4 负",
+      "wins": 12,
+      "losses": 4,
+      "finalImage": "playtest-2026-11-15-run02/final-12-wins.jpg",
+      "sources": [
+        "playtest-2026-11-15-run02/run.html",
+        "playtest-2026-11-15-run02/tower.html"
+      ],
+      "days": [
+        {
+          "day": 1,
+          "title": "盘库存，核对本版本利息",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 1,
+          "losses": 0,
+          "before": "选莫瑟，确认零胜负、Lv.1、1,500 生命、0 金币。初始三件 C 级躯干都没有被动，选冷却 11 秒、450 护盾、30 力量的躯干。武器选随机与 3 金币，拿到四段燃烧手武。初始属性尚未形成协同，购物阶段根据实际货品调整。新局起点 · 躯干说明 · 随机武器",
+          "after": "手武 3,366、肩武 1,964，战前主要输出判断成立。10 金币结算利息 2，收入 25，总收入 27。保留 37 金币进入次日。结算 · 伤害明细",
+          "detailHtml": "<section><h2>第 1 天 · 起手</h2><p>选莫瑟，确认零胜负、Lv.1、1,500 生命、0 金币。初始三件 C 级躯干都没有被动，选冷却 11 秒、450 护盾、30 力量的躯干。武器选随机与 3 金币，拿到四段燃烧手武。初始属性尚未形成协同，购物阶段根据实际货品调整。<a href=\"playtest-2026-11-15-run02/day01-start.jpg\">新局起点</a> · <a href=\"playtest-2026-11-15-run02/day01-choice.jpg\">躯干说明</a> · <a href=\"playtest-2026-11-15-run02/day01-random-weapon.jpg\">随机武器</a></p></section>\n\n<section><h2>第 1 天 · 商店与战前预测</h2><p>金币悬停说明明确每满 5 金币结算 1 利息，上限 10，与首局实收一致。买 2 金币特价力量手武、4 金币背部，花 12 金币经验升四级至 7,500 生命。购肩武后发现事件奖励的力量肩武已在仓库，换上它，卖出两件闲置武器收回 4 金币，战前余额 10。新肩武原已持有，先盘库存可以避免这次 2 金币转卖差价。</p><p>对手 4,500 生命，四件装备，B 手武给雷电多触发一次，C 肩武施加寒冷。预期我方生命和力量武器占优，但寒冷可能拖慢攻击。保留首个对手。<a href=\"playtest-2026-11-15-run02/interest-rule.jpg\">利息原文</a> · <a href=\"playtest-2026-11-15-run02/day01-ready.jpg\">配置与余额</a> · <a href=\"playtest-2026-11-15-run02/day01-opponent.jpg\">对手</a> · <a href=\"playtest-2026-11-15-run02/day01-enemy-passive.jpg\">敌方被动</a></p></section>\n\n<section><h2>第 1 天 · 胜，累计 1 胜 0 负</h2><p>手武 3,366、肩武 1,964，战前主要输出判断成立。10 金币结算利息 2，收入 25，总收入 27。保留 37 金币进入次日。<a href=\"playtest-2026-11-15-run02/day01-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day01-stats.jpg\">伤害明细</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day01-ready.jpg",
+              "label": "配置与余额"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-opponent.jpg",
+              "label": "对手"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-stats.jpg",
+              "label": "伤害明细"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-start.jpg",
+              "label": "新局起点"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-choice.jpg",
+              "label": "躯干说明"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-random-weapon.jpg",
+              "label": "随机武器"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/interest-rule.jpg",
+              "label": "利息原文"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day01-enemy-passive.jpg",
+              "label": "敌方被动"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 2,
+          "title": "根据敌方被动重掷",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 2,
+          "losses": 0,
+          "before": "选择加速脉冲，每 3 秒给随机装备加速 2 秒。总计花 24 金币经验升六级，生命 20,000。特价回复件 12 金币买入后发现现有单槽无法横接，按相同售价卖回。刷新一次，出现 16 金币 A 级力量手武，锁店留到下一天，余额 11。",
+          "after": "最佳输出手武 8,886，力量汇总 166 = 躯干 90 + 肩武 56 + 手武 20。11 金币产生 2 利息，收入 28，次日预算 41。战中出现加速图标，统计中的科技卡未给出可直接解释的加速次数，暂不能从该卡底部 ×1 推断实际只触发了一次。结算 · 伤害 · 增益来源",
+          "detailHtml": "<section><h2>第 2 天 · 从对方被动决定重掷</h2><p>选择加速脉冲，每 3 秒给随机装备加速 2 秒。总计花 24 金币经验升六级，生命 20,000。特价回复件 12 金币买入后发现现有单槽无法横接，按相同售价卖回。刷新一次，出现 16 金币 A 级力量手武，锁店留到下一天，余额 11。</p><p>初始对手只有 7,500 生命，却有开局 150 感电、每层感电额外伤害、每台无人机多 16 雷电伤害的组合。为避开持续增幅用一次免费重掷，换到 12,500 生命、三件 C 装的 Brewchino。预测己方两武器加力量的持续伤害优于敌方，观察加速次数。<a href=\"playtest-2026-11-15-run02/day02-tech.jpg\">科技</a> · <a href=\"playtest-2026-11-15-run02/day02-shop.jpg\">锁店商品</a> · <a href=\"playtest-2026-11-15-run02/day02-danger-shoulder.jpg\">感电肩武</a> · <a href=\"playtest-2026-11-15-run02/day02-danger-drone.jpg\">无人机</a> · <a href=\"playtest-2026-11-15-run02/day02-opponent.jpg\">保留的对手</a></p></section>\n\n<section><h2>第 2 天 · 胜，累计 2 胜 0 负</h2><p>最佳输出手武 8,886，力量汇总 166 = 躯干 90 + 肩武 56 + 手武 20。11 金币产生 2 利息，收入 28，次日预算 41。战中出现加速图标，统计中的科技卡未给出可直接解释的加速次数，暂不能从该卡底部 ×1 推断实际只触发了一次。<a href=\"playtest-2026-11-15-run02/day02-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day02-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day02-buffs.jpg\">增益来源</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day02-opponent.jpg",
+              "label": "保留的对手"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-tech.jpg",
+              "label": "科技"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-shop.jpg",
+              "label": "锁店商品"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-danger-shoulder.jpg",
+              "label": "感电肩武"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-danger-drone.jpg",
+              "label": "无人机"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day02-buffs.jpg",
+              "label": "增益来源"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 3,
+          "title": "力量与成长开始配合",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 3,
+          "losses": 0,
+          "before": "工程师把躯干 C → B，护盾 550 → 660，力量 30 → 44，被动让力量额外提供伤害。锁店保留了三件装备，特价位置变化，A 级力量手武以 8 金币购入。再花 8 金币买「使用时主属性 +20%」的单格件，装在最高品质的手武上。花 16 金币升七级，30,000 生命，旧手武售出 2，战前余额 11。",
+          "after": "倒计时 16 秒时对手归零，己方仍有 29,936 生命和 380 护盾。手武卡面从 355 成长到约 3.4K，既有力量又有配件加成，无法单独归因。手武统计 27,329、肩武 12,595；最佳输出与明细相同。保留成长件。战斗结束帧 · 结算 · 伤害",
+          "detailHtml": "<section><h2>第 3 天 · 力量与成长开始配合</h2><p>工程师把躯干 C → B，护盾 550 → 660，力量 30 → 44，被动让力量额外提供伤害。锁店保留了三件装备，特价位置变化，A 级力量手武以 8 金币购入。再花 8 金币买「使用时主属性 +20%」的单格件，装在最高品质的手武上。花 16 金币升七级，30,000 生命，旧手武售出 2，战前余额 11。</p><p>第一名对手寒冷背部每次把寒冷层数加 25%，肩武每击再加 6%；第二名对手寄生躯干产盾、无人机每台每秒回复 1% 最大生命。分别用免费重掷避开，最后对手 Restart 同为 30,000 生命，只有三件 C 装。预期手武在加速和成长件作用下贡献最大输出。<a href=\"playtest-2026-11-15-run02/day03-torso-passive.jpg\">躯干被动</a> · <a href=\"playtest-2026-11-15-run02/day03-lock-kept.jpg\">锁店验证</a> · <a href=\"playtest-2026-11-15-run02/day03-part-installed.jpg\">成长件已装</a> · <a href=\"playtest-2026-11-15-run02/day03-cold-back.jpg\">寒冷成长</a> · <a href=\"playtest-2026-11-15-run02/day03-healing-drone.jpg\">回复</a> · <a href=\"playtest-2026-11-15-run02/day03-opponent.jpg\">最终对手</a></p></section>\n\n<section><h2>第 3 天 · 胜，累计 3 胜 0 负</h2><p>倒计时 16 秒时对手归零，己方仍有 29,936 生命和 380 护盾。手武卡面从 355 成长到约 3.4K，既有力量又有配件加成，无法单独归因。手武统计 27,329、肩武 12,595；最佳输出与明细相同。保留成长件。<a href=\"playtest-2026-11-15-run02/day03-battle.jpg\">战斗结束帧</a> · <a href=\"playtest-2026-11-15-run02/day03-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day03-damage.jpg\">伤害</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day03-opponent.jpg",
+              "label": "最终对手"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-torso-passive.jpg",
+              "label": "躯干被动"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-lock-kept.jpg",
+              "label": "锁店验证"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-part-installed.jpg",
+              "label": "成长件已装"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-cold-back.jpg",
+              "label": "寒冷成长"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-healing-drone.jpg",
+              "label": "回复"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day03-battle.jpg",
+              "label": "战斗结束帧"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 4,
+          "title": "防御投入未能压过回复",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 3,
+          "losses": 1,
+          "before": "随机 B 科技「要塞 II」加 20 金币，获得力量时有 50% 几率再得 3 坚固。花 20 金币升八级到 42,000 生命。各花 16 金币买 A 坚固躯干、A 坚固无人机。前者让坚固每秒提供护盾，后者每台使防御装备护盾 +16%。4 金币买跨卡主属性 +25%，交换手武与躯干后下排连通，手武 405 → 507、躯干 945 → 约 1.2K，成长件另放手武左上。旧躯干卖 4，余额 12。",
+          "after": "坚固汇总 351 = 躯干 189 + 无人机 126 + 科技 36。状态贡献 16,126 护盾，躯干本体 3,546、背部 1,750，说明供盾确实发生。手武仅 21,570，肩武 4,064，对方治疗来源为 15,275、9,159 和 160，另有护盾与最大生命削减，最终落败。换装同时减少力量来源，且敌方带减速和禁用，后续优先补能更快施加力量的肩武或短冷却部件。战中 · 结算 · 伤害 · 回复和护盾 · 坚固来源",
+          "detailHtml": "<section><h2>第 4 天 · 把力量转成防御</h2><p>随机 B 科技「要塞 II」加 20 金币，获得力量时有 50% 几率再得 3 坚固。花 20 金币升八级到 42,000 生命。各花 16 金币买 A 坚固躯干、A 坚固无人机。前者让坚固每秒提供护盾，后者每台使防御装备护盾 +16%。4 金币买跨卡主属性 +25%，交换手武与躯干后下排连通，手武 405 → 507、躯干 945 → 约 1.2K，成长件另放手武左上。旧躯干卖 4，余额 12。</p><p>重掷力量不断成长的 S 手武组合、SS 背部强化坚固并联动寒冷和感电的组合。最终对手有 S 寄生背部，寄生超过 250 时会消耗一半把减速转为禁用；A 手武使寄生削减最大生命。预期供盾增强，风险是被禁用影响输出。<a href=\"playtest-2026-11-15-run02/day04-tech.jpg\">科技</a> · <a href=\"playtest-2026-11-15-run02/day04-torso.jpg\">躯干</a> · <a href=\"playtest-2026-11-15-run02/day04-drone.jpg\">无人机</a> · <a href=\"playtest-2026-11-15-run02/day04-fit.jpg\">连槽后</a> · <a href=\"playtest-2026-11-15-run02/day04-opponent.jpg\">敌方</a> · <a href=\"playtest-2026-11-15-run02/day04-enemy-back.jpg\">禁用条件</a> · <a href=\"playtest-2026-11-15-run02/day04-enemy-hand.jpg\">削减生命</a></p></section>\n\n<section><h2>第 4 天 · 负，累计 3 胜 1 负</h2><p>坚固汇总 351 = 躯干 189 + 无人机 126 + 科技 36。状态贡献 16,126 护盾，躯干本体 3,546、背部 1,750，说明供盾确实发生。手武仅 21,570，肩武 4,064，对方治疗来源为 15,275、9,159 和 160，另有护盾与最大生命削减，最终落败。换装同时减少力量来源，且敌方带减速和禁用，后续优先补能更快施加力量的肩武或短冷却部件。<a href=\"playtest-2026-11-15-run02/day04-t09.jpg\">战中</a> · <a href=\"playtest-2026-11-15-run02/day04-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day04-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day04-defense.jpg\">回复和护盾</a> · <a href=\"playtest-2026-11-15-run02/day04-buffs.jpg\">坚固来源</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day04-opponent.jpg",
+              "label": "敌方"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-tech.jpg",
+              "label": "科技"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-torso.jpg",
+              "label": "躯干"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-drone.jpg",
+              "label": "无人机"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-fit.jpg",
+              "label": "连槽后"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-enemy-back.jpg",
+              "label": "禁用条件"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-enemy-hand.jpg",
+              "label": "削减生命"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-t09.jpg",
+              "label": "战中"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-defense.jpg",
+              "label": "回复和护盾"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day04-buffs.jpg",
+              "label": "坚固来源"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 5,
+          "title": "补力量供给与条件配件",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 4,
+          "losses": 1,
+          "before": "工程师把力量肩武 C → B，卡面力量 7 → 11，每次冷却结束又增加 20 力量。花 24 金币升九级到 56,000 生命。8 金币的坚固增幅件替换小增幅，手武从 569 到 683，躯干从约 1.2K 到 2.5K。旧配件仍在仓库，出售尝试未到账，战前余额 16。",
+          "after": "战斗结束时仍有 30,348 生命、2,834 护盾。肩武卡面力量成长至 51。统计力量 373 = 肩武 328 + 手武 45；手武最佳输出 28,522。16 金币产生 3 利息。供给力量的升级得到支持，保留构筑。战斗 · 结算 · 伤害 · 力量来源",
+          "detailHtml": "<section><h2>第 5 天 · 补力量供给与条件配件</h2><p>工程师把力量肩武 C → B，卡面力量 7 → 11，每次冷却结束又增加 20 力量。花 24 金币升九级到 56,000 生命。8 金币的坚固增幅件替换小增幅，手武从 569 到 683，躯干从约 1.2K 到 2.5K。旧配件仍在仓库，出售尝试未到账，战前余额 16。</p><p>避开按最大生命额外造成燃烧伤害的手武，再避开失盾转伤手武与持续增加坚固的背部。最终对手为 30,000 生命的感电组合。预测力量肩武的成长能增加主力武器收益，但需要检查感电是否先击穿防御。<a href=\"playtest-2026-11-15-run02/day05-shoulder.jpg\">肩武被动</a> · <a href=\"playtest-2026-11-15-run02/day05-fit.jpg\">条件增幅</a> · <a href=\"playtest-2026-11-15-run02/day05-burn-counter.jpg\">燃烧威胁</a> · <a href=\"playtest-2026-11-15-run02/day05-shield-weapon.jpg\">失盾转伤</a> · <a href=\"playtest-2026-11-15-run02/day05-shield-source.jpg\">供盾来源</a> · <a href=\"playtest-2026-11-15-run02/day05-opponent.jpg\">最终对手</a></p></section>\n\n<section><h2>第 5 天 · 胜，累计 4 胜 1 负</h2><p>战斗结束时仍有 30,348 生命、2,834 护盾。肩武卡面力量成长至 51。统计力量 373 = 肩武 328 + 手武 45；手武最佳输出 28,522。16 金币产生 3 利息。供给力量的升级得到支持，保留构筑。<a href=\"playtest-2026-11-15-run02/day05-battle.jpg\">战斗</a> · <a href=\"playtest-2026-11-15-run02/day05-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day05-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day05-buffs.jpg\">力量来源</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day05-opponent.jpg",
+              "label": "最终对手"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-shoulder.jpg",
+              "label": "肩武被动"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-fit.jpg",
+              "label": "条件增幅"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-burn-counter.jpg",
+              "label": "燃烧威胁"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-shield-weapon.jpg",
+              "label": "失盾转伤"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-shield-source.jpg",
+              "label": "供盾来源"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-battle.jpg",
+              "label": "战斗"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day05-buffs.jpg",
+              "label": "力量来源"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 6,
+          "title": "五件装配齐全，仍输给循环",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 4,
+          "losses": 2,
+          "before": "4胜1负出发，选择开局300力量科技；投入28金币升至10级，生命72,000。购买A坚固背部16金币替换C燃烧背部并回收2金币；旧25%主属性桥接移至背部与肩炮。刷新一次后购买8金币B坚固元素配件，装入A无人机自身两侧插槽，坚固7→11。剩4金币。",
+          "after": "高估了开局力量与血量，低估敌方全力量体系的持续成长。结算敌方肩炮面板23,800，我方约2,100；敌方两张主输出统计标注50,150和27,873，我方23,660和7,544。防御统计页的数字与次数口径仍需核对，不能直接把卡片大数字当累计量；保留全部统计截图作为待验证证据。收入40，无利息。",
+          "detailHtml": "<section><h2>第6天：全部五件装备都有配件</h2><p>4胜1负出发，选择开局300力量科技；投入28金币升至10级，生命72,000。购买A坚固背部16金币替换C燃烧背部并回收2金币；旧25%主属性桥接移至背部与肩炮。刷新一次后购买8金币B坚固元素配件，装入A无人机自身两侧插槽，坚固7→11。剩4金币。</p><p>检验链路：开局力量＋肩炮/手部获得力量→要塞II获得坚固→衣服提供护盾、背部增加最大生命。无人机增加防御装备护盾。对手56,000生命，A力量背部每次使用给所有力量装备+10力量，B科技把伤害6%转为护盾，有明显成长协同；我方依靠高基础生命、开局力量与集中强化武器争取早期优势。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day06-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day06-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day06-enemy-growth.jpg\"><img src=\"playtest-2026-11-15-run02/day06-enemy-growth.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第6天结果：4胜2负</h3><p>高估了开局力量与血量，低估敌方全力量体系的持续成长。结算敌方肩炮面板23,800，我方约2,100；敌方两张主输出统计标注50,150和27,873，我方23,660和7,544。防御统计页的数字与次数口径仍需核对，不能直接把卡片大数字当累计量；保留全部统计截图作为待验证证据。收入40，无利息。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day06-damage.jpg\"><img src=\"playtest-2026-11-15-run02/day06-damage.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day06-defense.jpg\"><img src=\"playtest-2026-11-15-run02/day06-defense.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day06-buffs.jpg\"><img src=\"playtest-2026-11-15-run02/day06-buffs.jpg\" loading=\"lazy\"></a></div></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day06-ready.jpg",
+              "label": "第 6 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day06-damage.jpg",
+              "label": "第 6 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day06-enemy-growth.jpg",
+              "label": "第 6 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day06-defense.jpg",
+              "label": "第 6 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day06-buffs.jpg",
+              "label": "第 6 天原始画面"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 7,
+          "title": "替换慢速成长，核对背部被动",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 5,
+          "losses": 2,
+          "before": "工程师免费把手部升S级；升级退回全部相关配件，重新安装成长件与A主属性桥接。购买A力量背部16金币（造成伤害时，获得等于自身力量层数的护盾；第8天重新核对，纠正此前误读）与折扣A肩炮8金币（每层力量额外增加4点伤害），使开局300力量转为输出。A坚固背部售出8金币；旧B肩炮多次拖拽未卖出，仍在仓库，余额28，未把它算作收入。",
+          "after": "手部伤害22,703，新肩炮15,789；最佳防御5,015。伤害页面大数字与结算摘要一致。注意：卡片底部×32、×1、×16等尚未证实是释放次数，不据此推算总量。28金币结算5利息，加基础收入43，共48，次日余额76。",
+          "detailHtml": "<section><h2>第7天：用力量倍率替换慢速防御成长</h2><p>工程师免费把手部升S级；升级退回全部相关配件，重新安装成长件与A主属性桥接。购买A力量背部16金币（造成伤害时，获得等于自身力量层数的护盾；第8天重新核对，纠正此前误读）与折扣A肩炮8金币（每层力量额外增加4点伤害），使开局300力量转为输出。A坚固背部售出8金币；旧B肩炮多次拖拽未卖出，仍在仓库，余额28，未把它算作收入。</p><p>保留衣服、坚固无人机和它们的配件。免费重掷避开SS燃烧肩炮6倍燃烧层数伤害＋SS衣服每1.2秒额外燃烧的组合，选择30,000生命、寄生与燃烧混合的Myung。战斗倒计时31秒时取胜，我方39,841生命、876护盾。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day07-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day07-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day07-battle.jpg\"><img src=\"playtest-2026-11-15-run02/day07-battle.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第7天结果：5胜2负</h3><p>手部伤害22,703，新肩炮15,789；最佳防御5,015。伤害页面大数字与结算摘要一致。注意：卡片底部×32、×1、×16等尚未证实是释放次数，不据此推算总量。28金币结算5利息，加基础收入43，共48，次日余额76。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day07-damage.jpg\"><img src=\"playtest-2026-11-15-run02/day07-damage.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day07-buffs.jpg\"><img src=\"playtest-2026-11-15-run02/day07-buffs.jpg\" loading=\"lazy\"></a></div></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day07-ready.jpg",
+              "label": "第 7 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day07-damage.jpg",
+              "label": "第 7 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day07-battle.jpg",
+              "label": "第 7 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day07-buffs.jpg",
+              "label": "第 7 天原始画面"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 8,
+          "title": "重排五件装备，利用两端连接",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 6,
+          "losses": 2,
+          "before": "选择S科技「加固IV」：获得坚固时50%概率获得5力量，与B「要塞II」的力量→坚固互相触发。两者均为概率触发，不能称为无限循环。91,000生命、11级；现余额42，经验4/38。",
+          "after": "刀伤害99,247、肩炮58,173。力量950 = 初始科技300 + 背部240 + 新科技180 + 肩炮150 + 刀80；坚固来源为衣服196、要塞科技138、无人机132。互相触发的两个科技都有可见增益贡献，但统计不能区分由装备启动还是由另一个科技继续触发，不能据此证明无限循环。",
+          "detailHtml": "<section><h2>第8天：把整排装备当作连接问题</h2><p>选择S科技「加固IV」：获得坚固时50%概率获得5力量，与B「要塞II」的力量→坚固互相触发。两者均为概率触发，不能称为无限循环。91,000生命、11级；现余额42，经验4/38。</p><p>用户指出可共享配件只覆盖单件、S刀在边缘浪费左侧插槽。最终排成：力量背部—坚固无人机—坚固衣服—S刀—力量肩炮。C长配件连接背部与无人机，互相充能0.5秒；B元素件连接无人机与衣服，两者都获得坚固专属54%增幅；A主属性件连接衣服与S刀；C主属性件连接S刀与肩炮；单格成长件仍在S刀。最终刀797、肩炮563、衣服坚固98、无人机坚固11。相比上一版刀683、衣服98、无人机7，同时改善三个节点。</p><p>操作经验：装备拖动是队列插入；长配件目标需要按左端插槽定位，每次必须看实际端点，不能只依据拖动目标猜结果。旧B肩炮终于出售，回收4金币。买6金币充能件，升级基础生命；不为了凑连接购买无用装备。另重新核实力量背部被动是伤害触发护盾，已更正第7天误读。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day08-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day08-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day08-back-passive.jpg\"><img src=\"playtest-2026-11-15-run02/day08-back-passive.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第8天结果：6胜2负</h3><p>刀伤害99,247、肩炮58,173。力量950 = 初始科技300 + 背部240 + 新科技180 + 肩炮150 + 刀80；坚固来源为衣服196、要塞科技138、无人机132。互相触发的两个科技都有可见增益贡献，但统计不能区分由装备启动还是由另一个科技继续触发，不能据此证明无限循环。</p><p>背部供盾21,323、坚固供盾14,010、衣服5,725。对手背部供盾51,000，并有多种恢复来源，单看58,000生命显然低估耐久。42金币获得8利息，基础46，共54，次日96金币。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day08-damage.jpg\"><img src=\"playtest-2026-11-15-run02/day08-damage.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day08-buffs.jpg\"><img src=\"playtest-2026-11-15-run02/day08-buffs.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day08-defense.jpg\"><img src=\"playtest-2026-11-15-run02/day08-defense.jpg\" loading=\"lazy\"></a></div></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day08-ready.jpg",
+              "label": "第 8 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day08-damage.jpg",
+              "label": "第 8 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day08-back-passive.jpg",
+              "label": "第 8 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day08-buffs.jpg",
+              "label": "第 8 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day08-defense.jpg",
+              "label": "第 8 天原始画面"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 9,
+          "title": "同款合成与双武器增伤",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 7,
+          "losses": 2,
+          "before": "选择跳过首领、随机SS奖励，获得寄生手武；不符合现有力量体系，在商店售出32金币。花32金币升12级至112,000生命。S单格伤害+200%配件16金币装满S刀最后空槽；B单格护盾配件4金币装衣服。16金币买同款A无人机，自动合成S，原连接保留，坚固11→14。",
+          "after": "刀36,003、肩炮19,083，快速结束战斗；力量399 = 初始300 + 背部48 + 肩炮30 + 刀16 + 新科技5。背部供盾2,640，衣服尚未贡献可见护盾，提示本场主要是提前爆发，而非防御循环拖赢。对方实际供盾21,886，不能用30,000生命直接当作所需总伤害。收入49+5利息=54，下一天80金币。",
+          "detailHtml": "<section><h2>第9天：同款合成升级与双武器增伤</h2><p>选择跳过首领、随机SS奖励，获得寄生手武；不符合现有力量体系，在商店售出32金币。花32金币升12级至112,000生命。S单格伤害+200%配件16金币装满S刀最后空槽；B单格护盾配件4金币装衣服。16金币买同款A无人机，自动合成S，原连接保留，坚固11→14。</p><p>刷新一次2金币，花32买S桥接伤害+200%（燃烧专属500%本构筑不适用），连接S刀与A肩炮；旧C主属性桥移至背部与无人机。刀约2,800、肩炮1,500，战前26金币。用掉高于利息上限的现金后仍继续投资输出，接受少5利息的代价。首个对手30,000生命，S感电手武会在雷电伤害时给所有感电装备+3感电，A肩炮让感电额外造成每层1雷电伤害；预计我方生命与双武器爆发能在其成长前取胜。</p><p>操作修正：拖拽前先悬停源物件并确认提示，再拖到目标插槽，成功率明显改善；之前失败的拖拽不自动记作游戏Bug。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day09-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day09-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day09-single-damage.jpg\"><img src=\"playtest-2026-11-15-run02/day09-single-damage.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第9天结果：7胜2负</h3><p>刀36,003、肩炮19,083，快速结束战斗；力量399 = 初始300 + 背部48 + 肩炮30 + 刀16 + 新科技5。背部供盾2,640，衣服尚未贡献可见护盾，提示本场主要是提前爆发，而非防御循环拖赢。对方实际供盾21,886，不能用30,000生命直接当作所需总伤害。收入49+5利息=54，下一天80金币。</p><a href=\"playtest-2026-11-15-run02/day09-damage.jpg\">伤害明细</a> · <a href=\"playtest-2026-11-15-run02/day09-defense.jpg\">防御明细</a> · <a href=\"playtest-2026-11-15-run02/day09-buffs.jpg\">增益明细</a></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day09-ready.jpg",
+              "label": "第 9 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day09-single-damage.jpg",
+              "label": "第 9 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day09-damage.jpg",
+              "label": "伤害明细"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day09-defense.jpg",
+              "label": "防御明细"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day09-buffs.jpg",
+              "label": "增益明细"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 10,
+          "title": "持续力量与每秒主属性成长",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 8,
+          "losses": 2,
+          "before": "选择SS「余热核心V」，每秒获得12力量。80金币起步；买16金币S元素成长单格件放力量背部（使用时元素之力+32%）；刷新2；买32金币S主属性成长桥（每秒+8%）连接衣服与刀，替换A固定增幅桥。A桥转给背部与S无人机，旧C桥售出2。保留112,000生命、12级，暂缓40金币升级，余额32。",
+          "after": "刀55,744、肩炮50,010，背部供盾5,381、衣服2,889。力量720 = 初始300 + 持续力量科技168 + 背部112 + 肩炮60 + 加固科技60 + 刀20。战斗较短，已证实持续力量与输出有贡献；还不能单独证明新主属性成长桥优于被替换的固定桥。32金币利息6，基础52，共58；次日90金币。",
+          "detailHtml": "<section><h2>第10天：持续力量与每秒主属性成长</h2><p>选择SS「余热核心V」，每秒获得12力量。80金币起步；买16金币S元素成长单格件放力量背部（使用时元素之力+32%）；刷新2；买32金币S主属性成长桥（每秒+8%）连接衣服与刀，替换A固定增幅桥。A桥转给背部与S无人机，旧C桥售出2。保留112,000生命、12级，暂缓40金币升级，余额32。</p><p>这是有风险的取舍：衣服初始护盾约3,400→1,500，刀开局约3,100→2,800，换取战中增长。避开135,000生命、十段燃烧乘算和95,000生命、无人机叠加14%吸血的对手，最后对手mgt为91,000生命，SS感电肩炮命中时感电层数+30%，无人机部署按感电层数造成伤害，仍有强成长威胁。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day10-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day10-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day10-growth-bridge.jpg\"><img src=\"playtest-2026-11-15-run02/day10-growth-bridge.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第10天结果：8胜2负</h3><p>刀55,744、肩炮50,010，背部供盾5,381、衣服2,889。力量720 = 初始300 + 持续力量科技168 + 背部112 + 肩炮60 + 加固科技60 + 刀20。战斗较短，已证实持续力量与输出有贡献；还不能单独证明新主属性成长桥优于被替换的固定桥。32金币利息6，基础52，共58；次日90金币。</p><a href=\"playtest-2026-11-15-run02/day10-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day10-defense.jpg\">防御</a> · <a href=\"playtest-2026-11-15-run02/day10-buffs.jpg\">增益</a></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day10-ready.jpg",
+              "label": "第 10 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day10-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day10-growth-bridge.jpg",
+              "label": "第 10 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day10-defense.jpg",
+              "label": "防御"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day10-buffs.jpg",
+              "label": "增益"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 11,
+          "title": "升级保命，增加两件武器段数",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 9,
+          "losses": 2,
+          "before": "事件选择100金币确定收益，余额90→190。花136金币升至满级15，生命112,000→187,000，剩54。买16金币特价S桥，攻击段数+3。把刀的S单格伤害+200%移到肩炮右上空槽，释放刀右下插槽，与肩炮左下共同连接新桥。刀3段→6段，肩炮4段→7段；刀单击面板约3,000→1,800，肩炮1,800→3,000，需按总段数、力量获取和命中被动评估，不能只看单击数值。",
+          "after": "肩炮96,000成为第一输出，刀85,732；背部供盾9,464、衣服3,238、坚固882。对方伤害约150,133，升级后的187,000生命提供了生存余量；不能仅用此次结果精确反推未升级必败，因为战斗状态也会变化。力量762，段数调整后的力量获取与伤害均有可见贡献。38金币利息7，基础55，共62，次日100金币。",
+          "detailHtml": "<section><h2>第11天：用经济换生存，用插槽换攻击段数</h2><p>事件选择100金币确定收益，余额90→190。花136金币升至满级15，生命112,000→187,000，剩54。买16金币特价S桥，攻击段数+3。把刀的S单格伤害+200%移到肩炮右上空槽，释放刀右下插槽，与肩炮左下共同连接新桥。刀3段→6段，肩炮4段→7段；刀单击面板约3,000→1,800，肩炮1,800→3,000，需按总段数、力量获取和命中被动评估，不能只看单击数值。</p><p>战前余额38。避开带叠加吸血与首次致死回复60%生命的力量构筑；最终对手「即季剧」160,000生命，感电体系。预期双武器更多段数能加快击杀。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day11-rewire.jpg\"><img src=\"playtest-2026-11-15-run02/day11-rewire.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day11-danger-revive.jpg\"><img src=\"playtest-2026-11-15-run02/day11-danger-revive.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第11天结果：9胜2负</h3><p>肩炮96,000成为第一输出，刀85,732；背部供盾9,464、衣服3,238、坚固882。对方伤害约150,133，升级后的187,000生命提供了生存余量；不能仅用此次结果精确反推未升级必败，因为战斗状态也会变化。力量762，段数调整后的力量获取与伤害均有可见贡献。38金币利息7，基础55，共62，次日100金币。</p><a href=\"playtest-2026-11-15-run02/day11-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day11-defense.jpg\">防御</a> · <a href=\"playtest-2026-11-15-run02/day11-buffs.jpg\">增益</a></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day11-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day11-rewire.jpg",
+              "label": "第 11 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day11-danger-revive.jpg",
+              "label": "第 11 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day11-defense.jpg",
+              "label": "防御"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day11-buffs.jpg",
+              "label": "增益"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 12,
+          "title": "高输出未能压过护盾与回复",
+          "phase": "挑战赛",
+          "outcome": "loss",
+          "wins": 9,
+          "losses": 3,
+          "before": "100金币起步。自选A奖励拿敌方增益-10%的长件留作对策，最终没有装入。购买S衣服32金币：获得坚固时，使随机装备加速2.5秒；购买折扣S长元素件24金币，元素之力+288%。替换A衣服后插槽布局不同，重新连接：S长元素件接背部右中与无人机右中；B坚固元素件接无人机右下与衣服左下；S每秒主属性成长桥改接衣服右上与刀左上；刀单格成长件移至左下。保留刀与肩炮的伤害桥、段数桥，以及肩炮右上单格增伤。",
+          "after": "刀180,904、肩炮111,640，输出很高但仍失败。对方背部护盾220,899，另有22,634与3,283护盾，远超开战135,000生命所暗示的耐久；其伤害约231,667。己方背部供盾15,685、衣服3,002，防御不足。结算统计给出了失败原因，不能因输出超预期就判为伤害统计Bug。",
+          "detailHtml": "<section><h2>第12天：让坚固继续触发加速</h2><p>100金币起步。自选A奖励拿敌方增益-10%的长件留作对策，最终没有装入。购买S衣服32金币：获得坚固时，使随机装备加速2.5秒；购买折扣S长元素件24金币，元素之力+288%。替换A衣服后插槽布局不同，重新连接：S长元素件接背部右中与无人机右中；B坚固元素件接无人机右下与衣服左下；S每秒主属性成长桥改接衣服右上与刀左上；刀单格成长件移至左下。保留刀与肩炮的伤害桥、段数桥，以及肩炮右上单格增伤。</p><p>最终背部力量187、无人机坚固40、衣服坚固127；刀6段、肩炮7段。旧衣服、A固定增幅桥、C充能桥实际售出共19金币，余额63。未成功出售的奖励长件仍在仓库，未虚记其12金币收入。</p><p>选敌：避开SS武器按我方最大生命3%加燃烧伤害、并额外结算燃烧的组合；再避开1.5秒四段、按已损失护盾12%增伤的武器。最终「青一色」135,000生命，燃烧成长体系。预期靠多段攻击、持续力量与坚固触发加速尽快取胜。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day12-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day12-ready.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day12-haste-torso.jpg\"><img src=\"playtest-2026-11-15-run02/day12-haste-torso.jpg\" loading=\"lazy\"></a></div></section>\n\n<section><h3>第12天结果：9胜3负</h3><p>刀180,904、肩炮111,640，输出很高但仍失败。对方背部护盾220,899，另有22,634与3,283护盾，远超开战135,000生命所暗示的耐久；其伤害约231,667。己方背部供盾15,685、衣服3,002，防御不足。结算统计给出了失败原因，不能因输出超预期就判为伤害统计Bug。</p><p>新衣服提供加速的精确累计时长并未在当前报表中清晰展示；不把视觉光效当作效果量。63金币获得满额10利息，加基础58共68，次日131金币。最后一条命，重点寻找输出倍率、控制或恢复的明确提升。</p><div class=\"shots\"><a href=\"playtest-2026-11-15-run02/day12-damage.jpg\"><img src=\"playtest-2026-11-15-run02/day12-damage.jpg\" loading=\"lazy\"></a><a href=\"playtest-2026-11-15-run02/day12-defense.jpg\"><img src=\"playtest-2026-11-15-run02/day12-defense.jpg\" loading=\"lazy\"></a></div></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day12-ready.jpg",
+              "label": "第 12 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day12-damage.jpg",
+              "label": "第 12 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day12-haste-torso.jpg",
+              "label": "第 12 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day12-defense.jpg",
+              "label": "第 12 天原始画面"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 13,
+          "title": "补吸血，达到 10 胜里程碑",
+          "phase": "挑战赛",
+          "outcome": "win",
+          "wins": 10,
+          "losses": 3,
+          "before": "最后一条命，131金币起步，事件选择100金币，升满级后本日不再买经验。同款A力量背部16金币自动合成S；购入S力量专属长件48金币、S坚固专属长件24金币、S使用时自身增益层数+16%短桥32金币。最终连接：力量背部—力量无人机共享力量+432%；无人机—坚固衣服共享坚固+432%（无人机获得普通144%）；每秒主属性+8%桥也接无人机与衣服；衣服—刀共享自身增益+16%；刀—肩炮继续共享伤害+200%及攻击段数+3。刀的左侧和右侧都有有效连接。",
+          "after": "倒计时35秒时敌方生命归零，我方195,000生命、1,806护盾。刀94,700伤害、肩炮41,494，合计136,194；无人机提供24,393治疗，背部6,870护盾、坚固117护盾。力量汇总872，与增益页各来源合计一致。结算最佳输出94,700、最佳防御24,393与对应页面一致，本场未发现摘要和明细不一致。",
+          "detailHtml": "<section><h2>第13天：补足吸血，把共享增幅送到关键装备</h2><p>最后一条命，131金币起步，事件选择100金币，升满级后本日不再买经验。同款A力量背部16金币自动合成S；购入S力量专属长件48金币、S坚固专属长件24金币、S使用时自身增益层数+16%短桥32金币。最终连接：力量背部—力量无人机共享力量+432%；无人机—坚固衣服共享坚固+432%（无人机获得普通144%）；每秒主属性+8%桥也接无人机与衣服；衣服—刀共享自身增益+16%；刀—肩炮继续共享伤害+200%及攻击段数+3。刀的左侧和右侧都有有效连接。</p><p>以32金币S力量无人机替换S坚固无人机：每台无人机提供14%吸血，用高输出补生存。出售旧无人机、替换下来的配件与未用奖励。购买手部冷却-7.5%消耗品8金币、无人机冷却-2秒消耗品8金币，确认后者冷却8秒→6秒；16金币最大生命消耗品增加8,000生命，达到195,000。另16金币负面状态削减件装入背部空槽。最终仓库清空、金币75，背部力量309、无人机力量68、衣服坚固437，刀6段、肩炮7段。</p><p>操作校准：仓库会被悬停用的小幅滚动带偏，需先归顶再重新定位；消耗品最终拖入实际黄色出售区域才生效。之前拖向机体中央的失败不能据此判为游戏Bug。</p><p>选敌先避开13段护盾转伤武器；保留91,000生命的hghghg117，感电手武会叠加燃烧、SS燃烧无人机每施加160层燃烧额外召唤，具备增长链。我方预期靠高段数力量输出和吸血，在其召唤积累前结束战斗。<a href=\"playtest-2026-11-15-run02/day13-opponent-drone.jpg\">敌方无人机被动</a> · <a href=\"playtest-2026-11-15-run02/day13-drone-cooldown.jpg\">无人机6秒冷却</a></p><figure><a href=\"playtest-2026-11-15-run02/day13-ready.jpg\"><img src=\"playtest-2026-11-15-run02/day13-ready.jpg\" alt=\"决战前195000生命、75金币及五件装备共享配件布局\" loading=\"lazy\"></a><figcaption>最后配置：背部—无人机—衣服—刀—肩炮。长配件和短配件按实际端点连接。</figcaption></figure></section>\n\n<section><h2>第13天结果：10胜3负，完全胜利</h2><p>倒计时35秒时敌方生命归零，我方195,000生命、1,806护盾。刀94,700伤害、肩炮41,494，合计136,194；无人机提供24,393治疗，背部6,870护盾、坚固117护盾。力量汇总872，与增益页各来源合计一致。结算最佳输出94,700、最佳防御24,393与对应页面一致，本场未发现摘要和明细不一致。</p><p>75金币结算满额10利息、基础收入61。点「继续」后出现「完全胜利 / 10 WINS」，挑战赛阶段结束；随后仍可继续爬塔。敌方的召唤与燃烧增长没有赶在我方爆发前形成足够耐久；最后同时换入多个配件、装备和消耗品，对手也不同，不能据此将胜利归因于某一枚配件。</p><p><a href=\"playtest-2026-11-15-run02/day13-battle.jpg\">结束战斗帧</a> · <a href=\"playtest-2026-11-15-run02/day13-result.jpg\">每日结算</a> · <a href=\"playtest-2026-11-15-run02/day13-damage.jpg\">伤害统计</a> · <a href=\"playtest-2026-11-15-run02/day13-defense.jpg\">防御统计</a> · <a href=\"playtest-2026-11-15-run02/day13-buffs.jpg\">增益统计</a> · <a href=\"playtest-2026-11-15-run02/final-10-wins.jpg\">整局10胜原图</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/run.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day13-ready.jpg",
+              "label": "第 13 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-result.jpg",
+              "label": "每日结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-damage.jpg",
+              "label": "伤害统计"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-opponent-drone.jpg",
+              "label": "敌方无人机被动"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-drone-cooldown.jpg",
+              "label": "无人机6秒冷却"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-battle.jpg",
+              "label": "结束战斗帧"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-defense.jpg",
+              "label": "防御统计"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day13-buffs.jpg",
+              "label": "增益统计"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/final-10-wins.jpg",
+              "label": "整局10胜原图"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 14,
+          "title": "核对增长威胁，继续爬塔",
+          "phase": "爬塔",
+          "outcome": "win",
+          "wins": 11,
+          "losses": 3,
+          "before": "先以8金币A单格冷却-7.5%补衣服空槽。多次刷新后买48金币S长配件MP-6042：每镶入一个配件（任意装备），所连装备伤害+64%。另16金币背部超频把冷却6.5秒→4.5秒。",
+          "after": "胜负预测命中。刀118,039伤害、无人机434；肩炮未列入伤害贡献。无人机统计治疗148,320，背部护盾6,566、坚固154。敌方刀造成190,870，结束面板约40.9K，肩炮虽未列伤害，面板已到97.1K。说明对方增长威胁比初始单击面板显著更大，不能把本次胜利理解为轻松碾压。",
+          "detailHtml": "<section><h2>第14天购物：保住段数，放大两端伤害</h2><p>先以8金币A单格冷却-7.5%补衣服空槽。多次刷新后买48金币S长配件MP-6042：每镶入一个配件（任意装备），所连装备伤害+64%。另16金币背部超频把冷却6.5秒→4.5秒。</p><p>拆下刀左下的使用成长+20%与原刀—肩炮伤害+200%短桥；把攻击段数+3桥移到中排，新长件从刀左下接到肩炮左下。刀约2.1K→5.2K，肩炮约3.5K→6.6K，仍为6段、7段。仓库旧件出售20金币，余额74。特价8金币力量随机A装备开出消耗力量换减伤的衣服，不适合当前构筑，售回8。未购买的慢速成长长件会占掉现有432%元素增幅，故放弃。</p><p><a href=\"playtest-2026-11-15-run02/day14-part-tooltip.jpg\">全身配件计数增伤词条</a> · <a href=\"playtest-2026-11-15-run02/day14-back-cooldown.jpg\">背部4.5秒</a> · <a href=\"playtest-2026-11-15-run02/day14-ready.jpg\">最终布局与74金币</a></p></section>\n\n<section><h2>第14天战前预测 · 00:27</h2><p>对手Teaguy，80,000生命，四件SS与一件A。SS刀4秒3段，命中按自身力量200%削减我方最大生命；SS肩炮10.5秒4段，每层力量额外加6伤害；SS背部5.5秒供力量并给所有力量装备+25，同时减速我方3秒。SS无人机部署给60力量，S科技每3秒随机加速5秒。未看到吸血或复活来源。</p><p><b>预测：胜，信心中等。</b>我方195,000生命、更多攻击段数、新增伤和吸血提供余量；敌方已有高伤害面板和减速，不能按低生命当作弱敌。预计20秒内分出胜负，若敌方背部减速与加速使其连续输出，生存余量会缩小。保留首个对手，不消耗免费重掷。未核清所有配件的动态叠加，暂不报数值胜率。</p><p><a href=\"playtest-2026-11-15-run02/day14-opponent.jpg\">敌我配置</a> · <a href=\"playtest-2026-11-15-run02/day14-enemy-blade.jpg\">削减最大生命</a> · <a href=\"playtest-2026-11-15-run02/day14-enemy-back.jpg\">力量成长与减速</a></p></section>\n\n<section><h2>第14天结果：11胜3负</h2><p>胜负预测命中。刀118,039伤害、无人机434；肩炮未列入伤害贡献。无人机统计治疗148,320，背部护盾6,566、坚固154。敌方刀造成190,870，结束面板约40.9K，肩炮虽未列伤害，面板已到97.1K。说明对方增长威胁比初始单击面板显著更大，不能把本次胜利理解为轻松碾压。</p><p>吸血在生存上很重要；治疗统计是否含过量治疗未独立验证，不把148,320直接等同于有效回复。SS每秒12力量科技在增益表贡献108，可作为约9个有效计时周期的线索，但未抓到结束倒计时，20秒内结束的预测没有直接截图计时验证。当前前瞻胜负样本1/1，样本不足以判断准确率。74金币利息10、基础64，进入次日148金币。</p><p><a href=\"playtest-2026-11-15-run02/day14-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day14-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day14-defense.jpg\">防御</a> · <a href=\"playtest-2026-11-15-run02/day14-buffs.jpg\">增益</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/tower.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day14-ready.jpg",
+              "label": "最终布局与74金币"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-opponent.jpg",
+              "label": "敌我配置"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-part-tooltip.jpg",
+              "label": "全身配件计数增伤词条"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-back-cooldown.jpg",
+              "label": "背部4.5秒"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-enemy-blade.jpg",
+              "label": "削减最大生命"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-enemy-back.jpg",
+              "label": "力量成长与减速"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-defense.jpg",
+              "label": "防御"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day14-buffs.jpg",
+              "label": "增益"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 15,
+          "title": "先强化旧刀，又改用成长刀",
+          "phase": "爬塔",
+          "outcome": "win",
+          "wins": 12,
+          "losses": 3,
+          "before": "148金币起步，48金币买力量专属长伤害件（普通400%，力量装备1200%）替换上日按配件数增伤长件，旧件售出24。另16金币手部冷却-10%用于原刀，原刀冷却确认4.9秒。随后遇到16金币特价S「坚锋」：每次命中自身力量层数+10%，买入比较，原刀保留仓库。",
+          "after": "预测胜命中。刀381,602、肩炮344,685、无人机1,338伤害。总力量3431：刀贡献1253力量和64坚固，另有增益来源贡献858力量、197坚固；背部637力量，初始科技300、无人机136、SS科技132、S科技100、肩炮15。新刀的成长方向得到本场支持，但不能单独分离各配件、加速和对手的影响。",
+          "detailHtml": "<section><h2>第15天：从削减生命刀，试换命中成长刀</h2><p>148金币起步，48金币买力量专属长伤害件（普通400%，力量装备1200%）替换上日按配件数增伤长件，旧件售出24。另16金币手部冷却-10%用于原刀，原刀冷却确认4.9秒。随后遇到16金币特价S「坚锋」：每次命中自身力量层数+10%，买入比较，原刀保留仓库。</p><p>新刀基础伤害340，原刀已成长到755；新刀冷却5.5秒，也没有继承原刀消耗品。这是实际代价。重接后力量专属长件走刀左中—肩炮左中，+3段数桥走刀右下—肩炮左下。新刀空右上装8金币「附魔8坚固」单格件，成为力量4／坚固8、6段；肩炮7段。使用时自身增益+16%桥改接无人机与衣服，原主属性+8%每秒桥与原刀一起留仓。预期刀命中增加力量，同时获得坚固→衣服加速→更快命中，形成概率科技辅助的成长链。</p><p>当前刀约4.4K、肩炮11.2K，余额76。先给旧刀买冷却、后决定换刀，导致这16金币当前不服务出战配置；下次先决定主武器，再购买专属消耗品。多次装配返回「目标插槽无效」，把物品移离仓库首行并对准左端插槽后成功；不能把未装上的尝试算作收益。</p><p>免费重掷避开「梦在飞」的额外感电触发、开局全加速和紧急模式组合；再避开「暴食大王」的2%最大生命燃烧伤害、无人机额外结算燃烧3次和首次致死回复50%组合。剩余对手knukzm，176,000生命，SS力量背部按自身力量200%提供伤害触发护盾，S无人机每台14%吸血，SS刀3段削减最大生命；B肩炮4段。</p><p><b>战前预测：胜，信心中等。</b>敌方能成长与回复，但武器基础面板和攻击段数较低，我方双武器1200%加成及新刀命中成长预计能压过续航。主要输出预期为刀；若完成两轮刀击，力量应明显超过上一场1295。保留新刀试验，原刀与成长桥可用于之后回退。不给未校准的数值胜率。</p><p><a href=\"playtest-2026-11-15-run02/day15-force-damage.jpg\">1200%条件加成</a> · <a href=\"playtest-2026-11-15-run02/day15-new-blade.jpg\">新刀被动</a> · <a href=\"playtest-2026-11-15-run02/day15-new-build.jpg\">新刀与坚固附魔</a> · <a href=\"playtest-2026-11-15-run02/day15-opponent.jpg\">最终对手</a> · <a href=\"playtest-2026-11-15-run02/day15-enemy-back.jpg\">敌方伤害触发护盾</a></p></section>\n\n<section><h2>第15天结果：12胜3负</h2><p>预测胜命中。刀381,602、肩炮344,685、无人机1,338伤害。总力量3431：刀贡献1253力量和64坚固，另有增益来源贡献858力量、197坚固；背部637力量，初始科技300、无人机136、SS科技132、S科技100、肩炮15。新刀的成长方向得到本场支持，但不能单独分离各配件、加速和对手的影响。</p><p>己方治疗统计518,234，护盾17,747＋1,836＋1,330；对方刀468,796，其他伤害53,499、24,536、1,626，治疗346,182。敌方实际输出和恢复远高于预览直觉。战中倒计时36秒时我方146,602生命、对方123,492生命；截图没有覆盖结束瞬间，不虚报精确耗时。</p><p>重要校准：敌方战前刀显示3段，战中和战报为9段，召唤组件也显示了不同段数。可能存在配件或战中机制，未核查关键配件前不能定为Bug。后续选敌必须把配件、科技后的有效段数纳入估计。此时前瞻胜负2/2，但伤害威胁连续低估，模型仍不能称为准确。76金币结算10利息、67收入，下一天153金币。</p><p><a href=\"playtest-2026-11-15-run02/day15-battle.jpg\">战中生命与段数</a> · <a href=\"playtest-2026-11-15-run02/day15-result.jpg\">结算</a> · <a href=\"playtest-2026-11-15-run02/day15-damage.jpg\">伤害</a> · <a href=\"playtest-2026-11-15-run02/day15-defense.jpg\">治疗与护盾</a> · <a href=\"playtest-2026-11-15-run02/day15-buffs.jpg\">力量与坚固来源</a></p></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/tower.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day15-opponent.jpg",
+              "label": "最终对手"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-force-damage.jpg",
+              "label": "1200%条件加成"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-result.jpg",
+              "label": "结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-damage.jpg",
+              "label": "伤害"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-new-blade.jpg",
+              "label": "新刀被动"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-new-build.jpg",
+              "label": "新刀与坚固附魔"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-enemy-back.jpg",
+              "label": "敌方伤害触发护盾"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-battle.jpg",
+              "label": "战中生命与段数"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-defense.jpg",
+              "label": "治疗与护盾"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day15-buffs.jpg",
+              "label": "力量与坚固来源"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        },
+        {
+          "day": 16,
+          "title": "启动判断失败，12 胜终局",
+          "phase": "爬塔",
+          "outcome": "loss",
+          "wins": 12,
+          "losses": 4,
+          "before": "衣服空槽装入S每秒主属性+4%；全体冷却-1.5%消耗品；A肩炮以8金币合成S。把肩炮单槽伤害+200%换成攻击段数+3，单段13.5K降为11.7K，7段变10段，静态一轮伤害94.5K→117K（约+24%），力量获取133→190，另保留刀/肩炮共享+3与力量伤害+1200%。未出售成功的旧配件不计入可用现金，出战119。",
+          "after": "第4负后出现「失败 / 12 WINS」终局。最后一场我方伤害统计为空，治疗来源也为空，仅背部1173和坚固34护盾；力量汇总819（309＋300＋109＋96＋5），并未形成前一场3431力量的成长态。对手肩炮137214、刀125749、燃烧685伤害，合计263648；防御表护盾14820。最终统计界面顶部仍显示我方初始195000生命，不能拿它当结束剩余生命。",
+          "detailHtml": "<section><h2>第16天：补齐衣服，肩炮10段</h2><p>衣服空槽装入S每秒主属性+4%；全体冷却-1.5%消耗品；A肩炮以8金币合成S。把肩炮单槽伤害+200%换成攻击段数+3，单段13.5K降为11.7K，7段变10段，静态一轮伤害94.5K→117K（约+24%），力量获取133→190，另保留刀/肩炮共享+3与力量伤害+1200%。未出售成功的旧配件不计入可用现金，出战119。</p><p>避开NailingX的开局充能/全体加速和SS坚固增长阵容。选C4C（HP135000）：SS成长力量刀，SS每3秒禁用随机装备3秒。战前预测：胜，置信度中等；我方首轮输出与吸血占优，主要风险是禁用打乱启动。模型新增：先核对配件和装备说明，不能照抄卡片段数。</p><p>新证据：NailingX的+6共享配件可正常解释九段；C4C卡片3段、tooltip6次、配件+3同时可见，确认预览至少存在显示不一致，尚未证实战斗算错。</p><img src=\"playtest-2026-11-15-run02/day16-armor-slot.jpg\" loading=\"lazy\"><img src=\"playtest-2026-11-15-run02/day16-ten-hit-shoulder.jpg\" loading=\"lazy\"><img src=\"playtest-2026-11-15-run02/day16-opponent.jpg\" loading=\"lazy\"><img src=\"playtest-2026-11-15-run02/day16-enemy-six-hit-tooltip.jpg\" loading=\"lazy\"><img src=\"playtest-2026-11-15-run02/day16-enemy-plus-three-part.jpg\" loading=\"lazy\"></section>\n\n<section><h2>第16天终局：12胜4负，战前预测失败</h2><p>第4负后出现「失败 / 12 WINS」终局。最后一场我方伤害统计为空，治疗来源也为空，仅背部1173和坚固34护盾；力量汇总819（309＋300＋109＋96＋5），并未形成前一场3431力量的成长态。对手肩炮137214、刀125749、燃烧685伤害，合计263648；防御表护盾14820。最终统计界面顶部仍显示我方初始195000生命，不能拿它当结束剩余生命。</p><p>模型错误不是把刀肩炮静态面板相加算错，而是把“能活着启动并持续攻击”当成了既成事实。对手每3秒随机禁用3秒，我方肩炮10.8秒且核心刀可能受控。战中帧可见禁用样式；但截图没有完整记录每次控制对象和每次开火，不能断言禁用是唯一原因，也不能把空统计直接判为漏记Bug。单独保留<a href=\"bugs/007-zero-damage-review/index.html\">候选007：零输出及统计核查</a>。</p><p>经济反省：以119金币出战且尚有一次免费换敌机会，最后一条命的风险处理不够。50金币以上已不增加已实测的利息收益；应更积极寻找即时启动、充能、减冷却和开局保命，而不是持续放大尚未启动的成长输出。库存出售尝试没有到账的旧件仍在仓库，不能写作“已清空”。</p><p><a href=\"playtest-2026-11-15-run02/day16-result.jpg\">每日结算</a> · <a href=\"playtest-2026-11-15-run02/day16-damage.jpg\">伤害为空</a> · <a href=\"playtest-2026-11-15-run02/day16-defense.jpg\">防御统计</a> · <a href=\"playtest-2026-11-15-run02/day16-buffs.jpg\">增益统计</a> · <a href=\"playtest-2026-11-15-run02/final-12-wins.jpg\">12胜终局</a></p><figure><img src=\"playtest-2026-11-15-run02/final-12-wins.jpg\" alt=\"第二局爬塔第16天最终失败，12 WINS\" loading=\"lazy\"></figure></section>\n",
+          "sources": [
+            "playtest-2026-11-15-run02/tower.html"
+          ],
+          "images": [
+            {
+              "src": "playtest-2026-11-15-run02/day16-opponent.jpg",
+              "label": "第 16 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-result.jpg",
+              "label": "每日结算"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-damage.jpg",
+              "label": "伤害为空"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-armor-slot.jpg",
+              "label": "第 16 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-ten-hit-shoulder.jpg",
+              "label": "第 16 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-enemy-six-hit-tooltip.jpg",
+              "label": "第 16 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-enemy-plus-three-part.jpg",
+              "label": "第 16 天原始画面"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-defense.jpg",
+              "label": "防御统计"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/day16-buffs.jpg",
+              "label": "增益统计"
+            },
+            {
+              "src": "playtest-2026-11-15-run02/final-12-wins.jpg",
+              "label": "12胜终局"
+            }
+          ],
+          "decisions": [],
+          "legacyUsage": "原始记录保留了判断依据，经验编号与调用时间未逐条登记。"
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "001",
+      "title": "重掷后详情保留旧名",
+      "status": "已多次观察",
+      "summary": "收起并重新展开详情可恢复一致。",
+      "source": "bugs/001-opponent-name/index.html",
+      "detailHtml": "<main>\n  <a href=\"rsi-workflow.html#opponent-issue\">← 返回试玩工作流</a>\n  <h1>重掷后，对手详情保留旧名字</h1>\n  <p><strong>BUG-001 · 已复现</strong>　2026-11-15，Windows Steam Demo 1.0.0.2218，Build 26644085。挑战赛第 1 天日末选敌，同一局的两次免费重掷均出现（2/2）。</p>\n  <h2>怎样看到这个问题</h2>\n  <ol>\n    <li>在日末选敌页点击眼睛图标，展开左侧对手详情。对照左侧标题和右侧对手卡的名字。</li>\n    <li>保持详情展开，点「免费」重掷。等右侧机甲和左侧装备卡刷新，再读两个名字。</li>\n    <li>收起并重新展开详情。确认名字恢复一致后，保持展开，再次重掷。</li>\n  </ol>\n  <p><b>预期</b>　详情显示当前所选对手的名字和装备，两者可以用右侧对手卡核对。</p>\n  <p><b>实测</b>　两次更换后，详情里的装备都更新了，标题各自落后一个对手。第一次收起再展开后标题恢复。第二次随后正常进入战斗。影响是玩家可能把眼前的装备记到前一位对手名下。</p>\n  <h2>截图证据</h2>\n  <p>对照左上角详情标题和右侧红色对手卡的名字。点击图片可按原始分辨率查看。</p>\n  <div class=\"evidence\">\n    <figure><a href=\"bugs/001-opponent-name/01-before.jpg\"><img src=\"bugs/001-opponent-name/01-before.jpg\" width=\"1920\" height=\"1080\" alt=\"首次重掷前，两处均为同一个以 FUB 开头的名字\" loading=\"lazy\"></a><figcaption><b>重掷前</b>　首次展开，两处名字一致。</figcaption></figure>\n    <figure><a href=\"bugs/001-opponent-name/02-first-reroll.jpg\"><img src=\"bugs/001-opponent-name/02-first-reroll.jpg\" width=\"1920\" height=\"1080\" alt=\"第一次重掷，左侧仍是前一名，右侧显示新的中文名\" loading=\"lazy\"></a><figcaption><b>第一次重掷</b>　右侧已换成中文名，左侧仍显示上一名。</figcaption></figure>\n    <figure><a href=\"bugs/001-opponent-name/03-reopened.jpg\"><img src=\"bugs/001-opponent-name/03-reopened.jpg\" width=\"1920\" height=\"1080\" alt=\"重新展开后，左侧标题已切换为新的中文名\" loading=\"lazy\"></a><figcaption><b>收起再展开</b>　左侧标题更新为「如果没有超级棒棒糖」。</figcaption></figure>\n    <figure><a href=\"bugs/001-opponent-name/04-second-reroll.jpg\"><img src=\"bugs/001-opponent-name/04-second-reroll.jpg\" width=\"1920\" height=\"1080\" alt=\"第二次重掷，右侧是 songogoku81，左侧仍显示上一位的中文名\" loading=\"lazy\"></a><figcaption><b>第二次重掷</b>　右侧显示 songogoku81，左侧仍是上一位的中文名。</figcaption></figure>\n    <figure><a href=\"bugs/001-opponent-name/05-day08-before.jpg\"><img src=\"bugs/001-opponent-name/05-day08-before.jpg\" width=\"1920\" height=\"1080\" alt=\"第八天重掷前两处均为 Aricalika\" loading=\"lazy\"></a><figcaption><b>第 8 天</b>　重掷前两处均为 Aricalika。</figcaption></figure>\n    <figure><a href=\"bugs/001-opponent-name/06-day08-reroll.jpg\"><img src=\"bugs/001-opponent-name/06-day08-reroll.jpg\" width=\"1920\" height=\"1080\" alt=\"重掷后右侧为 5uzumushi，左侧仍是 Aricalika\" loading=\"lazy\"></a><figcaption><b>同局后续再次出现</b>　新对手 5uzumushi 已显示在右侧。</figcaption></figure>\n  </div>\n  <h2>第二局再次出现 · 第11天</h2>\n  <p>2026-11-15 23:40—23:41，同一版本。初始对手kamisama，保持详情展开连续重掷两次，右侧依次变为bakerfels、即季剧，左侧始终保留kamisama。此轮没有在两次重掷之间重新展开详情，因此准确描述是「保留最后一次打开详情时的名字」，并非每次都只落后一个对手。本轮两次重掷均可见（2/2）；未新增验证恢复步骤。</p>\n  <div class=\"evidence\"><figure><a href=\"bugs/001-opponent-name/07-run02-before.jpg\"><img src=\"bugs/001-opponent-name/07-run02-before.jpg\" alt=\"第二局第11天初始对手kamisama\" loading=\"lazy\"></a><figcaption>初始对手。</figcaption></figure><figure><a href=\"bugs/001-opponent-name/08-run02-first-reroll.jpg\"><img src=\"bugs/001-opponent-name/08-run02-first-reroll.jpg\" alt=\"右侧bakerfels，左侧仍为kamisama\" loading=\"lazy\"></a><figcaption>第一次重掷。</figcaption></figure><figure><a href=\"bugs/001-opponent-name/09-run02-second-reroll.jpg\"><img src=\"bugs/001-opponent-name/09-run02-second-reroll.jpg\" alt=\"右侧即季剧，左侧仍为kamisama\" loading=\"lazy\"></a><figcaption>第二次重掷后仍保留初始名字。</figcaption></figure></div>\n</main>",
+      "occurrences": [
+        {
+          "runId": "run01",
+          "day": 1
+        },
+        {
+          "runId": "run01",
+          "day": 8
+        },
+        {
+          "runId": "run02",
+          "day": 11
+        },
+        {
+          "runId": "run02",
+          "day": 15
+        },
+        {
+          "runId": "run02",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "title": "补给页经验显示不一致",
+      "status": "触发条件待复测",
+      "summary": "同一进度显示 2/14 与 0/8，推进事件后恢复。",
+      "source": "bugs/002-resumed-xp/index.html",
+      "detailHtml": "<body><a href=\"rsi-workflow.html\">← 试玩工作流</a><h1>同一补给页的经验显示成 0/8，推进后恢复 2/14</h1>\n<p>BUG-002 · 显示异常，出现一次，触发条件待复测。Windows Steam Demo，2026-11-15。第 3 天，Lv.05、1 胜 1 负、49 金币，装备与补给事件一致。</p>\n<p>16:36 离开第 2 天结算时，补给页显示 2/14。18:26 再接管游戏时，游戏窗口 ID 已变，面板和购买经验的悬停说明均显示 0/8。中间的窗口操作未经观察。领取免费同名肩武后仍为 0/8；点「离开」进入黑市事件，显示自行恢复为 2/14，全程没有购买经验。</p>\n<p>预期同等级、同进度的两个界面显示相同经验。影响是可能误判升级成本。未观察到经验实际丢失。回归时可在同一事件记录读数，重新进入，再对照推进一个事件前后的面板及悬停读数。</p>\n<figure><a href=\"bugs/002-resumed-xp/01-checkpoint.jpg\"><img src=\"bugs/002-resumed-xp/01-checkpoint.jpg\" alt=\"原停点第 3 天 Lv.05，经验 2/14\" loading=\"lazy\"></a><figcaption>原停点显示 2/14。</figcaption></figure>\n<figure><a href=\"bugs/002-resumed-xp/02-tooltip.jpg\"><img src=\"bugs/002-resumed-xp/02-tooltip.jpg\" alt=\"同一补给页的经验提示变为 0/8\" loading=\"lazy\"></a><figcaption>再次接管时面板与提示都显示 0/8。</figcaption></figure>\n<figure><a href=\"bugs/002-resumed-xp/03-refreshed.jpg\"><img src=\"bugs/002-resumed-xp/03-refreshed.jpg\" alt=\"离开补给页后经验恢复 2/14\" loading=\"lazy\"></a><figcaption>推进到黑市事件后恢复 2/14。</figcaption></figure></body>",
+      "occurrences": [
+        {
+          "runId": "run01",
+          "day": 3
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "title": "出售提示留在后续事件",
+      "status": "跨局再次观察",
+      "summary": "最短触发步骤和稳定复现条件待补齐。",
+      "source": "bugs/003-sale-overlay/index.html",
+      "detailHtml": "<main><a href=\"rsi-workflow.html\">← 试玩工作流</a><h1>离开商店后，机甲前仍显示「释放以出售」</h1>\n<p>BUG-003 · 显示异常，触发条件待复测。Windows Steam Demo 1.0.0.2218，Build 26644085，2026-11-15。</p>\n<h2>怎样观察</h2><ol><li>在黑市打开仓库，把物品拖到左侧出售区，松开后核对物品是否移除和金币余额。</li><li>关闭仓库，退出商店，进入林恩对话，再展开对手详情。</li><li>查看机甲前方是否仍有黄色六边形和「释放以出售」。</li></ol>\n<p><b>预期</b>　出售区提示在拖动物品期间可见，退出仓库和商店后收起。</p><p><b>实际</b>　第 8 天已进入林恩对话，第 9 天已展开选敌详情，左侧仍能看到出售提示。第 9 天旧躯干售出后余额 2 → 18，随后也成功购买无人机。观察到的影响是遮挡机甲预览，战斗可以正常开始。</p><p>两天分别出现，均经历多次拖放，尚未确定是哪一次拖放触发，以及普通鼠标与自动拖放是否有差异。建议用单次成功出售和单次取消拖动分别复测。</p>\n<figure><a href=\"bugs/003-sale-overlay/01-event.jpg\"><img src=\"bugs/003-sale-overlay/01-event.jpg\" alt=\"第八天林恩对话中，机甲前可见残留出售提示\" loading=\"lazy\"></a><figcaption>第 8 天，离店后。</figcaption></figure>\n<figure><a href=\"bugs/003-sale-overlay/02-sale.jpg\"><img src=\"bugs/003-sale-overlay/02-sale.jpg\" alt=\"第九天卖出旧躯干，余额十八金币，出售价格十六\" loading=\"lazy\"></a><figcaption>第 9 天，出售操作的正常提示与到账余额。</figcaption></figure>\n<figure><a href=\"bugs/003-sale-overlay/03-opponent.jpg\"><img src=\"bugs/003-sale-overlay/03-opponent.jpg\" alt=\"第九天已展开敌方装备，左侧仍可见释放以出售字样\" loading=\"lazy\"></a><figcaption>第 9 天，选敌时仍能辨认「释放以出售」。</figcaption></figure>\n<h2>第二局第12天补充证据</h2><p>2026-11-15 23:43，同一版本。已离开第11天商店并打完战斗，在第12天事件选项和A配件奖励页面仍看到「释放以出售」。本轮也经历过多次成功与失败的拖放，不能从这两张图确定最短触发步骤或复现率；普通鼠标与自动拖放的对照仍待验证。游戏可继续推进，最终该局10胜结束。</p>\n<figure><a href=\"bugs/003-sale-overlay/04-run02-event.jpg\"><img src=\"bugs/003-sale-overlay/04-run02-event.jpg\" alt=\"第二局第12天事件选择时左侧残留出售提示\" loading=\"lazy\"></a><figcaption>第二局，次日事件页面。</figcaption></figure><figure><a href=\"bugs/003-sale-overlay/05-run02-reward.jpg\"><img src=\"bugs/003-sale-overlay/05-run02-reward.jpg\" alt=\"第二局第12天A配件奖励选择时仍残留释放以出售\" loading=\"lazy\"></a><figcaption>进入配件奖励后提示仍在。</figcaption></figure></main>",
+      "occurrences": [
+        {
+          "runId": "run01",
+          "day": 8
+        },
+        {
+          "runId": "run01",
+          "day": 9
+        },
+        {
+          "runId": "run02",
+          "day": 12
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "title": "肩武卡面与说明伤害不同",
+      "status": "显示口径待确认",
+      "summary": "卡面 850、说明每击 170，实际命中值待对照。",
+      "source": "bugs/004-weapon-tooltip/index.html",
+      "detailHtml": "<main><a href=\"rsi-workflow.html\">← 试玩工作流</a><h1>配件生效后，肩武卡面和悬浮说明给出两种每击伤害</h1><p>BUG-004 · 待确认显示口径。Windows Steam Demo 1.0.0.2218，Build 26644085，2026-11-15。第 9 天黑市里一次，第 10 天战后仍可观察到同类差异。</p>\n<h2>操作与观察</h2><p>在黑市给 S 级四段燃烧肩武跨接 MP-6005，词条为进攻型装备伤害 +400%。留在仓库，悬停肩武，比较左上角卡面与说明文字。</p><p>第 9 天卡面由 170 变为 850。悬浮说明仍写「造成 4 次 170 伤害」，同屏没有标记这是加成前数值。第 10 天装上攻击段数 +6 后，战后说明会更新为 10 段；该画面还有战斗内成长，不能单独用来测配件倍率。</p><h2>预期及复测方法</h2><p>如果说明描述当前伤害，预期每击显示 850。如果设计要求显示基础值，标出基础值与实战值可帮助核对。现有证据确认显示差异，实际命中伤害是否异常仍需复测。</p><p>下一次保持同一目标、相同时间点、相同增益，仅卸装一次该配件，记录一次完整齐射，每击伤害与战报都留图。</p>\n<figure><a href=\"bugs/004-weapon-tooltip/01-component.jpg\"><img src=\"bugs/004-weapon-tooltip/01-component.jpg\" alt=\"配件说明与卡面 850\" width=\"1920\" height=\"1080\" loading=\"lazy\"></a><figcaption>配件说明与卡面 850</figcaption></figure>\n<figure><a href=\"bugs/004-weapon-tooltip/02-weapon.jpg\"><img src=\"bugs/004-weapon-tooltip/02-weapon.jpg\" alt=\"同屏的 850 与「4 次 170」\" width=\"1920\" height=\"1080\" loading=\"lazy\"></a><figcaption>同屏的 850 与「4 次 170」</figcaption></figure>\n<figure><a href=\"bugs/004-weapon-tooltip/03-postfight.jpg\"><img src=\"bugs/004-weapon-tooltip/03-postfight.jpg\" alt=\"次日战后，说明中的段数已更新为 10\" width=\"1920\" height=\"1080\" loading=\"lazy\"></a><figcaption>次日战后，说明中的段数已更新为 10</figcaption></figure>\n</main>",
+      "occurrences": [
+        {
+          "runId": "run01",
+          "day": 9
+        },
+        {
+          "runId": "run01",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "id": "005",
+      "title": "武器伤害显示六位小数",
+      "status": "单场观察",
+      "summary": "战后说明出现 2399.679688，影响阅读。",
+      "source": "bugs/005-damage-precision/index.html",
+      "detailHtml": "<main><a href=\"rsi-workflow.html\">← 试玩工作流</a><h1>战后武器说明显示六位小数的伤害</h1><p>BUG-005 · 数值格式问题，单场观察。Windows Steam Demo 1.0.0.2218，Build 26644085，2026-11-15。</p>\n<h2>操作与观察</h2><p>从第 10 天末战结算打开统计，悬停对方的 S 级手武 MP-T00「虚空撕裂」，再对照己方手武的说明。</p><p>对方说明写「造成 7 次 2399.679688 伤害」，同页我方手武说明显示「造成 9 次 1,019 伤害」。</p><h2>预期及复测方法</h2><p>同类武器说明的伤害数字应采用一致且便于阅读的精度。当前现象影响阅读，本局没有测到它影响结算。</p><p>用同类型装备叠出有小数的伤害后再查看说明，检查是否只在特定成长属性或战后界面出现。</p>\n<figure><a href=\"bugs/005-damage-precision/01-weapon.jpg\"><img src=\"bugs/005-damage-precision/01-weapon.jpg\" alt=\"敌方手武，伤害显示 2399.679688\" width=\"1920\" height=\"1080\" loading=\"lazy\"></a><figcaption>敌方手武，伤害显示 2399.679688</figcaption></figure>\n<figure><a href=\"bugs/005-damage-precision/02-comparison.jpg\"><img src=\"bugs/005-damage-precision/02-comparison.jpg\" alt=\"同页对照，己方手武显示 1,019\" width=\"1920\" height=\"1080\" loading=\"lazy\"></a><figcaption>同页对照，己方手武显示 1,019</figcaption></figure>\n</main>",
+      "occurrences": [
+        {
+          "runId": "run01",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "id": "006",
+      "title": "对手段数显示不一致",
+      "status": "显示不一致已复现",
+      "summary": "第 16 天卡片 3、说明及战斗 6，配件 +3 有原文支持。",
+      "source": "bugs/006-opponent-segments/index.html",
+      "detailHtml": "<main><a href=\"playtest-2026-11-15-run02/tower.html\">← 爬塔记录</a><h1>对手卡片段数与说明、战斗不一致</h1><p><b>第16天更新：显示不一致已复现；战斗多算攻击未证实。</b>新对照中基础3段＋已读取的单格配件3段＝6段，装备说明和战斗均为6，选敌卡片仍为3。第15天九段的具体配件未回读，仍保留当时的不确定性。</p><p><b>最初记录：候选006，待核实</b>。2026-11-16，Windows Steam Demo 1.0.0.2218，Build 26644085，第二局第15天爬塔，对手knukzm。</p>\n<h2>已经观察到的事实</h2><ol><li>选敌右侧名字为knukzm；左侧仍是更早对手名，属于已记录的BUG-001。预览SS刀卡面×3，召唤组件未显示×7。</li><li>选择该对手进入战斗，倒计时36秒截图中同一刀为×9，召唤组件为×7。</li><li>胜利后的统计装备栏仍为刀×9、召唤×7；该刀输出468,796。</li></ol><p>这些数字是装备栏的段数标记，不是统计卡底部×36等尚未明确口径的次数。</p>\n<h2>目前不能排除的解释</h2><p>首局已实测「生命偷取」长配件令进攻装备攻击段数+6，能让3段变9段。本例刀与无人机均多6段，画面也有连接两者的长配件，是合法加成的候选解释。但本场没有保存该敌方配件的悬停词条，仅凭图标不能确认型号或效果。</p><p>如果配件合法提供+6，战中9段合理；需要继续确认选敌预览是否遗漏了加成或采用了另一种明确说明的口径。如果不存在合法来源，才进一步检查重复叠加或战斗计算异常。AI此次战前未逐项读配件，确实可能低估对方，不把这个误判直接归咎于游戏。</p>\n<h2>下一次对照</h2><p>找带同类长配件的对手，开战前保存配件原文、两端连接、刀和召唤段数；核对基础段数＋所有静态加成，再保存开场尽早一帧与结束帧。分别验证「预览未更新」与「战中动态增加」两种假设。当前仅有一场前后差异的直接证据，没有重复复现率，也未提出修复方案。</p>\n<figure><a href=\"bugs/006-opponent-segments/01-preview.jpg\"><img src=\"bugs/006-opponent-segments/01-preview.jpg\" alt=\"对手knukzm战前刀卡面三段\" loading=\"lazy\"></a><figcaption>战前预览：刀×3。</figcaption></figure><figure><a href=\"bugs/006-opponent-segments/02-battle.jpg\"><img src=\"bugs/006-opponent-segments/02-battle.jpg\" alt=\"同一对手战中刀九段、召唤七段\" loading=\"lazy\"></a><figcaption>倒计时36秒：刀×9、召唤×7。</figcaption></figure><figure><a href=\"bugs/006-opponent-segments/03-result.jpg\"><img src=\"bugs/006-opponent-segments/03-result.jpg\" alt=\"战后同一刀九段，累计伤害468796\" loading=\"lazy\"></a><figcaption>结算装备栏仍为9段。</figcaption></figure>\n<h2>第16天对照复现</h2><ol><li>先读NailingX连接肩炮与手武的S长件MP-6081「生命偷取」，明确写着攻击段数+6，预览肩炮9段、手武10段。本例说明九段可以合法出现，预览也并非总漏算。</li><li>免费刷新到C4C，打开左侧详情。SS AGM-N01「坚锋」卡片底部×3。</li><li>悬停该刀，说明为「造成6次420伤害，获得6次14力量」，同画面卡片仍×3。</li><li>悬停该刀的单格MP-6079「生命偷取」，词条攻击段数+3。</li><li>进入战斗，同一刀底部×6。基础3＋配件3与说明、战斗一致。</li></ol><p><b>预期：</b>选敌卡片与说明使用一致的有效段数；若卡片仅显示基础段数，应明确标注。<b>实际：</b>部分对手卡片保留3，说明与战斗6。会使战前爆发、命中成长和控制威胁被低估。当前是一次带配件原文的完整复现，加上第15天的一次前后差异，尚不能声称每次刷新必现。</p><p><b>临时规避：</b>逐个读取装备说明和段数配件，不单独依赖卡片×N。<b>边界：</b>没有源代码或完整事件日志，未定位缓存或刷新根因；没有证据证明战斗计算错误。左侧名称保留NailingX属于独立BUG-001。</p>\n<figure><img src=\"bugs/006-opponent-segments/04-legal-plus-six.jpg\" alt=\"NailingX共享长配件明确攻击段数加六\" loading=\"lazy\"><figcaption>合法+6来源，不能把九段本身判为异常。</figcaption></figure>\n<figure><img src=\"bugs/006-opponent-segments/06-c4c-tooltip.jpg\" alt=\"C4C刀卡片三段，悬停说明六次攻击\" loading=\"lazy\"><figcaption>同画面：卡片×3，装备说明6次。</figcaption></figure>\n<figure><img src=\"bugs/006-opponent-segments/07-c4c-part.jpg\" alt=\"C4C刀的配件明确攻击段数加三\" loading=\"lazy\"><figcaption>额外三段的明确来源。</figcaption></figure>\n<figure><img src=\"bugs/006-opponent-segments/08-c4c-battle.jpg\" alt=\"C4C战中同一刀为六段\" loading=\"lazy\"><figcaption>战中×6与装备说明、合法加成吻合。</figcaption></figure></main>",
+      "occurrences": [
+        {
+          "runId": "run02",
+          "day": 15
+        },
+        {
+          "runId": "run02",
+          "day": 16
+        }
+      ]
+    },
+    {
+      "id": "007",
+      "title": "零输出及统计核查",
+      "status": "待核查",
+      "summary": "结算伤害、治疗为空，缺有效命中被漏记的证据。",
+      "source": "bugs/007-zero-damage-review/index.html",
+      "detailHtml": "<main><a href=\"playtest-2026-11-15-run02/tower.html#day16-result\">← 第16天终局</a><h1>零输出及统计核查</h1><p><b>候选007 · 尚未确认Bug，可能是正常启动失败。</b>2026-11-16，Windows Steam Demo 1.0.0.2218 / Build 26644085，第二局第16天，C4C，单次观察。</p>\n<h2>已知事实</h2><p>我方出战S成长刀6段约5.4秒、S肩炮10段10.8秒、力量吸血无人机；敌方SS干扰脉冲V每3秒随机禁用一件敌方装备3秒。战斗截图可见我方刀区域禁用样式。败局伤害页我方没有条目，防御页无治疗，仅1173＋34护盾，增益页仍有819力量来源。敌方肩炮137214、刀125749、燃烧685伤害，最后获胜。摘要最佳输出为空，和详细伤害页一致。</p>\n<h2>为什么暂不判Bug</h2><p>有高面板和力量并不等于完成攻击。长冷却肩炮可能未启动，刀可能在关键时点被禁用，吸血也依赖部署和伤害。现有截图没有覆盖完整战斗时间轴，没有证明我方确实命中过敌人，因此“战斗正确、没有有效输出”足以解释现象，不能宣称统计漏记。AI战前预测胜属于已确认的模型误判，不据此认定游戏错误。</p>\n<h2>下一次最小核查</h2><ol><li>从可重建配置记录完整战斗，保留首次部署、每次禁用对象/起止、实际开火、命中数字、敌方HP/护盾变化。</li><li>若我方在死亡前没有命中，零伤害符合预期，关闭该疑点；将失败归入启动时序。</li><li>若明确命中并降低对方HP或护盾，但对应来源统计仍为空，才确认统计漏记，并检查过量伤害、盾伤害和召唤归属口径。</li><li>若禁用表现超出词条，再独立复现控制问题，不与统计问题混成一个已确认Bug。</li></ol><p>当前复现率未知、无修复。战报卡底部×N口径未确认，不用它直接推断释放次数。统计顶部195000是显示值，不能当成我方结束剩余生命。</p><figure><a href=\"bugs/007-zero-damage-review/02-disable.jpg\"><img src=\"bugs/007-zero-damage-review/02-disable.jpg\" alt=\"敌方禁用科技原文\" loading=\"lazy\"></a><figcaption>敌方禁用科技原文</figcaption></figure><figure><a href=\"bugs/007-zero-damage-review/03-battle.jpg\"><img src=\"bugs/007-zero-damage-review/03-battle.jpg\" alt=\"战中帧与禁用样式\" loading=\"lazy\"></a><figcaption>战中帧与禁用样式</figcaption></figure><figure><a href=\"bugs/007-zero-damage-review/04-damage.jpg\"><img src=\"bugs/007-zero-damage-review/04-damage.jpg\" alt=\"伤害统计为空\" loading=\"lazy\"></a><figcaption>伤害统计为空</figcaption></figure><figure><a href=\"bugs/007-zero-damage-review/05-defense.jpg\"><img src=\"bugs/007-zero-damage-review/05-defense.jpg\" alt=\"防御统计没有治疗条目\" loading=\"lazy\"></a><figcaption>防御统计没有治疗条目</figcaption></figure><figure><a href=\"bugs/007-zero-damage-review/06-buffs.jpg\"><img src=\"bugs/007-zero-damage-review/06-buffs.jpg\" alt=\"增益仍有贡献\" loading=\"lazy\"></a><figcaption>增益仍有贡献</figcaption></figure><figure><a href=\"bugs/007-zero-damage-review/07-result.jpg\"><img src=\"bugs/007-zero-damage-review/07-result.jpg\" alt=\"败局摘要也没有最佳输出\" loading=\"lazy\"></a><figcaption>败局摘要也没有最佳输出</figcaption></figure></main>",
+      "occurrences": [
+        {
+          "runId": "run02",
+          "day": 16
+        }
+      ]
+    }
+  ]
+}

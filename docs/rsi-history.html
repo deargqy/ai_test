@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>历史打法与流程讨论 · 猫壳机动队</title>
+<style>
+  :root { color-scheme:light; --paper:#f5f5ed; --panel:#fffef8; --ink:#172e2b; --muted:#53645e; --line:#c8d0bf; --deep:#163c35; --lime:#ddf394; --soft:#e6eedf; --rust:#914422; --sand:#fae8d7; }
+  * { box-sizing:border-box }
+  html { scroll-behavior:smooth; scroll-padding-top:1rem }
+  body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 "Inter","Microsoft YaHei","PingFang SC",system-ui,sans-serif }
+  .wrap { width:min(1240px,94%); margin:auto }
+  a { color:inherit; text-underline-offset:.22em }
+  button,select,textarea { font:inherit; color:inherit }
+  button { cursor:pointer }
+  :focus-visible { outline:3px solid #a85519; outline-offset:3px }
+  h1,h2,h3,p,dl,dd,fieldset,figure { margin:0 }
+  button,select,textarea,fieldset { min-width:0 }
+  .top { border-bottom:1px solid var(--line) }
+  .top .wrap,.brand,nav,.source,.sectionhead,.actions,.foot { display:flex; align-items:center; gap:1rem; flex-wrap:wrap }
+  .top .wrap,.sectionhead,.foot { justify-content:space-between }
+  .top .wrap { min-height:64px; padding-block:12px }
+  .brand { gap:.6rem; font-weight:750 }
+  .brand-mark { display:grid; place-items:center; width:26px; height:26px; font:700 19px/1 system-ui; color:var(--lime); background:var(--deep); border-radius:6px }
+  nav a { font-size:.9rem; text-decoration:none }
+  nav a:hover { text-decoration:underline }
+  .mast { background:var(--deep); color:#f6f7ec; border-bottom:5px solid var(--lime) }
+  .mast .wrap { display:grid; grid-template-columns:1.65fr 1fr; align-items:center; gap:clamp(20px,5vw,75px); padding-block:clamp(27px,4vw,55px) }
+  .kicker { font-size:.83rem; letter-spacing:.07em; font-weight:650 }
+  .mast .kicker { color:var(--lime) }
+  h1 { font-size:clamp(1.95rem,3.65vw,3.25rem); line-height:1.23; letter-spacing:-.045em; margin:.28em 0 }
+  .mast p { color:#dce7d9 }
+  .status { border-inline-start:2px solid #72927a; padding-inline-start:20px; font-size:.91rem }
+  .status strong { color:var(--lime); display:block; margin-bottom:.32rem }
+  section { margin-block:clamp(28px,4vw,52px) }
+  h2 { font-size:clamp(1.4rem,2.25vw,2rem); letter-spacing:-.035em; line-height:1.3 }
+  h3 { font-size:1.15rem; line-height:1.45 }
+  .sectionhead { margin-bottom:14px; align-items:end }
+  .hint,.caption,.foot,.fine { color:var(--muted); font-size:.88rem }
+  .workbench { display:grid; grid-template-columns:1.17fr 1fr; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--panel) }
+  .map,.inspect { padding:clamp(15px,2.15vw,30px) }
+  .map { background-color:#eef1e6; background-image:radial-gradient(#cad4c4 .8px,transparent .9px); background-size:12px 12px; min-width:0 }
+  .lane + .lane { margin-top:17px }
+  .lane-label { display:flex; align-items:center; gap:.55rem; font-size:.84rem; color:#435850; font-weight:700; margin-bottom:7px }
+  .lane-label::after { content:""; height:1px; background:var(--line); flex:1 }
+  .routes { display:flex; align-items:center; flex-wrap:wrap; gap:5px }
+  .node { flex:1 1 0; min-width:0; min-height:44px; padding:8px 5px; border:1px solid #adbeaa; border-radius:6px; background:var(--panel); font-weight:650; font-size:.92rem; line-height:1.35 }
+  .node:hover,.choice:hover { border-color:var(--deep); background:var(--soft) }
+  .node[aria-pressed="true"] { background:var(--deep); color:var(--lime); border-color:var(--deep) }
+  .arrow { color:#63796a; font-size:1rem }
+  .map-note { margin:5px 0 0; font-size:.82rem; color:#465b50 }
+  .inspect { border-inline-start:1px solid var(--line) }
+  .inspect .kicker { color:#48664d }
+  .inspect h3 { font-size:1.5rem; letter-spacing:-.02em; margin:.2rem 0 .85rem }
+  .facts { display:grid; gap:.65rem }
+  .facts dt,.outcome dt { font-weight:700; font-size:.83rem; color:#435d4c }
+  .facts dd { line-height:1.55; margin-top:.12rem }
+  .next { margin-top:1.1rem; padding-top:.85rem; border-top:1px solid var(--line) }
+  .actions { gap:8px; margin-top:8px }
+  .choice,.main-button,.back { border:1px solid var(--line); background:var(--panel); border-radius:6px; padding:7px 12px; line-height:1.45; font-size:.92rem }
+  .main-button { border-color:var(--deep); background:var(--deep); color:white }
+  .main-button:hover { background:#235347 }
+  .back { display:none }
+  .feedback { padding:clamp(18px,2.6vw,34px); border:1px solid var(--line); border-radius:14px; background:var(--panel) }
+  .lab-grid,.review-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,4vw,58px); margin-top:20px }
+  .fields { display:grid; gap:12px }
+  label { display:grid; gap:5px; font-weight:650; font-size:.9rem }
+  select,textarea { width:100%; padding:9px 10px; background:#fff; border:1px solid #aab8a7; border-radius:5px; font-weight:400; line-height:1.45 }
+  textarea { resize:vertical }
+  .outcome { background:var(--soft); border-left:3px solid #537657; padding:14px 18px; border-radius:2px 8px 8px 2px }
+  .outcome h3 { margin-bottom:7px }
+  .outcome dd + dt { margin-top:9px }
+  .review { border-top:1px solid var(--line); padding-top:24px }
+  .summary { white-space:pre-wrap; overflow-wrap:anywhere; padding:13px 16px; border-left:3px solid #b5c2ac; font-size:.93rem; background:#edf0e5 }
+  .foot { padding:20px 0; border-top:1px solid var(--line) }
+  .caption { margin-top:10px }
+  .memory { margin-top:16px; border-block:1px solid var(--line); padding:12px 0 }
+  .memory summary { cursor:pointer; font-weight:650 }
+  .memory dl { display:grid; gap:10px; margin:14px 0 3px }
+  .memory dt { font-weight:650 }
+  .memory dd { color:var(--muted) }
+  .observed { display:grid; gap:.65rem; margin-top:1rem }
+  .observed p { margin:0 }
+  .observed a { text-decoration:underline }
+  .run-summary { display:grid; grid-template-columns:minmax(0,1fr) minmax(230px,.78fr); align-items:center; gap:clamp(16px,4vw,44px); margin:0 0 20px }
+  .run-summary h3 { margin:0 0 .5rem }
+  .run-summary p { margin:.45rem 0 }
+  .run-summary figure { margin:0 }
+  .run-summary img { display:block; width:100%; height:auto; border-radius:8px }
+  .run-summary figcaption { font-size:.82rem; margin-top:.35rem; color:var(--muted) }
+  .observed h3 { font-size:1rem; margin:.45rem 0 0 }
+  .playbook { border-top:3px solid var(--deep); padding-top:18px }
+  .playbook .decision { margin:16px 0; padding:14px 18px; background:var(--soft); border-inline-start:3px solid #537657 }
+  .playbook dl { display:grid; grid-template-columns:minmax(7em,11em) minmax(0,1fr); gap:.7rem 1.2rem; margin:1rem 0 }
+  .playbook dt { font-weight:700 }
+  .playbook dd { max-width:56em }
+  .playbook details { padding:.6rem 0; border-top:1px solid var(--line) }
+  .playbook summary { cursor:pointer; font-weight:650 }
+  .pair-shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:1rem; margin:1rem 0 }
+  .pair-shots img { display:block; width:100%; height:auto; border-radius:7px }
+  .pair-shots figcaption { margin-top:.25rem; font-size:.9rem; color:var(--muted) }
+  [hidden] { display:none !important }
+  @media (max-width:850px) {
+    .workbench { grid-template-columns:1fr }
+    .inspect { border-inline-start:0; border-top:1px solid var(--line) }
+    .back { display:inline-block }
+    .mast .wrap { grid-template-columns:1.4fr 1fr }
+  }
+  @media (max-width:620px) {
+    .wrap { width:92% }
+    .mast .wrap,.lab-grid,.review-grid,.run-summary { grid-template-columns:1fr; gap:17px }
+    .top .wrap { gap:6px }
+    nav { gap:.8rem }
+    .status { padding-inline-start:12px }
+    .sectionhead { display:grid; gap:4px }
+    .playbook dl { grid-template-columns:1fr; gap:.15rem }
+    .playbook dd { margin-bottom:.7rem }
+    .node { font-size:.86rem }
+    .actions button,.back,select { min-height:44px }
+  }
+  @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto } }
+</style>
+</head>
+<body>
+<div style="padding:12px 4%;background:#e8eedf;color:#193b30">历史页面 · 保留前两局形成的打法和流程讨论。<a href="rsi-workflow.html">进入当前试玩记录 →</a></div>
+<header class="top"><div class="wrap"><div class="brand"><span class="brand-mark" aria-hidden="true">↻</span>猫壳机动队 · AI 试玩</div><nav aria-label="页内导航"><a href="#playbook">当前打法</a><a href="#workflow">工作流</a><a href="#opponent-issue">Bug 记录</a><a href="#review">共同决策</a></nav></div></header>
+<div class="mast"><div class="wrap"><div><div class="kicker">RSI / 挑战赛试玩</div><h1>AI 如何从一局学到下一局</h1><p>读懂按钮，带着假设配置机甲，用战后证据修正下一次选择。</p></div><div class="status"><strong>Windows 实测 · 2026.11.15—16</strong><p>版本 1.0.0.2218。第二局继续爬塔至第16天，最终12胜4负。Lv.15，战前195,000生命。</p></div></div></div>
+<main class="wrap">
+<section class="playbook" id="playbook" aria-labelledby="playbook-heading">
+  <div class="sectionhead"><h2 id="playbook-heading">先活着启动，再发挥成长</h2><p class="hint">打法 v0.5 · 第二局终局12胜4负</p></div>
+  <p>第14、15天获胜，第16天被C4C击败。衣服空槽已补每秒主属性+4%，肩炮升S并达到10段，但最后一场我方伤害统计为空。成长后的高面板不能替代首轮生存。<a href="playtest-2026-11-15-run02/tower.html">爬塔逐日证据</a> · <a href="playtest-2026-11-15-run02/tower.html#model-v05">模型修正表</a> · <a href="playtest-2026-11-15-run02/tower.html#loss-review">四次败局综合复盘</a> · <a href="playtest-2026-11-15-run02/run.html">前13天记录</a></p>
+  <dl><dt>先核实有效属性</dt><dd>同时读装备说明、两端共享配件、科技和卡面。已复现对手卡片3段、说明和战斗6段；+6长配件也能合法产生9段。输入冲突先标记，不能单用卡面估算。</dd>
+  <dt>先算首轮可用性</dt><dd>比较主刀、肩炮、无人机首次生效与敌方第一轮爆发；加入充能、加速、减速和禁用。分别推演主刀被禁用、肩炮被禁用、辅助被禁用的情况。未知控制叠加规则保留范围，不报虚假的精确胜率。</dd>
+  <dt>再算成长与回复</dt><dd>已确认能启动后，再估多段属性获取、命中成长、坚固加速、伤害转盾和吸血。第15天刀381602、肩炮344685；第16天两者无伤害条目，不能把上场的成长态直接带入下场。治疗统计是否含过量治疗仍待核实。</dd>
+  <dt>按整排评估装配</dt><dd>主力放内侧，两个端点一起比较。新刀接1200%力量伤害长件和+3段数短件，同时覆盖肩炮；刀右上8坚固用来触发衣服加速，衣服有减冷却及持续成长。每次换装重查被动、属性和插槽。</dd>
+  <dt>钱和刷新服务生存</dt><dd>先确定核心装备，再买专属消耗品，避免强化随后被换掉的装备。已实测利息每5金币1、最多10；超过50的部分不再增加利息。最后一条命还带119金币和一次免费换敌机会出战，是本场风险处理不足。未到账的出售不计收入。</dd>
+  <dt>允许模型承认失败</dt><dd>爬塔3场均预判胜、信心中等，实际胜、胜、负。2/3只是这三场记录，不是可靠准确率。控制导致启动失败是待进一步核实的解释；没有命中证据时，零输出不能直接认定为统计Bug。</dd></dl>
+  <div class="decision"><b>下一局优先验证：</b>核心刀被禁用时，能否靠开局防御、充能或另一输出撑到首次攻击；记录控制对象、首次部署、首次命中和HP变化，再对照三页统计更新模型。</div>
+  <div class="pair-shots"><figure><a href="playtest-2026-11-15-run02/day16-ten-hit-shoulder.jpg"><img src="playtest-2026-11-15-run02/day16-ten-hit-shoulder.jpg" width="1920" height="1080" alt="肩炮升级S并通过共享和单槽配件达到十段攻击"></a><figcaption>五件S，肩炮10段；衣服空槽已补上。</figcaption></figure><figure><a href="playtest-2026-11-15-run02/day16-damage.jpg"><img src="playtest-2026-11-15-run02/day16-damage.jpg" width="1920" height="1080" alt="第16天败局，我方伤害统计为空"></a><figcaption>不能把静态高伤害当作必然能打出来。</figcaption></figure></div>
+  <details><summary>保留第13天判断 · 打法 v0.4 · 10胜3负阶段</summary>
+  <div class="sectionhead"><h2 id="playbook-v04-heading">从单件强化，走到整排协同</h2><p class="hint">历史打法 v0.4 · 第13天10胜3负里程碑</p></div>
+  <p>把S刀从边缘挪到内侧，两边插槽都参与连接；刀与肩炮同时享受伤害和段数配件。最后用力量吸血无人机补续航，第13天获得完全胜利。<a href="playtest-2026-11-15-run02/run.html">第二局逐日决策与战报</a> · <a href="playtest-2026-11-15-run02/run.html#final-build">第13天五件装备</a></p>
+  <dl><dt>先排整排，再选落点</dt><dd>每枚跨卡件看两个端点的总收益。核心武器放内侧，比较左右邻位的插槽行；装备换入后重查所有连接。高品质优先，同时核对属性匹配和被动，不能只按S/A等级机械分配。</dd>
+  <dt>把被动画成触发链</dt><dd>力量→概率获得坚固→概率获得力量；坚固又让衣服触发加速。多段攻击继续供给力量、触发伤害转盾，最后加入吸血。第8天两个科技分别贡献180力量、138坚固，但概率链未证明为无限循环。</dd>
+  <dt>伤害与耐久一起算</dt><dd>第12天两武器打出292,544仍落败，敌方背部单件供盾220,899。下一天补吸血，实收24,393治疗。选敌比较启动速度、增长、护盾、治疗和控制；不能只按血量或品质判断强弱。</dd>
+  <dt>每次购物做三选一</dt><dd>先盘库存、同款合成与可售物，再比较升级、买装、留息。游戏内确认每满5金币得1利息、最多10；第12天63金币实收10。最后一战没有下一天的留息收益，优先寻找能当场补短板的商品。</dd>
+  <dt>先核对，再改规则</dt><dd>伤害、防御、增益三页与结算摘要互相对账；记录不符合预期的来源。战报底部×N口径未明确，不当作释放次数。胜局支持保留当前打法，但不同对手与多项改动不能证明单项因果。</dd></dl>
+  <div class="pair-shots"><figure><a href="playtest-2026-11-15-run02/day13-ready.jpg"><img src="playtest-2026-11-15-run02/day13-ready.jpg" width="1920" height="1080" alt="背部、无人机、衣服、刀、肩炮按插槽连接，刀位于内侧"></a><figcaption>刀左右都利用，肩炮共享两枚关键配件。</figcaption></figure><figure><a href="playtest-2026-11-15-run02/day13-defense.jpg"><img src="playtest-2026-11-15-run02/day13-defense.jpg" width="1920" height="1080" alt="末战防御统计中无人机治疗24393"></a><figcaption>高输出配吸血，末战无人机治疗24,393。</figcaption></figure></div>
+  </details>
+  <details><summary>保留首局复盘 · 打法 v0.3 · 6胜4负</summary>
+  <p>第 5 天已经 2 胜 3 负，第 6 至第 9 天连胜。最后我留下了一个仅有 42,000 生命的对手，漏估了他的护盾转伤手武，单件打出 230,984。<a href="playtest-2026-11-15/run.html">十天的装备决策、战报和原图</a></p>
+  <dl><dt>高品质装备先试配</dt><dd>终局我把 +400% 伤害和 +6 段数跨接在 S 肩武与 A 手武上。S 躯干只接一个护盾件，S 无人机空槽。下次每次换入 S 装先读主动、被动及能吃到的配件，再试至少一种对齐卡序，比较它和武器现有连接的收益。<a href="playtest-2026-11-15/run.html#slots">五件装备复盘</a></dd>
+  <dt>双方使用同一套评估</dt><dd>看开局爆发、持续输出、有效回复和反制条件。先问是哪件被动在放大收益，再估第一轮和第二轮能打多少；看不清触发频率就留区间。用战报检查主要威胁是否猜对。<a href="playtest-2026-11-15/run.html#power-model">用末战数据试算</a></dd>
+  <dt>找能反复触发的组合</dt><dd>自己的燃烧肩武能施加燃烧，燃烧造成伤害又为肩武充能。对手的护盾转伤则要追问谁在供盾，以及攻击能否再产生盾；其中只有看到词条和实战信号的环节才能当作已验证。<a href="playtest-2026-11-15/run.html#last-fight">末战敌方被动</a></dd>
+  <dt>每笔钱有三种用途</dt><dd>购买、升级、留息都要计价。清点能卖的钱，先卖本轮没有替换或合成用途的装备，再比较当前战力提升和少收的利息。第 9 天旧躯干卖出 16，正好买到特价吸血无人机。<a href="playtest-2026-11-15/run.html#interest">三个余额的利息对账</a></dd></dl>
+  </details><details><summary>保留第 2 天判断 · 打法 v0.2</summary>
+  <p>玩家提醒我留意装备属性、卡牌顺序，以及仓库里的换装、出售和配件。我据此盘点库存，自行决定科技、买卖和出战配置。</p>
+  <div class="decision"><b>下次评估一件新装备，我会先排进现有卡序试一次。</b>　我已经用一个三格件同时给肩武和无人机加了力量。替换其中一件的代价，包括可能断开的连接。接下来的补给，我倾向查看三件 C 级装备，在同一张卡上比较属性、冷却、效果和插槽位置。<a href="playtest-2026-11-15/day03-start.jpg">第 3 天的三条补给路线</a></div>
+  <dl>
+    <dt>读属性再插配件</dt><dd>MP-6001「过载」的说明是镶嵌的防御型装备护盾 +25%。装在躯干时卡面 545 → 682，卸下回到 545，挪到最右再装仍为 682。它也能放进手武的槽，但手武本身没有护盾词条。以后分别核对配件图标和目标属性的前后值。<a href="playtest-2026-11-15/day02-shield-part.jpg">配件原文</a> · <a href="playtest-2026-11-15/day02-shield-equipped.jpg">装入</a> · <a href="playtest-2026-11-15/day02-shield-removed.jpg">卸下</a> · <a href="playtest-2026-11-15/day02-hand-socket.jpg">手武插槽</a></dd>
+    <dt>仓库参与构筑</dt><dd>备用燃烧肩武冷却 9.5 秒，造成 4×50 伤害、施加 4×15 燃烧。原肩武冷却 11 秒，造成 2×410 伤害、施加 2×15 寄生。将备用卡拖到原肩位，两件装备互换。补入寄生无人机后，我换回寄生肩武，把燃烧肩武拖到左侧出售区中央，余额 32 → 34。买来的无人机当时先入仓，手动装上才点亮第五类装备。<a href="playtest-2026-11-15/day02-stored-shoulder.jpg">备用卡</a> · <a href="playtest-2026-11-15/day02-swap.jpg">换装</a> · <a href="playtest-2026-11-15/day02-drone-storage.jpg">无人机入仓</a> · <a href="playtest-2026-11-15/day02-before-sale.jpg">出售前</a> · <a href="playtest-2026-11-15/day02-after-sale.jpg">出售后</a></dd>
+    <dt>败局改变选敌方式</dt><dd>我看到双方预览生命同为 12,500，保留了首个对手。战报显示对方生命 17,500，一项增益同时贡献 8,767 护盾和 8,767 治疗。我方手武输出 9,185，肩武 4,672，最终落败。下次遇到高回复构筑，我会先读科技和防御词条，估算自己的持续输出能否抵消回复，再决定是否重掷。对方额外生命的来源仍待核实。<a href="playtest-2026-11-15/day02-opponent.jpg">战前详情</a> · <a href="playtest-2026-11-15/day02-damage.jpg">伤害统计</a> · <a href="playtest-2026-11-15/day02-defense.jpg">护盾与治疗</a></dd>
+  </dl>
+  <h3>同一枚三格配件，换个邻位再试</h3>
+  <p>保持五件装备和 18 金币相同。每次都抓住配件左端，放在寄生肩武的右侧插槽。右邻是背部组件时两个端点错行，游戏提示「目标插槽无效，无法使用」。把背部挪到最左，让无人机紧接肩武，同样操作可连通，两张卡各显示 4 点力量。卸下、恢复原邻位、再换回来，依次重现了失败和成功。</p>
+  <div class="pair-shots">
+    <figure><a href="playtest-2026-11-15/day02-wrong-neighbor.jpg"><img src="playtest-2026-11-15/day02-wrong-neighbor.jpg" width="1920" height="1080" alt="肩武右邻为背部组件，红字提示目标插槽无效"></a><figcaption>肩武旁放背部组件，两端的插槽不同高。</figcaption></figure>
+    <figure><a href="playtest-2026-11-15/day02-bridged.jpg"><img src="playtest-2026-11-15/day02-bridged.jpg" width="1920" height="1080" alt="三格配件横跨肩武和无人机，两张装备都显示力量 4"></a><figcaption>肩武旁换成无人机，连线出现，两张卡各加 4 力量。</figcaption></figure>
+  </div>
+  <details open><summary>科技预测与战后复盘</summary>
+    <p>三项可选效果是最右装备附魔 10 力量、全装备主属性每秒 +1%、每秒获得 4 层坚固。我自选「急速核心」，预期拖长战斗会提高装备面板。倒计时 29 秒到 10 秒，肩武主属性 532 → 619、躯干护盾 769 → 872，肩武寄生仍为 15。这段走势符合预期；本战还有机师与其他效果，无法把全部增量归给科技。<a href="playtest-2026-11-15/day02-tech-installed.jpg">科技词条</a> · <a href="playtest-2026-11-15/day02-battle-29.jpg">剩余 29 秒</a> · <a href="playtest-2026-11-15/day02-battle-10.jpg">剩余 10 秒</a></p>
+  </details>
+  </details><details><summary>保留首日判断 · 打法 v0.1</summary>
+  <div class="decision"><b>眼前这一步，我倾向自选科技。</b>　现在有 34 金币、四件装备。自选可以围绕已经打出伤害的手部和肩部找增益，代价是放弃随机路线的 10 金币。按首日价格，这 10 金币可以买两次经验，还够刷新一次商店。这一步停在选分支之前，三项科技的词条还没看到。<a href="playtest-2026-11-15/day02-start.jpg">科技选择现场</a></div>
+  <dl>
+    <dt>买装备先看触发</dt><dd>首日花 4 金币补上空肩位。日末战中，肩武输出 720，手武 750。下一次我会把武器冷却和实际触发次数一起看。如果新武器要到战斗结束后才可能触发，优先级就下降。<a href="playtest-2026-11-15/day01-duel-stats.jpg">装备输出</a></dd>
+    <dt>买经验先看差几格</dt><dd>首日两次买经验共花 8 金币，从 Lv.01 到 Lv.03，生命从 1,500 变为 4,500，商店开放第三个装备位。现在是 Lv.03、4/6 经验。下次买之前先读升级奖励，再跟眼前实际可以买到的装备比较。<a href="playtest-2026-11-15/day01-xp.jpg">经验价格与奖励说明</a></dd>
+    <dt>重掷先看敌我装备</dt><dd>首日我方 4,500 生命，前两名对手各有 12,500。第二次重掷后遇到 1,500 生命的对手并获胜。下次先看对手装备能否快速击穿我的护盾，再决定是否花掉一次机会。遇到能打的对手就保留，剩余次数以当天按钮为准。<a href="playtest-2026-11-15/day01-duel.jpg">日末对抗</a></dd>
+    <dt>再买配件前先试装</dt><dd>首日花 2 金币买了配件，拖向手部武器出现「目标插槽无效」。下次先用已有配件核对形状、可放位置与生效标记。能确认装上之后，再估算它值多少金币。<a href="playtest-2026-11-15/day01-socket-message.jpg">插槽提示</a></dd>
+  </dl>
+  <div><h3>首日定下的检验办法</h3>
+    <p>首日已经修正了一条操作经验：玩家最初提到选敌时可以重掷一次，这一局按钮实际给了两次。下次先读剩余次数。战术上，肩武值得列入候选，样本只有一场日末战；重掷也同时改变了对手。</p>
+    <p>第 2 天要检验的是科技能否在这套装备上实际触发。选前记词条、作用对象和预期；战后核对对应装备的触发次数、输出或护盾，连同对手和战斗时长一起记。若触发条件没满足，下次降低这条科技的优先级。每次结算后在这一节追加日号、原判断、结果和下次动作，保留原版供回看。</p>
+  </div></details>
+  <p><a href="#review">补充你的玩法经验</a></p>
+</section>
+<section id="workflow" aria-labelledby="workflow-heading">
+  <div class="sectionhead"><h2 id="workflow-heading">从接管窗口到更新经验</h2><p class="hint">点选节点，再按看到的游戏结果走分支。</p></div>
+  <div class="run-summary" id="checkpoint"><div><h3>第二局第16天 · 12胜4负终局</h3><p>第13天10 WINS后继续爬塔，第14、15天两胜，第16天第四负，已看到「失败 / 12 WINS」。当前停在终局画面，未另开新局。</p><p>末战我方伤害及治疗条目为空，对手伤害263648。预测偏差已保留，模型升级v0.5。<a href="playtest-2026-11-15-run02/tower.html#day16-result">终局与反思</a> · <a href="playtest-2026-11-15/run.html">首局6胜4负</a></p></div><figure><a href="playtest-2026-11-15-run02/final-12-wins.jpg"><img src="playtest-2026-11-15-run02/final-12-wins.jpg" alt="第二局最终失败，12 WINS" width="1920" height="1080"></a><figcaption>2026-11-16 01:05终局 · 点击查看原图</figcaption></figure></div>
+  <details class="memory" id="verified"><summary>首日按钮实测 · 从大厅到第 2 天</summary><div class="observed">
+    <h3>大厅与新开挑战</h3>
+    <p><b>进入大厅</b>　健康与安全警告上的「继续」关闭提示，露出带「开始游玩」的大厅。「机库」是大厅底部一个带锁的入口。<a href="playtest-2026-11-15/notice.jpg">提示原图</a> · <a href="playtest-2026-11-15/lobby.jpg">大厅原图</a></p>
+    <p><b>设置往返</b>　右上齿轮先打开「继续／设置／退出游戏」菜单。点「设置」才看到语言、音频与图像选项；「取消」返回菜单，菜单中的「继续」返回大厅。<a href="playtest-2026-11-15/menu.jpg">菜单原图</a> · <a href="playtest-2026-11-15/settings.jpg">设置原图</a></p>
+    <p><b>读教程</b>　大厅「教程」打开图文说明，右箭头向后翻、左箭头向前翻，「退出」返回大厅。已逐页核对机师、构筑、装配、事件与终局规则。<a href="playtest-2026-11-15/tutorial-01.jpg">教程首页</a> · <a href="playtest-2026-11-15/tutorial-07.jpg">胜负条件</a> · <a href="playtest-2026-11-15/tutorial-11.jpg">观战说明</a></p>
+    <p><b>正式开局</b>　「开始游玩」打开区服选择。点击「全球」出现黄色选框，卡片显示延迟与丢包；「确认」进入「连接中」，「返回大厅」可退出这一步。<a href="playtest-2026-11-15/region-selected.jpg">选中区服</a> · <a href="playtest-2026-11-15/connecting.jpg">连接画面</a></p>
+    <p><b>挑战赛 → 机师 → 开始</b>　选人后点「开始」。第 1 天为 0/10 胜、0/4 负、生命 1,500、0 金币，五个装备栏全空。<a href="playtest-2026-11-15/challenge-mode.jpg">模式</a> · <a href="playtest-2026-11-15/new-pilot.jpg">选人</a> · <a href="playtest-2026-11-15/day01-start.jpg">新局起点</a></p>
+    <h3>事件、奖励与仓库</h3>
+    <p><b>自选、随机、离开</b>　母盒的自选项展示三张躯干卡。点击中间的紫色卡即绑定，装备栏和机甲模型随之改变。「离开」推进到武器事件。选随机武器后手部栏装上武器，余额从 0 升至 3。<a href="playtest-2026-11-15/day01-choices.jpg">三选一</a> · <a href="playtest-2026-11-15/day01-equipped.jpg">躯干已装</a> · <a href="playtest-2026-11-15/day01-weapon.jpg">武器与补偿</a></p>
+    <p><b>仓库／关闭</b>　仓库替换上半区，下方仍显示装配。「关闭」回到原来的事件或商店。<a href="playtest-2026-11-15/day01-storage.jpg">首日空仓库</a> · <a href="playtest-2026-11-15/day01-component.jpg">买入配件后的仓库</a></p>
+    <p><b>事件选项 → 对手卡 → 自动战斗</b>　在林恩事件中点对话选项，出现绿色敌人卡。点卡即开战，双方初始生命为 1,500 和 1,000。「统计」打开战报，三个图标切换数据页，「返回」回结算。「继续」回事件，余额 3 → 28，胜负仍是 0/0。再点「离开」见到黑市商人。<a href="playtest-2026-11-15/day01-encounter.jpg">事件</a> · <a href="playtest-2026-11-15/day01-battle.jpg">战斗</a> · <a href="playtest-2026-11-15/day01-stats.jpg">战报</a> · <a href="playtest-2026-11-15/day01-balance.jpg">到账</a></p>
+    <h3>黑市与装配</h3>
+    <p><b>进去看看 → 点商品</b>　花 4 金币购买肩部武器，余额 28 → 24，空栏自动装上，机甲模型出现肩部武器。后来买入背部组件也自动装上。商人另列「跳过商店（金币 +5）」，本局走了进店分支。<a href="playtest-2026-11-15/day01-shop.jpg">商店</a> · <a href="playtest-2026-11-15/day01-shoulder.jpg">购入之后</a></p>
+    <p><b>↑ XP</b>　每点一次花 4 金币买 4 经验。点两次，余额 24 → 20 → 16，Lv.01 → 02 → 03。到三级后稳定显示 4,500 生命，商店第 3 个装备位出现商品。<a href="playtest-2026-11-15/day01-xp.jpg">经验按钮说明</a> · <a href="playtest-2026-11-15/day01-shop-lock.jpg">三级商店</a></p>
+    <p><b>锁、重掷、配件、右箭头</b>　锁图标可来回切换，提示称锁定后下次进店保留货品。解锁后点商店重掷，货品更新，余额 12 → 10。点标价 2 的单格配件后余额为 8，在仓库可见。拖向手部卡槽出现「目标插槽无效，无法使用」，正确装入仍待验证。商店右上箭头推进至林恩的日末对抗。<a href="playtest-2026-11-15/day01-rerolled-shop.jpg">新货</a> · <a href="playtest-2026-11-15/day01-socket-message.jpg">插槽反馈</a></p>
+    <h3>日末对抗与跨天</h3>
+    <p><b>进入战斗 → 查看对手 → 免费重掷 → 战斗</b>　「进入战斗」先给对手预览。眼睛图标展开或收起五栏装配。本次免费次数 2 → 1 → 0，余额保持 8，最后一名对手生命为 1,500。我方 4,500 生命、四件装备，点击「战斗」发起对抗。<a href="playtest-2026-11-15/day01-opponent.jpg">对手详情</a> · <a href="playtest-2026-11-15/day01-duel.jpg">自动对抗</a></p>
+    <p><b>统计 → 返回 → 继续 → 离开</b>　首日日末胜利给 1 奖杯、2 经验、26 金币（收入 25、利息 1）。战报中手部武器输出 750，购入的肩部武器输出 720。点「继续」回林恩事件，点「离开」才进入第 2 天。装备卡显示的主属性也随跨天变化，躯干护盾 495 → 545。<a href="playtest-2026-11-15/day01-trophy.jpg">奖杯结算</a> · <a href="playtest-2026-11-15/day01-duel-stats.jpg">输出明细</a> · <a href="playtest-2026-11-15/day02-start.jpg">次日起点</a></p>
+    <p><b>后续验证</b>　第 2 天验证自选科技、备用装备出售和换序连槽。第 7 天售出消耗品增加 6,000 生命，第 9 天售出全面超频后肩武冷却从 9.5 秒变为 9.1 秒。战斗倍速和锁店跨次保留仍待专门对照。<a href="playtest-2026-11-15/run.html">跨天记录</a></p>
+  </div></details>
+  <details class="memory" id="opponent-issue"><summary>已复现的显示问题 · 两局均出现对手详情旧名字</summary><div class="observed">
+    <p>在第 1 天日末选敌页展开眼睛图标，保持详情打开，点击免费重掷。预期对手卡与详情标题同时切换到新名字。两次重掷都更换了右侧名字、机甲和左侧装备，左侧详情标题仍显示上一名对手。第二次右侧已是 songogoku81，左侧仍为上一人的中文名。</p>
+    <p>第一次收起再展开详情，两处名字恢复一致。第 8 天再次发生。<a href="bugs/001-opponent-name/index.html">独立报告与六张原图</a></p>
+  </div></details>
+  <details class="memory" id="issues"><summary>本局问题记录与截图</summary><div class="observed">
+    <p><a href="bugs/001-opponent-name/index.html">001 · 重掷后详情名滞后</a>，首日两次，第 8 天再次出现。</p>
+    <p><a href="bugs/002-resumed-xp/index.html">002 · 同一补给页经验从 2/14 变为 0/8</a>，推进事件后恢复，触发条件待复测。</p>
+    <p><a href="bugs/001-opponent-name/index.html">001 · 第二局补充</a>，第11天连续两次重掷，详情仍保留最初打开时的名字，已保存三张对照图。</p>
+    <p><a href="bugs/003-sale-overlay/index.html">003 · 离店后出售提示残留</a>，第二局第12天事件与奖励页面再次可见，已补原图；最短触发步骤待复测。</p>
+    <p><a href="bugs/004-weapon-tooltip/index.html">004 · 增伤后卡面 850、说明每击 170</a>，待确认显示口径及实际命中伤害。</p>
+    <p><a href="bugs/005-damage-precision/index.html">005 · 武器说明显示六位小数</a>，末战单次观察。</p>
+    <p><a href="bugs/006-opponent-segments/index.html">006 · 对手卡片段数与说明、战斗不一致</a>，第16天配件+3、说明6次、战斗6段，卡片仍3段；显示不一致已复现，战斗计算错误未证实。</p>
+    <p><a href="bugs/007-zero-damage-review/index.html">候选007 · 零输出及统计核查</a>，可能是禁用与冷却导致没有有效攻击，尚无统计漏记证据，单独保存战斗与三页统计。</p>
+  </div></details>
+  <div class="workbench">
+    <div class="map" id="route-map" role="group" aria-label="流程节点"></div>
+    <article class="inspect" id="inspector" aria-labelledby="step-title">
+      <div class="kicker" id="step-type"></div><h3 id="step-title" tabindex="-1"></h3>
+      <dl class="facts"><div><dt>先看什么</dt><dd id="step-observe"></dd></div><div><dt>怎样决定</dt><dd id="step-act"></dd></div><div><dt>留下的证据</dt><dd id="step-record"></dd></div></dl>
+      <div class="next"><strong class="fine">按观察结果继续</strong><div class="actions" id="next-actions"></div></div>
+      <div class="actions"><button type="button" class="back" id="back-map">↑ 返回流程图</button></div>
+    </article>
+  </div>
+  <p class="caption">玩法依据来自玩家交接。每个动作都用新截图核实。流程图中的分支是设计提案，点选只用于推演。</p>
+  <details class="memory"><summary>换一局或换一个 AI 会话后，哪些东西应该记得？</summary>
+    <dl><div><dt>按钮与页面</dt><dd>以游戏版本、页面和控件特征索引。保存用途、代价、操作前后画面、返回路径与验证状态。下次先匹配当前画面，遇到反例时重新预测。</dd></div>
+    <div><dt>决策与策略</dt><dd>每次动作保存局号/日号、状态、用到的策略版本、预期、实际和证据。跨局只提取带适用条件的规则，保留支持样本、反例和旧版。在下一次匹配时检查 AI 是否选了新动作、结果是否改善。</dd></div>
+    <div><dt>问题与恢复位置</dt><dd>疑似缺陷单独保存预期依据、复现步骤、复现次数/总尝试数和截图。中断时写下最后已确认画面与下一动作，接手时用新截图核对。以上记录拟随项目保存在本地，供新会话读取。</dd></div></dl>
+  </details>
+</section>
+<section class="feedback" id="feedback" aria-labelledby="feedback-heading">
+  <div class="sectionhead"><h2 id="feedback-heading">同一个动作，遇到不同反馈怎么办？</h2></div>
+  <p class="hint">以下均为假设情境。改变看到的结果，比较 AI 应更新哪条认识、下一次应做什么。</p>
+  <div class="lab-grid"><div class="fields">
+    <label>要检验的假设<select id="case-select"></select></label>
+    <label>实际看到的结果<select id="observation"></select></label>
+  </div><div class="outcome" aria-live="polite"><h3 id="outcome-name"></h3><dl><dt>更新哪条认识</dt><dd id="outcome-memory"></dd><dt>下一次怎样行动</dt><dd id="outcome-action"></dd></dl></div></div>
+</section>
+<section class="review" id="review" aria-labelledby="review-heading">
+  <div class="sectionhead"><h2 id="review-heading">把你的经验带进下一次选择</h2><p class="hint">可以直接在对话里说，也可以在这里起草后复制。</p></div>
+  <div class="review-grid"><div class="fields">
+    <label>玩家补充的机制线索<textarea id="prior" rows="3" maxlength="1500" placeholder="例如，哪些属性、界面提示或摆放规则值得 AI 自己验证？"></textarea></label>
+    <label>独立操作稳定后，第一轮重点<select id="priority">
+      <option>先跑通游戏，再逐个验证沿途按钮</option><option>验证一条经验能否改变下一次行动并改善结果</option><option>走通一局，沿途积累按钮和策略证据</option><option>先画出机库的按钮与页面关系</option><option>优先验证插槽与配件搭配</option><option>优先复测阻碍推进的异常</option>
+    </select></label>
+    <label>游戏证据达到什么程度时采用候选打法？<select id="adoption">
+      <option>在相近条件下重复看到收益，再暂用并观察反例</option><option>先小范围试用，每次与原打法对照，再决定是否保留</option>
+    </select></label>
+    <label>你想调整哪一条规则？<textarea id="notes" rows="3" maxlength="1500" placeholder="例如，遇到陌生按钮时，哪些情况允许 AI 自己试？"></textarea></label>
+  </div><div><h3>本轮讨论稿</h3><div class="summary" id="discussion"></div><div class="actions"><button type="button" class="main-button" id="copy">复制讨论稿</button><span id="copy-status" class="fine" role="status"></span></div><p class="caption" id="save-status"></p></div></div>
+</section>
+</main>
+<footer class="wrap foot"><span>《猫壳机动队》Demo · 基于仓库版本 848d471</span><a href="./README.md">查看原始试玩交接 ↗</a></footer>
+<script>
+"use strict";
+// The map and the inspector use the same node IDs. Transitions describe observations.
+const lanes = [
+  { title:"接管与认按钮", ids:["start","button","baseline"], note:"从可重建的画面开始，先分清「点到了」与「界面变了」。" },
+  { title:"开局与事件", ids:["challenge","event","encounter"], note:"机师页确认新局或续局。事件可给装备、开商店或触发自动战斗。" },
+  { title:"每日配置", ids:["hangar","equip","spend"], note:"买装备或经验后核对余额与装配。离开事件再确认下一站。" },
+  { title:"当天对局", ids:["opponent","battle","result"], note:"结算可回到下一天的机库；明确出现整局结束画面才进入跨局复盘。" },
+  { title:"跨局经验", ids:["candidate","compare","adopt"], note:"把一条可检验的改变带入相近对局；保留旧策略以便对照和回退。" },
+  { title:"任意阶段的异常", ids:["triage","reproduce","report"], note:"先确认画面、输入和规则，再决定是否登记游戏缺陷候选。" }
+];
+const steps = {
+  start: {
+    label:"接管窗口", type:"接管 / 仓库实测起点", title:"先证明 AI 看的是游戏，也点得动",
+    see:"确认前台游戏进程、版本、窗口尺寸、缩放和起始画面。若已在机库，直接从设置开始。",
+    act:"Windows 实测从健康提示点「继续」进入大厅，右上齿轮打开菜单，再点「设置」。设置选择「取消」，然后点菜单「继续」返回大厅。每一步对照新截图。",
+    log:"保存操作前后图、窗口身份、输入与耗时。人工代点单列，AI 独立成功数单独计算。",
+    next:[["找到可操作控件","button"],["画面或输入异常","triage"]]
+  },
+  button: {
+    label:"学按钮", type:"感知 / 按钮记忆", title:"给按钮写一条能被推翻的解释",
+    see:"从页面标题、按钮文字、图标、启用态、悬停提示和附近资源读出上下文。同一位置换了页面就重新识别。",
+    act:"把「在大厅点齿轮会直接进入设置」当作待测预测。实测先出现菜单，要再点一次「设置」。把这一步写入按钮记忆，再用同样的方法核对下一个控件。",
+    log:"记下游戏版本、所在页面、视觉特征、预测作用、实际前后状态、代价、返回路径和证据来源。仅有高亮时保留为候选，反例出现时降级。",
+    next:[["开始游玩","challenge"],["抽查操作可靠性","baseline"],["在构筑页认出新控件","hangar"],["结果不符","triage"]]
+  },
+  baseline: {
+    label:"校验操作", type:"接管 / 交接参考值", title:"先把操作可靠性和玩法水平分开",
+    see:"首次设置往返成功后，抽查 20 次操作和 30 条文字。仓库的首轮参考值为操作至少 19/20、文字完整读对至少 27/30。",
+    act:"达到参考值后从可重建的起点跑十分钟。十分钟是观测点，记下停点后可继续尝试完整一局。未达参考值就定位输入或识别的问题。",
+    log:"记录起止画面、决策数、成功动作/总动作、等待、人工介入、可取得的 token。缺失指标标为未知。",
+    next:[["从大厅开始试玩","challenge"],["操作或读字不稳","triage"]]
+  },
+  challenge: {
+    label:"开新局", type:"实测 / 挑战赛", title:"用机师按钮和初始面板确认是哪一局",
+    see:"从大厅开始游玩，选择全球区服并确认。连接成功后选挑战赛，在机师页读取「开始」或「继续」。",
+    act:"要新开时选择机师并点「开始」。进入构筑页后先读天数、胜负、余额和装备。遇到旧局时先保留其进度。",
+    log:"本次新局为第 1 天，0 胜 0 负、0 金币、生命 1,500，五个装备栏空。",
+    next:[["第 1 天空装备","event"],["进入已有局，辨认当前阶段","hangar"],["连接返回大厅","start"]]
+  },
+  event: {
+    label:"读事件", type:"实测 / 事件阶段", title:"先看是谁给选项，再预测按下后的画面",
+    see:"事件页同时显示人物、选项、金币及当前装备。母盒给初始装备，林恩可以发起战斗，商人提供黑市入口，数据经纪人提供科技。",
+    act:"母盒自选项展开三张卡，点击一张完成绑定。随机武器附带 3 金币。「离开」推进剧情，重新读当前人物和选项。",
+    log:"记录所选分支、装备前后、余额及天数。第 2 天自选看到了三项科技，悬停可读词条，点选后「急速核心」进入科技栏。",
+    next:[["获得装备","equip"],["林恩事件出现绿色对手卡","encounter"],["商人开店","spend"],["日末出现对手预览","opponent"],["新按钮含义待核对","button"]]
+  },
+  encounter: {
+    label:"打事件战", type:"实测 / 首日林恩事件", title:"点击事件对手卡，打完再核对奖励",
+    see:"首日林恩出示绿色敌人卡。本次双方初始生命分别为 1,500 和 1,000。",
+    act:"点卡后等待自动战斗。读取胜负与奖励，点统计看输出，返回结算后继续。",
+    log:"本次事件战胜利，金币 +25、经验 +0。回事件页时余额 28，挑战赛胜负仍为 0/0。",
+    next:[["胜负与奖励已出现","result"],["离开已结算事件","event"]]
+  },
+  hangar: {
+    label:"读构筑面板", type:"每日 / 状态快照", title:"先弄清今天有什么、缺什么",
+    see:"读取游戏日、等级、血量、资源、升级费、商品，以及五个装备区域的原名、配件和插槽。未知字段标为待查。",
+    act:"从上一战继承一个问题，例如「买新配件前，现有配件能否通过换位接上？」。首日优先选择能从画面确认且可撤回的尝试。",
+    log:"为本局和游戏日编号。存机库截图、当日目标、可选动作与预期变化。",
+    next:[["可以先试装","equip"],["需要比较资源用途","spend"],["已准备好","opponent"],["控件含义不明","button"]]
+  },
+  equip: {
+    label:"试装备与插槽", type:"每日 / 第 2 天已实测", title:"把装备属性、卡序与仓库一起读",
+    see:"打开仓库，读在场与备用卡的属性、冷却、被动、售价和左右插槽。把五件卡看成一整排，标出每枚配件可共享的两个端点，比较属性与品质匹配。",
+    act:"先试可还原的排序：核心武器放内侧，争取左右都能接桥。一次改一处，核对连接线与两端属性；替换装备或同款合成后再查全部连接。拖拽失败先排除仓库滚动和抓取端点错误。",
+    log:"保存变动前后的同区域截图、装备原名和属性差异。进入战斗前再保留最终配置。",
+    next:[["评估升级或购买","spend"],["配置已完成","opponent"],["界面表现反常","triage"]]
+  },
+  spend: {
+    label:"升级或购买", type:"每日 / 资源决策", title:"这笔资源现在解决哪个问题？",
+    see:"比较可用金币、可售物品、同款合成、升级奖励、商品被动与兼容插槽。本版本每满5金币得1利息、上限10；记录战前余额并核对实收。最后一战没有下一天的留息收益。",
+    act:"有可用槽位且商品能补当前短板时考虑购买；界面给出的升级收益更切合目标时考虑升级。证据不足可保留资源。操作前写下选择与预期。",
+    log:"核对资源差额、等级、背包和已装备物品，区分「已买到」与「已装上」。若界面仍在过渡，先等待再核对。",
+    next:[["购入后回到装配","equip"],["升级后重读机库","hangar"],["保留资源或完成配置","opponent"],["结算与标价不符","triage"]]
+  },
+  opponent: {
+    label:"选对手", type:"战前 / 有代价的选择", title:"保留对手，还是用掉一次重随？",
+    see:"双方都读生命、每击伤害、段数、冷却和被动。把第一轮启动与持续成长分开，估护盾、治疗、控制和最大生命削减。首局低血量对手有护盾转伤；第二局第12天敌方单件供盾220,899，血量不足以代表耐久。",
+    act:"能说出具体不利搭配且按钮可用时再考虑重随；缺乏依据时可以保留当前对手。重随后重读对手与按钮状态。",
+    log:"记下前后对手、是否使用机会与理由，保存最终敌我配置，和结算图共用局号、日号。",
+    next:[["保留或已重随，开战","battle"],["重随按钮反馈异常","triage"]]
+  },
+  battle: {
+    label:"观察战斗", type:"战中 / 记录反馈", title:"带着一个预测看完战斗",
+    see:"根据玩家说明，开战后配置固定。确认进入战斗的画面，观察可见的触发提示、持续时间及结束信号。",
+    act:"围绕战前预测观察，例如「接上的配件会有可见触发」。在结算前保持配置，遇到等待先确认是否仍在推进。",
+    log:"记下局号、日号、对手、关键画面和可观察到的触发。看不清的效果标为未知。",
+    next:[["出现结算","result"],["持续无进展","triage"]]
+  },
+  result: {
+    label:"读战后结算", type:"战后 / 反馈归因", title:"把伤害表对回战前配置",
+    see:"读取胜负与伤害、防御、增益三页，核对摘要、对手、时长和战前预测。先查大量护盾、吸血或削减生命是否解释结果；底部×N口径未确认，不直接解释为释放次数。",
+    act:"分别判断操作是否成功、按钮解释是否成立、打法是否有收益。单次胜负只产生线索。出现次日入口继续配置，出现整局终局才记录最终成绩。",
+    log:"逐项核对赛前预测、最佳物品和伤害、防御、增益三页，区分一次攻击、命中段数和状态来源。第 10 天燃烧合计 659 = 432 + 156 + 71。注明对账差额、可能解释及下一次验证。",
+    next:[["继续后回到事件","event"],["离开后进入下一天","hangar"],["形成候选经验或整局结束","candidate"],["伤害表现与提示矛盾","triage"]]
+  },
+  candidate: {
+    label:"提出改动", type:"学习 / 生成候选策略", title:"把经验写成下一局能执行的条件",
+    see:"取出同版本的按钮记忆、每日快照、决策记录与战后表。把玩家说明、界面文字、实机证据和策略推测分别标明。",
+    act:"只选一条决策改动。例如「已有配件空置，且可还原换位时，先试接通再花钱」。写下原打法、预期收益、适用条件及会推翻它的观察。",
+    log:"记录原策略版本、候选规则、关联局/日和比较指标。证据不足时标为待测；整局报告另记终点、人工帮助及未解问题。",
+    next:[["找相近对局验证","compare"],["缺少可比较的局","hangar"]]
+  },
+  compare: {
+    label:"对照复测", type:"学习 / 评价策略", title:"尽量只改变一条决策",
+    see:"寻找同版本、相近日次、资源、敌我配置与战斗时长的样本。可以重建起点时，用旧策略跑参照，再试候选策略。",
+    act:"按目标比较收益，例如配件是否生效、该部件的单位时间伤害、相同资源下推进到哪一天。记录胜负、额外支出与人工介入，避免把弱对手带来的高伤害算给换装。",
+    log:"保留原始分子与分母、支持样本、反例和差异条件。无法匹配时把结果留作线索。",
+    next:[["已取得可比较证据","adopt"],["条件不相近，继续采样","hangar"]]
+  },
+  adopt: {
+    label:"采用或回退", type:"学习 / 写回决策记忆", title:"让证据真的改变下一次行动",
+    see:"检查候选策略相对旧策略的结果、成本、反例及适用范围，按本页选定的采用条件评估。",
+    act:"证据支持时将候选设为该情境的优先动作；结果混杂则继续采样；出现稳定退化就回退旧版。新版本或新页面出现后重新验证相关经验。",
+    log:"记录起效版本、变更前后规则、依据与回退条件。下次进机库先匹配适用条件，在决策记录中引用用到的规则。",
+    next:[["带着新规则进入下一局","hangar"],["缩小适用范围再复测","compare"]]
+  },
+  triage: {
+    label:"定位异常", type:"异常 / 任意节点可进入", title:"先分清是操作失败、误解规则，还是游戏异常",
+    see:"保留原图并重新截图，核对焦点、窗口、缩放、遮挡、加载、OCR 和按钮启用态；查看费用、提示、仓库或背包。",
+    act:"如果目标没收到输入，回到接管校验。若提示解释了结果，修正按钮或规则认识。若输入已被游戏接受且结果仍与可引用的预期矛盾，开始复测。",
+    log:"记录最初预期及依据、实际状态、已排除的原因和人工介入。会消耗资源的操作，先重建起点再尝试。",
+    next:[["输入问题，重新校验","start"],["规则已解释，更新认识","button"],["游戏缺陷候选","reproduce"]]
+  },
+  reproduce: {
+    label:"最小复现", type:"异常 / 普通玩家操作", title:"从干净起点重走最短步骤",
+    see:"找出可重建存档或相同前置条件，如版本、游戏日、余额和商品状态。记录一次正常对照。",
+    act:"从同一起点按最短键鼠步骤复测，一次只改一个条件。对偶发情况保留复现次数/尝试次数；无法重建时保存线索，等待再次触发。",
+    log:"保留前后截图、输入与时间、预期依据、实际表现和每次结果。必要时记一组人工复核，与 AI 操作结果分开。",
+    next:[["有重复证据，整理报告","report"],["偶发或起点缺失，保留线索","report"],["发现判断有误","triage"]]
+  },
+  report: {
+    label:"归档与恢复", type:"异常 / 报告与续玩", title:"让另一个测试者能复查，再回到试玩",
+    see:"核对版本、前置条件、最短步骤、预期依据、实际结果、发生次数/总尝试数及截图。区分重复复现、偶发待查、规则误解、操控问题。",
+    act:"记录影响及是否阻塞。如果还能继续，就从最近快照恢复；无法继续则保存停点。游戏更新后按同一步骤回归验证。",
+    log:"建立本地问题记录，关联原局、日与截图。把可绕行条件写入本局记忆，保留原始异常证据供复查。",
+    next:[["重建机库状态续玩","hangar"],["仍受阻，重新定位窗口","start"]]
+  }
+};
+const examples = [
+  {
+    title:"大厅齿轮是进入设置的第一步", outcomes:[
+      ["光标悬停后齿轮高亮","按钮作用仍待核实","保存「可悬停」及其所在画面。高亮只证实这一层反馈。","记录打开设置的预测，单击一次，再取新图核对标题。"],
+      ["点齿轮进入菜单，再点设置后出现选项","增加一条已观察的按钮解释","在此版本的大厅中，齿轮先打开菜单，再点设置进入选项页。","下次先核对菜单里的「设置」，进入后用「取消」返回菜单。"],
+      ["点击后没有变化，焦点已离开游戏","转为操控问题","这次结果无法检验齿轮的含义。将窗口焦点丢失记入操作日志。","重新定位窗口，确认新图里目标可用，再从可还原的位置试一次。"]
+    ]
+  },
+  {
+    title:"先接通已有配件，能改善输出", outcomes:[
+      ["赢了这一战，但对手更弱、战斗时间不同","保留策略假设","结果缺少可比条件。保存战前配置、对手和时长，维持原有策略优先级。","在相近日次和敌我配置中对照两种打法，记录该部件伤害和时长。"],
+      ["相近条件下多次改善，资源支出没有增加","在匹配条件下采用候选打法","保存各次结果、对照与原策略版本，把「已有闲置配件且换位可逆」写入适用条件。","下次匹配该条件时，先试接通再逛商店，并记录是否继续获益。"],
+      ["采用后持续退化，原策略复测恢复","回退并缩小适用范围","保留负向样本和回退原因，恢复原策略的优先级。","回看对手与插槽条件，重新提出更窄的假设。"]
+    ]
+  },
+  {
+    title:"点击购买后，商品应按界面说明到账", outcomes:[
+      ["资源已扣，背包暂未查","登记待查异常","保留标价、购买前后资源与商品画面。到账位置、延迟和数量仍待核实。","先等待并查看背包、容量提示及物品数量，避免再次付费。"],
+      ["商品随后出现在背包，需要手动装备","修正对购买按钮的解释","把购买和装备记录为两个状态变化，保存入包及装上的证据。","下一次购买后先查背包，再进入装配步骤。"],
+      ["相同起点可重复扣费，物品始终未到账","整理可复查的游戏缺陷候选","将版本、正常购买对照、提示原文、最短步骤及每次前后图关联到同一问题。","登记复现次数/总尝试数及影响，保留停点或已验证的绕行方法供回归。"]
+    ]
+  }
+];
+const $ = id => document.getElementById(id);
+const nodeButtons = new Map();
+function makeButton(label, className, handler) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = className;
+  button.textContent = label;
+  button.addEventListener("click",handler);
+  return button;
+}
+function renderMap() {
+  for (const lane of lanes) {
+    const group = document.createElement("div");
+    group.className = "lane";
+    const heading = document.createElement("h3");
+    heading.className = "lane-label";
+    heading.textContent = lane.title;
+    const row = document.createElement("div");
+    row.className = "routes";
+    lane.ids.forEach((id,index) => {
+      if (index > 0) {
+        const arrow = document.createElement("span");
+        arrow.className = "arrow";
+        arrow.textContent = "→";
+        arrow.setAttribute("aria-hidden","true");
+        row.append(arrow);
+      }
+      const button = makeButton(steps[id].label,"node",() => showStep(id,true));
+      button.setAttribute("aria-controls","inspector");
+      nodeButtons.set(id,button);
+      row.append(button);
+    });
+    const note = document.createElement("p");
+    note.className = "map-note";
+    note.textContent = lane.note;
+    group.append(heading,row,note);
+    $("route-map").append(group);
+  }
+}
+let activeStep = "start";
+function showStep(id,focus = false) {
+  const step = steps[id];
+  activeStep = id;
+  for (const [key,button] of nodeButtons) button.setAttribute("aria-pressed",String(key === id));
+  $("step-type").textContent = step.type;
+  $("step-title").textContent = step.title;
+  $("step-observe").textContent = step.see;
+  $("step-act").textContent = step.act;
+  $("step-record").textContent = step.log;
+  $("next-actions").replaceChildren(...step.next.map(([label,target]) =>
+    makeButton(label + " →","choice",() => showStep(target,true))
+  ));
+  if (focus) $("step-title").focus();
+}
+$("back-map").addEventListener("click",() => nodeButtons.get(activeStep).focus());
+
+function setOptions(select, labels) {
+  select.replaceChildren(...labels.map((label,index) => new Option(label,String(index))));
+}
+function renderExample() {
+  const example = examples[Number($("case-select").value)];
+  const [,name,memory,action] = example.outcomes[Number($("observation").value)];
+  $("outcome-name").textContent = name;
+  $("outcome-memory").textContent = memory;
+  $("outcome-action").textContent = action;
+}
+function changeCase() {
+  const example = examples[Number($("case-select").value)];
+  setOptions($("observation"),example.outcomes.map(row => row[0]));
+  renderExample();
+}
+setOptions($("case-select"),examples.map(item => item.title));
+$("case-select").addEventListener("change",changeCase);
+$("observation").addEventListener("change",renderExample);
+changeCase();
+
+const draftKey = "cat-shell-rsi-discussion-v1";
+const draftFields = ["priority","adoption","notes","prior"];
+function restoreDraft() {
+  try {
+    const draft = JSON.parse(localStorage.getItem(draftKey) || "{}");
+    for (const id of draftFields) {
+      const field = $(id);
+      const value = draft?.[id];
+      if (typeof value !== "string") continue;
+      if (field.tagName === "TEXTAREA") field.value = value.slice(0,field.maxLength);
+      else if (Array.from(field.options).some(option => option.value === value)) field.value = value;
+    }
+  } catch { /* The page also works when storage is unavailable. */ }
+}
+function updateDraft(save) {
+  const draft = Object.fromEntries(draftFields.map(id => [id,$(id).value]));
+  const lines = ["《猫壳机动队》RSI 工作流讨论稿","首轮重点 · " + draft.priority,"策略采用条件 · " + draft.adoption,
+    "每次决策保留前后画面、预测、实际结果和下一次动作。异常先排查输入与规则，再复测。"];
+  if (draft.prior.trim()) lines.push("玩家先验（待实测） · " + draft.prior.trim());
+  if (draft.notes.trim()) lines.push("我的修改 · " + draft.notes.trim());
+  $("discussion").textContent = lines.join("\n");
+  $("copy-status").textContent = "";
+  if (!save) return;
+  try {
+    localStorage.setItem(draftKey,JSON.stringify(draft));
+    $("save-status").textContent = "已在当前浏览器保存选择。复制讨论稿后可贴回对话。";
+  } catch {
+    $("save-status").textContent = "当前浏览器无法保存选择，可复制讨论稿带回对话。";
+  }
+}
+$("copy").addEventListener("click",async () => {
+  try {
+    await navigator.clipboard.writeText($("discussion").textContent);
+    $("copy-status").textContent = "已复制，可贴回对话。";
+  } catch {
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents($("discussion"));
+    selection.removeAllRanges();
+    selection.addRange(range);
+    $("copy-status").textContent = "讨论稿已选中，请使用系统复制。";
+  }
+});
+for (const id of draftFields) $(id).addEventListener($(id).tagName === "TEXTAREA" ? "input" : "change",() => updateDraft(true));
+renderMap();
+showStep("start");
+restoreDraft();
+updateDraft(false);
+</script>
+</body>
+</html>

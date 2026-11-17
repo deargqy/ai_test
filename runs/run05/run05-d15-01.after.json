@@ -1,0 +1,11 @@
+{
+  "observed": "44金升级已成功：Lv15为MAX LEVEL，HP191000，S85%而非预想更高档。余额84，已进入黑市。原装备阶级不变。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day15-s0-p0.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "生命与余额支持；XP2预测反驳，15级直接满级。S仅升5个百分点。",
+  "nextAction": "批读整店并比较装备/配件组合"
+}

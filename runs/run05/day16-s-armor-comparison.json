@@ -1,0 +1,115 @@
+{
+  "runId": "run05",
+  "day": 16,
+  "phase": "shop-advice",
+  "operation": "read-only; user operates the game",
+  "snapshot": {
+    "wins": 14,
+    "losses": 1,
+    "hp": 191000,
+    "gold": 42
+  },
+  "memories": [
+    "M02r6",
+    "M05r11",
+    "M06r1",
+    "M07r6",
+    "M09r4"
+  ],
+  "candidate": {
+    "name": "MP-001 塞玛·量产",
+    "grade": "S",
+    "price": 32,
+    "baseShield": 1230,
+    "firm": 82,
+    "cooldown": 13,
+    "ports": [
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "active": "超载IV；护盾；坚固",
+    "passive": "获得坚固时，使随机一件装备获得加速，持续2.5秒"
+  },
+  "current": {
+    "name": "AGM-K08 塞玛·祸津神",
+    "grade": "B",
+    "baseShield": 1260,
+    "forceWithBlue": 48,
+    "cooldownObservedNow": 10.1,
+    "ports": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "passive": "力量现在额外提供1层伤害",
+    "forceDefinition": "每层进攻型装备+2伤害，召唤组件仅获得力量10%收益；额外1层的具体乘区仍未隔离"
+  },
+  "sameBridgeComparison": {
+    "assumption": "主属性+10%科技，力量主属性长桥保留；长桥对力量+600%，对新坚固甲仅+200%",
+    "currentShield": 8946,
+    "candidateShield": 3813,
+    "loss": 5133,
+    "candidateTotalPorts": 19,
+    "connectedAfterRelocatingBlueToArmorLeftBottom": 16,
+    "blockedPorts": [
+      "hand right middle",
+      "armor left middle"
+    ],
+    "freePort": "armor right top",
+    "note": "仅审计原顺序/原桥端点；其他顺序可另枚举。蓝附魔新位置是否仍产生4力量必须实机验，不能当增加坚固。"
+  },
+  "alternatives": [
+    {
+      "action": "保留旧甲",
+      "benefit": "保留力量增伤、已有成长与8946盾基线，不花32",
+      "cost": "没有坚固触发随机加速；仍只有2孔",
+      "unknown": "力量被动边际增伤及新对手时序"
+    },
+    {
+      "action": "买S甲试换，旧甲留库",
+      "benefit": "手/肩获得坚固可触发随机加速，强化第二轮；多一个原布局真实空位",
+      "cost": "32金后余10；丢旧力量被动；主盾更少、主动13秒更慢",
+      "unknown": "加速是否刷新/叠加、随机目标与实际有效触发频率；新孔能否装入更优现有配件"
+    }
+  ],
+  "recommendation": "倾向购买试换，旧甲先保留。理由为多段坚固触发加速循环，并非S等级。未宣称已算出战力净增或最优布局。",
+  "prospectiveChecks": [
+    "获得坚固后是否出现随机装备加速，以及是否落到手/肩/无人机",
+    "首次有效命中不会因为依赖命中后才启动的被动而自动提前",
+    "第二次核心启动是否提前，是否足以抵消失去力量增伤",
+    "重新布局后全部桥端点、蓝附魔与实际可用孔数"
+  ],
+  "purchaseOrEquipResult": "not verified; no autonomous purchase",
+  "evidence": [
+    "playtest-2026-11-16-run05/day16-new-s-armor-shop.jpg",
+    "playtest-2026-11-16-run05/day16-shop-s-armor-detail.jpg",
+    "playtest-2026-11-16-run05/day16-current-armor-detail.jpg"
+  ],
+  "excludedDetail": "day16-s-armor-overload.jpg shows a manual drag, not the overload definition",
+  "battleFollowup": {
+    "actualArmor": "B祸津神",
+    "offeredSArmorTested": false,
+    "outcome": "loss vs Rogas",
+    "causalConclusion": "未构成换甲试验；不能从本场裁决试换建议",
+    "evidence": "playtest-2026-11-16-run05/day16-gear-own-1.jpg"
+  }
+}

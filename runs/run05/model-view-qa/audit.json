@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "browser": "Edge headless",
+  "offline": true,
+  "viewport": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "linksChecked": 18,
+  "errors": [],
+  "checks": [
+    "10 parts and 21 ports",
+    "remove and reset",
+    "single beneficiary",
+    "drone lookup",
+    "keyboard tabs",
+    "combat facet",
+    "3 cases",
+    "unknowns",
+    "local links",
+    "mobile overflow"
+  ],
+  "manualVisualReview": [
+    "layout.jpg",
+    "combat.jpg",
+    "mobile.jpg"
+  ],
+  "modelBehaviorGroups": 7,
+  "opponentTests": 5,
+  "opponentFilterScenarios": 7,
+  "rsi": {
+    "memories": 9,
+    "days": 54,
+    "bugReports": 11
+  },
+  "limitations": [
+    "最后配置战报与终局胜负未知",
+    "静态移除试算不能模拟随机加速、控制和命中",
+    "尚无阅读耗时或独立战力预测改善测量"
+  ],
+  "decision": "保留可视化；玩法效果待新战验证"
+}

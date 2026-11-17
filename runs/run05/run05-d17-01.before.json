@@ -1,0 +1,87 @@
+{
+  "runId": "run05",
+  "day": 17,
+  "id": "run05-d17-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-17T03:57:42.034Z",
+  "before": {
+    "state": "60金；现装B背/B甲/S手/SS肩/S机；仓库S神速。商店S曙光与S甲各32，所有截图已冻结。",
+    "goal": "购买我选择的坚固循环方案，先筹足现金，不用静态最高DPS冒充最强。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day17-current-shop.jpg",
+      "playtest-2026-11-16-run05/day17-build-resume.jpg",
+      "playtest-2026-11-16-run05/day17-shop-gear2.jpg",
+      "playtest-2026-11-16-run05/day17-shop-gear3.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 11,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "整排1680排列搜索加六个显式方案比较"
+      },
+      {
+        "id": "M01",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "肩出手门槛优先，单孔CD给肩"
+      },
+      {
+        "id": "M02",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "区分支援触发与静态伤害"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "卖物到账后才消费"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "新实例不继承成长"
+      },
+      {
+        "id": "M07",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "确认孔位与被动，蓝附魔未知不预支"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留旧B背甲仅调配件",
+        "benefit": "保留物伤产盾与力量增伤，零支出",
+        "cost": "没有获得坚固随机加速与坚固装备成长",
+        "risk": "上战肩未兑现问题仍可能存在",
+        "unknown": "旧被动完整边际价值未隔离"
+      },
+      {
+        "action": "S甲+已有神速背",
+        "benefit": "仅32金，随机加速与2秒减速",
+        "cost": "神速成长主要服务力量支援装而非两件坚固核心",
+        "risk": "弃旧盾被动但未直接强化核心坚固",
+        "unknown": "循环实效未知"
+      },
+      {
+        "action": "S甲+曙光背，核心手肩直连加速",
+        "benefit": "快手产生坚固触发随机加速，曙光强化坚固核心，背全体减速2秒",
+        "cost": "64金币；需要卖闲置S神速16筹款；丢旧背甲被动，静态完整轮降低",
+        "risk": "循环未及时启动时可能弱于旧被动；没有完整战斗仿真",
+        "unknown": "随机目标、动画、蓝色附魔是否赋予力量标签"
+      }
+    ],
+    "chosenAction": "售仓库S神速+16后核现金76，买S曙光32与S加速甲32，余12；旧B背甲留库，按day17-selected.json布局。",
+    "prediction": "金币60→76→44→12；新装备入库，不自动升旧件。上场核心保留S虚空/SS链法/S力量无人机。装配另立build记录验收。"
+  }
+}

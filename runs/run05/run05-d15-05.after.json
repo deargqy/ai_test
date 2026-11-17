@@ -1,0 +1,12 @@
+{
+  "observed": "换序和左下多段长桥成功，手10段肩9段，手CD单孔已装左上。伤害长桥右中两次未装成，仍在库；未完成目标布局。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day15-selected-cd.jpg",
+    "playtest-2026-11-16-run05/day15-selected-damage.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "几何图不等于操作成功；停止重试右中落点，改已核左中路线。",
+  "nextAction": "离线新增两长桥走左侧候选，遮孔转手右中，肩五孔全部有效；火控改肩右中。"
+}

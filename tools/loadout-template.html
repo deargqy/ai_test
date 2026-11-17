@@ -3,7 +3,7 @@
 <style>
 :root{font-family:system-ui,sans-serif;color:#21362e;background:#f1f4ed}body{margin:0}main{max-width:1240px;margin:auto;padding:28px}h1{font-size:30px;margin:8px 0}h2{font-size:21px}p{line-height:1.7}a{color:#246650}header,.panel{background:white;border:1px solid #ccd6ca;border-radius:12px;padding:22px;margin-bottom:18px}.note{background:#fff3d9;border-left:4px solid #af8234;padding:12px 16px}label{display:inline-block;margin:8px 20px 8px 0}select{max-width:100%;padding:8px;border:1px solid #97afa2;border-radius:5px}.metrics{display:flex;gap:12px;flex-wrap:wrap}.metric{padding:12px;background:#edf3ed;border-radius:6px;min-width:135px}.metric strong{display:block;font-size:22px}.scroll{overflow:auto}svg{width:100%;min-width:850px;display:block}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;border-bottom:1px solid #d8e0d6;padding:10px;vertical-align:top}small{color:#62766c}li{margin:9px 0}button{padding:8px 14px;cursor:pointer}.pill{padding:3px 8px;background:#e7eee3;border-radius:12px;font-size:13px}footer{font-size:13px;color:#61756b;padding:12px}.legend{display:flex;flex-wrap:wrap;gap:12px}#candidates{width:100%}
 </style><main>
-<header><a href="play-flow.html">← 每日流程</a><h1>装备、孔位与配件，放在一起比较</h1><p>run05 · 第14天暂停快照 · 离线组合候选，不会操作游戏</p><div class="note">候选都尚未实机验证。静态数值不含战斗成长、控制、动画与随机充能；不代表首击时间、胜率或全局最优。截图来自已保存现场，不是实时画面。</div></header>
+<header><a href="play-flow.html">← 每日流程</a><h1>装备、孔位与配件，放在一起比较</h1><p>run05 · 第14天记录 · 离线组合候选，不会操作游戏</p><div class="note">仅明确标记“实机装配已核”的布局完成端点核验；其余仍为候选。静态数值不含战斗成长、控制、动画与随机充能；不代表首击时间、胜率或全局最优。截图来自已保存现场，不是实时画面。</div></header>
 <section class="panel"><h2>先看完整选项，再决定采购与安装</h2><p>读取整店与库存 → 枚举装备替换及排列 → 检查配件端点与占用 → 保留不同目标候选 → 比较触发链和预算 → 集中购买 → 按图装配并核实。</p><p id="scope"></p><label>桥身交叠假设 <select id="policy"><option value="0">保守：端点及桥身均不交叠</option><option value="1">待验证：只限制端点共用</option></select></label><label>排序依据 <select id="sort"><option value="2">启动代理：主核CD与互充</option><option value="0">基础输出代理</option><option value="1">防御代理</option><option value="cost">采购支出</option></select></label><p id="search"></p><select id="candidates" aria-label="组合候选"></select></section>
 <section class="panel"><h2 id="title">候选布局</h2><div class="metrics" id="metrics"></div><p id="buy"></p><p id="replace"></p><div class="scroll" id="diagram"></div><div class="legend" id="legend"></div><p><small>圆孔为录入的真实孔位；彩线为配件；标记“未用”的配件不计采购费用。横坐标按卡宽4格、左右孔间隔2格归一化。卡片本身不旋转。</small></p><div class="scroll"><table><thead><tr><th>装备 / 被动</th><th>基础单击 / 段数</th><th>单次盾 / 副属性</th><th>面板CD</th></tr></thead><tbody id="gear"></tbody></table></div><h3>连接端点与有效受益</h3><div id="connections"></div><p id="unused"></p></section>
 <section class="panel"><h2>当前与试装前基线</h2><p id="baseline"></p><p>上次失败约3秒、我方零伤害零盾。即使离线基础输出增加，也需要检查能否在死亡前产生有效命中。甲的坚固触发加速、背的被动盾等必须与核心的实际触发时间一起比较。</p></section>
@@ -23,14 +23,14 @@ $('baseline').textContent=D.baselineNote;
 let shown=[];
 function refresh(){
  const r=DATA.results[+$('policy').value], sort=$('sort').value;
- shown=[...r.candidates].sort((a,b)=>sort==='cost'?a.cost-b.cost:b.scores[+sort]-a.scores[+sort]);
+ shown=[...r.candidates].sort((a,b)=>Number(!!b.verifiedLayout)-Number(!!a.verifiedLayout)||(sort==='cost'?a.cost-b.cost:b.scores[+sort]-a.scores[+sort]));
  $('search').textContent=`枚举${r.metrics.equipmentOrders}个装备排列；扩展${r.metrics.expandedStates.toLocaleString()}个中间状态；评估${r.metrics.evaluatedFinals.toLocaleString()}个最终布局；保留${r.metrics.retained}个。计算${r.metrics.seconds}秒。每目标束宽${r.metrics.beamPerObjective}。`;
  $('candidates').innerHTML=shown.map((r,i)=>`<option value="${i}">${i+1}. ${esc(r.order.map(name).join(' → '))}｜采购${r.cost}金｜基础释放${r.metrics.baseVolley}｜核心CD和${r.metrics.coreCdSum}s</option>`).join('');
  show();
 }
 function show(){
  const r=shown[+$('candidates').value||0];if(!r)return;
- $('title').textContent='未验证候选：'+r.order.map(name).join(' → ');
+ $('title').textContent=(r.verifiedLayout?'实机装配已核，战斗未验：':'未验证候选：')+r.order.map(name).join(' → ');
  const vals=[['采购 / 余额',`${r.cost} / ${r.remainingGold}`],['两核心基础释放合计',r.metrics.baseVolley],['各装单次盾合计',r.metrics.shieldPerCastSum],['主核面板CD之和',r.metrics.coreCdSum+'s'],['两核每轮坚固合计',r.metrics.firmPerVolley]];
  $('metrics').innerHTML=vals.map(([k,v])=>`<div class="metric">${esc(k)}<strong>${esc(v)}</strong></div>`).join('');
  $('buy').textContent='采购清单：'+(r.purchases.map(name).join('、')||'无需新增购买')+'。未计出售收入；余额50以上不再增加利息。';
@@ -42,7 +42,7 @@ function show(){
  $('diagram').innerHTML=svg+'</svg>';
  $('legend').innerHTML=r.placements.map((p,i)=>`<span style="color:${colors[i%8]}">${i+1} ${esc(name(p.part))}</span>`).join('');
  $('gear').innerHTML=r.equipment.map(g=>`<tr><td><b>${esc(g.name)}</b><br><small>${esc(g.passive)}</small></td><td>${g.damage} × ${g.hits}</td><td>${g.shield} / ${g.element}<br><small>${esc(g.tags.join('/'))}</small></td><td>${g.cooldown}s<br><small>非有效首击时间</small></td></tr>`).join('');
- $('connections').innerHTML=r.placements.map((p,i)=>`<p><b>${i+1}. ${esc(name(p.part))}</b> · ${esc(p.owners.map(name).join(' ↔ '))}<br>有效受益：${esc(p.beneficiaries.map(name).join('、'))} · 占用${esc(JSON.stringify(p.points))}</p>`).join('');
+ $('connections').innerHTML=r.placements.map((p,i)=>`<p><b>${i+1}. ${esc(name(p.part))}</b> · ${esc(p.owners.map(name).join(' ↔ '))}<br>有效受益：${esc(p.beneficiaries.map(name).join('、'))} · 占用${esc(JSON.stringify(p.points))}<br><small>${esc(P[p.part].description||'')}</small></p>`).join('');
  $('unused').textContent='未使用配件：'+(r.unusedParts.map(name).join('、')||'无')+'。未用库存先保留到方案验证，未用商店候选不购买。';
 }
 $('policy').onchange=refresh;$('sort').onchange=refresh;$('candidates').onchange=show;refresh();

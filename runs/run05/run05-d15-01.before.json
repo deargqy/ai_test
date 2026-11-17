@@ -1,0 +1,70 @@
+{
+  "runId": "run05",
+  "day": 15,
+  "id": "run05-d15-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-17T02:55:38.623Z",
+  "before": {
+    "state": "13胜1负，128金，Lv14 XP8/50，HP164000，S80%；黑市进入或跳过20金。",
+    "goal": "增加容错与随后搜有效装备/配件的质量，保留84金采购",
+    "evidence": [
+      "playtest-2026-11-16-run05/day15-reward-ready.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "44升级与84购物预算一起比较"
+      },
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "血量仅增加启动容错，不当启动改善"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "角色等级和装备阶级区分"
+      },
+      {
+        "id": "M05",
+        "revision": 9,
+        "origin": "player",
+        "use": "applied",
+        "reason": "玩家建议升装备/补配件需在商店具体比较"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "花44金升15再进入黑市",
+        "benefit": "预计HP+27000、S概率提高；仍有84可购买核心配件",
+        "cost": "44金和跳过黑市的20金机会成本",
+        "risk": "经验不升级现有装备；生命不能保证扛住3秒爆发",
+        "unknown": "Lv15概率和HP以现场核对"
+      },
+      {
+        "action": "保持14级进入黑市",
+        "benefit": "128金全用于装备/配件和刷新",
+        "cost": "少一档基础生命与商店质量",
+        "risk": "关键补强未刷到时现金未转化",
+        "unknown": "本店内容未揭示"
+      },
+      {
+        "action": "拿20金跳过",
+        "benefit": "资金148",
+        "cost": "少一次寻找手部多段/启动补强的商店机会",
+        "risk": "继续用不完整布局",
+        "unknown": "下一阶段是否还有商店"
+      }
+    ],
+    "chosenAction": "买11次4经验升15，核数值后进入黑市；不连续升级",
+    "prediction": "余额128→84；Lv15 XP2、HP约191000、S概率高于80%；现有装备仍原阶级。"
+  }
+}

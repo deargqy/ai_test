@@ -1,0 +1,11 @@
+{
+  "observed": "原d14-03被物理Esc中断，之后玩家自行改装及升级；本次恢复无法区分中断动作最终效果。新图为无人机x7/肩3，不能归因旧自动操作。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day14-resume-after-reset.jpg"
+  ],
+  "operationResult": "unknown",
+  "predictionResult": "unknown",
+  "memoryDecision": "pending",
+  "reason": "玩家后续操作造成混杂，旧预测保留且不补记为成功。",
+  "nextAction": "由d14-04/05记录新状态上的独立决策与验证。"
+}

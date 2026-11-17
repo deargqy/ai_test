@@ -1,0 +1,11 @@
+{
+  "cases": 53,
+  "ownWins": 38,
+  "ownLosses": 15,
+  "linkedReferences": 314,
+  "missingLinks": [],
+  "unitTests": 5,
+  "pageFilterScenarios": 7,
+  "visualBrowserQA": false,
+  "unknownFinalDayExcluded": true
+}

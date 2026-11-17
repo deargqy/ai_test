@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 17,
+  "id": "run05-d17-04",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T04:07:22.598Z",
+  "before": {
+    "state": "12金；无人机双上孔200%短桥已装，左中/左下空；火控120%和蓝4力在库存。",
+    "goal": "把闲置单孔移到真正有效的无人机空孔。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day17-drone-self-bridge.jpg",
+      "playtest-2026-11-16-run05/day17-blue-back.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 11,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不要遗漏可用单孔；桥同件只算一次"
+      },
+      {
+        "id": "M07",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "用实测增量预测350+127"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "蓝切换有力量装备目标"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核实最终装备及端点"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留两单孔库存",
+        "benefit": "可供未来布局",
+        "cost": "当前少120%机伤害",
+        "risk": "无",
+        "unknown": "未来商店"
+      },
+      {
+        "action": "火控机左中、蓝机左下",
+        "benefit": "200%桥和120%单孔可同时作用同一无人机；蓝若成功+4力",
+        "cost": "核心收益不变",
+        "risk": "蓝装配仍可能失败",
+        "unknown": "蓝被拒绝的条件/操作因素"
+      }
+    ],
+    "chosenAction": "火控机左中；蓝机左下，按两次不同失败上限。",
+    "prediction": "无人机伤害350→477；若蓝成功力量10→14。手肩所有桥和数值保持。"
+  }
+}

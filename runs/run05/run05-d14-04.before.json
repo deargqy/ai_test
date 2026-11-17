@@ -1,0 +1,89 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "id": "run05-d14-04",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T02:41:39.625Z",
+  "before": {
+    "state": "玩家调整后62金、Lv14 XP6/50，S无人机x7，肩7462x3手4615x4，库存精械+4%/秒。新刀32，敌减益+20%长桥48。",
+    "goal": "验证整排模型与双受益+6桥，比较当前商店购买价值",
+    "evidence": [
+      "playtest-2026-11-16-run05/day14-resume-after-reset.jpg",
+      "playtest-2026-11-16-run05/day14-new-shop-sword.jpg",
+      "playtest-2026-11-16-run05/day14-new-shop-part.jpg",
+      "playtest-2026-11-16-run05/day14-new-inventory.jpg",
+      "playtest-2026-11-16-run05/day14-current-six-bridge.jpg",
+      "playtest-2026-11-16-run05/day14-current-hand.jpg"
+    ],
+    "memorySearch": "按build/shop阶段读取当前修订，比较玩家更新后的完整布局",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 8,
+        "origin": "player",
+        "use": "applied",
+        "reason": "先全局建模；手动补充被束搜索遗漏的召唤+双核加速候选"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "player",
+        "use": "applied",
+        "reason": "核端点与两次试装上限"
+      },
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "player",
+        "use": "applied",
+        "reason": "保留启动代价，手慢0.5秒与无人机快0.75秒权衡"
+      },
+      {
+        "id": "M02",
+        "revision": 5,
+        "origin": "player",
+        "use": "applied",
+        "reason": "新刀不是林弦百分比力量链；不照图标复制"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "player",
+        "use": "applied",
+        "reason": "库存免费改装优先于无已知链的48金配件"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "player",
+        "use": "applied",
+        "reason": "换刀计算旧成长损失"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "不买新物，+6桥接无人机和肩，伤害桥挪至肩右中—手右中",
+        "benefit": "保留无人机x7，肩3→9；原护盾桥、双核加速和坚固桥保留；库存成长装肩",
+        "cost": "200%短桥无核心位置；CD改无人机，手4.5→5秒",
+        "risk": "肩单次伤害7462→5822；桥身占用/锚点需实机核",
+        "unknown": "无人机7次部署336力量尚无战报；实际战力非静态分"
+      },
+      {
+        "action": "买32金力量刀",
+        "benefit": "按力量140%每次命中剥夺敌最大生命，可对高盾有效",
+        "cost": "旧650基础伤害及失盾成长丢失，CD5→6；伤害桥600%只给新刀200%",
+        "risk": "非每命中力量百分比增长；不保证比旧手强",
+        "unknown": "剥夺口径、对盾实际价值未实测"
+      },
+      {
+        "action": "买48金敌减益+20%长桥",
+        "benefit": "有已积累敌方减益时可按使用触发增长",
+        "cost": "剩14金，占长桥两孔",
+        "risk": "当前无已确认规模化敌减益链；不能当自己力量增长",
+        "unknown": "减速时长与最大生命剥夺是否列为可增幅减益未证实"
+      }
+    ],
+    "chosenAction": "保留62金；先拆必要配件交换无人机与甲为甲—背—无人机—肩—手，按day14-live-selected.json装配，最多两次不同失败后调整",
+    "prediction": "肩5822x9/95坚固，手4615x4/13坚固，甲背盾保持8236/5254；无人机x7/CD6.75、手CD5；精械装肩不改变战前基础面板；基础双核每轮40846→70858，仅静态指标。"
+  }
+}

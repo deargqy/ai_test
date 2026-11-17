@@ -1,0 +1,31 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "operator": "player",
+  "result": "win",
+  "wins": 13,
+  "losses": 1,
+  "opponent": "Dempsey",
+  "damage": {
+    "hand": 224902,
+    "shoulder": 85551,
+    "drone": 8172,
+    "total": 318625
+  },
+  "buffs": {
+    "droneForce": 621
+  },
+  "ownDefense": {
+    "back": 12691,
+    "armor": 8236,
+    "firm": 338
+  },
+  "reward": 74,
+  "interest": 10,
+  "unknown": [
+    "firstEffectiveHit",
+    "battleDuration",
+    "endHP"
+  ],
+  "prediction": null
+}

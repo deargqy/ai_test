@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 15,
+  "id": "run05-d15-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-17T03:06:26.342Z",
+  "before": {
+    "state": "34金，主要双核心桥已完成；元素短桥在库，蓝色+4力在无人机左上；现商店动量16/感电短桥32/坚固背32/感电甲32。",
+    "goal": "将已有元素桥转为力量供给，并有限搜索启动、同系高阶防具或有效段数配件。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day15-full-verified.jpg",
+      "playtest-2026-11-16-run05/day15-s1-g2.jpg",
+      "playtest-2026-11-16-run05/day15-s1-g3.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 9,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "库存桥只有一件受益也比较真实收益，双端不虚报"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "有限刷新预算不机械囤34"
+      },
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "搜索启动改善"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "同系升阶需保住被动"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "元素短桥接无人机左右上，蓝色移左下；刷新最多两次，每次2金并批读",
+        "benefit": "预计无人机14力升25力，单件两孔不算两个受益者；用4金寻找针对性补强",
+        "cost": "最多4金币；不给桥身下强塞单孔",
+        "risk": "刷新可能无有效货，残余30金未必有用",
+        "unknown": "下一商店；无人机元素取整待核"
+      },
+      {
+        "action": "直接当前配置出战",
+        "benefit": "保留34金币",
+        "cost": "已知元素桥闲置，少找启动机会",
+        "risk": "爬塔对手可能仍抢先手",
+        "unknown": "对手尚未揭示"
+      }
+    ],
+    "chosenAction": "先元素桥和蓝色移位；最多刷新两次，重要购买另行prepare；不买本店不匹配装备。",
+    "prediction": "不购买时余额34→32→30；无人机预期25力量且x1，两件主力仍10/9段。若刷出可用CD或同系升级，重新比较而不机械再刷新。"
+  }
+}

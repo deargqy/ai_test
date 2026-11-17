@@ -1,0 +1,16 @@
+{
+  "observed": "双S背甲及8件配件成功。背806/CD5.2，甲3.8K/CD11.4，肩7.2K×9/CD6.9，手5.7K×10/CD2.6，机265/CD7.1。核心共享伤害/多段/互加速端点已核。蓝附魔两次甲左上未成，仍库；无人机伤害估算256偏低，实际265。部分拖动失败，关闭提示并等待后中心拾取→左端落点成功，未隔离根因。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day17-final-back.jpg",
+    "playtest-2026-11-16-run05/day17-final-armor.jpg",
+    "playtest-2026-11-16-run05/day17-final-shoulder.jpg",
+    "playtest-2026-11-16-run05/day17-final-hand.jpg",
+    "playtest-2026-11-16-run05/day17-final-drone.jpg",
+    "playtest-2026-11-16-run05/day17-blue-armor-adjusted.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "主要布局与核心预测支持，但蓝附魔未装成、无人机估值被反驳；保留原预测，不写实战胜率。",
+  "nextAction": "改蓝到背空孔，并比较无人机自桥200%与原120%单孔。"
+}

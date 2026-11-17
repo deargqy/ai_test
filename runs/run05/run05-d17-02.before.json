@@ -1,0 +1,96 @@
+{
+  "runId": "run05",
+  "day": 17,
+  "id": "run05-d17-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T04:02:08.662Z",
+  "before": {
+    "state": "第17天14胜2负，12金；S曙光和S塞玛已入库；现B背B甲手肩机，10配件。",
+    "goal": "把快手、肩炮与坚固随机加速连接成有效循环；验证每个端点与显示数值。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day17-purchases-stock.jpg",
+      "playtest-2026-11-16-run05/day17-equipped-hand.jpg",
+      "playtest-2026-11-16-run05/day17-part-accel-short.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 11,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "整排几何与被遮孔机会成本"
+      },
+      {
+        "id": "M01",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "肩首次有效出手优先，非全轮伤害保证"
+      },
+      {
+        "id": "M02",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "学习Rogas坚固与加速链但不冒充完整复制"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次失败后换策略"
+      },
+      {
+        "id": "M07",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "加速非直接充能"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "逐操作核验"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "旧猫成长不继承"
+      }
+    ],
+    "candidates": [
+      {
+        "name": "保持旧布局",
+        "benefit": "初始盾和静态伤害高",
+        "cost": "肩无输出反例，快手未直接带肩",
+        "unknown": "控制时间轴",
+        "action": "保持旧布局",
+        "risk": "控制时间轴"
+      },
+      {
+        "name": "曙光—塞玛—肩—手—机，双核心互加速",
+        "benefit": "手肩共享+6和600%伤害、使用互加速；背坚固成长触发甲随机加速",
+        "cost": "64购买、旧盾下降、200%短桥暂闲置",
+        "unknown": "坚固增长触发目标/随机加速实际收益、蓝色附魔是否改变条件标签",
+        "action": "曙光—塞玛—肩—手—机，双核心互加速",
+        "risk": "坚固增长触发目标/随机加速实际收益、蓝色附魔是否改变条件标签"
+      },
+      {
+        "name": "同序火控肩，CD背",
+        "benefit": "肩全轮更高、背更快",
+        "cost": "肩初次CD更长",
+        "unknown": "对手控制",
+        "action": "同序火控肩，CD背",
+        "risk": "对手控制"
+      }
+    ],
+    "chosenAction": "采用runs/run05/day17-selected.json；main长桥背左中—甲左中；growth背左下；CD短桥背右下—甲左下；damage长桥肩右中—手右中；hits长桥肩左下—手左下；accel肩右上—手左上；CD单孔肩左中；firecontrol机右上；蓝附魔甲左上。旧B背甲保留，200%短桥留库。",
+    "prediction": "预期手10段约5723/CD2.55，肩9段约7214/CD6.9；新背约806盾/CD5.25，新甲3813盾/CD11.375；机约256/CD7.09。蓝附魔及战中循环未计入；核全部端点，若不一致保留反例。"
+  }
+}

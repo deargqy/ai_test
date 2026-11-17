@@ -1,0 +1,2113 @@
+[
+  {
+    "order": [
+      "back-b",
+      "armor-b",
+      "hand-s",
+      "shoulder-ss",
+      "drone-s-live"
+    ],
+    "equipment": [
+      {
+        "id": "back-b",
+        "name": "深红尊",
+        "slot": "back",
+        "damage": 0,
+        "shield": 5609,
+        "element": 38,
+        "hits": 1,
+        "cooldown": 7,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+      },
+      {
+        "id": "armor-b",
+        "name": "祸津神",
+        "slot": "armor",
+        "damage": 0,
+        "shield": 8591,
+        "element": 48,
+        "hits": 1,
+        "cooldown": 10.5,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+      },
+      {
+        "id": "hand-s",
+        "name": "虚空撕裂",
+        "slot": "hand",
+        "damage": 5013,
+        "shield": 0,
+        "element": 4,
+        "hits": 10,
+        "cooldown": 4.5,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "获得相当于失去护盾12%的伤害；未模拟"
+      },
+      {
+        "id": "shoulder-ss",
+        "name": "链法手枪",
+        "slot": "shoulder",
+        "damage": 7972,
+        "shield": 0,
+        "element": 95,
+        "hits": 9,
+        "cooldown": 8.1,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+      },
+      {
+        "id": "drone-s-live",
+        "name": "式神野衾",
+        "slot": "drone",
+        "damage": 336,
+        "shield": 0,
+        "element": 18,
+        "hits": 1,
+        "cooldown": 7.5,
+        "kind": "summon",
+        "tags": [
+          "force"
+        ],
+        "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+      }
+    ],
+    "placements": [
+      {
+        "part": "main-long",
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b",
+          "armor-b"
+        ],
+        "beneficiaries": [
+          "back-b",
+          "armor-b"
+        ]
+      },
+      {
+        "part": "damage-long",
+        "points": [
+          [
+            8,
+            1
+          ],
+          [
+            12,
+            1
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "hits-long",
+        "points": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "charge-short",
+        "points": [
+          [
+            14,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "damage-short",
+        "points": [
+          [
+            14,
+            1
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "firm-short",
+        "points": [
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "cd-single",
+        "points": [
+          [
+            8,
+            0
+          ]
+        ],
+        "owners": [
+          "hand-s"
+        ],
+        "beneficiaries": [
+          "hand-s"
+        ]
+      },
+      {
+        "part": "growth-single",
+        "points": [
+          [
+            0,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b"
+        ],
+        "beneficiaries": [
+          "back-b"
+        ]
+      },
+      {
+        "part": "calibration-single",
+        "points": [
+          [
+            18,
+            0
+          ]
+        ],
+        "owners": [
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "drone-s-live"
+        ]
+      }
+    ],
+    "cost": 0,
+    "metrics": {
+      "baseVolley": 121878,
+      "baseDps": 19997.8,
+      "shieldPerCastSum": 14200,
+      "coreCdSum": 12.6,
+      "firmPerVolley": 895,
+      "chargeLinks": 1,
+      "coreChargeTargets": 1,
+      "effectiveEndpoints": 15,
+      "summonsPerCastSum": 1,
+      "deploymentForcePerCast": 48
+    },
+    "chargeLinks": [
+      {
+        "equipment": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "seconds": 2,
+        "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+      }
+    ],
+    "dynamicEffects": [
+      {
+        "part": "growth-single",
+        "equipment": "back-b",
+        "stat": "main_per_second",
+        "value": 0.04,
+        "status": "未模拟，不代表收益为零"
+      }
+    ],
+    "name": "本场实际布局",
+    "note": "肩五孔均连接；手右中被长桥遮挡。该战胜利不证明全局最优。",
+    "portAudit": [
+      {
+        "equipment": "back-b",
+        "point": [
+          0,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "back-b",
+        "point": [
+          2,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          10,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "blocked",
+        "coveredBy": [
+          "damage-long"
+        ]
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          18,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      }
+    ],
+    "fixedPlacements": [
+      {
+        "part": "fixed-blue-force",
+        "points": [
+          [
+            6,
+            2
+          ]
+        ],
+        "owners": [
+          "armor-b"
+        ]
+      }
+    ],
+    "battlePrediction": null
+  },
+  {
+    "order": [
+      "back-b",
+      "armor-b",
+      "hand-s",
+      "shoulder-ss",
+      "drone-s-live"
+    ],
+    "equipment": [
+      {
+        "id": "back-b",
+        "name": "深红尊",
+        "slot": "back",
+        "damage": 0,
+        "shield": 5609,
+        "element": 38,
+        "hits": 1,
+        "cooldown": 7,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+      },
+      {
+        "id": "armor-b",
+        "name": "祸津神",
+        "slot": "armor",
+        "damage": 0,
+        "shield": 8591,
+        "element": 48,
+        "hits": 1,
+        "cooldown": 10.5,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+      },
+      {
+        "id": "hand-s",
+        "name": "虚空撕裂",
+        "slot": "hand",
+        "damage": 5295,
+        "shield": 0,
+        "element": 4,
+        "hits": 10,
+        "cooldown": 5,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "获得相当于失去护盾12%的伤害；未模拟"
+      },
+      {
+        "id": "shoulder-ss",
+        "name": "链法手枪",
+        "slot": "shoulder",
+        "damage": 7972,
+        "shield": 0,
+        "element": 95,
+        "hits": 9,
+        "cooldown": 8.1,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+      },
+      {
+        "id": "drone-s-live",
+        "name": "式神野衾",
+        "slot": "drone",
+        "damage": 298,
+        "shield": 0,
+        "element": 18,
+        "hits": 1,
+        "cooldown": 6.75,
+        "kind": "summon",
+        "tags": [
+          "force"
+        ],
+        "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+      }
+    ],
+    "placements": [
+      {
+        "part": "main-long",
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b",
+          "armor-b"
+        ],
+        "beneficiaries": [
+          "back-b",
+          "armor-b"
+        ]
+      },
+      {
+        "part": "damage-long",
+        "points": [
+          [
+            8,
+            1
+          ],
+          [
+            12,
+            1
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "hits-long",
+        "points": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "charge-short",
+        "points": [
+          [
+            14,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "damage-short",
+        "points": [
+          [
+            14,
+            1
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "firm-short",
+        "points": [
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "cd-single",
+        "points": [
+          [
+            18,
+            0
+          ]
+        ],
+        "owners": [
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "growth-single",
+        "points": [
+          [
+            0,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b"
+        ],
+        "beneficiaries": [
+          "back-b"
+        ]
+      },
+      {
+        "part": "calibration-single",
+        "points": [
+          [
+            8,
+            0
+          ]
+        ],
+        "owners": [
+          "hand-s"
+        ],
+        "beneficiaries": [
+          "hand-s"
+        ]
+      }
+    ],
+    "cost": 0,
+    "metrics": {
+      "baseVolley": 124698,
+      "baseDps": 19447.8,
+      "shieldPerCastSum": 14200,
+      "coreCdSum": 13.1,
+      "firmPerVolley": 895,
+      "chargeLinks": 1,
+      "coreChargeTargets": 1,
+      "effectiveEndpoints": 15,
+      "summonsPerCastSum": 1,
+      "deploymentForcePerCast": 48
+    },
+    "chargeLinks": [
+      {
+        "equipment": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "seconds": 2,
+        "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+      }
+    ],
+    "dynamicEffects": [
+      {
+        "part": "growth-single",
+        "equipment": "back-b",
+        "stat": "main_per_second",
+        "value": 0.04,
+        "status": "未模拟，不代表收益为零"
+      }
+    ],
+    "name": "火控给手，冷却给无人机",
+    "note": "手基础伤害增加，但手CD4.5→5；无人机7.5→6.75。需比较第一次有效命中与部署，不能只按伤害份额决策。",
+    "portAudit": [
+      {
+        "equipment": "back-b",
+        "point": [
+          0,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "back-b",
+        "point": [
+          2,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          10,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "blocked",
+        "coveredBy": [
+          "damage-long"
+        ]
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          18,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      }
+    ],
+    "fixedPlacements": [
+      {
+        "part": "fixed-blue-force",
+        "points": [
+          [
+            6,
+            2
+          ]
+        ],
+        "owners": [
+          "armor-b"
+        ]
+      }
+    ],
+    "battlePrediction": null
+  },
+  {
+    "order": [
+      "back-b",
+      "armor-b",
+      "hand-s",
+      "shoulder-ss",
+      "drone-s-live"
+    ],
+    "equipment": [
+      {
+        "id": "back-b",
+        "name": "深红尊",
+        "slot": "back",
+        "damage": 0,
+        "shield": 5609,
+        "element": 38,
+        "hits": 1,
+        "cooldown": 6.3,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+      },
+      {
+        "id": "armor-b",
+        "name": "祸津神",
+        "slot": "armor",
+        "damage": 0,
+        "shield": 8591,
+        "element": 48,
+        "hits": 1,
+        "cooldown": 10.5,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+      },
+      {
+        "id": "hand-s",
+        "name": "虚空撕裂",
+        "slot": "hand",
+        "damage": 5013,
+        "shield": 0,
+        "element": 4,
+        "hits": 10,
+        "cooldown": 5,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "获得相当于失去护盾12%的伤害；未模拟"
+      },
+      {
+        "id": "shoulder-ss",
+        "name": "链法手枪",
+        "slot": "shoulder",
+        "damage": 7972,
+        "shield": 0,
+        "element": 95,
+        "hits": 9,
+        "cooldown": 8.1,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+      },
+      {
+        "id": "drone-s-live",
+        "name": "式神野衾",
+        "slot": "drone",
+        "damage": 336,
+        "shield": 0,
+        "element": 18,
+        "hits": 1,
+        "cooldown": 7.5,
+        "kind": "summon",
+        "tags": [
+          "force"
+        ],
+        "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+      }
+    ],
+    "placements": [
+      {
+        "part": "main-long",
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b",
+          "armor-b"
+        ],
+        "beneficiaries": [
+          "back-b",
+          "armor-b"
+        ]
+      },
+      {
+        "part": "damage-long",
+        "points": [
+          [
+            8,
+            1
+          ],
+          [
+            12,
+            1
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "hits-long",
+        "points": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "charge-short",
+        "points": [
+          [
+            14,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "damage-short",
+        "points": [
+          [
+            14,
+            1
+          ],
+          [
+            16,
+            1
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "firm-short",
+        "points": [
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "cd-single",
+        "points": [
+          [
+            0,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b"
+        ],
+        "beneficiaries": [
+          "back-b"
+        ]
+      },
+      {
+        "part": "growth-single",
+        "points": [
+          [
+            8,
+            0
+          ]
+        ],
+        "owners": [
+          "hand-s"
+        ],
+        "beneficiaries": [
+          "hand-s"
+        ]
+      },
+      {
+        "part": "calibration-single",
+        "points": [
+          [
+            18,
+            0
+          ]
+        ],
+        "owners": [
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "drone-s-live"
+        ]
+      }
+    ],
+    "cost": 0,
+    "metrics": {
+      "baseVolley": 121878,
+      "baseDps": 18883.8,
+      "shieldPerCastSum": 14200,
+      "coreCdSum": 13.1,
+      "firmPerVolley": 895,
+      "chargeLinks": 1,
+      "coreChargeTargets": 1,
+      "effectiveEndpoints": 15,
+      "summonsPerCastSum": 1,
+      "deploymentForcePerCast": 48
+    },
+    "chargeLinks": [
+      {
+        "equipment": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "seconds": 2,
+        "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+      }
+    ],
+    "dynamicEffects": [
+      {
+        "part": "growth-single",
+        "equipment": "hand-s",
+        "stat": "main_per_second",
+        "value": 0.04,
+        "status": "未模拟，不代表收益为零"
+      }
+    ],
+    "name": "成长给手，冷却给背",
+    "note": "手失去10%CD；成长4%每秒为加算，未实测该布局。短战可能来不及兑现，不能把未模拟收益写成零。",
+    "portAudit": [
+      {
+        "equipment": "back-b",
+        "point": [
+          0,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "back-b",
+        "point": [
+          2,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          10,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "blocked",
+        "coveredBy": [
+          "damage-long"
+        ]
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          18,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      }
+    ],
+    "fixedPlacements": [
+      {
+        "part": "fixed-blue-force",
+        "points": [
+          [
+            6,
+            2
+          ]
+        ],
+        "owners": [
+          "armor-b"
+        ]
+      }
+    ],
+    "battlePrediction": null
+  },
+  {
+    "order": [
+      "back-b",
+      "armor-b",
+      "hand-s",
+      "shoulder-ss",
+      "drone-s-live"
+    ],
+    "equipment": [
+      {
+        "id": "back-b",
+        "name": "深红尊",
+        "slot": "back",
+        "damage": 0,
+        "shield": 5609,
+        "element": 38,
+        "hits": 1,
+        "cooldown": 7,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+      },
+      {
+        "id": "armor-b",
+        "name": "祸津神",
+        "slot": "armor",
+        "damage": 0,
+        "shield": 8591,
+        "element": 48,
+        "hits": 1,
+        "cooldown": 10.5,
+        "kind": "defense",
+        "tags": [
+          "force"
+        ],
+        "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+      },
+      {
+        "id": "hand-s",
+        "name": "虚空撕裂",
+        "slot": "hand",
+        "damage": 5013,
+        "shield": 0,
+        "element": 4,
+        "hits": 10,
+        "cooldown": 4.5,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "获得相当于失去护盾12%的伤害；未模拟"
+      },
+      {
+        "id": "shoulder-ss",
+        "name": "链法手枪",
+        "slot": "shoulder",
+        "damage": 6570,
+        "shield": 0,
+        "element": 95,
+        "hits": 9,
+        "cooldown": 8.1,
+        "kind": "attack",
+        "tags": [
+          "firm"
+        ],
+        "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+      },
+      {
+        "id": "drone-s-live",
+        "name": "式神野衾",
+        "slot": "drone",
+        "damage": 106,
+        "shield": 0,
+        "element": 18,
+        "hits": 1,
+        "cooldown": 7.5,
+        "kind": "summon",
+        "tags": [
+          "force"
+        ],
+        "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+      }
+    ],
+    "placements": [
+      {
+        "part": "main-long",
+        "points": [
+          [
+            2,
+            1
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b",
+          "armor-b"
+        ],
+        "beneficiaries": [
+          "back-b",
+          "armor-b"
+        ]
+      },
+      {
+        "part": "damage-long",
+        "points": [
+          [
+            8,
+            1
+          ],
+          [
+            12,
+            1
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "hits-long",
+        "points": [
+          [
+            8,
+            2
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "owners": [
+          "hand-s",
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "hand-s",
+          "shoulder-ss"
+        ]
+      },
+      {
+        "part": "charge-short",
+        "points": [
+          [
+            14,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "firm-short",
+        "points": [
+          [
+            14,
+            2
+          ],
+          [
+            16,
+            2
+          ]
+        ],
+        "owners": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "beneficiaries": [
+          "shoulder-ss",
+          "drone-s-live"
+        ]
+      },
+      {
+        "part": "cd-single",
+        "points": [
+          [
+            8,
+            0
+          ]
+        ],
+        "owners": [
+          "hand-s"
+        ],
+        "beneficiaries": [
+          "hand-s"
+        ]
+      },
+      {
+        "part": "growth-single",
+        "points": [
+          [
+            0,
+            1
+          ]
+        ],
+        "owners": [
+          "back-b"
+        ],
+        "beneficiaries": [
+          "back-b"
+        ]
+      },
+      {
+        "part": "calibration-single",
+        "points": [
+          [
+            14,
+            1
+          ]
+        ],
+        "owners": [
+          "shoulder-ss"
+        ],
+        "beneficiaries": [
+          "shoulder-ss"
+        ]
+      }
+    ],
+    "cost": 0,
+    "metrics": {
+      "baseVolley": 109260,
+      "baseDps": 18440.0,
+      "shieldPerCastSum": 14200,
+      "coreCdSum": 12.6,
+      "firmPerVolley": 895,
+      "chargeLinks": 1,
+      "coreChargeTargets": 1,
+      "effectiveEndpoints": 13,
+      "summonsPerCastSum": 1,
+      "deploymentForcePerCast": 48
+    },
+    "chargeLinks": [
+      {
+        "equipment": [
+          "shoulder-ss",
+          "drone-s-live"
+        ],
+        "seconds": 2,
+        "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+      }
+    ],
+    "dynamicEffects": [
+      {
+        "part": "growth-single",
+        "equipment": "back-b",
+        "stat": "main_per_second",
+        "value": 0.04,
+        "status": "未模拟，不代表收益为零"
+      }
+    ],
+    "name": "移除200%桥，火控给肩",
+    "note": "肩伤害降低、无人机也失去200%桥；只换来无人机可用孔，没有更好配件填入前不因空孔变多而判更强。",
+    "portAudit": [
+      {
+        "equipment": "back-b",
+        "point": [
+          0,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "back-b",
+        "point": [
+          2,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "armor-b",
+        "point": [
+          6,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          8,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "hand-s",
+        "point": [
+          10,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "blocked",
+        "coveredBy": [
+          "damage-long"
+        ]
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          12,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          1
+        ],
+        "localPort": [
+          2,
+          1
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "shoulder-ss",
+        "point": [
+          14,
+          2
+        ],
+        "localPort": [
+          2,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          0
+        ],
+        "localPort": [
+          0,
+          0
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          1
+        ],
+        "localPort": [
+          0,
+          1
+        ],
+        "state": "free",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          16,
+          2
+        ],
+        "localPort": [
+          0,
+          2
+        ],
+        "state": "connected",
+        "coveredBy": []
+      },
+      {
+        "equipment": "drone-s-live",
+        "point": [
+          18,
+          0
+        ],
+        "localPort": [
+          2,
+          0
+        ],
+        "state": "free",
+        "coveredBy": []
+      }
+    ],
+    "fixedPlacements": [
+      {
+        "part": "fixed-blue-force",
+        "points": [
+          [
+            6,
+            2
+          ]
+        ],
+        "owners": [
+          "armor-b"
+        ]
+      }
+    ],
+    "battlePrediction": null
+  }
+]

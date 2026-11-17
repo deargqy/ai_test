@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "id": "run05-d14-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T02:44:54.737Z",
+  "before": {
+    "state": "62金；+6长已跨无人机右上—肩右上x7/x9；加速短回库，伤害长仍库，手CD已移无人机；主属性桥已恢复。",
+    "goal": "在已验证六段连接上恢复完整可战配置",
+    "evidence": [
+      "playtest-2026-11-16-run05/day14-verify-six-dual.jpg",
+      "playtest-2026-11-16-run05/day14-verify-six-mid.jpg"
+    ],
+    "memorySearch": "按build/shop阶段读取当前修订，比较玩家更新后的完整布局",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 8,
+        "origin": "player",
+        "use": "applied",
+        "reason": "将几何失败反馈为新布局约束，保留反例而非反复盲拖"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "player",
+        "use": "applied",
+        "reason": "停止相同六段中排装配，采用已成功上排"
+      },
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "player",
+        "use": "applied",
+        "reason": "恢复手4.5秒，比较坚固损失"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "player",
+        "use": "applied",
+        "reason": "力量副属性与部署固定48分开"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留上排六段，600%伤害下排双核，加速中排双核，元素桥转甲—无人机",
+        "benefit": "保留无人机x7及肩9段，双核互加速；手CD恢复4.5，精械装肩左中",
+        "cost": "每击坚固95/13降30/4；无人机力量10→18、甲44→76（+72%）仅面板，不将部署48同乘",
+        "risk": "失去高坚固增长，但总双核坚固337→286；真实存活能力需战斗核",
+        "unknown": "长桥装配锚点、动态力量/失盾未模拟"
+      },
+      {
+        "action": "恢复玩家原装",
+        "benefit": "已知可用337坚固/轮，手4.5秒",
+        "cost": "六段仅无人机受益，肩仍3段",
+        "risk": "损失提升肩炮输出机会",
+        "unknown": "原装胜率未知"
+      }
+    ],
+    "chosenAction": "按当前已成功六段的上下孔改排，其余布局不再强行试同一中排六段",
+    "prediction": "肩5822x9/30坚固，手4615x4/4坚固/CD4.5；无人机x7/18力量/7.5秒；甲76力量背38，盾仍8236/5254；双核基础70858/轮，坚固286/轮；余额62不变。"
+  }
+}

@@ -92,6 +92,34 @@ class LoadoutTests(unittest.TestCase):
         support = self.m.evaluate(order,[p],[ps[-1]],0)
         self.assertGreater(self.m.scores(core)[2], self.m.scores(support)[2])
 
+    def test_observed_summon_count_and_dynamic_effects_are_not_fake_dps(self):
+        g = self.gear('drone', [[0,0],[2,0]])
+        g.update(kind='summon', acceptsHits=True, hits=1, deploymentForce=48)
+        p = dict(id='six', price=0, effect=dict(stat='hits',value=6))
+        q = dict(id='growth', price=0, effect=dict(stat='main_per_second',value=.04))
+        chosen = [dict(part='six',points=[(0,0)],owners=['drone']),
+                  dict(part='growth',points=[(2,0)],owners=['drone'])]
+        r = self.m.evaluate([g],[p,q],chosen,0)
+        self.assertEqual(r['equipment'][0]['hits'],7)
+        self.assertEqual(r['metrics']['deploymentForcePerCast'],336)
+        self.assertEqual(r['metrics']['baseDps'],0)
+        self.assertEqual(r['dynamicEffects'][0]['stat'],'main_per_second')
+
+    def test_verified_force_drone_accepts_damage_bridge_without_invented_dps(self):
+        # Day15 UI: the S force drone changes from 106 to 298 with +200%.
+        g = self.gear('drone', [[0,0],[2,0]])
+        g.update(kind='summon', damage=96, hits=1, acceptsDamagePct=True)
+        p = dict(id='damage', price=0, effect=dict(stat='damage_pct',value=2))
+        chosen = [dict(part='damage',points=[(0,0),(2,0)],owners=['drone'])]
+        r = self.m.evaluate([g],[p],chosen,.1)
+        self.assertEqual(r['equipment'][0]['damage'],298)
+        self.assertEqual(r['placements'][0]['beneficiaries'],['drone'])
+        self.assertEqual(r['metrics']['baseDps'],0)
+        g.pop('acceptsDamagePct')
+        unknown = self.m.evaluate([g],[p],chosen,.1)
+        self.assertEqual(unknown['equipment'][0]['damage'],106)
+        self.assertEqual(unknown['placements'][0]['beneficiaries'],[])
+
 
 if __name__ == '__main__':
     unittest.main()

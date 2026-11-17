@@ -1,7 +1,7 @@
 // Offline DOM smoke check: exercises generated page JS, not a browser render.
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'../..');
-const source=fs.readFileSync(path.join(root,'docs/loadout-lab.html'),'utf8');
+const source=fs.readFileSync(path.join(root,process.argv[2]||'docs/loadout-lab.html'),'utf8');
 const ids=[...source.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 if(new Set(ids).size!==ids.length)throw Error('duplicate IDs');
 const elements=Object.fromEntries(ids.map(id=>[id,{value:'0',innerHTML:'',textContent:''}]));

@@ -42,7 +42,7 @@ def evaluate(order, parts, chosen, main_bonus):
     values = {g['id']: dict(g, damage_pct=main_bonus, shield_pct=main_bonus,
                             element_pct=0, extra_hits=0, cd_pct=0) for g in order}
     cost = sum(g.get('price', 0) for g in order)
-    links, output = [], []
+    links, output, dynamic = [], [], []
     for p in chosen:
         part = by_id[p['part']]
         cost += part.get('price', 0)
@@ -52,7 +52,10 @@ def evaluate(order, parts, chosen, main_bonus):
             g = values[owner]
             v = e.get('tagValue', e['value']) if e.get('tag') in g['tags'] else e['value']
             stat = e['stat']
-            if stat in ('damage_pct', 'hits') and g['kind'] != 'attack':
+            if (stat == 'damage_pct' and g['kind'] != 'attack'
+                    and not g.get('acceptsDamagePct', False)):
+                continue
+            if stat == 'hits' and g['kind'] != 'attack' and not g.get('acceptsHits', False):
                 continue
             if stat == 'shield_pct' and g.get('shield', 0) <= 0:
                 continue
@@ -61,6 +64,9 @@ def evaluate(order, parts, chosen, main_bonus):
                 g['shield_pct'] += v
             elif stat == 'hits':
                 g['extra_hits'] += v
+            elif stat in ('main_per_second', 'debuff_growth'):
+                dynamic.append(dict(part=part['id'], equipment=owner, stat=stat, value=v,
+                                    status='未模拟，不代表收益为零'))
             elif stat == 'charge':
                 if len(p['owners']) < 2:
                     continue
@@ -69,7 +75,7 @@ def evaluate(order, parts, chosen, main_bonus):
             beneficiaries.append(owner)
         if e['stat'] == 'charge' and len(p['owners']) > 1:
             links.append({'equipment': p['owners'], 'seconds': e['value'],
-                          'trigger': '使用一端为另一端充能；多段不自动视为多次使用'})
+                          'trigger': '使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用'})
         output.append(dict(p, beneficiaries=beneficiaries))
     equipment = []
     for g in values.values():
@@ -89,9 +95,12 @@ def evaluate(order, parts, chosen, main_bonus):
                'firmPerVolley': sum(g['element'] * g['hits'] for g in cores if 'firm' in g['tags']),
                'chargeLinks': len(links),
                'coreChargeTargets': sum(sum(id in {g['id'] for g in cores} for id in link['equipment']) for link in links),
-               'effectiveEndpoints': sum(len(p['beneficiaries']) for p in output)}
+               'effectiveEndpoints': sum(len(p['beneficiaries']) for p in output),
+               'summonsPerCastSum': sum(g['hits'] for g in equipment if g['kind'] == 'summon'),
+               'deploymentForcePerCast': sum(g['hits'] * values[g['id']].get('deploymentForce', 0)
+                                             for g in equipment if g['kind'] == 'summon')}
     return {'order': [g['id'] for g in order], 'equipment': equipment, 'placements': output,
-            'cost': cost, 'metrics': metrics, 'chargeLinks': links}
+            'cost': cost, 'metrics': metrics, 'chargeLinks': links, 'dynamicEffects': dynamic}
 
 
 def scores(r):

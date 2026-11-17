@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 17,
+  "id": "run05-d17-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T04:06:30.364Z",
+  "before": {
+    "state": "主布局已完成12金；A200%短桥与B4力量附魔闲置，机右上120%火控；蓝甲两次失败。",
+    "goal": "使用已有配件完成可行增益，不再同槽重试。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day17-final-drone.jpg",
+      "playtest-2026-11-16-run05/day17-final-blue.jpg",
+      "playtest-2026-11-16-run05/day17-final-contact.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 11,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "同装备双孔只算一次；利用库存"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "甲两次失败改背空孔"
+      },
+      {
+        "id": "M07",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "附魔与标签分离验证"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "数值验收"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保持现状",
+        "benefit": "火控继续占孔成长",
+        "cost": "当前120%小于闲置200%",
+        "risk": "成长在库存是否继续未知",
+        "unknown": "未来天数"
+      },
+      {
+        "action": "无人机自身顶部双孔接200%短桥；蓝附魔给背左上",
+        "benefit": "机当前伤害约265→357；蓝若成功提高力量并可能满足主属性条件",
+        "cost": "火控转库存，单桥只算一件受益",
+        "risk": "背附魔可能仍拖入失败",
+        "unknown": "附魔是否触发600%条件"
+      }
+    ],
+    "chosenAction": "先取下火控留库存，200%短桥接机左上—右上；蓝移背左上。若蓝仍失败保留库存，不继续同槽重复。",
+    "prediction": "无人机伤害约357/CD7.1不变，核心伤害/段数/CD不变；蓝若成功背出现力量4，盾可能806→1846（条件未知，不预判一定触发）。"
+  }
+}

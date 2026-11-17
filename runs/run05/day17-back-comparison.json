@@ -1,0 +1,118 @@
+{
+  "runId": "run05",
+  "day": 17,
+  "phase": "shop-advice",
+  "operation": "read-only; player operates",
+  "snapshot": {
+    "wins": 14,
+    "losses": 2,
+    "hp": 191000,
+    "gold": 94
+  },
+  "memories": [
+    "M01r6",
+    "M02r7",
+    "M05r11",
+    "M06r1",
+    "M07r7",
+    "M09r4"
+  ],
+  "current": {
+    "name": "B 深红尊",
+    "shield": 890,
+    "force": 38,
+    "cooldown": 6.6,
+    "slowAllSeconds": 1,
+    "ports": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "passive": "造成物理伤害时，获得等于自身力量层数的护盾"
+  },
+  "candidate": {
+    "name": "S 神速神经",
+    "price": 32,
+    "shield": 260,
+    "force": 52,
+    "cooldown": 6,
+    "slowAllSeconds": 2,
+    "ports": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "passive": "使用时，所有力量装备获得+15力量"
+  },
+  "recentShieldStats": [
+    {
+      "day": 14,
+      "shield": 12691
+    },
+    {
+      "day": 15,
+      "shield": 3280
+    },
+    {
+      "day": 16,
+      "shield": 1652
+    }
+  ],
+  "comparison": {
+    "sameMainBridgeMultiplier": 7.1,
+    "currentShieldBeforeDynamicGrowth": 6319,
+    "candidateShieldBeforeDynamicGrowth": 1846,
+    "loss": 4473,
+    "goldAfterPurchase": 62,
+    "interestAfterPurchase": 10,
+    "geometry": "保留现主属性长桥右中端点与成长单孔左中，新增左右下两孔；两孔可用但现有库存未复核，不虚构已填配件收益"
+  },
+  "recommendation": "针对当前核心兑现问题，倾向试换新背强化全体减速与力量装备成长，旧背先保留。不是护盾升级，也未证明战力净增。",
+  "alternatives": [
+    {
+      "action": "留旧背",
+      "benefit": "保留物伤产盾与手部失盾转伤的潜在联系；高主动盾",
+      "cost": "控制较短、仅2孔"
+    },
+    {
+      "action": "换新背，旧背留库",
+      "benefit": "稍快主动、全体减速时间1→2秒、力量装备成长、两新增孔",
+      "cost": "32金币，主动盾下降4473，失去物伤产盾"
+    }
+  ],
+  "unknowns": [
+    "统计护盾不一定是全部生成量，不能用1652倒算手部失盾增伤",
+    "新背第一次使用前不会提供其主动减速或使用触发成长，不能承诺解决超快首轮",
+    "每次+15作用于力量装备属性，不直接视作角色立即增加45力量；应用时机需验",
+    "库存与新下排配件未完整复核，未声称全局最优布局"
+  ],
+  "prospectiveChecks": [
+    "主属性桥两端是否保留，初始盾是否约1846",
+    "第一次使用时全敌装备是否减速2秒、力量装备副属性是否各+15",
+    "手/肩首次有效命中是否赶上对手爆发；失去物伤产盾后生存及手部成长是否受损"
+  ],
+  "purchaseResult": "no autonomous purchase or equipment change",
+  "evidence": [
+    "playtest-2026-11-16-run05/day17-shop-back-text.jpg",
+    "playtest-2026-11-16-run05/day17-current-back-text.jpg",
+    "playtest-2026-11-16-run05/day17-back-shop-resume.jpg"
+  ]
+}

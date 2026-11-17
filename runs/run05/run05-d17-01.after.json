@@ -1,0 +1,14 @@
+{
+  "observed": "仓库神速出售16，60→76；曙光和塞玛各32，76→44→12。新背甲均入库。第一次从卡片上部拖动无出售；关闭重开从主体拖至左部后成功。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day17-sale-art-center.jpg",
+    "playtest-2026-11-16-run05/day17-buy-firm-back.jpg",
+    "playtest-2026-11-16-run05/day17-buy-firm-armor.jpg",
+    "playtest-2026-11-16-run05/day17-purchases-stock.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "预算与库存预测支持，实战增强尚待装配和战斗。",
+  "nextAction": "先登记整排装配预测再换装"
+}

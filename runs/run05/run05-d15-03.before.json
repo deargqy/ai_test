@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 15,
+  "id": "run05-d15-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-17T03:04:47.150Z",
+  "before": {
+    "state": "34金，背甲肩手无人机；手10段5秒，肩9段9秒；左上被互加速占用，右中CD失败两次。",
+    "goal": "保留双核心伤害和段数，先兑现手部减冷却，再接可用加速。",
+    "evidence": [
+      "playtest-2026-11-16-run05/day15-layout-before-adjust.jpg",
+      "playtest-2026-11-16-run05/day15-cd-rule.jpg"
+    ],
+    "memorySearch": "按shop/build阶段读取M01-M09当前修订；玩家战报触发手部多段与装备升阶比较",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次失败更换装配策略"
+      },
+      {
+        "id": "M05",
+        "revision": 9,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留已成功长桥，不占桥身"
+      },
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "优先手首次启动而非只堆段数"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "CD移手左上；互加速改手右中—无人机左中",
+        "benefit": "手回4.5秒，无人机部署可加速手，手也加速无人机",
+        "cost": "肩不再吃互加速",
+        "risk": "手右中端点装配仍有未知，失败则换共享段数方案",
+        "unknown": "为何右中CD失败未隔离根因"
+      },
+      {
+        "action": "维持肩手互加速，CD给背",
+        "benefit": "背更早出盾和减速",
+        "cost": "手5秒首轮慢0.5",
+        "risk": "核心启动仍慢",
+        "unknown": "两个启动方案净收益未知"
+      }
+    ],
+    "chosenAction": "先取消悬浮配件状态，拆顶排互加速，CD手左上；互加速尝试手右中到无人机左中。",
+    "prediction": "手CD4.5秒且段数10不变，肩9段和6.2K不变；互加速若接成，端点为手和无人机；不消耗金币。"
+  }
+}

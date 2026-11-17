@@ -1,0 +1,13 @@
+{
+  "observed": "两座长桥左侧已装成，手10段肩9段；手减CD已在左上。肩右上互加速、右下元素桥已接无人机，肩95坚固。最新可见图又出现肩右中—无人机左中200%伤害短桥，肩8K、手5K、无人机298/18；火控在库，蓝色归属待核。后续F12激活窗口失败，重新绑定仍失败。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day15-final-damage-clear-verified.jpg",
+    "playtest-2026-11-16-run05/day15-charge-final.jpg",
+    "playtest-2026-11-16-run05/day15-blue-drone-mid.jpg"
+  ],
+  "operationResult": "unknown",
+  "predictionResult": "unknown",
+  "memoryDecision": "revise",
+  "reason": "核心几何部分兑现；最终布局含人工交叉输入且单孔未验，不把它称完整自动安装成功。实际S无人机106→298说明通用模型漏算进攻伤害桥。",
+  "nextAction": "当前不再试装；按离线比较解释完整流程。下次恢复先核单孔与最终布局，再以新图进行战前判断。"
+}

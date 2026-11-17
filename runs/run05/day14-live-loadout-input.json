@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "run05 day14 refreshed after player changes / 2026-11-17",
+  "gold": 62,
+  "stride": 4,
+  "mainBonus": 0.1,
+  "slots": [
+    "back",
+    "armor",
+    "shoulder",
+    "hand",
+    "drone"
+  ],
+  "equipment": [
+    {
+      "id": "back-b",
+      "name": "深红尊",
+      "slot": "back",
+      "grade": "B",
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 740,
+      "element": 38,
+      "cooldown": 7,
+      "price": 0,
+      "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "growth": "原实例跨日积累，740按每日快照推算；卡面5.3K作交叉核对"
+    },
+    {
+      "id": "armor-b",
+      "name": "祸津神",
+      "slot": "armor",
+      "grade": "B",
+      "ports": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 1160,
+      "element": 44,
+      "cooldown": 10.5,
+      "price": 0,
+      "passive": "超载II；力量额外提供1层伤害，精确系数待核",
+      "evidence": "playtest-2026-11-16-run05/day03-drone-equipped.jpg",
+      "growth": "保留旧成长与0.5秒CD消耗品；1160据跨日快照"
+    },
+    {
+      "id": "shoulder-ss",
+      "name": "链法手枪",
+      "slot": "shoulder",
+      "grade": "SS",
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "damage": 820,
+      "hits": 3,
+      "shield": 0,
+      "element": 30,
+      "cooldown": 9,
+      "price": 0,
+      "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤",
+      "evidence": "playtest-2026-11-16-run05/day14-long-bottom.jpg",
+      "growth": "820由第14天原始说明确认；新实例不继承"
+    },
+    {
+      "id": "hand-s",
+      "name": "虚空撕裂",
+      "slot": "hand",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "damage": 650,
+      "hits": 4,
+      "shield": 0,
+      "element": 4,
+      "cooldown": 5,
+      "price": 0,
+      "passive": "获得相当于失去护盾12%的伤害；未模拟",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "growth": "旧实例每日+50；650按卡面4.6K与增幅反核"
+    },
+    {
+      "id": "drone-s-live",
+      "name": "式神野衾",
+      "slot": "drone",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "kind": "summon",
+      "tags": [
+        "force"
+      ],
+      "damage": 85,
+      "hits": 1,
+      "shield": 0,
+      "element": 10,
+      "cooldown": 7.5,
+      "price": 0,
+      "acceptsHits": true,
+      "deploymentForce": 48,
+      "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。",
+      "evidence": "playtest-2026-11-16-run05/day14-new-drone.jpg",
+      "growth": "玩家升级后的实例；85由94/1.1反推，非原始无人机弹体详情"
+    },
+    {
+      "id": "sword-s-shop",
+      "name": "朦胧斩者",
+      "slot": "hand",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "kind": "attack",
+      "tags": [
+        "force"
+      ],
+      "damage": 405,
+      "hits": 3,
+      "shield": 0,
+      "element": 4,
+      "cooldown": 6,
+      "price": 32,
+      "passive": "命中剥夺敌最大生命，等于自身力量140%；不是命中增长力量。未模拟。",
+      "evidence": "playtest-2026-11-16-run05/day14-new-shop-sword.jpg",
+      "growth": "新实例无原650伤害积累；商店405按原始值待装后核"
+    }
+  ],
+  "parts": [
+    {
+      "id": "main-long",
+      "name": "S力量主属性长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "main_pct",
+        "value": 2,
+        "tag": "force",
+        "tagValue": 6
+      },
+      "description": "主属性+200%，力量装备改为+600%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "price": 0,
+      "sell": 24
+    },
+    {
+      "id": "damage-long",
+      "name": "A坚固伤害长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "damage_pct",
+        "value": 2,
+        "tag": "firm",
+        "tagValue": 6
+      },
+      "description": "伤害+200%，坚固装备改为+600%",
+      "evidence": "playtest-2026-11-16-run05/day14-restore-damage-endpoint.jpg",
+      "price": 0,
+      "sell": 12
+    },
+    {
+      "id": "damage-short",
+      "name": "A200%伤害短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "damage_pct",
+        "value": 2
+      },
+      "description": "进攻型装备伤害+200%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-damage-short.jpg",
+      "price": 0,
+      "sell": 8
+    },
+    {
+      "id": "firm-short",
+      "name": "S216%坚固短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "element_pct",
+        "value": 0.72,
+        "tag": "firm",
+        "tagValue": 2.16
+      },
+      "description": "元素+72%，坚固装备改+216%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "price": 0,
+      "sell": 16
+    },
+    {
+      "id": "charge-short",
+      "name": "S互相加速2秒短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "charge",
+        "value": 2
+      },
+      "description": "使用一端使另一端加速持续2秒；不是立即充能2秒",
+      "evidence": "playtest-2026-11-16-run05/day14-charge-bridge-current.jpg",
+      "price": 0,
+      "sell": 16
+    },
+    {
+      "id": "cd-single",
+      "name": "S10%冷却单孔",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "cd_pct",
+        "value": -0.1
+      },
+      "description": "面板冷却-10%",
+      "evidence": "playtest-2026-11-16-run05/day14-cd-to-back.jpg",
+      "price": 0,
+      "sell": 8
+    },
+    {
+      "id": "hits-long",
+      "name": "S+6段长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "hits",
+        "value": 6
+      },
+      "description": "进攻型装备+6段；现有S无人机可见x7，战斗部署计数待核",
+      "evidence": "playtest-2026-11-16-run05/day14-current-six-bridge.jpg",
+      "price": 0,
+      "sell": 24
+    },
+    {
+      "id": "growth-single",
+      "name": "S精械单孔",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "main_per_second",
+        "value": 0.04
+      },
+      "description": "每秒主属性+4%；动态增幅未纳入静态评分",
+      "price": 0,
+      "sell": 8,
+      "evidence": "playtest-2026-11-16-run05/day14-stock-cd.jpg"
+    },
+    {
+      "id": "debuff-long-shop",
+      "name": "S弹头长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "debuff_growth",
+        "value": 0.2
+      },
+      "description": "使用镶嵌装备时敌人减益层数+20%；依赖已有敌方减益，不等于自己力量+20%",
+      "price": 48,
+      "sell": 24,
+      "evidence": "playtest-2026-11-16-run05/day14-new-shop-part.jpg"
+    }
+  ],
+  "currentOrder": [
+    "drone-s-live",
+    "back-b",
+    "armor-b",
+    "shoulder-ss",
+    "hand-s"
+  ],
+  "baselineNote": "玩家调整后的新基线：62金；S无人机x7/7.5秒；肩7462x3/95坚固；手4615x4/13坚固/4.5秒；库存精械+4%/秒及攻击校准+6消耗品。",
+  "unknown": [
+    "双方完整战斗未模拟；候选不能按静态排名当最强。",
+    "互加速持续2秒与立即充能不同，模型仅记连接，不换算首击。",
+    "桥身交叠仍未知。",
+    "无人机x7可见，7次部署的336力量与攻击频率未实测。",
+    "新刀最大生命剥夺与每秒主属性、敌人减益增长均列动态项，未赋虚构战力分。",
+    "库存校准消耗品未使用；刀与弹头合计80金超过当前62金，不预支卖物。"
+  ]
+}

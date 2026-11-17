@@ -1,0 +1,270 @@
+{
+  "order": [
+    "back-b",
+    "armor-b",
+    "drone-s-live",
+    "shoulder-ss",
+    "hand-s"
+  ],
+  "equipment": [
+    {
+      "id": "back-b",
+      "name": "深红尊",
+      "slot": "back",
+      "damage": 0,
+      "shield": 5254,
+      "element": 38,
+      "hits": 1,
+      "cooldown": 7,
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+    },
+    {
+      "id": "armor-b",
+      "name": "祸津神",
+      "slot": "armor",
+      "damage": 0,
+      "shield": 8236,
+      "element": 76,
+      "hits": 1,
+      "cooldown": 10.5,
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+    },
+    {
+      "id": "drone-s-live",
+      "name": "式神野衾",
+      "slot": "drone",
+      "damage": 94,
+      "shield": 0,
+      "element": 18,
+      "hits": 7,
+      "cooldown": 7.5,
+      "kind": "summon",
+      "tags": [
+        "force"
+      ],
+      "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+    },
+    {
+      "id": "shoulder-ss",
+      "name": "链法手枪",
+      "slot": "shoulder",
+      "damage": 5822,
+      "shield": 0,
+      "element": 30,
+      "hits": 9,
+      "cooldown": 9,
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+    },
+    {
+      "id": "hand-s",
+      "name": "虚空撕裂",
+      "slot": "hand",
+      "damage": 4615,
+      "shield": 0,
+      "element": 4,
+      "hits": 4,
+      "cooldown": 4.5,
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "passive": "获得相当于失去护盾12%的伤害；未模拟"
+    }
+  ],
+  "placements": [
+    {
+      "part": "main-long",
+      "points": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "owners": [
+        "back-b",
+        "armor-b"
+      ],
+      "beneficiaries": [
+        "back-b",
+        "armor-b"
+      ]
+    },
+    {
+      "part": "hits-long",
+      "points": [
+        [
+          10,
+          0
+        ],
+        [
+          14,
+          0
+        ]
+      ],
+      "owners": [
+        "drone-s-live",
+        "shoulder-ss"
+      ],
+      "beneficiaries": [
+        "drone-s-live",
+        "shoulder-ss"
+      ]
+    },
+    {
+      "part": "damage-long",
+      "points": [
+        [
+          14,
+          1
+        ],
+        [
+          18,
+          1
+        ]
+      ],
+      "owners": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "shoulder-ss",
+        "hand-s"
+      ]
+    },
+    {
+      "part": "charge-short",
+      "points": [
+        [
+          14,
+          2
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "owners": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "shoulder-ss",
+        "hand-s"
+      ]
+    },
+    {
+      "part": "firm-short",
+      "points": [
+        [
+          6,
+          2
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "owners": [
+        "armor-b",
+        "drone-s-live"
+      ],
+      "beneficiaries": [
+        "armor-b",
+        "drone-s-live"
+      ]
+    },
+    {
+      "part": "cd-single",
+      "points": [
+        [
+          16,
+          0
+        ]
+      ],
+      "owners": [
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "hand-s"
+      ]
+    },
+    {
+      "part": "growth-single",
+      "points": [
+        [
+          12,
+          1
+        ]
+      ],
+      "owners": [
+        "shoulder-ss"
+      ],
+      "beneficiaries": [
+        "shoulder-ss"
+      ]
+    }
+  ],
+  "cost": 0,
+  "metrics": {
+    "baseVolley": 70858,
+    "baseDps": 9924.2,
+    "shieldPerCastSum": 13490,
+    "coreCdSum": 13.5,
+    "firmPerVolley": 286,
+    "chargeLinks": 1,
+    "coreChargeTargets": 2,
+    "effectiveEndpoints": 12,
+    "summonsPerCastSum": 7,
+    "deploymentForcePerCast": 336
+  },
+  "chargeLinks": [
+    {
+      "equipment": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "seconds": 2,
+      "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+    }
+  ],
+  "dynamicEffects": [
+    {
+      "part": "growth-single",
+      "equipment": "shoulder-ss",
+      "stat": "main_per_second",
+      "value": 0.04,
+      "status": "未模拟，不代表收益为零"
+    }
+  ],
+  "verifiedLayout": true,
+  "remainingGold": 62,
+  "scores": [
+    11.2102,
+    17.35,
+    -113.00758
+  ],
+  "purchases": [],
+  "replacedEquipment": [],
+  "unusedParts": [
+    "damage-short",
+    "debuff-long-shop"
+  ],
+  "verificationEvidence": "playtest-2026-11-16-run05/day14-verified-layout.jpg",
+  "note": "人工比较并按实机反馈修订；端点、段数、元素、冷却已核，真实战斗未检验。原计划下排伤害改中排右侧，加速改下排。"
+}

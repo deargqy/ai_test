@@ -1,0 +1,380 @@
+{
+  "day": 17,
+  "wins": 14,
+  "losses": 2,
+  "gold": 12,
+  "level": 15,
+  "hp": 191000,
+  "battleStarted": false,
+  "order": [
+    "back-firm-growth-s",
+    "armor-firm-s",
+    "shoulder-ss",
+    "hand-s",
+    "drone-s-live"
+  ],
+  "placements": [
+    {
+      "part": "main-long",
+      "label": "主属性+200%",
+      "points": [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "part": "growth-single",
+      "label": "每秒主属性+4%",
+      "points": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "part": "cd-short",
+      "label": "冷却−12.5%",
+      "points": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "part": "damage-long",
+      "label": "坚固伤害+600%",
+      "points": [
+        [
+          10,
+          1
+        ],
+        [
+          14,
+          1
+        ]
+      ]
+    },
+    {
+      "part": "hits-long",
+      "label": "攻击段数+6",
+      "points": [
+        [
+          8,
+          2
+        ],
+        [
+          12,
+          2
+        ]
+      ]
+    },
+    {
+      "part": "charge-short",
+      "label": "使用→另一端加速2秒",
+      "points": [
+        [
+          10,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ]
+    },
+    {
+      "part": "cd-single",
+      "label": "冷却−10%",
+      "points": [
+        [
+          8,
+          1
+        ]
+      ]
+    },
+    {
+      "part": "damage-short",
+      "label": "伤害+200%",
+      "points": [
+        [
+          16,
+          0
+        ],
+        [
+          18,
+          0
+        ]
+      ]
+    },
+    {
+      "part": "calibration-single",
+      "label": "伤害+120%",
+      "points": [
+        [
+          16,
+          1
+        ]
+      ]
+    },
+    {
+      "part": "blue-force",
+      "label": "附魔力量+4",
+      "points": [
+        [
+          16,
+          2
+        ]
+      ]
+    }
+  ],
+  "portAudit": [
+    {
+      "point": [
+        0,
+        0
+      ],
+      "owner": "back-firm-growth-s",
+      "state": "free"
+    },
+    {
+      "point": [
+        0,
+        1
+      ],
+      "owner": "back-firm-growth-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        0,
+        2
+      ],
+      "owner": "back-firm-growth-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        2,
+        2
+      ],
+      "owner": "back-firm-growth-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        4,
+        0
+      ],
+      "owner": "armor-firm-s",
+      "state": "free"
+    },
+    {
+      "point": [
+        4,
+        1
+      ],
+      "owner": "armor-firm-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        4,
+        2
+      ],
+      "owner": "armor-firm-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        6,
+        1
+      ],
+      "owner": "armor-firm-s",
+      "state": "free"
+    },
+    {
+      "point": [
+        8,
+        1
+      ],
+      "owner": "shoulder-ss",
+      "state": "connected"
+    },
+    {
+      "point": [
+        8,
+        2
+      ],
+      "owner": "shoulder-ss",
+      "state": "connected"
+    },
+    {
+      "point": [
+        10,
+        0
+      ],
+      "owner": "shoulder-ss",
+      "state": "connected"
+    },
+    {
+      "point": [
+        10,
+        1
+      ],
+      "owner": "shoulder-ss",
+      "state": "connected"
+    },
+    {
+      "point": [
+        10,
+        2
+      ],
+      "owner": "shoulder-ss",
+      "state": "blocked"
+    },
+    {
+      "point": [
+        12,
+        0
+      ],
+      "owner": "hand-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        12,
+        1
+      ],
+      "owner": "hand-s",
+      "state": "blocked"
+    },
+    {
+      "point": [
+        12,
+        2
+      ],
+      "owner": "hand-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        14,
+        1
+      ],
+      "owner": "hand-s",
+      "state": "connected"
+    },
+    {
+      "point": [
+        16,
+        0
+      ],
+      "owner": "drone-s-live",
+      "state": "connected"
+    },
+    {
+      "point": [
+        16,
+        1
+      ],
+      "owner": "drone-s-live",
+      "state": "connected"
+    },
+    {
+      "point": [
+        16,
+        2
+      ],
+      "owner": "drone-s-live",
+      "state": "connected"
+    },
+    {
+      "point": [
+        18,
+        0
+      ],
+      "owner": "drone-s-live",
+      "state": "connected"
+    }
+  ],
+  "portCounts": {
+    "connected": 16,
+    "blocked": 2,
+    "free": 3
+  },
+  "observedEquipment": [
+    {
+      "slot": "back",
+      "name": "S曙光盾",
+      "shieldShown": "806",
+      "cooldownShown": 5.2,
+      "firm": 52
+    },
+    {
+      "slot": "armor",
+      "name": "S塞玛·量产",
+      "shieldShown": "3.8K",
+      "cooldownShown": 11.4,
+      "firm": 82
+    },
+    {
+      "slot": "shoulder",
+      "name": "SS链法手枪",
+      "damageShown": "7.2K",
+      "hits": 9,
+      "cooldownShown": 6.9,
+      "firm": 30
+    },
+    {
+      "slot": "hand",
+      "name": "S虚空撕裂",
+      "damageShown": "5.7K",
+      "hits": 10,
+      "cooldownShown": 2.6,
+      "firm": 4
+    },
+    {
+      "slot": "drone",
+      "name": "S式神野衾",
+      "damageShown": "477",
+      "force": 14,
+      "cooldownShown": 7.1
+    }
+  ],
+  "inventory": [
+    "旧B深红尊",
+    "旧B祸津神"
+  ],
+  "economy": "60 + 出售闲置S神速16 − 曙光32 − 塞玛32 = 12",
+  "evidence": "playtest-2026-11-16-run05/day17-verified-layout.jpg",
+  "unknowns": [
+    "未战斗；不能宣称最强或保证比旧配置赢率高",
+    "蓝附魔在坚固背甲未成功安装，是否赋予力量条件标签未知；无人机+4成功",
+    "首击、随机加速目标与刷新/叠加规则未观察",
+    "无人机显示值138/265/350/477不能由原输入111与统一10%加成准确解释，保留实测查表，完整来源未核"
+  ],
+  "modelCorrections": [
+    "原手工候选漏掉无人机同件双孔200%桥与左中120%单孔可共存；最终全部10配件使用",
+    "S甲孔位以本轮左上/左中/左下/右中为准，旧报告右上误读",
+    "不从单张已加成卡面反推统一基础伤害；机实测无伤害件138，仅120%265，仅200%350，两件477"
+  ],
+  "timing": {
+    "startedAt": "2026-11-17T03:50:57.705Z",
+    "verifiedAt": "2026-11-17T04:08:13.461Z",
+    "seconds": 1035.756,
+    "scope": "本次整排优化：批采、离线比较、交易、拖放重试及最终验收；不含后续归档，不是完整游戏日",
+    "fullGameDaySeconds": null
+  }
+}

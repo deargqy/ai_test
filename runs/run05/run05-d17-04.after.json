@@ -1,0 +1,13 @@
+{
+  "observed": "火控机左中成功，伤害350→477；蓝附魔机左下第二次校正成功，力量10→14。全部10件已有配件均已装备，库存只留旧B背/甲，余额12。手肩多段、伤害、互加速桥完整，手10段/肩9段。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day17-drone-firecontrol.jpg",
+    "playtest-2026-11-16-run05/day17-blue-drone-adjusted.jpg",
+    "playtest-2026-11-16-run05/day17-verified-layout.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "实际增量支持；同件双孔只计无人机一件。先前蓝甲/背拖放未成，仍不能判断是否赋予条件标签。",
+  "nextAction": "记录最终几何、数值与模型遗漏；对战前另查敌方并准备预测。"
+}

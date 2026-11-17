@@ -1,0 +1,370 @@
+{
+  "runId": "run05",
+  "day": 16,
+  "opponent": "Rogas",
+  "operator": "player",
+  "outcome": "loss",
+  "wins": 14,
+  "losses": 2,
+  "phase": "postbattle statistics; not advanced",
+  "reward": {
+    "gold": 78,
+    "income": 70,
+    "interest": 8,
+    "xp": 2,
+    "lifeChange": -1
+  },
+  "prebattlePrediction": null,
+  "firstHitSeconds": null,
+  "durationSeconds": null,
+  "displayedHp": {
+    "own": 191000,
+    "enemy": 275400,
+    "enemyShield": 5404,
+    "meaning": "result UI labels, not verified initial or remaining HP; enemy has max-HP growth"
+  },
+  "armorActuallyEquipped": "B 祸津神; offered S armor is not equipped in this battle",
+  "damage": {
+    "own": {
+      "hand": 141488,
+      "shoulder": null,
+      "drone": null
+    },
+    "enemy": {
+      "shoulder": 281106,
+      "hand": 31504,
+      "drone": null
+    }
+  },
+  "defense": {
+    "own": {
+      "backShield": 1652,
+      "firmShield": 44,
+      "armor": null
+    },
+    "enemy": {
+      "backShield": 10808,
+      "firmShield": 584,
+      "buffPlus": 1168,
+      "techPlus": 234,
+      "armor": null
+    }
+  },
+  "buffs": {
+    "own": {
+      "openingForce": 375,
+      "periodicForce": 48,
+      "droneForce": 48,
+      "handFirm": 32,
+      "otherTechFirm": 1,
+      "shoulderFirm": null
+    },
+    "enemy": {
+      "handFirm": 556,
+      "shoulderFirm": 291,
+      "backFirm": 140
+    }
+  },
+  "nullMeaning": "No displayed row; never proof of no passive contribution or complete absence of action",
+  "counters": {
+    "ownHand": 29,
+    "enemyHand": 32,
+    "enemyShoulder": 1,
+    "note": "UI counters, not complete cast counts"
+  },
+  "ownTech": [
+    "全部装备主属性+10%",
+    "开场全部装备加速3秒",
+    "每秒8力量",
+    "开场375力量",
+    "每3秒随机一件装备直接充能3秒"
+  ],
+  "enemyTech": [
+    "每3秒随机一件装备直接充能1秒",
+    "每当任意装备被使用，对同一槽位敌方装备禁用0.9秒",
+    "最大生命+20%",
+    "最大生命+12500",
+    "每3秒随机敌装禁用3秒"
+  ],
+  "enemyEquipment": [
+    {
+      "id": "armor",
+      "name": "S 塞玛·量产",
+      "cdObserved": 13,
+      "rawShieldObserved": 1332,
+      "firmPerApplication": 130,
+      "passive": "获得坚固→随机一件装备加速2.5秒",
+      "active": "超载IV、盾、坚固",
+      "directStat": "无主动盾行；不能推导被动未触发"
+    },
+    {
+      "id": "back",
+      "name": "SS 英勇盾",
+      "cdObserved": 4,
+      "rawShieldObserved": 342,
+      "firmPerApplication": 70,
+      "passive": "坚固每秒还提供+2最大生命",
+      "active": "减速全部敌装3秒；盾与坚固",
+      "directStat": "10808盾、140坚固"
+    },
+    {
+      "id": "hand",
+      "name": "SS 熵",
+      "cdObserved": 2.2,
+      "rawDamageObserved": 428,
+      "hitsShown": 7,
+      "firmPerApplication": 23,
+      "passive": "命中自身坚固+15%",
+      "active": "多段伤害及坚固",
+      "directStat": "31504伤害、556坚固"
+    },
+    {
+      "id": "shoulder",
+      "name": "SS 链法手枪",
+      "cdObserved": 8,
+      "rawDamageObserved": 6660,
+      "hitsShown": 9,
+      "firmPerApplication": 97,
+      "passive": "每层坚固使本装备伤害+6",
+      "active": "多段伤害及坚固",
+      "directStat": "281106伤害、291坚固"
+    },
+    {
+      "id": "drone",
+      "name": "SS 侍灵·量产",
+      "cdObserved": 7,
+      "passive": "召唤物命中：敌方防御型装备-20护盾，己方获得+20",
+      "active": "召唤",
+      "directStat": "伤害/增益无行；未将纸面能力计为已兑现胜因"
+    }
+  ],
+  "enemyParts": [
+    {
+      "id": "armor-back-top",
+      "connection": "甲—背上排",
+      "name": "重型护盾校准器",
+      "text": "护盾+640%，每天再+160%",
+      "effectKind": "shield_growth",
+      "value": 6.4,
+      "evidence": "playtest-2026-11-16-run05/day16-part-armor-back-top.jpg"
+    },
+    {
+      "id": "armor-back-mid",
+      "connection": "甲—背中排",
+      "name": "坚固",
+      "text": "使用一端为另一端直接充能2秒",
+      "effectKind": "instant_charge",
+      "value": 2,
+      "evidence": "playtest-2026-11-16-run05/day16-part-armor-back-mid.jpg"
+    },
+    {
+      "id": "armor-back-bottom",
+      "connection": "甲—背下排",
+      "name": "标准型护盾校准器",
+      "text": "护盾+800%，每天再+80%",
+      "effectKind": "shield_growth",
+      "value": 8,
+      "evidence": "playtest-2026-11-16-run05/day16-part-armor-back-bottom.jpg"
+    },
+    {
+      "id": "armor-single",
+      "connection": "甲单孔",
+      "name": "齐射",
+      "text": "主属性+100%",
+      "effectKind": "main_pct",
+      "value": 1,
+      "evidence": "playtest-2026-11-16-run05/day16-part-armor-single.jpg"
+    },
+    {
+      "id": "back-hand-mid",
+      "connection": "背—手中排",
+      "name": "坚固",
+      "text": "使用一端为另一端直接充能0.25秒",
+      "effectKind": "instant_charge",
+      "value": 0.25,
+      "evidence": "playtest-2026-11-16-run05/day16-part-back-hand-mid.jpg"
+    },
+    {
+      "id": "back-hand-bottom",
+      "connection": "背—手下排",
+      "name": "标准型循环校准器",
+      "text": "冷却-20%，每天再-2.5%",
+      "effectKind": "cd_pct",
+      "value": -0.2,
+      "evidence": "playtest-2026-11-16-run05/day16-part-back-hand-bottom.jpg"
+    },
+    {
+      "id": "hand-shoulder-top",
+      "connection": "手—肩上排",
+      "name": "军械库",
+      "text": "进攻型装备伤害+800%",
+      "effectKind": "damage_pct",
+      "value": 8,
+      "evidence": "playtest-2026-11-16-run05/day16-part-hand-shoulder-top.jpg"
+    },
+    {
+      "id": "hand-single",
+      "connection": "手单孔",
+      "name": "继电器",
+      "text": "附魔16坚固",
+      "effectKind": "firm_enchantment",
+      "value": 16,
+      "evidence": "playtest-2026-11-16-run05/day16-part-hand-single.jpg"
+    },
+    {
+      "id": "hand-shoulder-bottom",
+      "connection": "手—肩下排",
+      "name": "生命偷取",
+      "text": "攻击段数+3",
+      "effectKind": "hits",
+      "value": 3,
+      "evidence": "playtest-2026-11-16-run05/day16-part-hand-shoulder-bottom.jpg"
+    },
+    {
+      "id": "shoulder-single",
+      "connection": "肩单孔",
+      "name": "生命偷取",
+      "text": "攻击段数+3",
+      "effectKind": "hits",
+      "value": 3,
+      "evidence": "playtest-2026-11-16-run05/day16-part-shoulder-single.jpg"
+    },
+    {
+      "id": "shoulder-drone-mid",
+      "connection": "肩—无人机中排",
+      "name": "力场猛攻",
+      "text": "伤害+400%；坚固装备改为+1200%",
+      "effectKind": "conditional_damage_pct",
+      "value": 12,
+      "evidence": "playtest-2026-11-16-run05/day16-part-shoulder-drone-mid.jpg"
+    },
+    {
+      "id": "shoulder-drone-bottom",
+      "connection": "肩—无人机下排",
+      "name": "标准型屏障增幅器",
+      "text": "元素+72%；坚固改为+216%",
+      "effectKind": "conditional_element_pct",
+      "value": 2.16,
+      "evidence": "playtest-2026-11-16-run05/day16-part-shoulder-drone-bottom.jpg"
+    },
+    {
+      "id": "drone-top",
+      "connection": "无人机自身上排两孔",
+      "name": "轮转",
+      "text": "使用一端使另一件元素+64%；同件两孔是否触发未知",
+      "effectKind": "element_growth_unverified",
+      "value": 0.64,
+      "evidence": "playtest-2026-11-16-run05/day16-part-drone-top.jpg"
+    },
+    {
+      "id": "drone-single",
+      "connection": "无人机单孔",
+      "name": "军械库",
+      "text": "进攻型装备伤害+200%；此SS召唤受益未隔离验证",
+      "effectKind": "damage_pct_unverified",
+      "value": 2,
+      "evidence": "playtest-2026-11-16-run05/day16-part-drone-single.jpg"
+    }
+  ],
+  "evidence": [
+    {
+      "src": "playtest-2026-11-16-run05/day16-loss-resume.jpg",
+      "label": "失败结算"
+    },
+    {
+      "src": "playtest-2026-11-16-run05/day16-loss-damage.jpg",
+      "label": "伤害"
+    },
+    {
+      "src": "playtest-2026-11-16-run05/day16-loss-defense.jpg",
+      "label": "防御"
+    },
+    {
+      "src": "playtest-2026-11-16-run05/day16-loss-buffs.jpg",
+      "label": "增益"
+    }
+  ],
+  "observedComparisons": {
+    "enemyDamage": 312610,
+    "ownDamage": 141488,
+    "enemyShoulderDamageShare": 0.8992,
+    "shoulderHitsShown": {
+      "own": 9,
+      "enemy": 9
+    },
+    "damageMultipliers": {
+      "own": 9.1,
+      "enemy": 21,
+      "ratio": 2.3077,
+      "basis": "own1+.1+6+2; enemy1+8+12, additive modifiers only, not whole-battle damage ratio"
+    },
+    "ownShoulderPortCount": 5,
+    "ownShoulderConnectedPortCount": 5,
+    "ownCooldownObserved": {
+      "back": 6.6,
+      "armor": 10.1,
+      "hand": 4.1,
+      "shoulder": 7.7,
+      "drone": 7.1
+    }
+  },
+  "causalAssessment": [
+    {
+      "confidence": "observed",
+      "claim": "我手输出已启动，但肩没有伤害或坚固行；不能把几何接满与9段潜力当已兑现输出。"
+    },
+    {
+      "confidence": "observed",
+      "claim": "敌肩占其伤害89.9%；两条已读伤害桥共同服务肩，另有两处+3段及元素强化。"
+    },
+    {
+      "confidence": "mechanism-supported inference",
+      "claim": "快手坚固成长、甲随机加速、直接充能、减速与两种禁用为敌肩争取爆发窗口，可能使我肩未能完成有效命中。"
+    },
+    {
+      "confidence": "unknown",
+      "claim": "未拍到过程，不能确认某次随机禁用命中我肩，也不能判定肩完全未施法；动画、弹道、死亡截断也未排除。"
+    },
+    {
+      "confidence": "not tested",
+      "claim": "S甲没有出战；本场不支持或反驳换S甲一定更好，不能断言换了能赢。"
+    }
+  ],
+  "modelChanges": [
+    {
+      "id": "readiness_gate",
+      "rule": "每个核心分别过实际输出门槛，再计完整轮和多段收益；先记录是否有伤害行/状态贡献，未启动不能套满轮。"
+    },
+    {
+      "id": "control_schedule",
+      "rule": "同时列开场、使用触发、周期随机三类控制与前置条件；不把控制持续时间简单相加，也不把随机控制固定分配核心。"
+    },
+    {
+      "id": "charge_semantics",
+      "rule": "直接充能=当次推进冷却；加速=持续时间内改变冷却速度。分字段记录，不把2秒加速当2秒直接充能。"
+    },
+    {
+      "id": "trigger_producer",
+      "rule": "快速手部即使伤害较低，也可能是坚固/随机加速与槽位封锁的触发来源；支援边际价值按整条链评估。"
+    },
+    {
+      "id": "core_resource_allocation",
+      "rule": "比较核心实际吃到的倍率/段数/控制保护，而非孔数或品级。放大不出手的核心无法自动增加本场伤害。"
+    }
+  ],
+  "unknowns": [
+    "真实首击、肩是否起手、禁用目标、战斗时长与击杀时点",
+    "敌手2.2秒的完整来源：-20%共享桥只能解释一部分，历史消耗品/其他修正未知",
+    "槽位封锁按装备类别还是排列位置映射未隔离验证",
+    "加速刷新/叠加规则、随机选目标分布、瞬间充能在禁用中如何处理",
+    "最大生命增长与防御统计加号项不能直接视作有效治疗",
+    "机师能力未读到，不凭头像补机制",
+    "敌无人机轮转跨同件两孔的实际效果未验证"
+  ],
+  "nextPredictions": [
+    "战前分别写手与肩首次有效命中是否有可能被周期/使用触发控制拖后，并记录0输出分支。",
+    "若采用快手坚固→随机加速，核第一次坚固产生时间、加速目标和第二轮核心命中；不能仅凭装备名称称复刻。",
+    "对同类控制与高倍率肩，先考虑减少核心启动依赖、直接充能/控制应对或可用换敌，再比较额外伤害与多段。"
+  ],
+  "bugConclusion": "No confirmed new game bug. Missing rows, counters and HP labels do not establish a numerical bug."
+}

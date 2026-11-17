@@ -1,0 +1,256 @@
+{
+  "order": [
+    "armor-b",
+    "back-b",
+    "drone-s-live",
+    "shoulder-ss",
+    "hand-s"
+  ],
+  "equipment": [
+    {
+      "id": "armor-b",
+      "name": "祸津神",
+      "slot": "armor",
+      "damage": 0,
+      "shield": 8236,
+      "element": 44,
+      "hits": 1,
+      "cooldown": 10.5,
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "passive": "超载II；力量额外提供1层伤害，精确系数待核"
+    },
+    {
+      "id": "back-b",
+      "name": "深红尊",
+      "slot": "back",
+      "damage": 0,
+      "shield": 5254,
+      "element": 38,
+      "hits": 1,
+      "cooldown": 7,
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒"
+    },
+    {
+      "id": "drone-s-live",
+      "name": "式神野衾",
+      "slot": "drone",
+      "damage": 94,
+      "shield": 0,
+      "element": 10,
+      "hits": 7,
+      "cooldown": 6.75,
+      "kind": "summon",
+      "tags": [
+        "force"
+      ],
+      "passive": "部署获得48力量；+6桥卡面召唤x7。336力量为7次部署条件预测，尚未战报验证。"
+    },
+    {
+      "id": "shoulder-ss",
+      "name": "链法手枪",
+      "slot": "shoulder",
+      "damage": 5822,
+      "shield": 0,
+      "element": 95,
+      "hits": 9,
+      "cooldown": 9,
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤"
+    },
+    {
+      "id": "hand-s",
+      "name": "虚空撕裂",
+      "slot": "hand",
+      "damage": 4615,
+      "shield": 0,
+      "element": 13,
+      "hits": 4,
+      "cooldown": 5,
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "passive": "获得相当于失去护盾12%的伤害；未模拟"
+    }
+  ],
+  "placements": [
+    {
+      "part": "main-long",
+      "points": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "owners": [
+        "armor-b",
+        "back-b"
+      ],
+      "beneficiaries": [
+        "armor-b",
+        "back-b"
+      ]
+    },
+    {
+      "part": "hits-long",
+      "points": [
+        [
+          8,
+          1
+        ],
+        [
+          12,
+          1
+        ]
+      ],
+      "owners": [
+        "drone-s-live",
+        "shoulder-ss"
+      ],
+      "beneficiaries": [
+        "drone-s-live",
+        "shoulder-ss"
+      ]
+    },
+    {
+      "part": "damage-long",
+      "points": [
+        [
+          14,
+          1
+        ],
+        [
+          18,
+          1
+        ]
+      ],
+      "owners": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "shoulder-ss",
+        "hand-s"
+      ]
+    },
+    {
+      "part": "charge-short",
+      "points": [
+        [
+          14,
+          0
+        ],
+        [
+          16,
+          0
+        ]
+      ],
+      "owners": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "shoulder-ss",
+        "hand-s"
+      ]
+    },
+    {
+      "part": "firm-short",
+      "points": [
+        [
+          14,
+          2
+        ],
+        [
+          16,
+          2
+        ]
+      ],
+      "owners": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "beneficiaries": [
+        "shoulder-ss",
+        "hand-s"
+      ]
+    },
+    {
+      "part": "cd-single",
+      "points": [
+        [
+          8,
+          0
+        ]
+      ],
+      "owners": [
+        "drone-s-live"
+      ],
+      "beneficiaries": [
+        "drone-s-live"
+      ]
+    },
+    {
+      "part": "growth-single",
+      "points": [
+        [
+          12,
+          2
+        ]
+      ],
+      "owners": [
+        "shoulder-ss"
+      ],
+      "beneficiaries": [
+        "shoulder-ss"
+      ]
+    }
+  ],
+  "cost": 0,
+  "metrics": {
+    "baseVolley": 70858,
+    "baseDps": 9514.0,
+    "shieldPerCastSum": 13490,
+    "coreCdSum": 14,
+    "firmPerVolley": 907,
+    "chargeLinks": 1,
+    "coreChargeTargets": 2,
+    "effectiveEndpoints": 12,
+    "summonsPerCastSum": 7,
+    "deploymentForcePerCast": 336
+  },
+  "chargeLinks": [
+    {
+      "equipment": [
+        "shoulder-ss",
+        "hand-s"
+      ],
+      "seconds": 2,
+      "trigger": "使用一端使另一端加速，持续指定秒数；不是立即充能，多段不自动视为多次使用"
+    }
+  ],
+  "dynamicEffects": [
+    {
+      "part": "growth-single",
+      "equipment": "shoulder-ss",
+      "stat": "main_per_second",
+      "value": 0.04,
+      "status": "未模拟，不代表收益为零"
+    }
+  ],
+  "note": "人工补充均衡候选：束搜索48强未保留本方案。证明当前代理剪枝会遗漏保留召唤与双核心加速的组合。非全局最优。"
+}

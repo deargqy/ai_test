@@ -1,0 +1,13 @@
+{
+  "observed": "旧手与肩已共享+6段、600%伤害，手5K×10肩6.2K×9；背甲主属性桥保留。CD右中两次失败仍5秒。桥身下放精械把伤害桥挤回库，已恢复，精械改甲右下。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day15-layout-before-adjust.jpg",
+    "playtest-2026-11-16-run05/day15-cd-retry.jpg",
+    "playtest-2026-11-16-run05/day15-growth-underbridge.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "核心桥成功，但CD预测失败，不能称整套完成；桥身占用得到一次实机支持。",
+  "nextAction": "改手左上CD，互加速改手右中到无人机左中。"
+}

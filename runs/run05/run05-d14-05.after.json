@@ -1,0 +1,16 @@
+{
+  "observed": "已装成背—甲—S无人机—SS肩—S手。+6长上排无人机右上至肩右上，x7/x9；600%伤害中排肩右至手右；互加速下排肩右至手左；元素短甲右下至无人机左下；CD手左上；精械肩左中。肩5.8Kx9/30、手4.6Kx4/4/CD4.5、无人机94x7/18/CD7.5，甲76力背38；盾5.3K/8.2K；62金。下排伤害桥两试未成后改用已知中排；清除悬浮说明后单孔冷却成功，遮挡是否根因尚未隔离。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day14-verified-layout.jpg",
+    "playtest-2026-11-16-run05/day14-verified-shoulder-details.jpg",
+    "playtest-2026-11-16-run05/day14-verified-hand-details.jpg",
+    "playtest-2026-11-16-run05/day14-verified-drone-details.jpg",
+    "playtest-2026-11-16-run05/day14-verify-growth-shoulder.jpg",
+    "playtest-2026-11-16-run05/day14-verify-charge-left.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "narrow",
+  "reason": "最终功能布局和数值支持修订预测，但端点路线与最初图有调整；仅装配验证，未战斗，不能推断胜率。原方案失败记录保留。",
+  "nextAction": "保持当前完整配置；最终确定出战装备后使用库存攻击校准+6；A200%短桥留作改装/恢复对照候选。商店新刀与48金弹头未买、未刷新。选敌与实战须另prepare。"
+}

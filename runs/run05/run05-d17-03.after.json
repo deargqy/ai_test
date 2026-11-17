@@ -1,0 +1,12 @@
+{
+  "observed": "无人机自桥装成，265→350（未加火控）；背附魔提示目标插槽无效，仍仓库。没有把蓝附魔视为已赋予力量条件。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day17-drone-self-bridge.jpg",
+    "playtest-2026-11-16-run05/day17-blue-back.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "机实际350不同于估算357，须按原始数值/加成口径修正；蓝未成功不能验证标签。发现机左中仍可放火控。",
+  "nextAction": "火控放机左中；蓝改机左下，失败则留库。"
+}

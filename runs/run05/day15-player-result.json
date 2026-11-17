@@ -1,0 +1,138 @@
+{
+  "runId": "run05",
+  "day": 15,
+  "operator": "player",
+  "opponent": "Ranka0423",
+  "outcome": "win",
+  "wins": 14,
+  "losses": 1,
+  "ownHp": 191000,
+  "enemyHp": 168000,
+  "prebattlePrediction": null,
+  "firstEffectiveHit": null,
+  "durationSeconds": null,
+  "damage": {
+    "own": {
+      "hand": 102003,
+      "shoulder": 92513,
+      "drone": null
+    },
+    "enemy": {
+      "shock": 16697,
+      "hand": 3780,
+      "shoulder": 3358,
+      "drone": 1470
+    }
+  },
+  "defense": {
+    "own": {
+      "back": 3280,
+      "firm": 301,
+      "armor": null
+    },
+    "enemy": {
+      "back": 20380,
+      "firm": 92,
+      "armor": null
+    }
+  },
+  "buffs": {
+    "own": {
+      "openingForce": 375,
+      "periodicForce": 80,
+      "droneForce": 48,
+      "shoulderFirm": 285,
+      "handFirm": 20
+    },
+    "enemy": {
+      "openingShock": 450,
+      "shoulderShock": 727,
+      "backShock": 466,
+      "handFirm": 95,
+      "drone": {
+        "burn": 22,
+        "cold": 6,
+        "shock": 11
+      }
+    }
+  },
+  "nullMeaning": "not displayed / not observed, not proved zero contribution",
+  "ownTech": [
+    "主属性+10%",
+    "开场全装备加速3秒",
+    "每秒8力量",
+    "开场375力量",
+    "每3秒随机一件充能3秒"
+  ],
+  "enemyTech": [
+    "施加感电50%获得2坚固",
+    "施加寒冷50%获得3坚固",
+    "施加燃烧50%获得4坚固",
+    "开场禁用全部敌装2.5秒",
+    "开场施加450感电"
+  ],
+  "evidence": [
+    "playtest-2026-11-16-run05/day15-result-damage.jpg",
+    "playtest-2026-11-16-run05/day15-result-defense.jpg",
+    "playtest-2026-11-16-run05/day15-result-buffs.jpg",
+    "playtest-2026-11-16-run05/day15-tech-own-0.jpg",
+    "playtest-2026-11-16-run05/day15-tech-own-1.jpg",
+    "playtest-2026-11-16-run05/day15-tech-own-2.jpg",
+    "playtest-2026-11-16-run05/day15-tech-own-3.jpg",
+    "playtest-2026-11-16-run05/day15-tech-own-4.jpg",
+    "playtest-2026-11-16-run05/day15-tech-enemy-0.jpg",
+    "playtest-2026-11-16-run05/day15-tech-enemy-1.jpg",
+    "playtest-2026-11-16-run05/day15-tech-enemy-2.jpg",
+    "playtest-2026-11-16-run05/day15-tech-enemy-3.jpg",
+    "playtest-2026-11-16-run05/day15-tech-enemy-4.jpg"
+  ],
+  "geometry": {
+    "ports": 17,
+    "connected": 16,
+    "blocked": 1,
+    "free": 0,
+    "blockedPort": "hand right middle",
+    "shoulderConnected": 5
+  },
+  "changes": [
+    {
+      "rule": "startup",
+      "before": "Nominal CD / opening acceleration used without explicit control overlap",
+      "after": "Include enemy opening disable2.5s and own acceleration3s as overlapping states. Random charge3s every3s remains a branch, not guaranteed core acceleration.",
+      "status": "rule text verified; actual timing unknown"
+    },
+    {
+      "rule": "support",
+      "before": "Damage share could dominate allocation",
+      "after": "Separate direct damage, applied force/firm, triggered shields, lost-shield growth and acceleration recipients. Drone has48force despite no damage row; armor passive is independent of its active shield row.",
+      "status": "support observed; marginal causal contribution unknown"
+    },
+    {
+      "rule": "counters",
+      "before": "Assumed full volley metrics might be mistaken for realized output",
+      "after": "Hand x10 and shoulder x9 are capacity; result counters x21/x1 do not mean complete casts. Shoulder285firm is not9*95=855, so realized fraction is unknown.",
+      "status": "mismatch observed; no game bug conclusion"
+    },
+    {
+      "rule": "layout",
+      "before": "Missing summon damage eligibility and qualitative blocked-hole concern",
+      "after": "Explicit verified eligibility; enumerate exact occupied/blocked/free ports and compare alternatives with displaced parts.",
+      "status": "offline regression verified; alternatives not played"
+    }
+  ],
+  "unknowns": [
+    "Enemy accessory details were not captured before leaving results; shapes alone do not establish effects.",
+    "No exact first-hit, battle duration, remaining HP or per-event damage timeline.",
+    "Displayed shields may not equal total generated or absorbed; cannot multiply16697 by2 and declare a discrepancy bug.",
+    "Enemy armor passive acceleration may operate even without armor defense row.",
+    "Victory and changed damage shares across different opponents are not a controlled +6 bridge experiment."
+  ],
+  "nextValidation": [
+    "Record first effective hand/shoulder hit and first drone deployment before enemy burst.",
+    "Separate predicted attack segments from observed effective hit events and buff applications.",
+    "Compare control-free, disabled-start and delayed-core scenarios; leave unsupported rates unknown."
+  ],
+  "inputAttribution": "User confirmed intermediate operations were manual; no subsequent UI operations by agent.",
+  "ownTotalDamage": 194516,
+  "enemyTotalDamage": 25305
+}

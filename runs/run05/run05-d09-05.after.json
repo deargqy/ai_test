@@ -1,0 +1,11 @@
+{
+  "observed": "B100%桥左端1534,870→1437,870一次成功。手3.9K、肩4.7K、背1.1K、无人机59，金币103。三桥全部至少两件装备有效。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-third-bridge-core.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "零购买把有效加成集中高频主力；未牺牲600%与50%共享。",
+  "nextAction": "核对首领手肩被动再决定战斗"
+}

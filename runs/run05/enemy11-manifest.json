@@ -1,0 +1,219 @@
+{
+  "batchId": "enemy11",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "entries": [
+    {
+      "id": "slot1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-slot1.jpg",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ]
+    },
+    {
+      "id": "slot2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-slot2.jpg",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ]
+    },
+    {
+      "id": "slot3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-slot3.jpg",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ]
+    },
+    {
+      "id": "slot4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-slot4.jpg",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ]
+    },
+    {
+      "id": "slot5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-slot5.jpg",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ]
+    },
+    {
+      "id": "tech1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-tech1.jpg",
+      "box": [
+        208,
+        90,
+        833,
+        560
+      ]
+    },
+    {
+      "id": "tech2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-tech2.jpg",
+      "box": [
+        301,
+        90,
+        926,
+        560
+      ]
+    },
+    {
+      "id": "tech3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-tech3.jpg",
+      "box": [
+        395,
+        90,
+        1020,
+        560
+      ]
+    },
+    {
+      "id": "tech4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-tech4.jpg",
+      "box": [
+        491,
+        90,
+        1116,
+        560
+      ]
+    },
+    {
+      "id": "tech5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-tech5.jpg",
+      "box": [
+        584,
+        90,
+        1209,
+        560
+      ]
+    },
+    {
+      "id": "bridge1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-bridge1.jpg",
+      "box": [
+        300,
+        220,
+        925,
+        750
+      ]
+    },
+    {
+      "id": "bridge2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-bridge2.jpg",
+      "box": [
+        264,
+        220,
+        889,
+        750
+      ]
+    },
+    {
+      "id": "bridge3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-bridge3.jpg",
+      "box": [
+        586,
+        220,
+        1211,
+        750
+      ]
+    },
+    {
+      "id": "part1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part1.jpg",
+      "box": [
+        264,
+        220,
+        889,
+        750
+      ]
+    },
+    {
+      "id": "part2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part2.jpg",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ]
+    },
+    {
+      "id": "part3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part3.jpg",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ]
+    },
+    {
+      "id": "part4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part4.jpg",
+      "box": [
+        480,
+        220,
+        1105,
+        750
+      ]
+    },
+    {
+      "id": "part5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part5.jpg",
+      "box": [
+        625,
+        220,
+        1250,
+        750
+      ]
+    },
+    {
+      "id": "part6",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part6.jpg",
+      "box": [
+        768,
+        220,
+        1393,
+        750
+      ]
+    },
+    {
+      "id": "part7",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part7.jpg",
+      "box": [
+        768,
+        220,
+        1393,
+        750
+      ]
+    },
+    {
+      "id": "part8",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-enemy-part8.jpg",
+      "box": [
+        840,
+        220,
+        1465,
+        750
+      ]
+    }
+  ]
+}

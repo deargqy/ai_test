@@ -1,0 +1,11 @@
+{
+  "observed": "已进入三选：感电480/32、力量480/32、感电450/32，全部C无被动。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-armor-choices-ready.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "选择页已读取；红色图标实际为力量，按文字确认，不能称燃烧。",
+  "nextAction": "选择力量初甲"
+}

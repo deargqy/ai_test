@@ -1,0 +1,14 @@
+{
+  "observed": "32金买入S八光玉并装备550，但长桥上排左端与中心两种拖法均目标插槽无效。遵守两次限额，恢复旧B肩并原中排桥成功，手2.8K肩4.2K；31金。S500放仓库，旧B未卖。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day08-s-shoulder-equipped.jpg",
+    "playtest-2026-11-16-run05/day08-core-bridge-top.jpg",
+    "playtest-2026-11-16-run05/day08-core-bridge-top-center.jpg",
+    "playtest-2026-11-16-run05/day08-bridge-restored.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "买前只看两个外端可对齐不足以保证装配；上排缺中间孔可能是原因但未验证。32金暂未转战力，不能把购入当升级成功。保留S用于后续换序/钻孔的具体候选，本场先保已证双600%。",
+  "nextAction": "关闭商店查看敌人；后续只在新增槽位/布局证据时再试S"
+}

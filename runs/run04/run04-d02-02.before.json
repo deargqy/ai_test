@@ -1,0 +1,63 @@
+{
+  "runId": "run04",
+  "day": 2,
+  "id": "run04-d02-02",
+  "phase": "opponent",
+  "before": {
+    "state": "我方30000HP，双武器S每秒+16%成长，675/400共享盾。敌noobasik20000HP，3B装备冷手260×3/7寒冷4感电、冷肩400×3/14寒冷、背180盾56寒冷；C甲/燃无人机，科技所有装备每秒主属性+4。装备详细提示多次未显示，具体被动未知。",
+    "goal": "验证双武器成长能否突破对手，并保留末段画面核查终局。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day02-opponent.jpg",
+      "playtest-2026-11-16-run04/day02-opponent-tech.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "对手寒冷很高，启动可能变慢；己方开战2秒减速与每秒成长使慢启动仍有回报，硬禁用被动未知。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "我方多10000基础HP且两路每秒成长，敌每秒+4也成长；不把存活等同胜利。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "两组双端共享已实际确认，S增长看武器卡面和输出。"
+      },
+      {
+        "id": "M07",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "敌被动未读到明确保留未知，不伪造控制模型。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "打当前20000HP对手",
+        "benefit": "耐久优势，测试已知成长对位",
+        "cost": "失败后剩1条命",
+        "risk": "未知被动和高寒冷",
+        "unknown": "实际首击/终场规则"
+      },
+      {
+        "action": "免费刷新",
+        "benefit": "可能降低控制",
+        "cost": "失去已知低HP敌",
+        "risk": "之前刷新遇30000HP高输出",
+        "unknown": "新敌"
+      }
+    ],
+    "chosenAction": "保留当前敌，最高速度，同时短间隔截取战斗末段；不为未读取的被动填写精确胜率。",
+    "prediction": "倾向胜（中低信心）；两武器战斗卡面应从70/90持续增加，输出较首日5406明显改善。若失败，优先区分控制、伤害不足及终场规则。"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T16:17:22.581Z",
+  "before": {
+    "state": "61金，S反击在仓库，手部两次失败；背左中959,870空且背每次提供盾/力",
+    "goal": "把现有冷却件用于提前首盾及力量供给",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-cooldown-second.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "手部失败上限已到，切换不同装备"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已有库存优先，背首盾能影响失盾转伤"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先看是否入槽"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "装背左中",
+        "benefit": "7秒→6.3秒，促进盾和38力",
+        "cost": "失去本日手4.5预期",
+        "risk": "此孔也可能不兼容",
+        "unknown": "安装需核"
+      },
+      {
+        "action": "留库存",
+        "benefit": "保留未来改装",
+        "cost": "16金无即战收益",
+        "risk": "库存占用",
+        "unknown": "未来孔未知"
+      }
+    ],
+    "chosenAction": "只尝试背部空左中一次，失败留库存进入商店",
+    "prediction": "成功则背CD6.3，所有五桥不变，金币61；失败不新增购买。"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "observed": "购背部4、无人机4、长桥6，余5金币。把背部移到甲右侧，长桥连接甲右下—背右下，甲450→675盾、B背160→400盾，双端面板确认。无人机从首行拖拽失败，移到仓库下部再装入成功，五件齐全。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day01-shared-shield-verified.jpg",
+    "playtest-2026-11-16-run04/day01-full-build.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "这次购买前已考虑排列/寄生条件，实际重排并兑现高品质主动背部+150%盾。战斗贡献仍待统计，不把面板成功当胜率验证。",
+  "nextAction": "进入选敌，避免高强度禁用与高回复成长。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

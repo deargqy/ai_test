@@ -1,0 +1,189 @@
+{
+  "batchId": "enemy11b",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "entries": [
+    {
+      "id": "slot1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-slot1.jpg",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ]
+    },
+    {
+      "id": "slot2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-slot2.jpg",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ]
+    },
+    {
+      "id": "slot3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-slot3.jpg",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ]
+    },
+    {
+      "id": "slot4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-slot4.jpg",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ]
+    },
+    {
+      "id": "slot5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-slot5.jpg",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ]
+    },
+    {
+      "id": "tech1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-tech1.jpg",
+      "box": [
+        208,
+        90,
+        833,
+        560
+      ]
+    },
+    {
+      "id": "tech2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-tech2.jpg",
+      "box": [
+        301,
+        90,
+        926,
+        560
+      ]
+    },
+    {
+      "id": "tech3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-tech3.jpg",
+      "box": [
+        395,
+        90,
+        1020,
+        560
+      ]
+    },
+    {
+      "id": "tech4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-tech4.jpg",
+      "box": [
+        491,
+        90,
+        1116,
+        560
+      ]
+    },
+    {
+      "id": "tech5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-tech5.jpg",
+      "box": [
+        584,
+        90,
+        1209,
+        560
+      ]
+    },
+    {
+      "id": "bridge1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-bridge1.jpg",
+      "box": [
+        228,
+        220,
+        853,
+        750
+      ]
+    },
+    {
+      "id": "bridge2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-bridge2.jpg",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ]
+    },
+    {
+      "id": "bridge3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-bridge3.jpg",
+      "box": [
+        373,
+        220,
+        998,
+        750
+      ]
+    },
+    {
+      "id": "bridge4",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-bridge4.jpg",
+      "box": [
+        589,
+        220,
+        1214,
+        750
+      ]
+    },
+    {
+      "id": "bridge5",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-bridge5.jpg",
+      "box": [
+        697,
+        220,
+        1322,
+        750
+      ]
+    },
+    {
+      "id": "part1",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-part1.jpg",
+      "box": [
+        336,
+        220,
+        961,
+        750
+      ]
+    },
+    {
+      "id": "part2",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-part2.jpg",
+      "box": [
+        769,
+        220,
+        1394,
+        750
+      ]
+    },
+    {
+      "id": "part3",
+      "source": "../../docs/playtest-2026-11-16-run05/day11-dhm-part3.jpg",
+      "box": [
+        840,
+        220,
+        1465,
+        750
+      ]
+    }
+  ]
+}

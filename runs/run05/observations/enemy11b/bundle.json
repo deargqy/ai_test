@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "batchId": "enemy11b",
+  "createdAt": "2026-11-16T16:12:06.019756+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "slot1",
+      "label": "slot1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-slot1.jpg",
+      "sourceSha256": "7155efad5ab5213a72c801ab9c8d1e8109f3899a80db3cea310ae04052061bf2",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "71208aa5a3883c438241c71dd6ea0f1374e873580960f98fbf850bef2b9a56f6",
+      "reading": null
+    },
+    {
+      "id": "slot2",
+      "label": "slot2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-slot2.jpg",
+      "sourceSha256": "f1c92f2b654ed40e54b8cf14d359f28b64a5862aba1b43a41981e838afbb7000",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "117f4f53d9fd5d8fb5e4a5f02a255312b938d79f7aa9d8d057b180e369f348fb",
+      "reading": null
+    },
+    {
+      "id": "slot3",
+      "label": "slot3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-slot3.jpg",
+      "sourceSha256": "7d27684dc73a31943407ac0ffc0cc3f9ce3f3bafda302207539017170bd18051",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "977ecd008de9cc1bd66755797485e861573325d20c8e6878a1281c73397dace0",
+      "reading": null
+    },
+    {
+      "id": "slot4",
+      "label": "slot4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-slot4.jpg",
+      "sourceSha256": "6f25057c5258e675ed9689c9e5e6c111cfac6d7d1c95496c61952fc20b463111",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "865318c0a299670b41e0ebe0c2d9a17098015eeff67adb46ef59fdd1cce1c26a",
+      "reading": null
+    },
+    {
+      "id": "slot5",
+      "label": "slot5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-slot5.jpg",
+      "sourceSha256": "124bb6131dcee052797767c2d0632a5c3225ac1b56d6d2203f9a372d572e8a0a",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "3c43fa6a3f3e0b1ccf432e3c7d1166eeff165b5f828ae71ab863609b21e9bd06",
+      "reading": null
+    },
+    {
+      "id": "tech1",
+      "label": "tech1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-tech1.jpg",
+      "sourceSha256": "ba60e61d002f4f85e1e6ae8f65f8a9f5fdaf4ff6a5a921e5f0e27bceb20c2d46",
+      "box": [
+        208,
+        90,
+        833,
+        560
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "a66b971a8be687ff6e6e63e4ee9152d9b0d00d93ae10f29c1b7f7cd63e0be280",
+      "reading": null
+    },
+    {
+      "id": "tech2",
+      "label": "tech2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-tech2.jpg",
+      "sourceSha256": "f25bfc666502e84091e17e4d9baf3c1b4be9ea6261bcbbc419857506b613da6e",
+      "box": [
+        301,
+        90,
+        926,
+        560
+      ],
+      "crop": "crop-07.png",
+      "cropSha256": "c2702ae93240b392399b332b2624c67d73a805cc62662d22896e2e79eebab3ed",
+      "reading": null
+    },
+    {
+      "id": "tech3",
+      "label": "tech3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-tech3.jpg",
+      "sourceSha256": "f0320f3c3edfe83eaec2fdef917c0a2b70031757c6d775ea2c6dc592b79442c9",
+      "box": [
+        395,
+        90,
+        1020,
+        560
+      ],
+      "crop": "crop-08.png",
+      "cropSha256": "9d7f315010bf279fa9916fa4f804e3e3ac63aa4e04c0e369d06474447d01ad62",
+      "reading": null
+    },
+    {
+      "id": "tech4",
+      "label": "tech4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-tech4.jpg",
+      "sourceSha256": "2ffc1af65519453a60ae885c11be9a93c7ffc93dbce01dbdc068c1d216f7ef2c",
+      "box": [
+        491,
+        90,
+        1116,
+        560
+      ],
+      "crop": "crop-09.png",
+      "cropSha256": "ecb6399921c9c992f453354a3f5e90c09c3f8a10590cfb4215c9347044132eb8",
+      "reading": null
+    },
+    {
+      "id": "tech5",
+      "label": "tech5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-tech5.jpg",
+      "sourceSha256": "d426d0195a8999415884432120c19c8b938c62df6208899b97b900bda18a06c4",
+      "box": [
+        584,
+        90,
+        1209,
+        560
+      ],
+      "crop": "crop-10.png",
+      "cropSha256": "c6047e9a3c43b0cf575002d9dd41b011a34e7a5c5cefde64d4509a96dc18c1ed",
+      "reading": null
+    },
+    {
+      "id": "bridge1",
+      "label": "bridge1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-bridge1.jpg",
+      "sourceSha256": "c1757f4cb33c7292d191ca2cac37c60934744e74e5fedb3d3ff167d56117fe82",
+      "box": [
+        228,
+        220,
+        853,
+        750
+      ],
+      "crop": "crop-11.png",
+      "cropSha256": "33ce93d7873ac05ad8159e72c6853190b23529829a6bd66a8d73c1c0eeb003fa",
+      "reading": null
+    },
+    {
+      "id": "bridge2",
+      "label": "bridge2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-bridge2.jpg",
+      "sourceSha256": "82f9df8310117d0f76c93de9bef264d6ccf1c03307146d857dbf72165cab1cfc",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ],
+      "crop": "crop-12.png",
+      "cropSha256": "7c49ff609a0cab3c05e459ab1b2a5802f708d5108443515de9ba7a41330f39ee",
+      "reading": null
+    },
+    {
+      "id": "bridge3",
+      "label": "bridge3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-bridge3.jpg",
+      "sourceSha256": "3a5e96d69c325db644c637bb889e8e928f5f22ce03dfb75bd8beb3b8560e8a21",
+      "box": [
+        373,
+        220,
+        998,
+        750
+      ],
+      "crop": "crop-13.png",
+      "cropSha256": "34ab6e97643982182e9a94c99e9eee96d532413faa09f1328326ef5af76aa99e",
+      "reading": null
+    },
+    {
+      "id": "bridge4",
+      "label": "bridge4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-bridge4.jpg",
+      "sourceSha256": "a7a69e26c2723ef8ae9a91e6e40e4254f2e8b792aaa3e199dc75976dafd31fb8",
+      "box": [
+        589,
+        220,
+        1214,
+        750
+      ],
+      "crop": "crop-14.png",
+      "cropSha256": "dbad1a5f91b783608c13e503653b7362a7aee811d7eb3f6bad916cee7e4d856a",
+      "reading": null
+    },
+    {
+      "id": "bridge5",
+      "label": "bridge5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-bridge5.jpg",
+      "sourceSha256": "60b9fedfe6e111a581035a31461d6283711305728ef38639fef8a341e1f098d6",
+      "box": [
+        697,
+        220,
+        1322,
+        750
+      ],
+      "crop": "crop-15.png",
+      "cropSha256": "7402bb50806ff94a38874f485d05993a3683a3dedc0a29c1519d6b7bf2e6718f",
+      "reading": null
+    },
+    {
+      "id": "part1",
+      "label": "part1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-part1.jpg",
+      "sourceSha256": "80c66399535d06b374288ed6e17357426c7f2d92be4bc25dc8959147f891130d",
+      "box": [
+        336,
+        220,
+        961,
+        750
+      ],
+      "crop": "crop-16.png",
+      "cropSha256": "db70aa88b861757f780aefd21bbde7d0c0977ccb4f4fb036c98e5e5670022e82",
+      "reading": null
+    },
+    {
+      "id": "part2",
+      "label": "part2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-part2.jpg",
+      "sourceSha256": "7e301d5eb73acd7e4dcd2284cc5a8db8d49ce079530d141636c014d57ec0f579",
+      "box": [
+        769,
+        220,
+        1394,
+        750
+      ],
+      "crop": "crop-17.png",
+      "cropSha256": "40edd9f390578951258cdb176970421c2c657ee9324b4813b63c2fcee1d6ab9f",
+      "reading": null
+    },
+    {
+      "id": "part3",
+      "label": "part3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-dhm-part3.jpg",
+      "sourceSha256": "12f34cb58050e6b954876e07b63ede887013c71a4dcc9e04e6b586a7d5fd3508",
+      "box": [
+        840,
+        220,
+        1465,
+        750
+      ],
+      "crop": "crop-18.png",
+      "cropSha256": "06830249bd0a1ae3e8e986d468e1a7cc7dcdc9f10da707ad4fece841a67402eb",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg",
+    "contact-03.jpg",
+    "contact-04.jpg",
+    "contact-05.jpg"
+  ],
+  "metrics": {
+    "inputImages": 18,
+    "uniqueCrops": 18,
+    "packSeconds": 1.576
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

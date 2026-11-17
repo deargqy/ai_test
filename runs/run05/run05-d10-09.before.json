@@ -1,0 +1,81 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-09",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:01:18.045Z",
+  "before": {
+    "state": "9胜0负4命95kHP Lv11 14金，免费0；敌萌新80k Lv10，S燃烧甲/背、SS燃烧肩、B百分比燃烧手、S寄生无人机。实际部位按详情纠正采集id误标签。",
+    "goal": "启动双坚固核心，撑过敌紧急模式6秒，检验金桥防御/加速是否兑现",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-resume-visible.jpg",
+      "playtest-2026-11-16-run05/day10-mengxin-shoulder.jpg",
+      "playtest-2026-11-16-run05/day10-mengxin-hand.jpg",
+      "playtest-2026-11-16-run05/day10-mengxin-tech5.jpg",
+      "playtest-2026-11-16-run05/day10-shop-exit.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌5秒背减速2秒及燃伤自充能，比较启动而非只看血"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "额外结算+百分比血伤+6秒紧急模式可能反转爆发优势"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已核五桥端点；保留双核心600及背甲600"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "采集编号部位错而详情明确，按实际词条解释"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "最后刷新归因未知单列；战前先记录"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟主属性成长放大600%桥，四命可承担此战"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接出战",
+        "benefit": "375初始力量和首3秒加速；5秒手先启动并加速9秒肩，背甲双600%盾保续航",
+        "cost": "普通失败1命；不用14金",
+        "risk": "敌燃伤充能2秒且全燃烧+3，额外结算及1.6%最大HP燃伤；紧急6秒拖长",
+        "unknown": "随机充能目标、紧急模式具体免伤规则、寄生同步当前血未知"
+      },
+      {
+        "action": "继续升级/换装",
+        "benefit": "若能升级可增生命",
+        "cost": "14金不足38XP升一级，无库存或商店",
+        "risk": "不可兑现升级收益；拆桥削弱双核心",
+        "unknown": "部分经验无即战收益"
+      }
+    ],
+    "chosenAction": "直接出战，倾向能先压至紧急模式但最终胜负不确定；无可用重随，不虚构精确胜率",
+    "prediction": "我手首次有效出手在5秒内且早于肩；肩手至少各触发2次；敌SS紧急模式触发，最终耗时至少比首次致命延长约6秒；敌燃烧为其最大伤害来源；我甲和背均产生护盾。胜负不确定。"
+  }
+}

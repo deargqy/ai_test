@@ -1,0 +1,11 @@
+{
+  "observed": "已装配：A燃无人机—B寄生背—B寄生甲—B燃肩—C寄生锯。A短盾双防御、S成长双武器、C长盾接无人机与背（只背获益）。背盾720=160×(1+200%+150%)，甲2160；旧C甲/无人机实际卖得4，余11。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day03-shared-build.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "共享与加算验证；首次数次旧件出售/旧长桥安装未成功，改源坐标和释放位置后现金、属性、连线均确认。",
+  "nextAction": "核对敌方与第三天联动实战。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

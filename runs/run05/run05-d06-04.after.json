@@ -1,0 +1,14 @@
+{
+  "observed": "20金升Lv8 XP2/26，46000HP，商店S5/A25/B40/C30；第一次刷新2金后42金，出现S虚空撕裂与A成长长桥，停止剩余刷新。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-level8.jpg",
+    "playtest-2026-11-16-run05/day06-refresh1.jpg",
+    "playtest-2026-11-16-run05/day06-s-hand.jpg",
+    "playtest-2026-11-16-run05/day06-a-long.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "等级/生命/现金按预测，已有装备品质未变。命中核心候选停止搜索。",
+  "nextAction": "比较S武器与既有A"
+}

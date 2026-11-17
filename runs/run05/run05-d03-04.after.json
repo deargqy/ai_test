@@ -1,0 +1,17 @@
+{
+  "observed": "两件换装成功，旧甲和无人机卖出，16金。野衾实际26伤/6力，单位速度1持续7秒；祸津神726盾44力。战末204力量剑约2.2k，与原先每力+3再×2.1不一致（会约1800），更接近每力+4（约2228）。力量基础说明+2，甲写额外1层伤害，层的计算未知，不能当固定+1伤。战报无人机96力，背76，甲44，剑12；末帧204与总228差24可能胜负动画时点，不判bug。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day03-armor-equipped-confirmed.jpg",
+    "playtest-2026-11-16-run05/day03-oldarmor-sale-confirmed.jpg",
+    "playtest-2026-11-16-run05/day03-build-complete.jpg",
+    "playtest-2026-11-16-run05/day03-drone-frequency.jpg",
+    "playtest-2026-11-16-run05/day03-result.jpg",
+    "playtest-2026-11-16-run05/day03-force-rules.jpg",
+    "playtest-2026-11-16-run05/day03-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "购买成功，但伤害公式和无人机取整预测失败；保留原预测，下次用约每力4假设比较并标不确定。",
+  "nextAction": "继续优先核心被动/升阶，不按旧错误公式评价护甲"
+}

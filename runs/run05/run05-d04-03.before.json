@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:32:51.398Z",
+  "before": {
+    "state": "50金，Lv5 XP4/14，16500HP，仓库空；可进商店或跳过+5。C剑仍缺被动，其他B，已有两科技。",
+    "goal": "提高生存及高级商品概率，同时保留38金买核心",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-shop-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "库存已空，保留购买预算，升级不等于核心升阶"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟成长已支持旧剑，但缺被动需找升级"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进商店并买12经验到Lv6",
+        "benefit": "跨等级改善基础HP与商店质量",
+        "cost": "12金并放弃跳过5金；利息10降7",
+        "risk": "已有装备不自动升阶",
+        "unknown": "Lv6具体HP与概率待看"
+      },
+      {
+        "action": "留50进商店",
+        "benefit": "能直接买大量核心/保满利息",
+        "cost": "低等级商品更多C",
+        "risk": "若无合适物品现金不能即时救命",
+        "unknown": "商店池未知"
+      },
+      {
+        "action": "跳过+5",
+        "benefit": "保满利息",
+        "cost": "放弃核心搜索机会",
+        "risk": "C剑无成长被动可能后续落后",
+        "unknown": "下一天商品未知"
+      }
+    ],
+    "chosenAction": "进入；分次购买总12经验到Lv6即停，不继续机械升等级",
+    "prediction": "余额38，Lv6 XP2/18（下级需求待核）；HP提高，所有现有品质保持不变。随后按商品另决策。"
+  }
+}

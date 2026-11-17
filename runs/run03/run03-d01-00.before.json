@@ -1,0 +1,79 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-00",
+  "phase": "observe",
+  "preStartRecordedAt": "2026-11-16T05:59:49.332Z",
+  "recordingNote": "点开始前保存此原始文件；确认新局后才start-run并导入，导入时间不是原始决策时间。",
+  "before": {
+    "state": "版本1.0.0.2218；已读十位猫能力，若茜选中，被动开战所有装备充能50%，生命3。尚未开始。",
+    "goal": "利用首轮启动优势争胜，核实角色差异。",
+    "evidence": [
+      "playtest-2026-11-16-run03/pilot-chosen.jpg",
+      "playtest-2026-11-16-run03/version.jpg"
+    ],
+    "memorySearch": "已读observe(机师/开局/属性)、opponent(启动/充能/禁用)。无角色专用记忆。玩家提醒不同猫能力不同，自主逐一比较，不把该提醒记为独立发现。",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "notApplied",
+        "reason": "无对手控制，严格条件未满足；只借鉴启动视角，不计为已验证。"
+      },
+      {
+        "id": "M02",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "notApplied",
+        "reason": "尚无构筑和对手。"
+      },
+      {
+        "id": "M07",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "notApplied",
+        "reason": "角色信息当前没有读数冲突。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "新截图核对选中角色、日号、胜负，不能把点击尝试当成功。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "若茜：开战全装备充能50%",
+        "benefit": "提前首击/部署，有望补足启动短板。",
+        "cost": "3败上限，少一次容错，失去莫瑟跨日成长。",
+        "risk": "首轮之后仍可能受控，持续成长需装备解决。",
+        "unknown": "充能与控制和动作延迟的具体交互未验证。"
+      },
+      {
+        "action": "莫瑟：每日主属性+50，无人机+5",
+        "benefit": "4败容错，上局已使用，长期成长。",
+        "cost": "无直接启动充能。",
+        "risk": "长冷却装备仍可能出手前死亡。",
+        "unknown": "不同角色同随机条件的胜率未知。"
+      },
+      {
+        "action": "德米特里：每日3次免费刷新",
+        "benefit": "4败容错，更多找装备机会。",
+        "cost": "无直接战斗加成。",
+        "risk": "不保证出现所需装备。",
+        "unknown": "免费次数能否积累未知。"
+      },
+      {
+        "action": "火种：每消费20金币获得5经验",
+        "benefit": "4败容错，提升早期等级潜力。",
+        "cost": "满级后收益可能下降。",
+        "risk": "凑花费可能牺牲即时战力。",
+        "unknown": "买经验与刷新是否计入花费未测。"
+      }
+    ],
+    "chosenAction": "选择若茜开始，商店按实际货品发展，首轮充能单独观察。",
+    "prediction": "进入第1天0胜0负，失败上限3，角色仍是若茜；首次攻击效果留到战前另外预测。"
+  }
+}

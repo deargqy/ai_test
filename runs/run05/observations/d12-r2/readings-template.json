@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "id": "p1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "p2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "g1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "g2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "g3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "g4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    }
+  ]
+}

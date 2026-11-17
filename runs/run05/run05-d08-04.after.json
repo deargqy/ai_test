@@ -1,0 +1,13 @@
+{
+  "observed": "首次4金后89金，显示8/30，支持原实际4/30仍在，0/8是显示异常；再6次共28金升Lv10 XP2/34，HP动画完毕76000，65金。刷新1次63金，S35/A45/B10/C10，出现S八光玉。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day08-xp-once.jpg",
+    "playtest-2026-11-16-run05/day08-level10.jpg",
+    "playtest-2026-11-16-run05/day08-refresh1.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "实际升级花28而非0/8误示的8；旧装备阶级未变，停止剩余刷新预算购买已适配核心。",
+  "nextAction": "S力量肩替换比较"
+}

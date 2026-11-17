@@ -1,0 +1,12 @@
+{
+  "observed": "Lv11/91000HP、0/38XP、70金。Lv10=72000，Lv11实际+19000而非预估18000。A科技：对敌施加燃烧时50%再施加4感电。S55%A40%。快速连点经验只生效部分，按实际余额补足共60金。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day06-a-tech.jpg",
+    "playtest-2026-11-16-run04/day06-level11.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "等级与总支出正确，90000生命预测低估1000；保留误差。新科技与燃烧/感电/寄生相连。",
+  "nextAction": "按高品质店面寻找不破坏核心被动的S升级。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

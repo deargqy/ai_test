@@ -1,0 +1,11 @@
+{
+  "observed": "金币32，四件主属性798/215/165/28；副属性不变。整数按四舍五入显示，预测约值相差1。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-tech-applied.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "科技已全排生效；不同选择反事实仍未知。",
+  "nextAction": "进入商店优先看核心升阶"
+}

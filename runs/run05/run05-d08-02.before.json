@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T12:19:07.073Z",
+  "before": {
+    "state": "7胜0负；双核心4+3段物理，祸津力量额外伤害，深红物理伤害转自身力量等量护盾；93金",
+    "goal": "提高首次输出和从首击开始的护盾",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-tech-left.jpg",
+      "playtest-2026-11-16-run05/day08-tech-middle.jpg",
+      "playtest-2026-11-16-run05/day08-tech-right.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较完整触发链与首次生效"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按已有核心选择科技"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不把状态累计当当前量"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "突进IV起手375力量",
+        "benefit": "全物理段数获益且立即提高深红被动盾",
+        "cost": "放弃25坚固附魔/375感电",
+        "risk": "准确额外伤害层数仍未知",
+        "unknown": "力量与现有增伤配件结算顺序"
+      },
+      {
+        "action": "最右25坚固附魔",
+        "benefit": "可能每次无人机命中产坚固，续航成长",
+        "cost": "放弃确定起手力量",
+        "risk": "启动须等无人机部署",
+        "unknown": "附魔是部署还是单位命中触发"
+      },
+      {
+        "action": "预热375感电",
+        "benefit": "即时负面状态",
+        "cost": "缺乏感电后续链",
+        "risk": "纯一次状态缺持续增幅",
+        "unknown": "无感电主力的价值"
+      }
+    ],
+    "chosenAction": "选择突进IV375起始力量；现有多段物理和转盾被动直接吃到，避免引入新属性。",
+    "prediction": "选后93金；下战力量科技统计应有375突进，开场力量至少375；预计首轮护盾/伤害更高但无同敌对照不归因胜负。"
+  }
+}

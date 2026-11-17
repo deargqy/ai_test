@@ -1,0 +1,130 @@
+{
+  "reason": "已视读timeline：删除重复加载、同45秒开场、敌归零后静止及重复胜利；保留全部战斗进程11–18、首击边界及最终结算，timeline保留顶部所有帧",
+  "deleted": [
+    {
+      "file": "day11-fight-01.jpg",
+      "bytes": 550443,
+      "sha256": "f73f3e79ac6f7ebc7c08f02a1651cb9c3f7f7e39b43b23a7908e589d22fb97ae"
+    },
+    {
+      "file": "day11-fight-02.jpg",
+      "bytes": 550578,
+      "sha256": "049c393fcc7dc6687b3d75039c1a8bb6fd2a0b374e5d141ee527df25636f423f"
+    },
+    {
+      "file": "day11-fight-03.jpg",
+      "bytes": 550477,
+      "sha256": "1ea8290b6f91716acac0f0bafc002d6cf5c1f34ba80d5fb6e0bd2a7d92cf8163"
+    },
+    {
+      "file": "day11-fight-04.jpg",
+      "bytes": 546080,
+      "sha256": "93698ba0bbde0f820c28b7722ad4e0a40011eaf0e2f7aecd86e37056f0d20b60"
+    },
+    {
+      "file": "day11-fight-05.jpg",
+      "bytes": 587187,
+      "sha256": "99aef62f0ad43d41fbca659643619d04ead884a7d726f35f1e72b75fcdbb070a"
+    },
+    {
+      "file": "day11-fight-06.jpg",
+      "bytes": 574760,
+      "sha256": "65c68cae1f1260b09e0ad92e6c8bb5784c6772755e8a76daf8973570e4a608a2"
+    },
+    {
+      "file": "day11-fight-07.jpg",
+      "bytes": 568884,
+      "sha256": "07d2614137ca24a09038deccebfed38a9baa48b305e360e4a62d0dfe8072cd0c"
+    },
+    {
+      "file": "day11-fight-08.jpg",
+      "bytes": 570695,
+      "sha256": "1b816492e47ebf51b061ea7209acdf16929e091c7702d23412627ad3fd183667"
+    },
+    {
+      "file": "day11-fight-09.jpg",
+      "bytes": 561978,
+      "sha256": "fdae2f37b3c3fd222f3947d255079f5e4a172499c3bd6a48af21a839f5ca8a84"
+    },
+    {
+      "file": "day11-fight-19.jpg",
+      "bytes": 539342,
+      "sha256": "29f5afa416e2f6844c558e1d49c33543812be212bd947fe6b14fc30356261933"
+    },
+    {
+      "file": "day11-fight-20.jpg",
+      "bytes": 536455,
+      "sha256": "7e883542181704392aef826ad5cc0ebafa8359b2ecd593ab470f3c65c98e5de1"
+    },
+    {
+      "file": "day11-fight-21.jpg",
+      "bytes": 525576,
+      "sha256": "b4c7fc02e84c277f5535d24c1e4d29cd80ef8a2c3e63d2621f6cf4193dc353e2"
+    },
+    {
+      "file": "day11-fight-22.jpg",
+      "bytes": 511316,
+      "sha256": "f6f440c19bb2a7fd0acdcec23d0bad02f3e40965ee326b6ccd23e1b371958f4d"
+    },
+    {
+      "file": "day11-fight-23.jpg",
+      "bytes": 509191,
+      "sha256": "d293f2938cb33982375d23d09956a82b9dcde3b2b7d4d33665ff0e605f5f5ac5"
+    },
+    {
+      "file": "day11-fight-24.jpg",
+      "bytes": 605003,
+      "sha256": "2ccec3c5be329fdabcb4a6779664726c0c047d833c5598249d25050b1f5b6770"
+    },
+    {
+      "file": "day11-fight-25.jpg",
+      "bytes": 605185,
+      "sha256": "c37e87a6301abf9f9da4aeb2384cda99a81d7dd498b8a679398ec95ce16d4699"
+    },
+    {
+      "file": "day11-fight-26.jpg",
+      "bytes": 603916,
+      "sha256": "ea5fd8a7d58cb9107d69d8ccde6a688c63525698f1d4e1c15e64d20e331dd784"
+    },
+    {
+      "file": "day11-fight-27.jpg",
+      "bytes": 604405,
+      "sha256": "bac46d3ecf949c2fad23496724bace0b21c10d0ac1b40d7ff390ed6f1ba5416f"
+    },
+    {
+      "file": "day11-fight-28.jpg",
+      "bytes": 603707,
+      "sha256": "72b9adb289aad43294513d17f61fd9c26eda70a4e5d3ceb29ed276a586682654"
+    },
+    {
+      "file": "day11-fight-29.jpg",
+      "bytes": 605897,
+      "sha256": "eebd085c88e97bf502861252fca3a7eabd19f678b2e6b2529faa4e07602b6dfa"
+    },
+    {
+      "file": "day11-fight-30.jpg",
+      "bytes": 603758,
+      "sha256": "b7880e351e9ea972935dcf3c491e3840ed0b37b31f09e3da620e7b449fa49595"
+    },
+    {
+      "file": "day11-fight-31.jpg",
+      "bytes": 605006,
+      "sha256": "b73352c0dbc18dfa59860c053fc34179078815e2ed7393f14ad49089def9a39d"
+    },
+    {
+      "file": "day11-fight-32.jpg",
+      "bytes": 604765,
+      "sha256": "3cba20c19e3992fa8c430b023edd468d862eed21f1a01e2ff11d31b721ab21fe"
+    },
+    {
+      "file": "day11-fight-33.jpg",
+      "bytes": 604829,
+      "sha256": "aa5214e3079c82e3c73b85ab6315044e2ab0c516691ab37f861ac47baf6632a1"
+    },
+    {
+      "file": "day11-fight-34.jpg",
+      "bytes": 604452,
+      "sha256": "d36dba0db35482d00909d506898f8258fbc0b29827a65b6ca530f1f800d0542d"
+    }
+  ]
+}

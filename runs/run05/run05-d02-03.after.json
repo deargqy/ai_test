@@ -1,0 +1,11 @@
+{
+  "observed": "买4XP，32→28金，Lv4 XP2/10，8500→11500HP，A1%/B35%，旧装备阶级未变。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-level4.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "血量和商店质量提升，核心仍需另买。",
+  "nextAction": "买B力量背转化多段攻击为护盾"
+}

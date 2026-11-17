@@ -1,0 +1,14 @@
+{
+  "observed": "更正：曾观察背部6.3，但当前背部7秒、手部4.5秒；用户明确告知刚手动把配件装入手部。不能把当前安装归功自动操作。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-back-cd.jpg",
+    "playtest-2026-11-16-run05/day12-hand-reverify.jpg",
+    "playtest-2026-11-16-run05/day12-roll1-check.jpg",
+    "playtest-2026-11-16-run05/day12-stable.jpg"
+  ],
+  "operationResult": "unknown",
+  "predictionResult": "unknown",
+  "memoryDecision": "revise",
+  "reason": "保留原记录为superseded；人工转移后手部兼容已证实，之前不能装的推断撤回；自动背部是否成功不能由当前截图确认",
+  "nextAction": "按实际手4.5/背7继续"
+}

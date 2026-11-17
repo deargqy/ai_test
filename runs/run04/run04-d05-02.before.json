@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 5,
+  "id": "run04-d05-02",
+  "phase": "build",
+  "before": {
+    "state": "B冰霜打击短桥库存左464右512 y36。A手185伤害、有2寒冷，左上862410空闲；相邻燃肩右上没有孔，现有3桥不可牺牲。旧C手仍仓库。",
+    "goal": "低成本验证短桥单端使用，保留所有已验证共享。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day05-inventory.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先利用空闲A主力孔；若单端无效则保留备用，不改掉双成长。"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "最多两种锚点尝试，失败停止。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "旧手库存已确认，只有现金到账才算卖出。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "B桥右端接A手L上",
+        "benefit": "有寒冷应+150%伤害",
+        "cost": "占一个空闲孔",
+        "risk": "可能要求两个有效端点",
+        "unknown": "单端可否用"
+      },
+      {
+        "action": "替S成长桥",
+        "benefit": "立即150%",
+        "cost": "失去长期双武器成长",
+        "risk": "明显损伤后段输出",
+        "unknown": "短战是否有优势"
+      }
+    ],
+    "chosenAction": "试B桥单端A手L上，核对伤害185→约463；出售旧C手。",
+    "prediction": "若单端成立A手约463，现金43；不成立则保持185不谎报。"
+  }
+}

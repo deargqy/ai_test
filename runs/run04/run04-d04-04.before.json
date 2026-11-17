@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 4,
+  "id": "run04-d04-04",
+  "phase": "opponent",
+  "before": {
+    "state": "我方42000HP，对方翁燕桃30000HP，S燃甲约1100盾71燃烧，A电无人机43/6，B寒手90×3/10，C背100盾22，C燃肩205×4/7；一条长桥与单孔，科技燃烧核心I。",
+    "goal": "核对能否以寄生成长撑过敌方持续伤害。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day04-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "未读到明确禁用，启动风险仍未知。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "42000基础生命+寄生和盾，对方燃甲有持续威胁；不只比较S数量。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "三条共享配置完整，新A手提高寄生全体成长。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "迎战",
+        "benefit": "生命与联动优势",
+        "cost": "可能损失生命",
+        "risk": "敌燃烧/感电持续",
+        "unknown": "敌详细被动"
+      },
+      {
+        "action": "重随",
+        "benefit": "可能更简单",
+        "cost": "消耗免费机会",
+        "risk": "可能更强",
+        "unknown": "新对手"
+      }
+    ],
+    "chosenAction": "迎战并立即加速，战后核对手部寒冷和寄生成长。",
+    "prediction": "倾向获胜，中等信心；A手应有寒冷施加记录，生存主要靠寄生和双盾。"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 8,
+  "id": "run04-d08-01",
+  "phase": "shop",
+  "before": {
+    "state": "93金，Lv11/4/38XP，91000HP；随机S科技+40或三选S。",
+    "goal": "维持稳定构筑，把额外经济转换为初始生命并保满额利息。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day08-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "随机+40后133，升一级36后97，保留充足预算。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "高寄生后段强，仍需基础生命避免启动前被击倒。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机S+40，升一级",
+        "benefit": "稳定生命和经济",
+        "cost": "放弃定向科技",
+        "risk": "随机不适配",
+        "unknown": "科技词条与Lv12HP"
+      },
+      {
+        "action": "三选S",
+        "benefit": "挑主动联动",
+        "cost": "少40金",
+        "risk": "候选不合",
+        "unknown": "候选"
+      }
+    ],
+    "chosenAction": "随机S+40，9次经验升Lv12；核对科技后继续。",
+    "prediction": "余额97，Lv12/2XP，生命高于91000；具体生命以实测为准。"
+  }
+}

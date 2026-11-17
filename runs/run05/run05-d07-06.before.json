@@ -1,0 +1,71 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T12:14:10.208Z",
+  "before": {
+    "state": "Metadox60000HP：A燃肩9s4×235/41燃，命中额外3倍燃烧；A伏特手5s3×275/16电，雷伤多结算1次；B祸津甲11s666盾53力，力量额外1层伤；S野衾7.5s部署48力/单位35伤10力，频率未重读；A复仇背5s170盾41燃，烧伤全燃装+2燃/慢敌1.5s。科技开场150力、所有进攻+135伤、元素+20%；B手甲互用另一主属性+40%加算；C短桥及小单件未全读。自身60k，手2.5K×4/5s肩3.8K×3/10s、开场加速3s、余烬8力/s。",
+    "goal": "利用已确认的早期双核心伤害结束战斗，避免敌燃烧后期增长",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-reroll-dismiss.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-shoulder.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-hand.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-drone.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-back.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-tech1.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-tech2.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-tech3.jpg",
+      "playtest-2026-11-16-run05/day07-enemy2-long.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较首次有效出手与150力"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "烧伤→全燃装备加燃→肩3倍结算但缺百分比爆发"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按tooltip与卡面分开，坚固持续盾"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "连续帧与三页统计核对"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接战斗",
+        "benefit": "双核600%配件强于对手主伤增幅，手预计先于敌5s启动",
+        "cost": "承担燃伤成长与150力前置爆发",
+        "risk": "未读小件可能影响CD/额外段",
+        "unknown": "首轮敌慢与小件时序未知"
+      },
+      {
+        "action": "用最后免费重随",
+        "benefit": "可能避开燃烧成长",
+        "cost": "失去当前可分析的对位",
+        "risk": "可能抽到更强SS链",
+        "unknown": "新敌未知"
+      }
+    ],
+    "chosenAction": "直接战斗，保留非数值化偏胜判断；最快速度采集连续截图。",
+    "prediction": "偏胜；预计12–25秒结束，终场我HP>30000，主手伤>肩炮；无控制时主手首次攻击应约3.5秒、早于敌手5秒；科技力量独立来源随时长增加。关键帧没截到即未知。"
+  }
+}

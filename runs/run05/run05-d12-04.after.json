@@ -1,0 +1,11 @@
+{
+  "observed": "离开黑市57金，布局保持，进入选敌加载",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-opponent.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "放弃比较按布局与短局收益，替代装备战斗反事实未知",
+  "nextAction": "批读敌人"
+}

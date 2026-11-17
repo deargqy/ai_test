@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T12:09:31.066Z",
+  "before": {
+    "state": "72金，Lv8 XP4/26、46000HP；600%桥双核心已确认，B短桥暂未售成。",
+    "goal": "提高生命与高阶货概率，保留核心购买预算",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-sell-old-long2.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "优先已兑现核心后补生存"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按实际到账72计算"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "升级不改变莫瑟装备成长"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "24金经验升9，再最多3次刷新",
+        "benefit": "提高HP/品质；剩至少42可买S",
+        "cost": "24+最多6",
+        "risk": "没有合适现货",
+        "unknown": "等级9HP/概率待确认"
+      },
+      {
+        "action": "保钱直接战斗",
+        "benefit": "满利息10",
+        "cost": "放弃HP提升",
+        "risk": "46k对日7爆发不足",
+        "unknown": "敌未见"
+      }
+    ],
+    "chosenAction": "关闭仓库，买经验6次共24金至Lv9；刷新最多3次，遇合适核心停。",
+    "prediction": "金币72→48，Lv9 XP2；生命预估58000须现场核对；装备品质原样，刷新预算6。"
+  }
+}

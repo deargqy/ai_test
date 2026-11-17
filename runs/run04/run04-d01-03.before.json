@@ -1,0 +1,63 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-03",
+  "phase": "build",
+  "before": {
+    "state": "武器：冷枪6.5秒3×180/3×2寒冷，右中槽；虹吸锯5.5秒4×90/4×2寄生，左下槽；日耀焰枪5.5秒4×50/4×5燃烧，右下槽。当前感电甲右下槽。",
+    "goal": "选择感电高频命中伙伴，同时给共享配件预留有效连接。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-parasite-saw.jpg",
+      "playtest-2026-11-16-run04/day01-burn-gun.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "甲右下→虹吸锯左下可形成短桥，其他两武器初始槽方向/高度不匹配。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "4段5.5秒+较高基础输出，寄生可能补回复；不把未经读清的寄生等同吸血。"
+      },
+      {
+        "id": "M07",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "实际文字为寄生/燃烧，纠正只按颜色猜力量/吸血的风险。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "虹吸锯",
+        "benefit": "4段快速命中，360基础/轮，甲锯有同高相向槽",
+        "cost": "放弃3金币随机奖励",
+        "risk": "寄生具体收益待核对",
+        "unknown": "后续高级替换"
+      },
+      {
+        "action": "冷枪",
+        "benefit": "540基础/轮",
+        "cost": "循环慢1秒，槽暂不匹配",
+        "risk": "缺恢复",
+        "unknown": "控制能否补偿"
+      },
+      {
+        "action": "燃枪",
+        "benefit": "4段及持续燃烧",
+        "cost": "基础仅200/轮",
+        "risk": "暂无燃烧转换",
+        "unknown": "后续被动"
+      }
+    ],
+    "chosenAction": "选虹吸锯，随后按d01-01计划12金币升Lv4。",
+    "prediction": "甲和锯组成两个主动触发端点；18金币、Lv4/7500生命。事件后再补装备，不能视为流派已成型。"
+  }
+}

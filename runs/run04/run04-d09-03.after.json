@@ -1,0 +1,12 @@
+{
+  "observed": "S电肩与肃卫已购，原设肩L下不存在，未按原槽位执行；后续d09-04改分行布局完成。新肩4950×2，手1665×4，SS105；卖旧B肩4，余额71。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day09-new-shoulder-ports.jpg",
+    "playtest-2026-11-16-run04/day09-four-s-build.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "收益与资金在调整后实现，但原孔位假设错误；不将其视作原方案无修改成功。",
+  "nextAction": "采用d09-04的实际行位迎战。",
+  "operationResult": "succeeded",
+  "memoryDecision": "revise"
+}

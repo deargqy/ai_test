@@ -1,0 +1,11 @@
+{
+  "observed": "买肩8/桥12，金币0；肩移剑右，一次左端拖拽成功跨剑右上—肩右上。剑215→410，肩319→609，B齐射+100%与科技10%为加算。仓库空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-shared-link.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "双端数值、桥和库存共同确认；主攻吃配件，非同件双孔。",
+  "nextAction": "观察双武器和背部盾实际结算"
+}

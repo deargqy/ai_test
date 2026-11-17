@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-16T16:25:06.221Z",
+  "upgrade": {
+    "cost": 40,
+    "hpBefore": 116000,
+    "hpAfter": 139000,
+    "sBefore": 65,
+    "sAfter": 70,
+    "assessment": "保守投机升级，未看敌且上战满血，必要性未证实。未来仅5个百分点且无采购目标时提高门槛。"
+  },
+  "cooldown": {
+    "price": 48,
+    "goldBefore": 57,
+    "goldAfterIfBought": 9,
+    "interestBefore": 10,
+    "interestAfter": 1,
+    "assessment": "已确认替换位置会丢双核600%伤害或双防600%盾；未穷举全排列，不能证明不存在更优布局。基础稳态使用频率+33.3%，首击提前和加算/乘算未知。"
+  },
+  "manualAssistance": "用户将S反击单孔装手，4.5秒；原背部成功记录已追加纠正"
+}

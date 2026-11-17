@@ -1,0 +1,70 @@
+{
+  "runId": "run04",
+  "day": 6,
+  "id": "run04-d06-02",
+  "phase": "build",
+  "before": {
+    "state": "70金，91000HP。S长桥轮转48：使用一端装备时，另一端元素之力+128%。当前手L上中下，L中有寒冷；无人机L中L下R中；肩L下R下，背R中R下，甲L下R上。",
+    "goal": "保留双盾与双伤害成长，增加手部—无人机互相元素成长验证。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day06-s-element-loop.jpg",
+      "playtest-2026-11-16-run04/day05-build.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "将无人机移最后，成背—甲—肩—手—无人机；长桥手L中→无人机L中，寒冷单孔移手L上；原A盾和S伤害短桥保持。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "召唤部署是否算使用未知，只先计手→无人机，反向战中验证。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "48金后22，旧C长盾卖3则25；牺牲部分利息换新增成长，未买不匹配的S武器。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "移除旧C长盾背720降480，甲2160不变；91k基础与寄生可承受此代价。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买S轮转并重排",
+        "benefit": "A手/无人机属性成长，可能双向循环",
+        "cost": "48金及背少240盾/次",
+        "risk": "召唤不触发反向或增益只加算",
+        "unknown": "双向触发与增长方式"
+      },
+      {
+        "action": "买8金S单盾",
+        "benefit": "甲再加1440盾",
+        "cost": "8金",
+        "risk": "提升小于寄生主轴",
+        "unknown": "无"
+      },
+      {
+        "action": "换S电肩",
+        "benefit": "高基础与感电额外伤害",
+        "cost": "32金且失燃肩按层爆发",
+        "risk": "破坏燃烧主轴",
+        "unknown": "综合输出"
+      }
+    ],
+    "chosenAction": "买S轮转48；寒冷从手L中移L上，无人机移末位；新长桥手L中→无人机L中，旧长盾售出，保留两短桥。",
+    "prediction": "预计25金，甲2160背480；新S长桥两端就位，战中先看无人机燃烧和手寄生数值是否双向增长，未验证前不宣称闭环。"
+  }
+}

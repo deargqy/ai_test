@@ -1,0 +1,12 @@
+{
+  "observed": "免费2→1、金币6不变。新敌喵啦个喵20kHP/Lv6，仅C坚固甲510/34与C燃烧斧45×4/4燃烧，5秒，无被动。详情标题仍旧名，已出现既有BUG001同类表现。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-rerolled.jpg",
+    "playtest-2026-11-16-run05/day01-enemy2-sword.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "配置确实更新，原敌反事实胜负仍未知；旧名异常待并入已有报告。",
+  "nextAction": "比较长战伤害预算后决定最后一次重随"
+}

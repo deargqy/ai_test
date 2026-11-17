@@ -1,0 +1,62 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:27:37.086Z",
+  "before": {
+    "state": "洛侠112k：4.5秒4击燃烧+10%/hit；5.4秒无人机额外结算；肩燃伤自充1.4秒；背4.9秒双施法慢全体2秒且燃伤等额转盾；每3秒随机禁用2.5秒；所有配件读取。",
+    "goal": "避免禁用拖延首轮后让燃烧与护盾成环",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-reroll-enemy.jpg",
+      "playtest-2026-11-16-run05/day12-eb-g0.jpg",
+      "playtest-2026-11-16-run05/day12-eb-g3.jpg",
+      "playtest-2026-11-16-run05/day12-eb-g4.jpg",
+      "playtest-2026-11-16-run05/day12-eb-t3.jpg",
+      "playtest-2026-11-16-run05/day12-eb-p0.jpg",
+      "playtest-2026-11-16-run05/day12-eb-p9.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "禁用与慢全体可能使核心错过窗口"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "留方向风险而非全给偏胜"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已读轮转+128%按加算和完整双端链"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "用最后免费换敌",
+        "benefit": "避开持续禁用与燃烧等额转盾",
+        "cost": "失去回选/最后免费机会",
+        "risk": "下敌更强",
+        "unknown": "原敌未实战"
+      },
+      {
+        "action": "直接打",
+        "benefit": "139k可能撑首轮，火力够击杀112k",
+        "cost": "随机禁用若压手或肩则丢节奏",
+        "risk": "背双施法慢4秒与燃烧回血盾延长战斗后不利",
+        "unknown": "若前8秒击杀可能赢；超过15秒倾向输"
+      }
+    ],
+    "chosenAction": "用最后免费换敌",
+    "prediction": "次数1→0金币57；不把未知下敌默认更弱，重新核对再战"
+  }
+}

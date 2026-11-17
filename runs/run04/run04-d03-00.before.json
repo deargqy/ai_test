@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 3,
+  "id": "run04-d03-00",
+  "phase": "shop",
+  "before": {
+    "state": "1胜1负，Lv7/30000HP，31金；补给可三选C、随机B、6金币。现手武/甲/无人机C，肩/背B。",
+    "goal": "先利用免费高品质装备机会，保留主武升级预算。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day03-event.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "随机B若不适用可卖4，若适用相当省8；已有3件C可替换。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "免费装备也要读槽位，不为品质破坏两组有效共享。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先看新装备再考虑旧武强化；暂不花20升级8以保留A武器资金。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机B装备",
+        "benefit": "可能升级3个C位，至少有出售价值",
+        "cost": "放弃确定6金币",
+        "risk": "不适用时比直接金币少2",
+        "unknown": "装备与槽位"
+      },
+      {
+        "action": "领取6金币",
+        "benefit": "现金37可定向购买",
+        "cost": "放弃免费B升级机会",
+        "risk": "商店可能无合适货",
+        "unknown": "供给"
+      }
+    ],
+    "chosenAction": "选择随机B，核对属性/被动/插槽再决定使用或出售；不提前强化待替换C锯。",
+    "prediction": "现金暂31；若是输出升级且能保留S双端则优先试装，否则按售价变现。"
+  }
+}

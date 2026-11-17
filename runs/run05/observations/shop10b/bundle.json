@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "batchId": "run05-d10-shop-equipment",
+  "createdAt": "2026-11-16T15:43:31.863490+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "gold": 84
+  },
+  "entries": [
+    {
+      "id": "long-recheck",
+      "label": "long-recheck",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-long-recheck.jpg",
+      "sourceSha256": "a03d4bc6eab39a7f7741180007a92b18cef1202e15021ebc716726decb26911e",
+      "box": [
+        570,
+        50,
+        1230,
+        600
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "950d03e51907d65c60c8c87c51c25356eaa57e81ba09ce3268f56be397275518",
+      "reading": null
+    },
+    {
+      "id": "force-back",
+      "label": "force-back",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-force-back.jpg",
+      "sourceSha256": "0fe636007cf1202e36ac519169edd75aba2f6096db51e82c35d7a77bdf588089",
+      "box": [
+        1220,
+        280,
+        1880,
+        830
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "3017aeed0b9f6d784a1fe72c40b65b68c3ba17daaeb3e9c57880107d4f751bbc",
+      "reading": null
+    },
+    {
+      "id": "other-back",
+      "label": "other-back",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-other-back.jpg",
+      "sourceSha256": "179c35f21bfc10e79f570fb9bfff4399146551a285e582612062fd7df6f3a0d5",
+      "box": [
+        980,
+        280,
+        1640,
+        830
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "3bc3d4b7091fb161e6f468873c7aab8033cb6be430b70b0056caf728893cf7be",
+      "reading": null
+    },
+    {
+      "id": "drone",
+      "label": "drone",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-drone.jpg",
+      "sourceSha256": "95b90bf57106f5168156c374d31ebcc2b6cc142a0a0db4b4e1614cdfa56ae1c0",
+      "box": [
+        520,
+        280,
+        1180,
+        830
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "93c6bf4862d3340bb3bc572141175d9c4a585c4c51981e329a4d116befbaece6",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 4,
+    "uniqueCrops": 4,
+    "packSeconds": 0.5
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

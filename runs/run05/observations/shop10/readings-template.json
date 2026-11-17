@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "id": "long",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "short",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "consumable",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    }
+  ]
+}

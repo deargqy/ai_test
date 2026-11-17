@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:34:49.053Z",
+  "before": {
+    "state": "甲-肩-手-背-无人机；600%和50%双核心，手3.4K肩4.7K。100%桥背左中1534到无人机左中1726；手右中1437与背右中1629等距190且手右中空。",
+    "goal": "把低贡献无人机的100%转给高频核心，保留背部主属性增强",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-short-two-core.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "整体比较所有桥收益，核心频率与战报优先"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "端点核实、限制失败"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "各卡数值及空仓核对"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "移动100%长桥到手右中1437—背右中1629",
+        "benefit": "手+450每击，背不降；四连击/5s收益明显",
+        "cost": "无人机112→约59，零金币",
+        "risk": "相邻中心孔背左中1534是否有效；已见同形可用",
+        "unknown": "是否占用原600%手左孔，无重叠推断待实装"
+      },
+      {
+        "action": "保持背无人机",
+        "benefit": "稳定辅助收益",
+        "cost": "主力少450每击",
+        "risk": "无人机战报输出不足以兑现配件",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "从桥左端1534,870拖到1437,870，失败最多两次后还原。",
+    "prediction": "手3.4K→3.9K（3870推算），肩4.7K和背1.1K不变，无人机112→59，103金币不变。"
+  }
+}

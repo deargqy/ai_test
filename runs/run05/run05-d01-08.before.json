@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-08",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T08:57:16.937Z",
+  "before": {
+    "state": "12金，Lv3/4500HP。新池重复力量甲4金标LEVEL UP；B活力灌注4金出售+4000最大生命；元素18%短桥4；其他替换无明显提升。",
+    "goal": "提升实际装备等级并延长初次部署生存",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-refresh1.jpg",
+      "playtest-2026-11-16-run05/day01-investment-detail.jpg",
+      "playtest-2026-11-16-run05/day01-shortbridge-detail.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "实际甲升级、英雄经验、固定生命与利息一起比较"
+      },
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "生命用于争取8.5秒部署，不能保证获胜"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "升甲后重新读孔位"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "活力明确最大生命+4000"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "重复甲4+活力4",
+        "benefit": "升级实际装甲；生命增加4000",
+        "cost": "花8余4，放弃2利息",
+        "risk": "输出仍以C剑/召唤为主",
+        "unknown": "升阶被动/新孔待购买后核实"
+      },
+      {
+        "action": "重复甲4+经验4",
+        "benefit": "实际甲升级并英雄Lv4+3000HP",
+        "cost": "花8余4",
+        "risk": "本轮少1000HP但商店品质更好",
+        "unknown": "无剩余刷新预算时品质价值延后"
+      },
+      {
+        "action": "只重复甲4存8",
+        "benefit": "保留1利息",
+        "cost": "少4000HP",
+        "risk": "4500可能扛不住高爆发",
+        "unknown": "敌仍未知"
+      }
+    ],
+    "chosenAction": "买重复甲与活力灌注；使用活力后停止本店支出",
+    "prediction": "现金12→8→4；甲应升B并检查新词条，出售活力后生命4500→8500，不把最大生命等同治疗。"
+  }
+}

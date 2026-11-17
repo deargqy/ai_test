@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "batchId": "run05-d09-live-shop",
+  "createdAt": "2026-11-16T15:36:21.615424+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "gold": 53,
+    "inventory": [],
+    "purchases": [
+      {
+        "name": "S屏障",
+        "cost": 32
+      },
+      {
+        "name": "A后卫",
+        "cost": 16
+      }
+    ],
+    "needs": [
+      "保留五条已兑现连接",
+      "敌人威胁决定升级"
+    ],
+    "unknown": [
+      "中断期间55到53原因",
+      "经验0/8误显真实值待核"
+    ]
+  },
+  "entries": [
+    {
+      "id": "shop-back",
+      "label": "shop-back",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-resume-timed.jpg",
+      "sourceSha256": "60d0de453b66d11a93e3d1de791f4c584665d37c596fa1f2c6c8ff84cd694f69",
+      "box": [
+        515,
+        330,
+        1100,
+        700
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "69544caf91f4f95891ac291443573449fe5166c10ba3efc8e15d97e70771f5b9",
+      "reading": null
+    },
+    {
+      "id": "cooldown-bridge",
+      "label": "cooldown-bridge",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-timed-bridge.jpg",
+      "sourceSha256": "c1839a92fcd6ba3e796daa2d2f551fa4d4bb14b15065afca1b04b7ca52413874",
+      "box": [
+        590,
+        150,
+        1210,
+        420
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "6b4140899b07029db7e88a5bdbcca0a0f0642a2495c4ce0c7caad812754bd2c9",
+      "reading": null
+    },
+    {
+      "id": "shield-consumable",
+      "label": "shield-consumable",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-timed-consumable.jpg",
+      "sourceSha256": "c62101239d5273a73ff87a6d8051d3674212242480600d89013bc009cc448f34",
+      "box": [
+        1300,
+        125,
+        1805,
+        395
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "9570e2115459580cd501f3d42360ad8b9e4b862c1fdb988e9c399fc341759258",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 3,
+    "uniqueCrops": 3,
+    "packSeconds": 0.168
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

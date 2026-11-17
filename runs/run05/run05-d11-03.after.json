@@ -1,0 +1,18 @@
+{
+  "observed": "胜，约9秒，敌复活60k后再归零；我116000满血4764盾。41秒敌满血，39秒敌87798；首击只约束4–6秒，符合5–8部分但不足精确支持。预测12–24秒被9秒反驳。手140020肩78810电440；敌肩8804手3360。背9139盾甲7171坚固618。敌坚固手83肩52背49，甲未触发，无人机无伤。奖励65=55+10，52→117，XP+2。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day11-fight-14.jpg",
+    "playtest-2026-11-16-run05/day11-fight-15.jpg",
+    "playtest-2026-11-16-run05/day11-fight-17.jpg",
+    "playtest-2026-11-16-run05/day11-fight-18.jpg",
+    "playtest-2026-11-16-run05/day11-damage.jpg",
+    "playtest-2026-11-16-run05/day11-defense.jpg",
+    "playtest-2026-11-16-run05/day11-buffs.jpg",
+    "playtest-2026-11-16-run05/day11-fight-35.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "胜与复活支持，时长更短；识别出成长链但缺少增长所需轮数，不能把长战威胁当已经启动。满血胜不证明升级无用，反事实不可见。",
+  "nextAction": "继续关注敌链启动前窗口，进入第12天"
+}

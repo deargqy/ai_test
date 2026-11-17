@@ -1,0 +1,11 @@
+{
+  "observed": "虹吸锯已装，Lv4/7500生命/18金币，甲右下槽与锯左下槽同高相向。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day01-core-and-level4.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "购买前确认的共享连接几何成立；尚无配件，不虚报已获双端收益。",
+  "nextAction": "进行初始NPC事件后按实际商店补装。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

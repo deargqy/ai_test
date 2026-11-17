@@ -1,0 +1,11 @@
+{
+  "observed": "新局莫瑟4命；day02开始，甲675→725、剑145→195、背100→150、无人机20→25；力量45/1/4及坚固20不变。只加主属性，不增加副属性；换装继承尚未知。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-enter.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "同一局同装备跨日直接对照；每日成长已兑现，不能推成力量成长。",
+  "nextAction": "按日成长比较核心升级与长期使用。"
+}

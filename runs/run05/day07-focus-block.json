@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-16T10:15:56.754Z",
+  "error": "failed to activate captured window",
+  "attempts": 2,
+  "action": "领取24金币输入未确认；重新绑定并激活仍失败；停止游戏输入等待用户焦点",
+  "lastEvidence": "docs/playtest-2026-11-16-run05/day07-event.jpg"
+}

@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 2,
+  "id": "run04-d02-00",
+  "phase": "shop",
+  "before": {
+    "state": "31金币，Lv6 2/18XP，20000HP，0胜1负；科技可自选3或随机+10。",
+    "goal": "打开4号货位和更高品质概率，预留主武预算。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day02-start.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "随机+10后41，16经验升7后25，够16金A武器并可卖旧。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "暂不买绑定旧C锯的消耗强化。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "升级武器优先保留甲—背长桥，换序适配新增槽。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机科技+10，花16升级7",
+        "benefit": "30k生命、4货位和25金买输出",
+        "cost": "科技可能无用",
+        "risk": "主武仍依赖商店供给",
+        "unknown": "货品/科技"
+      },
+      {
+        "action": "自选科技，留Lv6",
+        "benefit": "31金购买装备且可能好科技",
+        "cost": "少10金且少一货位",
+        "risk": "可能没有输出升级可买",
+        "unknown": "候选"
+      }
+    ],
+    "chosenAction": "随机科技+10，4次经验升Lv7，读科技后进入商店。",
+    "prediction": "41→25金币，Lv7/30000HP；以本场输出不足为优先补强目标。"
+  }
+}

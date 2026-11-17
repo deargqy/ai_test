@@ -1,0 +1,11 @@
+{
+  "observed": "C力量躯干已装，卡面480护盾、32力量，0金币，0胜0负。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-armor-equipped.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "画面确认属性；过渡动画中的空卡不能当作装配失败。",
+  "nextAction": "读取初始武器选项，确认实际选择再继续。"
+}

@@ -1,0 +1,13 @@
+{
+  "observed": "英勇盾换入成功，实际槽为左下（原预测左中错误）；曙光首次拖售未生效，重新打开库存后从卡片下部拖入左侧出售区成功，4→6金币，库存空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-back-swap.jpg",
+    "playtest-2026-11-16-run05/day01-redundant-back-sold.jpg",
+    "playtest-2026-11-16-run05/day01-back-sale-verified.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "经济预测最终支持，但端点行高预测被反驳，不能宣称可与甲右中直接短桥共享。此前遗漏NPC奖励库存已保留。",
+  "nextAction": "离店并按核心选择科技"
+}

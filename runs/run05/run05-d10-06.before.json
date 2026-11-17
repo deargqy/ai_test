@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-06",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T15:48:26.965Z",
+  "before": {
+    "state": "新短桥肩手已成功；新长桥手背两种库存尝试仍失败，背无人机已实测可装；4金币。库存C机甲超频出售使现甲CD-0.5秒，旧B齐射售6、雷霆售4。",
+    "goal": "兑现已验证的配件收益并结束无效试装",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-new-short-equipped.jpg",
+      "playtest-2026-11-16-run05/day10-long-center-hand.jpg",
+      "playtest-2026-11-16-run05/day10-inventory-consumable.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "停止手背尝试，换已验证分支"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两端都具力量可各600%，与只让手200分别估值"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "旧桥无明确空闲有效槽，成功后卖，不预支收入"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "确认保留现甲后使用库存强化"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "S长放背无人机，卖旧B桥并使用现库存消耗品",
+        "benefit": "背649→4189，无人机64→412，两端均600%；甲11→10.5秒；现金14",
+        "cost": "手维持3550而非预测4550，旧桥失去备用",
+        "risk": "无人机收益不如手部有效命中确定",
+        "unknown": "战中净提升依赖对手与额外护盾"
+      },
+      {
+        "action": "恢复旧B长手背保留S",
+        "benefit": "手4050背1239，S可后续用",
+        "cost": "48金当前未兑现",
+        "risk": "浪费高阶桥防御增幅",
+        "unknown": "未来布局未知"
+      }
+    ],
+    "chosenAction": "S长库存中心1120,169→背左中1534,871，沿已验证位置；成功后卖两旧B桥并出售C消耗品",
+    "prediction": "S桥连接背与无人机，背4.2K无人机412手3.5K肩4.8K；甲CD10.5；旧桥售6+4使现金4→14"
+  }
+}

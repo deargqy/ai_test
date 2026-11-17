@@ -1,0 +1,79 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-11",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T15:36:20.680Z",
+  "before": {
+    "state": "8胜0负，53金，Lv10/76000，五桥已核，仓库旧记录空；新A减CD20长桥24金，A盾190/38电背16金，防御校准8金加9盾。",
+    "goal": "保留已成型连接与升级余地，推进对手",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-resume-timed.jpg",
+      "playtest-2026-11-16-run05/day09-timed-bridge.jpg",
+      "playtest-2026-11-16-run05/day09-timed-consumable.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "没有空闲长桥核心组合，替换需计损失"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "库存已用满，现金保留升级选择"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "换背损失莫瑟成长"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "旧55金不用，现场53为准"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留配装直接离店",
+        "benefit": "无代价保留爆发、莫瑟成长和10利息",
+        "cost": "放弃新物品",
+        "risk": "可能少一次降CD补强",
+        "unknown": "实际敌人未知"
+      },
+      {
+        "action": "A冷却桥替换600长桥",
+        "benefit": "提前20%启动",
+        "cost": "24金及双核心600%加成，或替换手背100%需再装",
+        "risk": "输出下降/有效端点减少",
+        "unknown": "精确伤害公式未校准"
+      },
+      {
+        "action": "换感电背",
+        "benefit": "25%几率递归感电",
+        "cost": "16金，失去成长护盾和物理转盾",
+        "risk": "毁掉防御链",
+        "unknown": "递归上限未知"
+      },
+      {
+        "action": "升级Lv11",
+        "benefit": "预计+19000生命",
+        "cost": "按旧实值约32金，利息降6",
+        "risk": "敌人不强则收益有限",
+        "unknown": "当前0/8误显，真实经验待核"
+      }
+    ],
+    "chosenAction": "不买不刷新，保留53金与原装配，进入下一阶段再评敌",
+    "prediction": "离店不改变金币53及手3.9K肩5.3K；不把无购买直接视为胜率提高"
+  }
+}

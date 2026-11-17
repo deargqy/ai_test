@@ -1,0 +1,14 @@
+{
+  "observed": "A手及短桥买入，旧剑卖2，16金。替换装备使原长桥自动回仓库。两种换序拖动均失败，改用d04-06原序方案；并未实现无人机短桥收益。当前A手702、肩819、无人机31。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-equip-hand.jpg",
+    "playtest-2026-11-16-run05/day04-swap-hand-shoulder.jpg",
+    "playtest-2026-11-16-run05/day04-reorder-header.jpg",
+    "playtest-2026-11-16-run05/day04-sell-old-sword.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "购买替换成功，整排换序及无人机45预测失败；原方案保留，不补写成成功。",
+  "nextAction": "战后核对A手坚固增长与肩炮伤害"
+}

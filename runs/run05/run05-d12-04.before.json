@@ -1,0 +1,80 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:23:42.653Z",
+  "before": {
+    "state": "57金，刷新两次到限；手4.5秒由玩家装配，背7秒。S甲为消耗30%力量换10%减伤型。",
+    "goal": "保留完整三桥双核并进入选敌",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-roll2.jpg",
+      "playtest-2026-11-16-run05/day12-r2-hand-detail.jpg",
+      "playtest-2026-11-16-run05/day12-r2-g3.jpg",
+      "playtest-2026-11-16-run05/day12-r2-purple-detail.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "预算达上限，57仍可满息"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较全排有效槽位，不能只看装备颜色"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已成长基础值换新会丢失"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保持现装备结束购物",
+        "benefit": "保留550基础手伤/失盾成长/双核三桥和力量伤害",
+        "cost": "本排无升级",
+        "risk": "可能漏过更强防御",
+        "unknown": "下个敌人未知"
+      },
+      {
+        "action": "S力量甲32",
+        "benefit": "71力量/10%减伤",
+        "cost": "耗30%力量、丢每层力量增伤和已投CD",
+        "risk": "短局损失输出，盾1065几乎没提高",
+        "unknown": "减伤叠加需长局"
+      },
+      {
+        "action": "S焰手32",
+        "benefit": "每命中坚固+10%",
+        "cost": "基础550→330，左孔不足丢上/下两桥",
+        "risk": "完整布局收益反降",
+        "unknown": "长局可能更强"
+      },
+      {
+        "action": "S长减CD桥48",
+        "benefit": "双端-25%",
+        "cost": "替掉600%伤害长桥或600%护盾桥",
+        "risk": "短爆发损失巨大",
+        "unknown": "不能用空孔同时覆盖核心"
+      },
+      {
+        "action": "紫成长桥16",
+        "benefit": "主属性20%每日+20%",
+        "cost": "占现有高值短桥或只强化弱无人机",
+        "risk": "剩余天数有限",
+        "unknown": "跨日增长待测"
+      }
+    ],
+    "chosenAction": "不再购买，保持布局进入选敌",
+    "prediction": "金币57不变，五条桥和手4.5秒保持；下阶段再根据敌方链决定是否出战"
+  }
+}

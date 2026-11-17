@@ -1,0 +1,11 @@
+{
+  "observed": "恢复新图显示24金币已到账，52→76；装备不变。上次工具报错后未确认，此次核实实际已领取；用户恢复焦点帮助。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day07-focus-restored.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "不能把激活错误等同游戏动作未发生，新截图确认到账。",
+  "nextAction": "进入商店比较升级"
+}

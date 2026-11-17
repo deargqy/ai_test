@@ -1,0 +1,55 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-01",
+  "phase": "shop",
+  "before": {
+    "state": "27金币，背部空；C复仇熔炉4金：5.5秒90盾、18燃烧、全敌装备减速0.5秒。商店小配件分别每天+2.5%主属性及每次使用CD-1%。随机科技霸主：施加感电时50%额外2寒冷，当前无感电源。",
+    "goal": "补满第5件装备，并寻找更强防御/回复。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-shop-back.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先用4金币补空位，再限1次刷新，保留21金币附近利息。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "尚未确定长期主武，跳过4金+20手武消耗品。"
+      },
+      {
+        "id": "M05",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "当前背部没有可见槽，暂不把共享桥收益算入。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "4金币买背部，2金币刷新一次",
+        "benefit": "新增盾燃烧减速，寻找高价值装备",
+        "cost": "6金币",
+        "risk": "C装备可能短期被换掉损失2金",
+        "unknown": "刷新内容"
+      },
+      {
+        "action": "不买，仅存27金币",
+        "benefit": "保留5利息",
+        "cost": "继续少一个装备",
+        "risk": "短板延续",
+        "unknown": "次日能否补齐"
+      }
+    ],
+    "chosenAction": "买C复仇熔炉补背部，然后仅刷新一次再比较。",
+    "prediction": "购买后23金币且5装备，刷新后21金币；5.5秒循环预计提供少量盾和18燃烧/次、0.5秒减速/次。"
+  }
+}

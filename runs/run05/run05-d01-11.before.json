@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-11",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:02:05.022Z",
+  "before": {
+    "state": "新敌20kHP，仅C甲和5秒燃斧45×4、16燃烧/次，无武器被动；我8500HP，C剑预计随线性力量成长，但B甲每次消耗30%力量。免费1，6金。",
+    "goal": "避免只按敌低面板忽略击杀时间与耗尽阶段",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-rerolled.jpg",
+      "playtest-2026-11-16-run05/day01-enemy2-sword.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌早期不危险但需比较终局生存"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "线性力量且每次消耗30%，不得假设无限爆发"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先利用免费机会，再决定是否追加4金升级"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "最后一次免费重随",
+        "benefit": "有机会得到可在45秒内削完生命的对手",
+        "cost": "耗最后机会，不能回选",
+        "risk": "新敌可能更强",
+        "unknown": "下一池未知"
+      },
+      {
+        "action": "保留并再升级4金",
+        "benefit": "我11500HP、敌输出低",
+        "cost": "花4金仅多3000，保留1免费无跨战价值",
+        "risk": "我方缺百分比成长，20k+盾难在常规45秒内消耗；耗尽阶段未知，倾向不利",
+        "unknown": "耗尽是否受减伤影响未定"
+      }
+    ],
+    "chosenAction": "使用最后一次免费重随，不为单看血量而夸大敌爆发",
+    "prediction": "免费1→0，金币6不变；新对手实际核心/启动再判断，原20k敌未战不能验证必败。"
+  }
+}

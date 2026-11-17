@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T14:13:50.673Z",
+  "before": {
+    "state": "新绑定后现场黑市，93金Lv9，XP显示0/8与先前4/30不一致待重绘核实；B甲背已有成长，核心S/B双600%",
+    "goal": "查看是否有核心链或启动升级",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-resume.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较余额与机会成本"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留双核心有效连接"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "换装比较旧实例成长"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进黑市",
+        "benefit": "多一次商品选择",
+        "cost": "放弃按钮10金（正文5冲突BUG010）",
+        "risk": "可能无适配商品",
+        "unknown": "商品未知"
+      },
+      {
+        "action": "跳过+10",
+        "benefit": "增收入",
+        "cost": "错过商品",
+        "risk": "无法补核心",
+        "unknown": "实际到账未知"
+      }
+    ],
+    "chosenAction": "进入；已有93金可投资核心，不为机械吃利息跳过选择。",
+    "prediction": "93金不变进商店，先读商品再购买；XP重绘核查。"
+  }
+}

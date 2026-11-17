@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-07",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T15:52:39.222Z",
+  "before": {
+    "state": "14金95k，当前甲肩手背无人机，五桥齐，背4.2K无人机412、甲1.1K。讨论候选背甲肩手无人机，需现场验证重排方式和孔位。",
+    "goal": "把S力量主属性桥分给双防御，同时保持双核心全部连接",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-resume-layout.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按用户讨论比较整排，不用品质替代有效收益"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "失败限次，保留恢复路径"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "主属性盾不是力量层数"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不换装备，保留莫瑟积累"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "背甲肩手无人机整排重排",
+        "benefit": "S桥背右中—甲右中600%盾，甲预计7171背4189；其他四桥可理论保留",
+        "cost": "无人机412→64，拖动可能使桥回库",
+        "risk": "实际槽位兼容不符则退回原布局",
+        "unknown": "排序是插入或交换、桥是否随卡跟随未知"
+      },
+      {
+        "action": "保持当前",
+        "benefit": "背4.2K无人机412已实装",
+        "cost": "甲仍1.1K，潜在盾与失盾转伤增益未用",
+        "risk": "承伤薄弱",
+        "unknown": "敌人未知"
+      }
+    ],
+    "chosenAction": "先移背到第一位，观察顺序，再恢复四桥与新双防御桥；同组合两种失败后恢复已验证分支",
+    "prediction": "成功则甲约7.2K背4.2K，手3.5K肩4.8K/95坚固51电不变，无人机64；14金不变。只是面板预测，实战需看甲首盾与手转伤"
+  }
+}

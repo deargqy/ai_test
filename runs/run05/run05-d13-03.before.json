@@ -1,0 +1,58 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T16:35:03.846Z",
+  "before": {
+    "state": "玩家提醒后重审：旧A后卫短桥甲右下—肩左下附魔16感电，肩51甲16。A军械库同长短桥16金进攻伤害+200%。前战全部感电561肩伤62154。",
+    "goal": "用低贡献附魔槽换核心伤害，保持肩手三桥和双防长桥",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-old-shock-bridge.jpg",
+      "playtest-2026-11-16-run05/day13-new-damage-bridge.jpg",
+      "playtest-2026-11-16-run05/day12-stats.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "player",
+        "use": "applied",
+        "reason": "最低边际贡献槽位优先比较，允许一有效端高于两个低价值端"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "操作成功必须核端点及数值"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "失败两次换策略"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买军械库换甲肩感电桥",
+        "benefit": "肩伤7.1→9.1倍约+28%，增伤作用含被动待验",
+        "cost": "16金，甲端无进攻收益，丢附魔感电",
+        "risk": "若不能装最多两不同尝试后恢复旧桥",
+        "unknown": "最终实战收益无同敌对照"
+      },
+      {
+        "action": "保留感电",
+        "benefit": "甲肩双端附魔+额外伤害",
+        "cost": "错失更高核心直接收益",
+        "risk": "原统计贡献不到1%",
+        "unknown": "未来触发链改变才可能升值"
+      }
+    ],
+    "chosenAction": "购买A军械库16，替换甲肩感电桥；成功后出售旧桥8",
+    "prediction": "金币121→105，肩面板约5.5k→7.0k；肩坚固95不变、感电消失，甲16感电消失，其余核心数值不降；卖旧后113"
+  }
+}

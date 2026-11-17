@@ -1,0 +1,14 @@
+{
+  "observed": "替代背无人机布局曾成功，售旧B6+4使4→14，C消耗品消失；后续装甲详情明确CD10.5（原11）。随后另立d10-07重排，不覆盖原分支。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-long-final.jpg",
+    "playtest-2026-11-16-run05/day10-sell-old-short.jpg",
+    "playtest-2026-11-16-run05/day10-consumable-used.jpg",
+    "playtest-2026-11-16-run05/day10-back-first.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "现金与CD实际核对完成，随后新决定改变长桥位置",
+  "nextAction": "进入选敌"
+}

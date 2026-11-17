@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-12",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:02:58.806Z",
+  "before": {
+    "state": "正式首战：我8500HP/B甲675盾45力量12秒（消耗30%力量换10%减伤），C剑6秒145×3，C背6秒100盾20坚固，C召唤8.5秒20攻击/命中+4力量，0.5秒攻击间隔/6.5秒持续；6金无配件。敌1500HP，两C无被动，枪6秒480每轮与9寒冷，甲13.5秒510盾34寒冷。",
+    "goal": "以完整启动和输出差判断，保留无必要升级的经济",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-enemy3-weapon.jpg",
+      "playtest-2026-11-16-run05/day01-enemy3-armor.jpg",
+      "playtest-2026-11-16-run05/day01-close-inventory.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较6秒/8.5秒启动与敌单枪两轮960，不只看血量"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两件敌被动都已确认无闭环"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不把剩余钱机械花光"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "寒冷是CD延长，不当硬控"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接出战",
+        "benefit": "双输出与早背盾/较高生命能覆盖敌前两轮",
+        "cost": "保留6金获1利息",
+        "risk": "寒冷会拉长我CD；B甲吃力量抑制输出",
+        "unknown": "精确寒冷时序与召唤战报口径未知"
+      },
+      {
+        "action": "花4金升Lv4",
+        "benefit": "额外3000生命",
+        "cost": "余2失去1利息",
+        "risk": "当前没有敌早爆发证据，边际小",
+        "unknown": "无需此升级能否赢待实战"
+      }
+    ],
+    "chosenAction": "不再升级，直接出战，使用最快速度",
+    "prediction": "倾向胜：应在45秒常规阶段内获胜；前两轮不出现启动前倒地，剑和无人机均有非零输出。敌首盾13.5秒前我应有剑首轮和首次部署。未承诺精确胜率。"
+  }
+}

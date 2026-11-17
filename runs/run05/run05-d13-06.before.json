@@ -1,0 +1,67 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:45:09.223Z",
+  "before": {
+    "state": "林弦227k。敌背1s三施法慢全2s，甲4.3s两施法消30%力量换10%减伤；手1s六击每命中力量+10%，开场450力；肩5.4s十击；无人机2.1s每台14%吸血。背甲600%+1200%盾桥；肩手480%成长伤害+600%力量伤害桥。无换敌，库存空。",
+    "goal": "检验快速力量循环与我方双核充能盾成长对抗",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-enemy3-settled.jpg",
+      "playtest-2026-11-16-run05/day13-ec-g0.jpg",
+      "playtest-2026-11-16-run05/day13-ec-g4.jpg",
+      "playtest-2026-11-16-run05/day13-ec-p4.jpg",
+      "playtest-2026-11-16-run05/day13-ec-p16.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "完整启动链，明确预测偏败"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "力量指数命中成长与多段盾/吸血循环"
+      },
+      {
+        "id": "M05",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "双端高收益桥已经齐备，无库存空想换装"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "现装出战",
+        "benefit": "保留双核增伤与护盾，仍有SS随机充能抢启动可能",
+        "cost": "可能失去第一命",
+        "risk": "敌1s控和百分比力量形成领先",
+        "unknown": "敌详情数值与预览不一，1s实际频率需战中验证"
+      },
+      {
+        "action": "移S10%CD到背",
+        "benefit": "稍早首盾减速",
+        "cost": "手4.5→5s，背7→6.3s",
+        "risk": "伤害与互充变慢，未必破敌1s链",
+        "unknown": "随机充能收益不确定"
+      },
+      {
+        "action": "拆双盾桥移进攻",
+        "benefit": "没有额外有效配件",
+        "cost": "损失两件盾收益",
+        "risk": "无法提高进攻",
+        "unknown": "无可用库存或购买入口"
+      }
+    ],
+    "chosenAction": "保留现装直接出战",
+    "prediction": "方向偏败：敌先有效出手约1–4秒，我方受慢首击约6–12秒；若敌1秒背持续生效则15秒内我HP过半、终局失利；若我3秒充能命中双核抢到首轮，则仍有反例可能。分别核对实际启动、双方盾/伤害，不用失败反推bug。"
+  }
+}

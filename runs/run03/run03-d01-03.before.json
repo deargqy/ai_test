@@ -1,0 +1,42 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-03",
+  "phase": "opponent",
+  "before": {
+    "state": "强制起始事件敌人，绿色卡战斗型异变塞玛；悬停未提供详细属性。己方1500生命，6.5秒三段手武、12秒躯干，若茜50%初始充能。",
+    "goal": "赢事件战，并观察充能后的首次攻击。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-event-enemy.jpg",
+      "playtest-2026-11-16-run03/day01-starting-gun.jpg"
+    ],
+    "memorySearch": "本日已读取opponent全部M01/M02/M07/M08；M01当前无已知控制、M02敌详情未给出、M07未见冲突，均不强行套结论。",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "notApplied",
+        "reason": "没有已知控制，此场只能检验基础首次出手，不算禁用反例复测。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "确认开战、速度及实际伤害，不将旧局速度和初始数值默认为本局事实。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进入必须的事件战",
+        "benefit": "推进开局并获得后续购物资源。",
+        "cost": "当前不能购物或选择别的敌人。",
+        "risk": "敌人详细属性未知。",
+        "unknown": "战斗速度是否沿用上局、敌方生命与控制未展示。"
+      }
+    ],
+    "chosenAction": "开战后核对速度并尽可能降至1倍观察。",
+    "prediction": "预测胜，中等信心；无控制时手武首次准备完成约3.25秒，躯干约6秒，实际命中可能滞后。若未捕获首击时间就记未知，不能用胜利代替验证。"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "runId": "run04",
+  "status": "complete",
+  "days": 9,
+  "wins": 6,
+  "losses": 3,
+  "endedAt": "2026-11-16T16:22:43+08:00",
+  "recordedDecisions": 39,
+  "unfinishedDecisions": [],
+  "formalDirectionForecasts": 8,
+  "allPredictedWin": true,
+  "directionCorrect": 5,
+  "directionWrong": 3,
+  "missingPreMatchForecastDays": [
+    7
+  ],
+  "calibratedWinProbability": null,
+  "qualification": "8次全部倾向胜，不能把5/8称为校准胜率；尚未预测过失败。NPC和重随不计入。",
+  "playerCorrection": "首领失败不掉命；已存M09r2，界面冲突BUG009待实测。",
+  "newIssue": "009",
+  "updatedIssueOccurrences": [
+    "003",
+    "004"
+  ],
+  "dataMatchesOfflineBundle": true,
+  "imageCount": 140,
+  "memoryRevisions": {
+    "M01": 3,
+    "M02": 4,
+    "M03": 1,
+    "M04": 3,
+    "M05": 5,
+    "M06": 1,
+    "M07": 3,
+    "M08": 1,
+    "M09": 2
+  }
+}

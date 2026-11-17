@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-05",
+  "phase": "opponent",
+  "before": {
+    "state": "敌Drukqz44000HP，SS手约2.1k×4、A肩约15k×4、A甲15k盾、多桥及寄生组件。关键被动未核；免费重随2。当前最后生命，我135k。",
+    "goal": "避免再次用血量差忽略首轮爆发和敌成长。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-opponent-rejected.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "高面板肩四段+SS手，启动伤害和关键被动未知，有免费机会优先换。"
+      },
+      {
+        "id": "M02",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "敌同时有高盾寄生，不能只看44k血。"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "未读词条的属性留未知，不凭图标给完整流派。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费换敌",
+        "benefit": "避已见高爆发多成长构筑",
+        "cost": "一次免费机会",
+        "risk": "下一敌更强",
+        "unknown": "新敌"
+      },
+      {
+        "action": "直接迎战",
+        "benefit": "不花机会",
+        "cost": "终局风险",
+        "risk": "重演启动被打穿",
+        "unknown": "关键被动"
+      }
+    ],
+    "chosenAction": "关闭详情后使用一次免费重随，再观察新对手。",
+    "prediction": "免费次数减1，金币71不变；新敌单独评估，不保证变弱。"
+  }
+}

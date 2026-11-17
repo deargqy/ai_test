@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-06",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T10:03:18.001Z",
+  "before": {
+    "state": "S手装备成功，军械库双端有效，手1.5K/肩2.5K；短桥两种锚点都失败；10金，仓库A燼与B短桥。",
+    "goal": "在已确认配置上检验S被动，保留可回退候选，避免连续无效装配",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-short-reconnected2.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次失败改策略"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保护高价值400%双核心连接"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留有明确回退用途的库存"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "沿用S与400%双端，旧A/短桥留一战",
+        "benefit": "可检验护盾损失转伤，无需继续装配",
+        "cost": "少50%加算伤害；暂不回收8金，少约1利息",
+        "risk": "若S被动无法兑现需回退A",
+        "unknown": "短桥失败原因未定"
+      },
+      {
+        "action": "直接换回A",
+        "benefit": "恢复已验证的完整配件配置",
+        "cost": "放弃S首战验证且需再装桥",
+        "risk": "S购买32暂沉没",
+        "unknown": "可能错过失盾转伤收益"
+      }
+    ],
+    "chosenAction": "保持S，仓库A燼和短桥作为下一战后评估的明确候选，今天停止购物。",
+    "prediction": "S首战静态1.5K，军械库同时服务肩炮；若失盾后面板显著超出(300+力量层数×未知甲系数)×5.1的基线，支持S额外转伤；战后决定旧A是否售出。"
+  }
+}

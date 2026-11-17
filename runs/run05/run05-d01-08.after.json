@@ -1,0 +1,12 @@
+{
+  "observed": "重复甲升级B，675盾/45力量/12秒、左下与右中孔；被动使用时消耗自身力量30%换10%减伤（上限90%）。活力已出售，生命8500、金币4。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-b-armor-detail.jpg",
+    "playtest-2026-11-16-run05/day01-health-used.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "装备升阶和生命增长均生效；B甲消耗力量是输出代价，不只计算减伤收益。",
+  "nextAction": "清点发现遗漏的NPC奖励背部，修正库存判断"
+}

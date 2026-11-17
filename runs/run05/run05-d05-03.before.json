@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:46:30.457Z",
+  "before": {
+    "state": "49金Lv7，现货C力量肩/B感电肩/C感电和坚固无人机，现有A坚固手+B坚固肩/力量供给，无库存。两C桥无明确比现有桥大的收益；已读A校准固定+6不值得8。",
+    "goal": "寻找核心重复升阶或更强力量启动/循环",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-level7.jpg",
+      "playtest-2026-11-16-run05/day05-shop.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "固定当前A坚固手，优先提高与其有用联动"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "预设搜索支出，保留经济空间"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留现有双主攻桥"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "最多3次刷新2金/次",
+        "benefit": "以高级商品率寻找A手重复或B供给升级",
+        "cost": "最多6金，保43金",
+        "risk": "可能未出目标",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "本页买C力量肩",
+        "benefit": "7力量×4，低价4金",
+        "cost": "失去坚固转肩伤和莫瑟150成长",
+        "risk": "C无被动可能弱化双增长",
+        "unknown": "未读精确CD，不贸然换"
+      },
+      {
+        "action": "直接存钱",
+        "benefit": "49金利息9",
+        "cost": "核心B仍低阶",
+        "risk": "下日敌更强",
+        "unknown": "对手未知"
+      }
+    ],
+    "chosenAction": "预算内逐次刷新，有强候选即停",
+    "prediction": "总刷新支≤6，至少留43金；不因金币多乱补无效配件。"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-09",
+  "phase": "opponent",
+  "before": {
+    "state": "我方7500生命4件装备；对方12500生命5C，燃烧+电系输出、6s轻减速/坚固。",
+    "goal": "争取首胜并测若茜初始充能和共享护盾。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-opponent-chosen.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "无禁用，仅0.5秒减速；比较实际启动。"
+      },
+      {
+        "id": "M02",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "冷肩炮成长与320共享护盾对抗对方燃烧/坚固。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "打当前对手",
+        "benefit": "比此前30000HP对手更可控",
+        "cost": "失败消耗1/3生命",
+        "risk": "燃烧持续伤害可能穿过护盾拖死",
+        "unknown": "召唤物与寒冷肩炮实际成长速度"
+      },
+      {
+        "action": "继续最后一次刷新",
+        "benefit": "可能找到更弱对手",
+        "cost": "失去当前较温和对手",
+        "risk": "再遇更高HP",
+        "unknown": "下一对手"
+      }
+    ],
+    "chosenAction": "打当前对手；开战即尝试低速，保留中途和三类统计。",
+    "prediction": "倾向胜（中低信心），肩炮约5.5秒首次冷却、冷枪约3.25秒；共享配件应使手武与无人机均产生护盾，禁止把累计护盾当有效减伤。"
+  }
+}

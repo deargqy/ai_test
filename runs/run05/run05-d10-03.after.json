@@ -1,0 +1,12 @@
+{
+  "observed": "7次4经验购买共28金，112→84，Lv11 XP0/38，最终HP95000；S55 A40 B4 C1，现装备数值不变。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-level-purchase.jpg",
+    "playtest-2026-11-16-run05/day10-shop-entry.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "生命、扣费与经验兑现，保留升级不升现装备阶级",
+  "nextAction": "看本轮商店再决定是否用剩余预算"
+}

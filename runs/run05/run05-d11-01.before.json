@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 11,
+  "id": "run05-d11-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:03:28.911Z",
+  "before": {
+    "state": "爬塔day11 68金Lv11 2/38，当前黑市可20金；已成型五桥，无库存",
+    "goal": "在正常商店前升一级，保持50金利息并增加启动容错",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-after-interruption.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "资源用于可验证当日战力"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "五桥已覆盖不盲买"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "52金维持10利息"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟旧装成长，不把升级当升阶"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "拿20金再36金升级",
+        "benefit": "88→52仍满息，Lv12生命与商店概率提升",
+        "cost": "放弃黑市专属池",
+        "risk": "错过新配件",
+        "unknown": "下一级生命及概率需核"
+      },
+      {
+        "action": "进黑市不升",
+        "benefit": "68足以32或48金关键配件",
+        "cost": "放弃20金且可能挤掉已生效五桥",
+        "risk": "未必有提升",
+        "unknown": "未知黑市商品"
+      }
+    ],
+    "chosenAction": "拿20金后买9次经验升Lv12；先核钱到账再升级",
+    "prediction": "金币68→88→52，等级11→12，现有装备保持阶级；生命与S概率提高。"
+  }
+}

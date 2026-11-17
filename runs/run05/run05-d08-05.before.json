@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:16:02.160Z",
+  "before": {
+    "state": "Lv10 76kHP63金。S八光玉11s4×500/19力，自己每层力量本装备伤害+5；旧B链法10s3×590基础成长/10坚固、得坚固+3伤。起手375力+每秒8。",
+    "goal": "把起手力量转为更高核心伤害，同时保留S虚空600%",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-s-force-shoulder.jpg",
+      "playtest-2026-11-16-run05/day08-refresh1.jpg",
+      "playtest-2026-11-16-run05/day08-a-right-bridge.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按新实例槽位重排桥并核双端"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "最多两次不同失败尝试"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "旧B已积累300主属性属于替换成本"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "11秒首次启动与力量触发链"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买S八光玉32并将600%桥移上排手左上—肩左上",
+        "benefit": "4段与375起手力及持续力强关联；手仍600%，新肩通用200%",
+        "cost": "32金+失旧肩300莫瑟成长，10→11s启动",
+        "risk": "桥端点需移动、力+5结算顺序未知",
+        "unknown": "5×力量在增伤前后未测"
+      },
+      {
+        "action": "保留B链法",
+        "benefit": "已验证4.2K三段，600%吃满",
+        "cost": "放弃S力量成长上限",
+        "risk": "低阶基数不一定是当前瓶颈",
+        "unknown": "新S收益无对照"
+      },
+      {
+        "action": "买A感电长桥24",
+        "benefit": "通用100%可用",
+        "cost": "低于旧600/200主桥且无新端点",
+        "risk": "无感电300%专属收益",
+        "unknown": "不值得当前价格"
+      }
+    ],
+    "chosenAction": "买S32，保留B到装配成功；将现有A力场猛攻长桥上移使手左上和新肩左上共享；成功后卖旧B4，若两次失败则恢复旧配置。",
+    "prediction": "63→31买入；S无附加时550，桥后静态1550（200%+科技10%）；手仍2840。起手375力让S伤害至少额外1875/段（是否再增幅未知），下战期待肩总输出接近或高于手。"
+  }
+}

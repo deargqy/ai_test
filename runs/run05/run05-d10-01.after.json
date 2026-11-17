@@ -1,0 +1,11 @@
+{
+  "observed": "出现3个SS科技，112金未变。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-tech-options.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "机会成本50金已兑现，实际科技优劣待读",
+  "nextAction": "读取三项后选核心适用科技"
+}

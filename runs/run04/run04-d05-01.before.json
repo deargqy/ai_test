@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 5,
+  "id": "run04-d05-01",
+  "phase": "shop",
+  "before": {
+    "state": "65金，Lv8/4/26XP，42000HP。补给三选B配件/随机A/12金。当前三桥完整，A手左上、甲右上和肩左下空闲。",
+    "goal": "优先找到能用的配件，同时升级基础生命。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day05-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "三个B可选更易找不破坏现有三桥的适配件。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "花24XP可升级，余41；当前连胜且只有3生命，生命升级优先于少2利息。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "三选B+升级",
+        "benefit": "可挑合适配件，基础生命提高",
+        "cost": "24金",
+        "risk": "选项仍可能都不适配",
+        "unknown": "配件内容"
+      },
+      {
+        "action": "12金+升级",
+        "benefit": "保留53吃满利息",
+        "cost": "放弃免费配件",
+        "risk": "短期增益较小",
+        "unknown": "后续商店"
+      }
+    ],
+    "chosenAction": "查看三件B选择最适配项；购买6次经验升Lv9。",
+    "prediction": "预期Lv9、56000生命、41金币加可能旧装备出售。"
+  }
+}

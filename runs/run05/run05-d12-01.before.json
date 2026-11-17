@@ -1,0 +1,70 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:14:53.356Z",
+  "before": {
+    "state": "117金 Lv12 2/42，HP116k；爬塔仍莫瑟+50/+5；黑市跳过20，当前完整五桥。",
+    "goal": "先提升英雄生命与店品质，再找更快/额外段数或防御被动且保全核心桥",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-reward-ready.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "77仍满息且有购物预算"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "针对启动容错，非机械升满"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "只买有可行端点的提升"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "成长与升级区分"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "40金升Lv13后进黑市",
+        "benefit": "增23kHP且提高高阶概率，剩77可买32/48",
+        "cost": "放弃20金奖励，升级40",
+        "risk": "新物品未必适配",
+        "unknown": "Lv13概率未知"
+      },
+      {
+        "action": "不升级直接黑市",
+        "benefit": "117购买力",
+        "cost": "少23k血及概率改善",
+        "risk": "更难敌人启动风险",
+        "unknown": "商品未知"
+      },
+      {
+        "action": "拿20跳过",
+        "benefit": "137金可连升",
+        "cost": "当日无商店机会",
+        "risk": "无法改进触发链",
+        "unknown": "下一敌未知"
+      }
+    ],
+    "chosenAction": "买10次经验40金升13，再进黑市；额外42/46级成本不预支",
+    "prediction": "117→77，Lv13 XP0/46，HP139000；旧阶级和五桥不变。"
+  }
+}

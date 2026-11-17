@@ -1,0 +1,11 @@
+{
+  "observed": "免费1→0，113金不变，新敌林弦227000HP。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day13-enemy3-settled.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "只确认换敌成功，不判旧敌胜负",
+  "nextAction": "批读新敌全装科技"
+}

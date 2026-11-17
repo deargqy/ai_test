@@ -1,0 +1,13 @@
+{
+  "observed": "20金到账68→88，恢复后9次经验88→52，Lv12 0/42，稳定116000HP；S65/A30/B4/C1，装备不变。跳过黑市后直接对战入口，没有常规商店，原以为还有常规店未成立。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day11-cash.jpg",
+    "playtest-2026-11-16-run05/day11-level-completed.jpg",
+    "playtest-2026-11-16-run05/day11-opponent.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "narrow",
+  "reason": "等级生命收益成立，但黑市后无第二常规店，未来不能假设仍有购物机会",
+  "nextAction": "完整读取敌人再决定"
+}

@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 3,
+  "id": "run05-d03-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:19:46.468Z",
+  "before": {
+    "state": "24金Lv5，现货C燃手/电背/燃背均不改善当前；C单孔每天+2.5%2金和B短桥互充0.5秒8金，主攻剑唯一上孔已占，肩左中可接甲右中但需换序打断双攻",
+    "goal": "优先找到核心升阶或力量增长配件，不机械补空孔",
+    "evidence": [
+      "playtest-2026-11-16-run05/day03-mod1.jpg",
+      "playtest-2026-11-16-run05/day03-mod2.jpg",
+      "playtest-2026-11-16-run05/day03-level5.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "分配搜寻预算并保留购买现金"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先比较已有布局，主攻桥不牺牲"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心被动和联动优先于低效专属强化"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "最多刷新2次，每次2金",
+        "benefit": "搜重复剑/肩/力量背/更好甲或力量专属配件",
+        "cost": "最多4金，至少20留购买",
+        "risk": "可能无有用商品",
+        "unknown": "货池随机"
+      },
+      {
+        "action": "短桥8金给背-无人机",
+        "benefit": "改善循环约0.5秒/次",
+        "cost": "净增幅有限且放弃搜核心预算",
+        "risk": "不是主攻提速",
+        "unknown": "实际触发频率"
+      },
+      {
+        "action": "买单孔2金",
+        "benefit": "长期成长",
+        "cost": "即时仅2.5%，剑无空孔",
+        "risk": "投肩仅小增益",
+        "unknown": "剩余局程"
+      }
+    ],
+    "chosenAction": "先刷新1次；若没有直接适用核心，再刷新1次；每次看到后核对，不超4金",
+    "prediction": "金币24→22（最多20），当前配置不变；不把刷新当必定获得升级"
+  }
+}

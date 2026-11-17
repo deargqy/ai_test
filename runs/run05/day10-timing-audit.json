@@ -1,0 +1,21 @@
+{
+  "day10WallClockSeconds": 1450.616,
+  "start": {
+    "at": "2026-11-16T15:39:18.241Z",
+    "stage": "boundary-correction",
+    "note": "上一个day-boundary实际仍第9天战后对话；本次离开后以画面天数核定第10天起点"
+  },
+  "end": {
+    "at": "2026-11-16T16:03:28.857Z",
+    "stage": "day11-boundary",
+    "note": "首次确认day11，10/15胜；上次继续点击输入中断，中间过渡未捕获"
+  },
+  "pureOperationSeconds": null,
+  "limitations": [
+    "首张day11截图前实际跨日点未连续捕获，终点取记录时刻，属于观测窗口",
+    "包含用户讨论、模型处理、记录和输入中断；无法精确剔除",
+    "第9天旧3分25秒只到错误边界，需按boundary-correction重算"
+  ],
+  "enemyBatchCaptureSeconds": 24.914,
+  "enemyBatchPackSeconds": 1.72
+}

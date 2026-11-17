@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-09",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:42:59.632Z",
+  "before": {
+    "state": "55金；S元素双核手13肩95已成功，A附魔/B雷霆库存。上排A两失败、甲肩B两失败记录。甲右下1053与肩左下1149可见空孔，但B移装未成功；新A从仓库试不同分支。",
+    "goal": "以单肩有效联动作为降级方案，停止原失败上排装配",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-s-element-bottom.jpg",
+      "playtest-2026-11-16-run05/day09-old-short-left.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "原同装配两次后换不同分支不再重复"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "仅肩真正输出有收益，其他桥保持"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "操作失败先记不解释成强弱"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "A附魔从仓库接甲右下—肩左下",
+        "benefit": "肩可获感电，主核S和600%不动",
+        "cost": "只肩有效，甲不当作输出受益者",
+        "risk": "同位置B失败，故只试一次中心后若失败保留",
+        "unknown": "附魔具体槽约束未知"
+      },
+      {
+        "action": "不装A留仓",
+        "benefit": "节省操作时间，核心S已生效",
+        "cost": "16金币未兑现",
+        "risk": "未来未必有空槽",
+        "unknown": "未来装备未知"
+      }
+    ],
+    "chosenAction": "A中心1120,72→1101,923仅一次不同位置尝试，失败不重复本方案。B保留候选，后续商店优先可用配件。",
+    "prediction": "若成功肩额外感电至少16，坚固95保持；55金币不变，若失败库存保持。"
+  }
+}

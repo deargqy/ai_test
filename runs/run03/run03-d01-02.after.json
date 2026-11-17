@@ -1,0 +1,11 @@
+{
+  "observed": "获得C寒冷手武TRH-G00「破冰者-6」，6.5秒，3×180伤害，施加3×2寒冷，无被动，金币3。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-starting-gun.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "随机得到三段武器，可受力量供给增益且附带寒冷；实际金币到账。",
+  "nextAction": "事件战预测首击约3.25秒、躯干约6秒；先确认敌方与速度再观察。"
+}

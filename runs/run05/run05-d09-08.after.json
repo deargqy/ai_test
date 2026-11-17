@@ -1,0 +1,16 @@
+{
+  "observed": "购买成功，103→55。A附魔上排两种锚点均失败；B短桥甲肩下排迁移两种均失败，已停止。B退仓成功；S中心977,72→1293,923一次成功双核心：手4→13坚固，肩30→95，手3.6K肩4.4K；600%与100%桥均保留。A与B仍仓库，未兑现附魔联动。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-enchant-dual-core.jpg",
+    "playtest-2026-11-16-run05/day09-enchant-dual-core-left.jpg",
+    "playtest-2026-11-16-run05/day09-old-short-reposition.jpg",
+    "playtest-2026-11-16-run05/day09-old-short-left.jpg",
+    "playtest-2026-11-16-run05/day09-old-short-to-store.jpg",
+    "playtest-2026-11-16-run05/day09-s-element-bottom.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "购买及S元素双端成功，A附魔和B重用失败；不能把完整方案记成功。新A16金尚未兑现，不事后改预测。",
+  "nextAction": "换不同装配分支：A从仓库尝试甲肩下排，仅强化肩；若失败保留待合适新槽，先完成比赛"
+}

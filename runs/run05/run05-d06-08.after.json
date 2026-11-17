@@ -1,0 +1,11 @@
+{
+  "observed": "免费1→0，10金不变；新对手风起陇西Lv10/72000HP，4件A，配件更少；旧太初之翼未战。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-reroll2.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "重随成功；之前偏负未战不能验命中。",
+  "nextAction": "记录最终出战预测"
+}

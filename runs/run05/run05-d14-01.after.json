@@ -1,0 +1,11 @@
+{
+  "observed": "花44金184→140，Lv14 XP2/50，HP164000，S70→80%；进入黑市。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day14-s0-p0-read.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "实测S概率提高10个百分点；原引用M07经济说明编号错，应引用已读M06，保留此错误并纠正",
+  "nextAction": "先找能改善启动或双核触发的连接"
+}

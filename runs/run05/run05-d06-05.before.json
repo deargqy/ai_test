@@ -1,0 +1,79 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T10:01:12.081Z",
+  "before": {
+    "state": "42金。S虚空撕裂32金，5秒4×300/4坚固，本装备获得相当于失去护盾12%的伤害；槽L上L中L下R中。旧A燼原始270+莫瑟100=370，5.5秒4次/3坚固，命中坚固+8%；旧卖价8。",
+    "goal": "把持续产盾转为主动伤害，同时保持军械库双核心连接",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-s-hand.jpg",
+      "playtest-2026-11-16-run05/day06-a-long.jpg",
+      "playtest-2026-11-16-run05/day06-refresh1.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心真实升级和成长成本并评"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按新实例槽位重新连"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留400%双核心收益"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "检查产盾→失盾→增伤完整条件"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确莫瑟成长替换损失"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换S虚空撕裂",
+        "benefit": "5秒4连，比5.5秒快；失盾转伤与深红背、甲、坚固循环；主攻品质真正升阶",
+        "cost": "32金，旧A成长100与8%坚固增长丢失；旧卖8净24",
+        "risk": "低受击/不掉盾时被动弱；多孔需要重新连",
+        "unknown": "失盾统计是否累计与倍率顺序未知"
+      },
+      {
+        "action": "保持A燼，买12金成长长桥",
+        "benefit": "未来每日+80%可双核心；当前多80%但要拆50%短桥",
+        "cost": "12金，仍保留A核心",
+        "risk": "增伤已有400%，相对收益被稀释",
+        "unknown": "未来换装孔位未知"
+      },
+      {
+        "action": "都不买",
+        "benefit": "42金保持8息",
+        "cost": "错过可行S与折扣桥",
+        "risk": "未来无法保证同等货",
+        "unknown": "未知"
+      }
+    ],
+    "chosenAction": "先买S装备替换手：军械库改手L中—肩L中；雷霆改甲R下—手L下；齐射背机不动。确认双核心及短桥后卖旧A燼8，预期18金。A成长桥暂不买。",
+    "prediction": "S无战斗面板300×5.6=1680（1.7K）；肩约2499（2.5K），背819机80不变；护盾累计损失超过约584时12%抵消旧A的70基础差（未计CD优势），战中看S伤害是否随失盾增加。装配最多两次失败换策略。"
+  }
+}

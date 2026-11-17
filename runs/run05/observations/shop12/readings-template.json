@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "id": "part1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "part2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "consumable",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    }
+  ]
+}

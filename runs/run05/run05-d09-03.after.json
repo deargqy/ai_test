@@ -1,0 +1,12 @@
+{
+  "observed": "左端对齐失败，中心1168→1388/923成功；SS肩4.4K→4.7K，手3.2K保持，短桥连接同件SS下排两孔，103金不变，仓库清空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-short-ss-bottom.jpg",
+    "playtest-2026-11-16-run05/day09-short-ss-center.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "新实例下排新增孔使旧库存可用；左端锚点仍不稳定，中心有新成功证据，不推广为所有桥固定规则。",
+  "nextAction": "关闭仓库查看首领"
+}

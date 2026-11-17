@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-09",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T08:58:43.792Z",
+  "before": {
+    "state": "首次打开仓库发现NPC奖励C英勇盾100/20坚固/6秒、左中孔，之前买背前遗漏库存。现装曙光110/22/6.5秒、右上孔。均减速全敌0.5秒且无被动。4金/8500HP。",
+    "goal": "修正库存漏查，用快启动背并回收冗余投入",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-reward-back-detail.jpg",
+      "playtest-2026-11-16-run05/day01-inventory.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "此前库存检查不完整，本次纠正并回收冗余"
+      },
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "更早首盾而非只看单次量"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "与甲右中有未来短桥共享可能，暂不为此花钱"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换免费英勇并卖曙光",
+        "benefit": "首盾早0.5秒；回收2金；每日固定增量在短CD更有效",
+        "cost": "基础盾110→100，坚固22→20",
+        "risk": "首日护盾速率16.67略低16.92",
+        "unknown": "成长作用字段次日验证"
+      },
+      {
+        "action": "卖免费英勇保留曙光",
+        "benefit": "不换装并回收2金",
+        "cost": "首盾晚0.5秒",
+        "risk": "长期固定成长频率略低",
+        "unknown": "右上槽暂无明确配件用途"
+      }
+    ],
+    "chosenAction": "把英勇盾换入背位，出售曙光；不再添配件",
+    "prediction": "换后背100/20/6秒左中，出售后4→6金币；当前全库存清空。此前未查NPC赠品的错误如实保留。"
+  }
+}

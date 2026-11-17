@@ -1,0 +1,12 @@
+{
+  "observed": "余额3；获C力量剑AGM-N01坚峰，6秒3×145伤害/3×1力量，无被动、右上孔。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-weapon-received.jpg",
+    "playtest-2026-11-16-run05/day01-sword-detail.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "随机结果本次恰与力量甲相合，但不证明随机优于自选。",
+  "nextAction": "进入强制NPC事件"
+}

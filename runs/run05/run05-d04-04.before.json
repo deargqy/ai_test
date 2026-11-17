@@ -1,0 +1,66 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:34:10.273Z",
+  "before": {
+    "state": "38金24000HP，商店三C异属性武器；S长桥48金使用互充2秒，太贵且会挤当前齐射；A攻击校准8金只+6伤；C攻势1金+9%元素，单点力量甲约+4层/轮。",
+    "goal": "找C剑升阶或力量百分比成长核心",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-shop.jpg",
+      "playtest-2026-11-16-run05/day04-s-link.jpg",
+      "playtest-2026-11-16-run05/day04-consumable.jpg",
+      "playtest-2026-11-16-run05/day04-small-link.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心优先，6点固定伤不是8金的好用途"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "现有齐射服务双主攻，不能为S品质盲拆"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "刷新设预算，库存空仍不机械填孔"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "最多3次刷新，每次2金，出现核心即停",
+        "benefit": "保留32金以上购买与利息",
+        "cost": "最多6金",
+        "risk": "可能空刷",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "买C攻势1金",
+        "benefit": "单孔甲/背少量力量增加",
+        "cost": "1金及操作时间",
+        "risk": "小收益不能补核心被动",
+        "unknown": "取整未知"
+      },
+      {
+        "action": "存钱离店",
+        "benefit": "保留38金7利息",
+        "cost": "今日武器不进阶",
+        "risk": "后续强敌成长风险",
+        "unknown": "敌方未知"
+      }
+    ],
+    "chosenAction": "跳过本页，最多3次2金刷新，每次核对新商品后决定是否停",
+    "prediction": "刷新总支不超过6；不买与力量链无关物品，找到强核心即另记购买决策。"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:27:01.956Z",
+  "before": {
+    "state": "103金，仓库B雷霆短桥；SS肩新下排左右孔均空，主桥仍手左中—肩左中；原S手底部只有左孔而无右孔导致此前桥失败。",
+    "goal": "把已有库存用于新可用插槽，不再花钱买重复配件",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-s-sold-retry.jpg",
+      "playtest-2026-11-16-run05/day09-ss-equipped.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "新增SS槽后试新装配，仍最多两次"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "单装备两孔只计算一件收益"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先用库存"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "短桥装SS肩下排两孔",
+        "benefit": "只强化SS肩50%伤害，现有核心连接不动",
+        "cost": "占同件两孔，放弃出售4金",
+        "risk": "未实装仍可能失败",
+        "unknown": "拖锚点及同件条件"
+      },
+      {
+        "action": "继续仓库或卖4",
+        "benefit": "保现金",
+        "cost": "浪费当前空槽可用收益",
+        "risk": "先前卖短桥失败",
+        "unknown": "具体命中区"
+      }
+    ],
+    "chosenAction": "以左端拖SS肩左下，失败则中心对齐两孔中点；最多2次，均败就保持。",
+    "prediction": "103金不变，SS4402→4712（倍率7.1→7.6），S手3195不变；同件两孔不能计为双装备共享。"
+  }
+}

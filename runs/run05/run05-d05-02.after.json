@@ -1,0 +1,11 @@
+{
+  "observed": "65→49金，批量4次买经验共16，Lv7 XP2/22，第4商品位开启，概率S2/A15/B45/C38；HP升级动画中，本次截图旧值24000，稳定数值下一图核对。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-level7.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "等级金币和商品位已兑现，生命动画未结束不提前声称34000。",
+  "nextAction": "在后续新图确认生命并刷新"
+}

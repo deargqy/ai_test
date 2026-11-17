@@ -1,0 +1,70 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-09",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T10:08:37.913Z",
+  "before": {
+    "state": "风起陇西Lv10/72000HP。A建御雷11.5秒870盾58力，每用消耗30%力换10%减伤上限90%；A虚空5秒4×250/3坚固，失盾8%转伤；A曙光背6秒210盾42坚固，每用全坚固装备+10坚固并慢敌1.5秒；A打击者肩540×3/18坚固，沿用已读受伤5%+6坚固（该实例未重读）。科技巨像5000HP、锚定3秒加速、弹幕20%主；甲手B长力量装150%否则50%主；手C25%伤；背A每用回640。无无人机。自身46000HP，S手1.5K/5秒失盾12%转伤，B肩2.5K/10秒，力每秒8+背/甲/机。",
+    "goal": "利用力量持续供给和400%双核心，抢在敌减伤与坚固长线积累前击杀",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-reroll2.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-armor.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-hand.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-back.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-long.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-a-single.jpg",
+      "playtest-2026-11-16-run05/day06-enemy3-tech2.jpg",
+      "playtest-2026-11-16-run05/day06-shop-final.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "同启动并比较两轮持续链"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌减伤/坚固长线与我方失盾转伤"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留统计口径及实例未重读项"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核对科技力量和敌消耗力量"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "现有S配置出战",
+        "benefit": "同启动加速与5秒武器，我方400%双核心、额外力量与无人机，敌无高阶充能链",
+        "cost": "生命比敌少26000，短桥未装",
+        "risk": "敌减伤逐次上升且背加全坚固，拖长会难打",
+        "unknown": "双方失盾转伤精确值、减伤对护盾口径未知"
+      },
+      {
+        "action": "换回A燼",
+        "benefit": "恢复坚固百分比成长",
+        "cost": "需重装，S失盾转伤测试取消",
+        "risk": "对方偏慢型更给S转伤空间",
+        "unknown": "旧A+短桥是否更好无对照"
+      }
+    ],
+    "chosenAction": "保持已确认S配置直接出战，最快速度。",
+    "prediction": "方向偏胜，预计25–40秒结束，剩血>25000；我方S手伤害>肩炮；余烬科技力量贡献>160（若超过20秒）。敌甲若确实消耗力量，战末力量应少于战报甲累计授予量，此观测只检验消耗现象，不推出精确扣除时序。"
+  }
+}

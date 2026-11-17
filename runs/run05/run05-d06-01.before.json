@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-01",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:56:26.404Z",
+  "before": {
+    "state": "第6天64金，5胜0负，Lv7/34000HP；莫瑟后甲891、手2.1K、肩2.5K、背819、机80，副属性未变。A科技3选1或随机+30金。",
+    "goal": "优先获得能服务现有力量与坚固核心的科技",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-reward-choice.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "基于当前核心而非图标偏好"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确30金币机会成本"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟成长保持旧装备需对照新装备价值"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "A科技三选一",
+        "benefit": "提高选中启动/力量/坚固/普适进攻科技机会",
+        "cost": "放弃30金币",
+        "risk": "三项仍可能全不合适",
+        "unknown": "科技池未知"
+      },
+      {
+        "action": "随机科技+30金",
+        "benefit": "可多升级或搜核心，经济94金",
+        "cost": "随机可能无效科技占永久槽",
+        "risk": "现有经济已足够一次升级与小额购物",
+        "unknown": "随机结果未知"
+      }
+    ],
+    "chosenAction": "选择A科技三选一，再读取三项后决定。",
+    "prediction": "金币保持64，出现3项A科技；能否改善构筑需实际候选核对，不预先认定选科技必胜过30金。"
+  }
+}

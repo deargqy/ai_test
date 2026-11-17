@@ -1,0 +1,13 @@
+{
+  "observed": "出现3个B科技，已选锚定核心II；50金未变，机会成本20。选后短暂窗口激活报错两次，用户点击恢复焦点，未代选或改变游戏策略。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-tech-options.jpg",
+    "playtest-2026-11-16-run05/day04-tech-confirmed.jpg",
+    "playtest-2026-11-16-run05/day04-focus-restored.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "完成主动选择，但相对随机+20金币的反事实收益不可直接验证。",
+  "nextAction": "核对开场提前启动"
+}

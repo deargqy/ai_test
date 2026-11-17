@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T10:14:46.713Z",
+  "before": {
+    "state": "52金，四件B但已积累莫瑟成长；S手已有50成长。补给A三选/随机S/24金。",
+    "goal": "保留核心联动并获得可定向升级的资源",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先判实际替换收益"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "现金与随机物资比较"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟成长纳入替换成本"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "A三选一",
+        "benefit": "可择适配被动",
+        "cost": "放弃24金；不适合售8",
+        "risk": "三选无合适",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "随机S",
+        "benefit": "可获高阶核心",
+        "cost": "放弃24；不适合售16",
+        "risk": "可能无用且替换丢成长",
+        "unknown": "装备未知"
+      },
+      {
+        "action": "24金币",
+        "benefit": "现金可买指定A/S或升级；76金",
+        "cost": "放弃免费选择",
+        "risk": "商店找不到提升",
+        "unknown": "下一商店未知"
+      }
+    ],
+    "chosenAction": "选24金币；已有主力，不为品质单独换体系。",
+    "prediction": "金币52→76，装配不变；原有成长保留。"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "observed": "A手替换成功，三连接恢复，寒冷无人机装配被拒绝，改由d04-03装A手。现现金26，出售旧手未确认。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day04-drone-cold-slot-rejected.jpg",
+    "playtest-2026-11-16-run04/day04-final-build.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "不能把无人机附魔或旧手出售当作完成；保留原预测，改装决策另记。",
+  "nextAction": "以实际26金与A手寒冷2继续。",
+  "operationResult": "unknown",
+  "memoryDecision": "narrow"
+}

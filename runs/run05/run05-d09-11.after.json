@@ -1,0 +1,11 @@
+{
+  "observed": "离店成功，53金、手3.9K肩5.3K不变。XP由0/8自行恢复4/34，不买经验也恢复；进入通话事件。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-timed-exit.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "已有连接保留，XP误显新增恢复条件",
+  "nextAction": "读下一事件"
+}

@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 11,
+  "id": "run05-d11-02",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:11:26.237Z",
+  "before": {
+    "state": "我116kHP52金，敌3044754673 120k+开场15000盾；4秒S斧4hit57燃烧且每hit+10%；9秒S肩7hit90燃烧，额外4倍燃烧伤；SS机5.5秒三次燃伤结算；A背燃伤等额转盾。",
+    "goal": "避免燃烧增长同时转盾拖住双核心爆发",
+    "evidence": [
+      "playtest-2026-11-16-run05/day11-enemy-slot1.jpg",
+      "playtest-2026-11-16-run05/day11-enemy-slot2.jpg",
+      "playtest-2026-11-16-run05/day11-enemy-slot4.jpg",
+      "playtest-2026-11-16-run05/day11-enemy-slot5.jpg",
+      "playtest-2026-11-16-run05/day11-enemy-tech5.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "4秒斧与7hit肩、三结算均需纳入"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "燃伤转盾提高击杀门槛"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核对实际新对手而非旧标题"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "规避燃伤→等额盾+多次结算与7hit增幅",
+        "cost": "消耗1次免费",
+        "risk": "下一敌未知可能更强",
+        "unknown": "新候选"
+      },
+      {
+        "action": "直接战斗",
+        "benefit": "我可5–7秒首击，无硬禁用",
+        "cost": "风险1命",
+        "risk": "敌燃烧伤害还能等额变盾，120k不代表有效承伤上限",
+        "unknown": "实际斧/肩命中时间，增益分布"
+      }
+    ],
+    "chosenAction": "使用一次免费重随，不为连胜盲接续航闭环",
+    "prediction": "次数2→1，52金不变；旧敌不打，因此不对其输赢作事后验证。"
+  }
+}

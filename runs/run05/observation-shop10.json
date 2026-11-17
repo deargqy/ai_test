@@ -1,0 +1,56 @@
+{
+  "batchId": "run05-d10-shop-attachments",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "context": {
+    "gold": 84,
+    "purchases": [
+      {
+        "name": "买经验",
+        "cost": 28
+      }
+    ],
+    "inventory": [],
+    "equippedBridges": [
+      "A600双核心",
+      "B100手背",
+      "S216坚固",
+      "A16电甲肩",
+      "B150/50肩手"
+    ]
+  },
+  "entries": [
+    {
+      "id": "long",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-long.jpg",
+      "box": [
+        580,
+        80,
+        1220,
+        620
+      ]
+    },
+    {
+      "id": "short",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-short.jpg",
+      "box": [
+        910,
+        80,
+        1550,
+        620
+      ]
+    },
+    {
+      "id": "consumable",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-consumable.jpg",
+      "box": [
+        1240,
+        80,
+        1880,
+        620
+      ]
+    }
+  ]
+}

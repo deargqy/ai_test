@@ -1,0 +1,80 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-02",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:16:09.369Z",
+  "before": {
+    "state": "77金139k，五桥保持；S反击单孔16金冷却-10%，手右中1629,870空闲；S弹头短桥32金使敌减益+16%但需拆现核心桥，S坚固无人机每台防装盾+20%但丢24部署/6hit力；S打击者丢每坚固+6伤和低CD。",
+    "goal": "用空闲单孔减少核心冷却，不破坏五桥",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-shop-part1.jpg",
+      "playtest-2026-11-16-run05/day12-shop-part2.jpg",
+      "playtest-2026-11-16-run05/day12-shop-slot4.jpg",
+      "playtest-2026-11-16-run05/day12-shop.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "空槽单孔收益不牺牲五桥"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "绑定已确认S手"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "仅两种拖动失败后停"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "仍61保利息"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买S反击装手空右中",
+        "benefit": "手CD5→4.5，更快重复触发、互加速肩",
+        "cost": "16金余61仍满息",
+        "risk": "初次有效命中未必提前0.5因动画",
+        "unknown": "孔位需拖后核"
+      },
+      {
+        "action": "换S坚固无人机",
+        "benefit": "每台20%防盾且坚固来源",
+        "cost": "32金失力量部署与hit链，现盾600加算下20%边际小",
+        "risk": "短战可能不值",
+        "unknown": "召唤频率与加算未隔离"
+      },
+      {
+        "action": "S弹头替桥",
+        "benefit": "放大感电层",
+        "cost": "32金且失216元素或互加速",
+        "risk": "主伤仍物理，净收益不足",
+        "unknown": "减益增长实际节奏"
+      },
+      {
+        "action": "全留钱",
+        "benefit": "77金",
+        "cost": "放弃已见可用空孔",
+        "risk": "核心慢启动不变",
+        "unknown": "后续随机"
+      }
+    ],
+    "chosenAction": "买反击16并装手右中，核4.5秒后最多刷新两次找额外段数/兼容被动；其他现货不买",
+    "prediction": "77→61，反击入库；装手后CD5→4.5，五桥与主属性保持，仓库清空。"
+  }
+}

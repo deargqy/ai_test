@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 5,
+  "id": "run04-d05-03",
+  "phase": "shop",
+  "before": {
+    "state": "43金、56000HP，当前构筑连胜；商店可跳过得10金。",
+    "goal": "保护经济增长并减少无效刷新，用已升级生命继续。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day05-skip-shop.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "跳店到53，达到每5金1利息、最多10的50金阈值。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "现有输出连胜，本日新增14000基础生命，先保留已验证组合。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "跳店+10",
+        "benefit": "53金币满利息",
+        "cost": "错过一次商店",
+        "risk": "无法获得即时核心升级",
+        "unknown": "商品内容"
+      },
+      {
+        "action": "进店",
+        "benefit": "可能S肩升级",
+        "cost": "放弃10且可能花钱",
+        "risk": "不适配槽位",
+        "unknown": "商品内容"
+      }
+    ],
+    "chosenAction": "跳过商店。",
+    "prediction": "53金币，预期战后利息10；当前三桥完整不变。"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "免费2→1，16金未变，主面板变酸奶与狐42kHP/3命，卡组也改变，详情标题仍Neophantom，BUG001重复出现。前敌未实战。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-reroll-focus.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "仅确认重随行为；偏败方向未被实战检验。",
+  "nextAction": "评价新敌"
+}

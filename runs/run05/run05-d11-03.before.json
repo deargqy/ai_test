@@ -1,0 +1,82 @@
+{
+  "runId": "run05",
+  "day": 11,
+  "id": "run05-d11-03",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:12:38.027Z",
+  "before": {
+    "state": "D_HM120kLv13。B手6秒10hit每hit坚固+6%；B肩10秒3hit每坚固+3伤；B甲得坚固随机加速1.5秒；背6秒全坚固装+10、敌减速1.5秒。SS科技每秒元素+3%，S复活50%，两镀层18%给无人机。长战坚固增长风险真实。",
+    "goal": "在敌坚固滚起前用375力+600双核心爆发突破复活",
+    "evidence": [
+      "playtest-2026-11-16-run05/day11-reroll.jpg",
+      "playtest-2026-11-16-run05/day11-dhm-slot4.jpg",
+      "playtest-2026-11-16-run05/day11-dhm-slot3.jpg",
+      "playtest-2026-11-16-run05/day11-dhm-tech4.jpg",
+      "playtest-2026-11-16-run05/day11-dhm-tech5.jpg",
+      "playtest-2026-11-16-run05/day11-dhm-bridge5.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "分开CD和命中，给5–8秒区间"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "10hit百分比坚固+复活不能按B装低估"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "当前五桥已核不再重排"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "52保利息，额外血无清晰必要"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "手卡x4说明x10，已知BUG006不按卡面估算"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接战斗",
+        "benefit": "无硬禁用与开场大盾，敌主力初始属性低；我先后双核心爆发有时间窗",
+        "cost": "承担普通失败1命",
+        "risk": "10段百分比坚固+随机加速+每秒元素增幅，拖久可能反超",
+        "unknown": "随机落点及实际复活血量含寄生增长"
+      },
+      {
+        "action": "免费再换",
+        "benefit": "可能规避坚固成长链",
+        "cost": "消耗最后机会，失去当前已读且启动可接受的敌人",
+        "risk": "最后敌可能更强",
+        "unknown": "下一构筑未知"
+      },
+      {
+        "action": "再升级44金",
+        "benefit": "增23000HP",
+        "cost": "52→8只1利息，保购物资源不足",
+        "risk": "不能改善输出窗口",
+        "unknown": "是否必须额外血未知"
+      }
+    ],
+    "chosenAction": "保留D_HM，倾向胜；保52金不再升",
+    "prediction": "首有效命中预计5–8秒；敌50%复活应触发；预计12–24秒胜，若长期未破复活则说明低估坚固循环。战后核敌坚固/肩伤害和我两核心占比。"
+  }
+}

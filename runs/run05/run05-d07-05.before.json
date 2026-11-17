@@ -1,0 +1,59 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-05",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T12:12:19.065Z",
+  "before": {
+    "state": "Pascal_Gerster Lv9/62000HP。S燃手4.5s4×150/7燃烧，命中燃烧+10%；S燃无人机6.5s，施加累计140燃烧额外召唤。B槽位封锁每次装备使用禁用对面同槽0.9s；C干扰脉冲、A锚定III，具体第一/三科技尚未重读。S燃甲/A燃背和额外配件触发未知。",
+    "goal": "避开燃烧召唤加控制延迟我方核心的对位",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-enemy-detail.jpg",
+      "playtest-2026-11-16-run05/day07-enemy-tech2.jpg",
+      "playtest-2026-11-16-run05/day07-enemy-hand.jpg",
+      "playtest-2026-11-16-run05/day07-enemy-drone.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核对第一轮控制与成长"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "燃烧百分比+召唤闭环"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "未知被动明确保留"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接打",
+        "benefit": "保留免费重随",
+        "cost": "承担未知燃烧增幅/控制链",
+        "risk": "S手被敌第二槽召唤控制，爆发受延迟",
+        "unknown": "无人机频率与额外召唤是否禁用未知"
+      },
+      {
+        "action": "免费重随",
+        "benefit": "争取较少控制的敌人",
+        "cost": "一次重随机会",
+        "risk": "下敌更强",
+        "unknown": "下敌未知"
+      }
+    ],
+    "chosenAction": "使用第1次免费重随；不是根据HP接近判安全。",
+    "prediction": "当前对位高风险、方向偏负但未实际打不计命中；免费2→1、42金不变。"
+  }
+}

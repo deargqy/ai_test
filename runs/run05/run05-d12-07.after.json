@@ -1,0 +1,17 @@
+{
+  "observed": "胜，45→40约5秒敌归零；首伤42→41之间约3–4秒。己135465HP945盾。肩62154、手49984、感电561；敌手4260雷电780。己背盾2450，敌背1200均有被动，未主动出盾/减速；己充能科技1次但落点不独立证实。+68=58+10息，XP+2。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-fight-11.jpg",
+    "playtest-2026-11-16-run05/day12-fight-12.jpg",
+    "playtest-2026-11-16-run05/day12-fight-13.jpg",
+    "playtest-2026-11-16-run05/day12-fight-23.jpg",
+    "playtest-2026-11-16-run05/day12-stats.jpg",
+    "playtest-2026-11-16-run05/day12-defense.jpg",
+    "playtest-2026-11-16-run05/day12-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "方向胜与HP>50k支持，但首击及结束时间均过晚；随机3秒充能可能加快肩启动，不能只给统一CD区间。敌后续链没启动不等于不存在。统计x14含被动触发，不能当14次完整攻击。",
+  "nextAction": "进入下一天；减少无必要升级，分情景预测充能"
+}

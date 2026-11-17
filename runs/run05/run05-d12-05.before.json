@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-05",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:26:21.102Z",
+  "before": {
+    "state": "SingleZombie95k，五科技五装备已读；手2.5秒雷电额外触发，甲50%雷电递归，SS背45%施加递归及全体慢3秒，2次免费重随。",
+    "goal": "避开先启动的感电多重触发链",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-enemy-open.jpg",
+      "playtest-2026-11-16-run05/day12-e-g0.jpg",
+      "playtest-2026-11-16-run05/day12-e-g3.jpg",
+      "playtest-2026-11-16-run05/day12-e-g4.jpg",
+      "playtest-2026-11-16-run05/day12-e-t4.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "逐层识别快速链和减速，未知不能按面板补齐"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不用前11胜当胜率校准"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "免费重随不耗经济"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费换敌一次",
+        "benefit": "有机会避开高频递归链",
+        "cost": "剩1次，不能回来",
+        "risk": "下个可能更强",
+        "unknown": "未读全桥，不给数值胜率"
+      },
+      {
+        "action": "直接打",
+        "benefit": "我方139k与强首轮爆发可能足够",
+        "cost": "承受敌先手与减速",
+        "risk": "链触发次数和随机递归尾部不可低估",
+        "unknown": "预测方向不确定，不能仅95k判稳赢"
+      }
+    ],
+    "chosenAction": "免费换敌一次",
+    "prediction": "免费次数2→1、金币57不变；新敌重新评估，原敌实际胜负未知"
+  }
+}

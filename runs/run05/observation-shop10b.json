@@ -1,0 +1,52 @@
+{
+  "batchId": "run05-d10-shop-equipment",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "context": {
+    "gold": 84
+  },
+  "entries": [
+    {
+      "id": "long-recheck",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-long-recheck.jpg",
+      "box": [
+        570,
+        50,
+        1230,
+        600
+      ]
+    },
+    {
+      "id": "force-back",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-force-back.jpg",
+      "box": [
+        1220,
+        280,
+        1880,
+        830
+      ]
+    },
+    {
+      "id": "other-back",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-other-back.jpg",
+      "box": [
+        980,
+        280,
+        1640,
+        830
+      ]
+    },
+    {
+      "id": "drone",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-shop-drone.jpg",
+      "box": [
+        520,
+        280,
+        1180,
+        830
+      ]
+    }
+  ]
+}

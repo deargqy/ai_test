@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "batchId": "d13-eb",
+  "createdAt": "2026-11-16T16:39:26.410600+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "g0",
+      "label": "g0",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-g0.jpg",
+      "sourceSha256": "375d5ba0e629682d7c4b785ceb62e1d17f69b49f508fa0209f71617486c8c7ee",
+      "box": [
+        245,
+        210,
+        890,
+        820
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "8dd8afa20c49faf25865cc24621b06ea58dc3579c09282e12226aaa7dd515fdf",
+      "reading": null
+    },
+    {
+      "id": "g1",
+      "label": "g1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-g1.jpg",
+      "sourceSha256": "908ad03f170131bb5adcef347e6ed542e38d5fffb533cacf629a891fdd8be3c9",
+      "box": [
+        385,
+        210,
+        1030,
+        820
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "3ede285945165708bf877667d55203a739964addb1673c13cd279d9bbd536730",
+      "reading": null
+    },
+    {
+      "id": "g2",
+      "label": "g2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-g2.jpg",
+      "sourceSha256": "cfb5c5a60364f9b75fd9f03502c06bfb1da1b0a493b6d6731c75b048ec09ca3a",
+      "box": [
+        528,
+        210,
+        1173,
+        820
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "b71a4ed356a875227c4c7bf2776bf627ca86ee457bf74ca35b2e2cb4ab9e3bac",
+      "reading": null
+    },
+    {
+      "id": "g3",
+      "label": "g3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-g3.jpg",
+      "sourceSha256": "b9fcf1cbde2380c7e7afd6b5de1d73f4db2af146b7ec66a8ac00a087b0a06476",
+      "box": [
+        672,
+        210,
+        1317,
+        820
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "fa7efe11fff98a4e519d4b343d6757bd5b9bccdfda86e2225751d3cb7722fa1f",
+      "reading": null
+    },
+    {
+      "id": "g4",
+      "label": "g4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-g4.jpg",
+      "sourceSha256": "e2dacaf0d760fd482099125711ac7eb46d3d54a2217cb8c120dea4ee326fe3bc",
+      "box": [
+        814,
+        210,
+        1459,
+        820
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "71cdbd33fc817817b50ecbeb2eb3d0877f37851e2e1bc9edfb594b372d76f953",
+      "reading": null
+    },
+    {
+      "id": "t0",
+      "label": "t0",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-t0.jpg",
+      "sourceSha256": "b77fe9217795d7169208c6d58e0152c8131055bbfc32f413f2b5da8261fe9080",
+      "box": [
+        193,
+        80,
+        853,
+        600
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "5cd155a7d531fd4203b299bd3cd446969463165370cf135d21d00934648d91e8",
+      "reading": null
+    },
+    {
+      "id": "t1",
+      "label": "t1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-t1.jpg",
+      "sourceSha256": "40fe95d0637b8ac57dc58961d3782176066bed7155168f587bc2609f18e3b3b3",
+      "box": [
+        286,
+        80,
+        946,
+        600
+      ],
+      "crop": "crop-07.png",
+      "cropSha256": "622cb25d183607e5450acd1544c00fda4de164e928008bb8153770d759569c0b",
+      "reading": null
+    },
+    {
+      "id": "t2",
+      "label": "t2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-t2.jpg",
+      "sourceSha256": "1d64c769ed9407ef2cce223a9e2be96cd00e94ad3e8d045f1d140f949fd272de",
+      "box": [
+        380,
+        80,
+        1040,
+        600
+      ],
+      "crop": "crop-08.png",
+      "cropSha256": "95ecf5efbd70bb136f2528808018058e8480e93b3f6c248f9c3bdc8b7442439f",
+      "reading": null
+    },
+    {
+      "id": "t3",
+      "label": "t3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-t3.jpg",
+      "sourceSha256": "0c58f3f727d3e5af1f0007aad4c18c88e51145ca9be86801b639d5fea0b441ed",
+      "box": [
+        476,
+        80,
+        1136,
+        600
+      ],
+      "crop": "crop-09.png",
+      "cropSha256": "93cb492961e62ceb62eb68c3d2562bb13bd28c05a6c4a90fbef77434d989ec29",
+      "reading": null
+    },
+    {
+      "id": "t4",
+      "label": "t4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day13-eb-t4.jpg",
+      "sourceSha256": "b51f3c572f8a61081b18f8e3acebbaefd3ceea0ff19744d2b121770455a24438",
+      "box": [
+        569,
+        80,
+        1229,
+        600
+      ],
+      "crop": "crop-10.png",
+      "cropSha256": "18c656310df753ac2559adebe6d472230776c9458a2f8458e5d63643e89a390f",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg",
+    "contact-03.jpg"
+  ],
+  "metrics": {
+    "inputImages": 10,
+    "uniqueCrops": 10,
+    "packSeconds": 1.043
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

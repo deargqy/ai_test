@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 6,
+  "id": "run04-d06-01",
+  "phase": "shop",
+  "before": {
+    "state": "100金，Lv9/4/30XP、56000HP；随机A科技+30或三选A。",
+    "goal": "把经济优势转换为启动生存，同时保留采购和满额利息。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day06-tech-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "选30金后130；预计升Lv10花28、Lv11再32，共60后70，仍超过满利息50。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "寄生核心需要活到首次部署/攻击，基础生命保障启动。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "不把后段寄生代替前段生存。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机A+30，升两级",
+        "benefit": "56k→预计90k且保70金",
+        "cost": "放弃定向科技",
+        "risk": "随机科技无协同",
+        "unknown": "A科技结果、第二级阈值"
+      },
+      {
+        "action": "三选A、升一级",
+        "benefit": "可能强联动科技",
+        "cost": "少30金",
+        "risk": "科技未必比生命更有用",
+        "unknown": "候选"
+      }
+    ],
+    "chosenAction": "随机A+30，先升Lv10核阈值，再升Lv11若成本32。",
+    "prediction": "两级总60，余70、90000生命；不在未核实际阈值时多点经验。"
+  }
+}

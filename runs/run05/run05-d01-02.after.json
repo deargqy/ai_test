@@ -1,0 +1,11 @@
+{
+  "observed": "力量甲已装备：480盾/32力量，左下单槽，余额0。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-weapon-event.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "装备基线已核实，跨天成长另记。",
+  "nextAction": "领取武器"
+}

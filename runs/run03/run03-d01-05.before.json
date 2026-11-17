@@ -1,0 +1,48 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-05",
+  "phase": "shop",
+  "before": {
+    "state": "Lv4/7500生命，16金币；躯干、手武、肩炮齐，背部与无人机空，仓库已盘点。当前商店全为重复部位，暂无有意义的绑定消耗品。",
+    "goal": "用有限刷新寻找可兑现的空部位或核心提升。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-level4.jpg"
+    ],
+    "memorySearch": "shop M06/M03/M04/M05/M08已读取；采用预算、库存与避免无目标专属强化。",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "刷新最多两次预算4，不买已有重复部位来凑数量，优先即时收益。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "尚无无人机，跳过其减冷却消耗品。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "限额刷新1—2次",
+        "benefit": "有机会补空部位或得到更强装备。",
+        "cost": "每次2金币，最多4。",
+        "risk": "可能没有合适商品。",
+        "unknown": "随机货品未知，不预记战力提升。"
+      },
+      {
+        "action": "直接出战留16金币",
+        "benefit": "至少可保留3档利息。",
+        "cost": "两个部位空缺。",
+        "risk": "当前7500生命的优势不等于输出必足。",
+        "unknown": "尚未查看对手。"
+      }
+    ],
+    "chosenAction": "先刷新一次，读具体货品后再做购买决定。",
+    "prediction": "金币16→14，商店更新；不预测一定刷出好装备。"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-01",
+  "phase": "shop",
+  "before": {
+    "state": "6胜2负最后生命，123金。事件可三选SS后挑战高危首领，或跳首领拿随机SS，或放弃装备+100金。",
+    "goal": "避免额外首领生命风险，获得可用高阶替换机会。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-boss-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "胡班仅3次失败，当前2负，不能拿最后生命赌额外首领。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "随机SS仍需检查被动与连接，不因品质就换。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "已有123现金，装备机会比再100现金更符合当前缺口。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "跳首领拿随机SS",
+        "benefit": "无额外战斗风险，免费高阶装备",
+        "cost": "无定向",
+        "risk": "不合用",
+        "unknown": "装备"
+      },
+      {
+        "action": "三选后挑战",
+        "benefit": "定向SS",
+        "cost": "可能直接终局",
+        "risk": "高危首领",
+        "unknown": "敌强度"
+      },
+      {
+        "action": "100金",
+        "benefit": "可升级/刷新",
+        "cost": "放弃免费SS",
+        "risk": "找不到替代",
+        "unknown": "商品"
+      }
+    ],
+    "chosenAction": "选择跳过首领、领取随机SS装备。",
+    "prediction": "不进入首领战，金币仍123，得到一件待评估SS。"
+  }
+}

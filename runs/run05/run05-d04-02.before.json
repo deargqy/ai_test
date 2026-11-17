@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:31:54.590Z",
+  "before": {
+    "state": "B科技：骨干II感电施加50%+3力（己无感电）；锚定核心II开战全装备加速3秒；急速核心II每秒全装备主属性+1.5%。上一战22秒剩5427/16500，启动期无盾到7秒。",
+    "goal": "缩短第一轮力量与被动盾启动，比较长期成长",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-tech1.jpg",
+      "playtest-2026-11-16-run05/day04-tech2.jpg",
+      "playtest-2026-11-16-run05/day04-tech3.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "上日损失11073HP，优先缩短首盾前窗口"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "区别初期与长期，不将1.5%当复利"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不为无来源感电科技改掉力量链"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "整排已有110%主攻加成，比较边际收益"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "锚定核心II",
+        "benefit": "加速说明+50%，3秒约多充1.5秒，背/无人机/甲均提前",
+        "cost": "放弃长期主属性成长",
+        "risk": "敌控制可能吃掉提早收益",
+        "unknown": "实际动画首命中仍会滞后"
+      },
+      {
+        "action": "急速核心II",
+        "benefit": "22秒约+33%主属性，盾与伤害都受益",
+        "cost": "初期收益小，剑肩已有+110%使加算边际较低",
+        "risk": "强敌在成长前击穿",
+        "unknown": "是否与既有加算及力量乘区未测"
+      },
+      {
+        "action": "骨干II",
+        "benefit": "未来感电转力量",
+        "cost": "目前无感电，当前收益0",
+        "risk": "为科技改构筑损失当前联动",
+        "unknown": "后续感电来源未必出现"
+      }
+    ],
+    "chosenAction": "选锚定核心II",
+    "prediction": "无敌控制时首剑冷却约4.5秒、首背5.5秒、首无人机6.5秒，首甲约9.5秒；这只作用开场3秒，不当全场冷却减半。未来战斗核查首轮，而非只看总伤。"
+  }
+}

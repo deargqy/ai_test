@@ -1,0 +1,12 @@
+{
+  "observed": "B补给卖4，第二次拖拽成功；买8XP后24金，Lv5XP2/14，16500HP；原双攻连接与数值保持，第二配件货位开放。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day03-drone-sale-confirmed.jpg",
+    "playtest-2026-11-16-run05/day03-level5.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "计划收支和生命兑现，未假称核心升阶。",
+  "nextAction": "预算4金最多两次刷新找核心"
+}

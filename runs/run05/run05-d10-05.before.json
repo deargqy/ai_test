@@ -1,0 +1,79 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-05",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T15:44:43.579Z",
+  "before": {
+    "state": "84金Lv11/95k；现手500×8.6=4300，肩670×8.6=5762，背590×2.1=1239。S长主属性+200，力量+600，48金；S短互相使用加速2秒32金。可分别替换B齐射手背100与B雷霆肩手50/150。",
+    "goal": "用整套提高背部护盾与双核心循环，接受利息损失",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-shop-long-recheck.jpg",
+      "playtest-2026-11-16-run05/day10-shop-short.jpg",
+      "playtest-2026-11-16-run05/day10-shop.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "player",
+        "use": "applied",
+        "reason": "整套比较主属性与使用触发，不机械保利息；用户提醒同时比较两个好配件促成本次重评"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "买80余4，旧桥出售未到账不算现金，放弃升级"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "原位替换每方案最多2不同尝试"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "逐笔扣费及两端核实"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "两件都买并替换旧桥",
+        "benefit": "手约4550，背约4189；肩手互加速，补承伤与启动",
+        "cost": "80金余4，卖旧桥前利息0；旧桥预计6+4需核",
+        "risk": "肩静态5762→4757，若加速未共享则亏损",
+        "unknown": "加速触发时点和两端连接需现场核实"
+      },
+      {
+        "action": "只买短桥",
+        "benefit": "32金余52保10利息，双核心提速",
+        "cost": "失去50/150增伤",
+        "risk": "背盾仍弱",
+        "unknown": "触发收益未实测"
+      },
+      {
+        "action": "只买长桥",
+        "benefit": "48金余36，手4800背4189",
+        "cost": "保留原慢肩启动，利息降3",
+        "risk": "主属性不是全部战伤等比例增加",
+        "unknown": "额外盾对实战贡献未知"
+      },
+      {
+        "action": "全不买",
+        "benefit": "84保经济",
+        "cost": "放弃两项适配补强",
+        "risk": "高承伤复现",
+        "unknown": "下一敌人未知"
+      }
+    ],
+    "chosenAction": "买S长48与S短32；先核仓库，再旧B桥归仓，新桥原位替换，保留600%和216%核心桥；成功后卖旧桥",
+    "prediction": "购买84→4；完整换装后手约4.55K肩约4.76K，背约4.19K，坚固手13肩95及感电肩51保持。若触发成功下一战应见相互加速；不保证胜率"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "observed": "购买116金；第一拖误接手—无人机挤掉600%桥，第二拖未成功。用左端930→1340恢复600%桥，肩7.5K手4.6K恢复。+6长在库存，10%CD已移背。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day14-long-try1.jpg",
+    "playtest-2026-11-16-run05/day14-long-try2.jpg",
+    "playtest-2026-11-16-run05/day14-restore-damage-endpoint.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "未实现同排交错共存，不能把重叠桥算可用槽；改比较下排牺牲两短桥的净收益。",
+  "nextAction": "改为下排+6桥，保留600%伤害与互充"
+}

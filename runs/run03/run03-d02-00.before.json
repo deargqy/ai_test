@@ -1,0 +1,55 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-00",
+  "phase": "shop",
+  "before": {
+    "state": "0胜1负，Lv4，2/10XP，25金币；科技事件可3选1 C科技或随机C科技+10。",
+    "goal": "弥补首日生命缺口，保留购物资金。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-start.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "随机科技金币可用于确定升级收益。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "首日低估HP和持续伤害，先补5000生命。"
+      },
+      {
+        "id": "M09",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "若茜仅剩2次容错，没有莫瑟每日主属性成长。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机C科技+10，再买8XP升Lv5",
+        "benefit": "35→27金币且生命预计7500→12500",
+        "cost": "失去科技3选1",
+        "risk": "随机科技不契合",
+        "unknown": "科技结果"
+      },
+      {
+        "action": "自选3个C科技",
+        "benefit": "可能契合寒冷",
+        "cost": "放弃10金币",
+        "risk": "仍可能无合适科技",
+        "unknown": "候选内容"
+      }
+    ],
+    "chosenAction": "选随机C科技+10；两次4金币经验升Lv5，核对科技和实际生命。",
+    "prediction": "现金25→35→27、经验2+8达到Lv5；基础生命提升应改善持续伤害生存，但不单独保证胜利。"
+  }
+}

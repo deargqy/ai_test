@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-04",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:49:36.153Z",
+  "before": {
+    "state": "47金币，手A燼832/肩B链法924，共享齐射+100%；A军械库+400%伤害价24。",
+    "goal": "用现有可行双端位置提高核心伤害，保留力量与坚固链",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-a-long.jpg",
+      "playtest-2026-11-16-run05/day05-refresh1.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先核对已有库存与有效双端"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心升级优于机械囤息"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "百分比先按加算预测并实测"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买军械库替换齐射",
+        "benefit": "手肩同时+300个百分点伤害；已有插槽完全匹配",
+        "cost": "24金币，旧齐射预计售6，损失约4利息",
+        "risk": "不能把400%误作所有主属性；力量加成口径待测",
+        "unknown": "加成与力量的顺序未知"
+      },
+      {
+        "action": "保留齐射存钱",
+        "benefit": "47近满息，未来核心升级预算",
+        "cost": "放弃明显输出提升",
+        "risk": "当前34000HP仍可能遇到启动或爆发威胁",
+        "unknown": "后续商店未知"
+      }
+    ],
+    "chosenAction": "买A军械库，替换手肩长桥，核对双端后卖旧齐射；雷霆短桥保留。",
+    "prediction": "未战斗面板手从832→1792（320×5.6），肩924→2244（440×5.1）；护甲/背/无人机不变；买后23金币，旧B桥售出若6则29。"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "三次买经验后16金币、Lv4、生命稳定为7500，第三商品位解锁。刚升级瞬间显示4500，动画结束后更新，未记成Bug。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-level4.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "升级预算与生命预期成立。新增C刀135×3/6.5秒，当前寒冷枪180×3/6.5秒，暂不为同冷却低初始伤害换刀。",
+  "nextAction": "限额刷新找空缺的背部/无人机或明确提升，避免无限刷新。"
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "免费重随2→1，10金币不变；新对手太初之翼Lv12/112000HP。旧弹窗标题仍Bilibili.二非，重现BUG001，不影响读装备。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-reroll.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "操作成功；避开的寒冷对手未战斗，偏负方向不可验证。",
+  "nextAction": "评估新对手克制链"
+}

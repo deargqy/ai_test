@@ -1,0 +1,12 @@
+{
+  "observed": "刷新一次24→22金，出现B祸津神（每层力量额外+1伤）及特卖B力量无人机部署+24力，停止第二次刷新。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day03-force-armor.jpg",
+    "playtest-2026-11-16-run05/day03-force-drone-detail.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "找到实际核心联动改进，未盲花预算。",
+  "nextAction": "换甲和无人机，不买低效每日冷却桥"
+}

@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-08",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T15:56:13.803Z",
+  "before": {
+    "state": "求霸天Lv12，112k预览，燃烧150开场；S斧4.5秒4hit23每hit燃烧+10%；SS无人机5.5秒部署结算3次；B肩10秒4hit22，燃烧伤害自充1秒；B甲每2秒额外结算；S科技每3秒禁用随机装备2.5秒；C背5.4慢0.5。其余配件/科技未知。",
+    "goal": "避免核心初次命中被干扰后遭燃烧重复结算滚起",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-enemy-build.jpg",
+      "playtest-2026-11-16-run05/day10-enemy-hand.jpg",
+      "playtest-2026-11-16-run05/day10-enemy-drone.jpg",
+      "playtest-2026-11-16-run05/day10-enemy-armor.jpg",
+      "playtest-2026-11-16-run05/day10-enemy-disable.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "初始燃烧、百分比叠层、额外结算和禁用共同影响首次有效出手"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "识别完整威胁链，不只看低阶肩甲"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "重随后实际配置和名称核实"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "有机会换到启动威胁更小的对手",
+        "cost": "消耗1/2免费机会",
+        "risk": "下个可能更强",
+        "unknown": "未见候选"
+      },
+      {
+        "action": "直接战斗",
+        "benefit": "保留重随机会，测试强燃烧链",
+        "cost": "首手可能被2.5秒禁用延误，新盾启动也可能断",
+        "risk": "偏高失败风险，无法由95kHP保证撑过滚动",
+        "unknown": "未读配件与全部科技，不能给胜率"
+      }
+    ],
+    "chosenAction": "使用一次免费重随；当前对位不因新装备就判断偏胜",
+    "prediction": "次数2→1，金币仍14，重新读取实际对手，旧名可能显示滞后；此避战没有可验证的胜负结果"
+  }
+}

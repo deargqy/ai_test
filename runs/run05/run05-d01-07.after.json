@@ -1,0 +1,15 @@
+{
+  "observed": "无人机首次卡面点击未买，价格区点击后18→14，刷新14→12；正式首战无人机伤害88、力量12，存在非零输出。其基础攻击间隔0.5秒、持续6.5秒，力量仅给召唤10%收益。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-drone-buy-check.jpg",
+    "playtest-2026-11-16-run05/day01-refresh1.jpg",
+    "playtest-2026-11-16-run05/day01-drone-purchased.jpg",
+    "playtest-2026-11-16-run05/day01-stats.jpg",
+    "playtest-2026-11-16-run05/day01-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "确认独立攻击与力量来源；并非召唤吃满普通武器力量收益。",
+  "nextAction": "次日比较主属性增长与核心升级"
+}

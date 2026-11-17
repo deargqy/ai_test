@@ -1,0 +1,11 @@
+{
+  "observed": "旧齐射一次拖拽成功：背714、无人机70，双端跨两件装备，手肩1.8K/2.2K不变，23金币仓库空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-old-bridge-reuse.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "两个独立数值改变与预测一致，旧桥具明确价值保留。",
+  "nextAction": "离开商店选敌"
+}

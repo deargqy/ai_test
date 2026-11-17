@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-01",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T12:16:21.558Z",
+  "before": {
+    "state": "93金、7胜0负、60kHP。第8天S科技三选或随机+40金币。核心物理/力量/坚固，燃寒电缺主链。",
+    "goal": "用科技强化已有核心或启动防御",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-event.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "现有核心决定适配"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确40金币机会成本"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "优先启动或完整触发链"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "三选S",
+        "benefit": "提高适配当前核心/控制/通用收益机会",
+        "cost": "放弃40金",
+        "risk": "三项仍可能不合适",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "随机S+40",
+        "benefit": "133金可多升或买S",
+        "cost": "不能选科技",
+        "risk": "抽到纯元素无效科技",
+        "unknown": "分布未知"
+      }
+    ],
+    "chosenAction": "选S科技三选一；93金已有升级与购买预算，重视持续适配。",
+    "prediction": "金币93不变出现3项S科技；实际价值再依候选定，不能认为40金币必定不如选科技。"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "batchId": "shop12",
+  "createdAt": "2026-11-16T16:15:25.142471+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "part1",
+      "label": "part1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-part1.jpg",
+      "sourceSha256": "c102cd993a9d0984306c6968b63b9d974c01aff163ad8d6fca869cd71860192c",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "1d9288b7d7252cc1977fd7cacbcc4bd740cd052552b2894b828923953535097a",
+      "reading": null
+    },
+    {
+      "id": "part2",
+      "label": "part2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-part2.jpg",
+      "sourceSha256": "ad72266ca9778b51c5494304efebb6226507158facf07d5d200d29343b2c2296",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "720caeead05407c1c9a041b2b1965ef05b0b2861980530a32f42c859bd2c4dd8",
+      "reading": null
+    },
+    {
+      "id": "consumable",
+      "label": "consumable",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-consumable.jpg",
+      "sourceSha256": "c996a76d681969d162ff7f03f73ed96f5313a1cbe4872f2a0894e43c6bcef007",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "24a2ad4b8794efa5aac755360cca28a5199d832164441efa0cd8838b66322e2d",
+      "reading": null
+    },
+    {
+      "id": "slot1",
+      "label": "slot1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-slot1.jpg",
+      "sourceSha256": "32eb74304b38c5195d847864e13cb6d974e277d5cc1eb891d7c52c4e84256f2a",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "0dba126c79d8f6e1282065b5974159fbe5b685632429a6e7225419f29ad27cf0",
+      "reading": null
+    },
+    {
+      "id": "slot2",
+      "label": "slot2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-slot2.jpg",
+      "sourceSha256": "954c7b96de5fc90130ea023f605734acddfd5d017e817ab05a2beef781c7d285",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "a6f6e7a0f9e3ba04918c824d9d52a88a4774cdc01ce92f33cef694101f00844f",
+      "reading": null
+    },
+    {
+      "id": "slot3",
+      "label": "slot3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-slot3.jpg",
+      "sourceSha256": "63f51f859bd9cdf10800518fedcab74dc35f2bc2c61e2e0a2f74ca8304449040",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "e9189e906ea168d5dd4afca04a60466afc9105c78a13ef0ed68435987b45ea57",
+      "reading": null
+    },
+    {
+      "id": "slot4",
+      "label": "slot4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-shop-slot4.jpg",
+      "sourceSha256": "2664401bb137b9fb0887fe9e48cde7ffd7d9c16ff91d21677df424459099f836",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ],
+      "crop": "crop-07.png",
+      "cropSha256": "1d0250cb2933c1dd30a30ea1f62a6f08d7cd52407910a80074cbf417488d606a",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg"
+  ],
+  "metrics": {
+    "inputImages": 7,
+    "uniqueCrops": 7,
+    "packSeconds": 1.028
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

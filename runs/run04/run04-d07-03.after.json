@@ -1,0 +1,11 @@
+{
+  "observed": "两次刷新花4，余额74。发现S长桥「军械库」48，进攻装备伤害+800%。未找到同被动高级甲/肩。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day07-s-800-damage.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "遵守刷新上限，新的固定伤害桥可在相同两武器空闲同侧槽替换旧每秒16%，值得独立决策。",
+  "nextAction": "评估长桥改接肩L下→手L下。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 4,
+  "id": "run04-d04-01",
+  "phase": "shop",
+  "before": {
+    "state": "44金，Lv7/4/22XP。事件：三选B科技，或随机B科技+20金；现有构筑完整。",
+    "goal": "拿经济升级生命，同时保留购买高阶主力资金。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day04-tech-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "20金足够5次XP，接近完整升一级；与随机科技价值分开评估。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先提高基础生命，以免成长来不及启动。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机B科技+20金",
+        "benefit": "可升级并留44购物",
+        "cost": "放弃科技定向",
+        "risk": "可能无用科技",
+        "unknown": "随机词条"
+      },
+      {
+        "action": "三选B科技",
+        "benefit": "可选联动",
+        "cost": "少20金",
+        "risk": "三个都无用",
+        "unknown": "候选内容"
+      }
+    ],
+    "chosenAction": "选随机科技加20金币，随后花20买XP升级Lv8，保留44金币进店。",
+    "prediction": "余额64→44，等级8、生命上涨；科技按实际读词条，不预设联动。"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-07",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:14:22.478Z",
+  "before": {
+    "state": "我11500HP，0金，甲798/45力12秒；剑410×3/6秒；肩609×3/10秒每坚固+3伤；力量背209/38力7秒，物理伤害按力出盾；无人机28/4力8.5秒。敌Abondance20kHP：A电甲11秒870/58电，允许冷伤触电；B电无人机7秒部署结算电2次；C冷枪6.5秒540，冷肩11.5秒720，冷背6.5秒110/22冷；无百分比增长，冷科技50%+2电；双攻+320最大生命桥。",
+    "goal": "利用更强物理双攻和按命中护盾打穿高血对手",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-shared-link.jpg",
+      "playtest-2026-11-16-run05/day02-e2-armor.jpg",
+      "playtest-2026-11-16-run05/day02-e2-drone.jpg",
+      "playtest-2026-11-16-run05/day02-e2-hand.jpg",
+      "playtest-2026-11-16-run05/day02-e2-shoulder.jpg",
+      "playtest-2026-11-16-run05/day02-e2-back.jpg",
+      "playtest-2026-11-16-run05/day02-e2-tech.jpg",
+      "playtest-2026-11-16-run05/day02-e2-link.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "逐项核对启动，暂无硬禁用或爆发杀"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "最大生命桥不当成有效治疗，敌成长无百分比反馈；耗尽阶段是风险"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "所有关键装备原文读全"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "战后核伤害/防御/增益三页"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留出战",
+        "benefit": "敌输出与成长较线性，主攻低阶；我力量和坚固逐次增伤且攻击出盾",
+        "cost": "可能进入45秒后耗尽阶段",
+        "risk": "敌20k基础+最大生命桥，寒冷会延长我CD；雷电结算频率未量化",
+        "unknown": "最后战斗长度与无人机触发盾"
+      },
+      {
+        "action": "再免费重随",
+        "benefit": "可能更低血对手",
+        "cost": "耗尽最后机会，无法回退",
+        "risk": "可能再遇百分比链",
+        "unknown": "新对手未知"
+      }
+    ],
+    "chosenAction": "保留Abondance，最快速度出战；方向偏胜但非高把握",
+    "prediction": "我6秒首剑先于敌6.5秒枪，7秒背启动/约12秒甲可活到；预计45–60秒附近结束，可能耗尽阶段；剑肩均有显著伤害，背部总盾超过单纯209×使用次数；若输保留反例不当bug"
+  }
+}

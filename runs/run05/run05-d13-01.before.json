@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:31:25.591Z",
+  "before": {
+    "state": "125金Lv13，139kHP上战仅损3535；S商店70%，黑市跳过+20。每日成长后背4.9k甲7.9k肩5.5k手4.3k无人机75。",
+    "goal": "不机械升级，搜能增加攻击段数/启动而不拆600%核心桥的补强",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-ready.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先保留既有五桥，再看新增端点"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "成长后替换损失升高"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "利息上限50，多余钱可以转即战力"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进店不升级，最多两次刷新",
+        "benefit": "保留125预算寻找目标",
+        "cost": "放弃20金，刷新最多4",
+        "risk": "未必有有效孔位",
+        "unknown": "未看到商品"
+      },
+      {
+        "action": "升级44金再进",
+        "benefit": "更多HP/质量",
+        "cost": "此前生存充足且只小幅概率变化",
+        "risk": "现金占用",
+        "unknown": "下一敌爆发未知"
+      },
+      {
+        "action": "跳过+20",
+        "benefit": "经济增加且快",
+        "cost": "放弃今天装配改善",
+        "risk": "错过有效配件",
+        "unknown": "未来商品未知"
+      }
+    ],
+    "chosenAction": "不升级进店，最多两次刷新；每次购买另比较",
+    "prediction": "125金入店不变，Lv13；只买已说明用途和可用孔位的候选"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "observed": "获胜至1胜1负，+28金币。肩炮12617、燃烧6168、锯5806、感电188、无人机108，总24887。甲1350盾、背1600盾；寄生防御统计+3524。倒计时21秒，肩70→339、锯90→436，符合基础伤害每秒+16%线性累加；敌人11151生命我方26204。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day02-result.jpg",
+    "playtest-2026-11-16-run04/day02-growth-frame.jpg",
+    "playtest-2026-11-16-run04/day02-damage.jpg",
+    "playtest-2026-11-16-run04/day02-defense.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "双武器连接、成长和胜负均符合本次预测。新增B肩被动、等级与敌人差异同时存在，不能把全部增幅归因S配件。补读原分辨率属性说明：寄生为敌人受伤时获得最大生命值，不应把统计+号直接称吸血/有效回复。",
+  "nextAction": "继续保留两组共享，第三天优先高品质同槽主武/高频输出，核对寄生机制与实际配件触发。",
+  "operationResult": "succeeded",
+  "memoryDecision": "revise"
+}

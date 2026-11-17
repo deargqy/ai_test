@@ -1,0 +1,49 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:58:04.637Z",
+  "before": {
+    "state": "64金币，Lv7 XP4/22，34000HP；核心输出已A，防御/肩炮/无人机仍B。商店叙述5金、跳过按钮10金不一致。",
+    "goal": "查看直接核心升级，再决定升级或刷新预算",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-shop-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先可用候选再决定投资"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留经济和升级选择"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进店",
+        "benefit": "可找B同名合A、A力量背/甲、核心冷却配件",
+        "cost": "放弃按钮10金币",
+        "risk": "未必有用货，不能因进店就必买",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "跳过10金",
+        "benefit": "留74经济和满息",
+        "cost": "错过今天升级核心机会",
+        "risk": "B核心成长不能替代高阶被动",
+        "unknown": "下天商店未知"
+      }
+    ],
+    "chosenAction": "进店先读现货；不立即买经验。",
+    "prediction": "进入商店金币仍64、装备不变；优先比较实际升级与保留已有莫瑟成长。"
+  }
+}

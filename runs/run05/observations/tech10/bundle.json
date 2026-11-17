@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "batchId": "run05-d10-tech",
+  "createdAt": "2026-11-16T15:41:05.207812+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "gold": 112,
+    "knownTech": [
+      "弹幕I",
+      "锚定II",
+      "余烬III",
+      "突进IV"
+    ],
+    "needs": [
+      "双核心启动",
+      "生存"
+    ],
+    "opportunityCost": 50
+  },
+  "entries": [
+    {
+      "id": "tech-left",
+      "label": "tech-left",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-tech-left.jpg",
+      "sourceSha256": "88ef5d93f947718ef97390d70ca6b05c24395402b671e7a85a68c5f6c69e09d6",
+      "box": [
+        630,
+        305,
+        1025,
+        505
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "954054c62c89963d541e0f8bc0ca1d83fbd8003c0018e7493a3007a3f12adbdb",
+      "reading": null
+    },
+    {
+      "id": "tech-mid",
+      "label": "tech-mid",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-tech-mid.jpg",
+      "sourceSha256": "ae35587ecebd1a4b43a7df3244b564c0940d9e526b99ee8266b9c9132d0478c1",
+      "box": [
+        940,
+        305,
+        1335,
+        505
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "4d57530aa7a66deeedf24f1c8c7932fb3e15f191cd6aafed03344293c02753ff",
+      "reading": null
+    },
+    {
+      "id": "tech-right",
+      "label": "tech-right",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-tech-right.jpg",
+      "sourceSha256": "ac8568503400fc26c10e8d9a73ec310c82083ab22ffd425207bbc3bac8151e35",
+      "box": [
+        1255,
+        305,
+        1650,
+        505
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "a8d5f63fc549b411cc7353ce78b5e3ddf3d282dc7c4fc10df1aeb9ea18aaa467",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 3,
+    "uniqueCrops": 3,
+    "packSeconds": 0.136
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

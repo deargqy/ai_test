@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:09:27.982Z",
+  "before": {
+    "state": "28金，B深红尊8金；7秒190盾38力，全敌减速1秒；攻击伤害时获得等于自身力量的护盾。左右中孔。旧背6秒150基础盾20坚固，卖2。无库存配件",
+    "goal": "用剑多段攻击与力量形成生存输出联动，保留后续搜核心现金",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-back-offer.jpg",
+      "playtest-2026-11-16-run05/day02-link-offer.jpg",
+      "playtest-2026-11-16-run05/day02-level4.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "库存空、卖旧2须到账才记"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "新B背左右中孔，优先后续配件共享甲和无人机"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先确定核心体系再考虑桥"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "换装备会否保留成长单独核实"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买B力量背、换掉并卖C背，再刷新1次",
+        "benefit": "7秒得38力早于12秒甲，剑每段能转力量为盾；中孔可与甲/无人机候选连接",
+        "cost": "8买-2卖+2刷=8金，剩20",
+        "risk": "失去坚固与0.5秒更早减速；甲会消耗力量",
+        "unknown": "被动盾对无人机是否触发、换装是否继承莫瑟成长"
+      },
+      {
+        "action": "买6金生命长桥",
+        "benefit": "按次+320最大生命",
+        "cost": "不增加输出，需找合法端点",
+        "risk": "不等同恢复生命",
+        "unknown": "两端触发"
+      },
+      {
+        "action": "保留28金",
+        "benefit": "5利息",
+        "cost": "没有新输出/生存链",
+        "risk": "后续敌方更强",
+        "unknown": "后续货池"
+      }
+    ],
+    "chosenAction": "买力量背并换装卖旧；只刷新一次看核心",
+    "prediction": "新背209盾/38力，7秒先得力量；旧背成长不转移（待核）。余额最终20；下场背部被动有护盾收益，不以最大生命当治疗"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "observed": "进店76金；A力场猛攻长桥24金：通用伤200%，坚固装备600%；比现有400%适配双核心。其余B/C现货不构成明显替换。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day07-shop.jpg",
+    "playtest-2026-11-16-run05/day07-long.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "发现能沿用已成功端点的升级，不需要换装备丢莫瑟成长。",
+  "nextAction": "买600%长桥并出售无用库存"
+}

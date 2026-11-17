@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "id": "run05-d14-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T16:51:35.857Z",
+  "before": {
+    "state": "116金，+6长在库。原底排甲肩200%伤害短、肩手216%坚固短；中排600%伤害，顶排2s互充。",
+    "goal": "以多段替代弱增伤和元素桥，保留核心600%与互充",
+    "evidence": [
+      "playtest-2026-11-16-run05/day14-restore-damage-endpoint.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "实际段数×属性和连接代价"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "停止失败同排方案改换下排"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已有库存先安排再买新物"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "+6长接肩Lbottom—手Lbottom",
+        "benefit": "肩3→9手4→10；增加命中及触发次数，保留600%桥",
+        "cost": "拆200%短和216%元素短；每击坚固下降",
+        "risk": "总坚固可能近似而非增加；首击不变",
+        "unknown": "确切95→30与13→4需核"
+      },
+      {
+        "action": "原价卖长、买+3短替200%",
+        "benefit": "只改善肩3→6，坚固95保持",
+        "cost": "32金，仅肩收益",
+        "risk": "错过双核大量段数",
+        "unknown": "两者战力无同敌对照"
+      },
+      {
+        "action": "继续保持原装",
+        "benefit": "保留高单次坚固",
+        "cost": "放弃新配件收益",
+        "risk": "昨日不能启动，但后续可避超快敌",
+        "unknown": "不保证打其他敌仍胜"
+      }
+    ],
+    "chosenAction": "拆底排两短桥入库，+6长用左端接肩Lbottom1340,923；10%CD回手",
+    "prediction": "肩9手10；中排600%桥和顶排互充保留；肩伤害略降、手伤害不变；坚固每击下降，需按总段数比较。"
+  }
+}

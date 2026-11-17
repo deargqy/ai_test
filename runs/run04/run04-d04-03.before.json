@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 4,
+  "id": "run04-d04-03",
+  "phase": "build",
+  "before": {
+    "state": "新A手已替换，但S自动退仓库；寒冷单孔对无人机左中/下尝试出现目标插槽无效。装备截图仍有左中/下槽，是否召唤类限制未确认。",
+    "goal": "不反复拖拽，改用有直接攻击的A手空闲左中槽。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day04-drone-cold-slot-rejected.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "两种目标失败后停止该目标，改有直接攻击的装备。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "明确无人机装配未成功，不能推断其寒冷表现。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "改装A手左中",
+        "benefit": "4段攻击可检验附魔",
+        "cost": "占单孔",
+        "risk": "可能仍有限制",
+        "unknown": "附魔适用性"
+      },
+      {
+        "action": "继续尝试无人机",
+        "benefit": "若成功频率高",
+        "cost": "耗时",
+        "risk": "重复无效",
+        "unknown": "拒绝原因"
+      }
+    ],
+    "chosenAction": "S恢复肩R下→手L下；寒冷单孔改A手L中；卖旧C手。",
+    "prediction": "预计新手显示寒冷2，三共享连接恢复，现金28。"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "跳店到账10，现金53，构筑保持。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day05-opponent.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "达到满利息阈值；结算10利息待战后核对。",
+  "nextAction": "迎战镜像寄生燃烧构筑。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

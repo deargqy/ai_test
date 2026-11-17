@@ -1,0 +1,15 @@
+{
+  "observed": "胜利5胜0负；45秒倒计时剩30时敌HP0，我方25680HP/164盾/118力/59坚固，敌494力。伤害手20655>肩11721>机333，总32709；敌肩6536剑3817机89。防御我背1262甲836坚固188；敌寄生盾616+最大生命616、甲870背551。结算收入37+利息4=41，23→64，经验+2。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-battle-mid.jpg",
+    "playtest-2026-11-16-run05/day05-result.jpg",
+    "playtest-2026-11-16-run05/day05-stats.jpg",
+    "playtest-2026-11-16-run05/day05-defense.jpg",
+    "playtest-2026-11-16-run05/day05-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "偏胜、手伤高于肩及剩血>20000支持；耗时15秒早于18–30，时间预测被反驳。敌力量494未能逆转，我方本次不是比力量层数取胜；寄生616恢复/最大生命口径不可直接全算有效治疗。",
+  "nextAction": "更新日终快照并进入第6天"
+}

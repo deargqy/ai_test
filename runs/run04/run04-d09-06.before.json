@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-06",
+  "phase": "opponent",
+  "before": {
+    "state": "Dukie135000HP：S肩1.4k×4、S无人机159/18、SS背约1.9k/155、S甲5.5k/120、A刀923×6/7，多桥多科技，部分图标似力量但词条未核。免费1，71金。",
+    "goal": "用完免费机会寻找更清晰可承受的启动曲线。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-second-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "同等生命、多高阶快速成长配件，关键被动未知，遵循先避险。"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "仅记录可见数值，不把疑似力量当已核属性。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "再免费换敌",
+        "benefit": "避未知多桥爆发",
+        "cost": "最后免费机会",
+        "risk": "新敌更强",
+        "unknown": "下一敌"
+      },
+      {
+        "action": "迎战",
+        "benefit": "节约机会",
+        "cost": "终局风险",
+        "risk": "启动被打穿",
+        "unknown": "完整联动"
+      }
+    ],
+    "chosenAction": "关闭详情，再免费重随一次。",
+    "prediction": "免费归0、现金71；再核新敌，不因免费用完就盲目开战。"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "batchId": "run05-d09-live-shop",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "context": {
+    "gold": 53,
+    "inventory": [],
+    "purchases": [
+      {
+        "name": "S屏障",
+        "cost": 32
+      },
+      {
+        "name": "A后卫",
+        "cost": 16
+      }
+    ],
+    "needs": [
+      "保留五条已兑现连接",
+      "敌人威胁决定升级"
+    ],
+    "unknown": [
+      "中断期间55到53原因",
+      "经验0/8误显真实值待核"
+    ]
+  },
+  "entries": [
+    {
+      "id": "shop-back",
+      "source": "../../docs/playtest-2026-11-16-run05/day09-resume-timed.jpg",
+      "box": [
+        515,
+        330,
+        1100,
+        700
+      ]
+    },
+    {
+      "id": "cooldown-bridge",
+      "source": "../../docs/playtest-2026-11-16-run05/day09-timed-bridge.jpg",
+      "box": [
+        590,
+        150,
+        1210,
+        420
+      ]
+    },
+    {
+      "id": "shield-consumable",
+      "source": "../../docs/playtest-2026-11-16-run05/day09-timed-consumable.jpg",
+      "box": [
+        1300,
+        125,
+        1805,
+        395
+      ]
+    }
+  ]
+}

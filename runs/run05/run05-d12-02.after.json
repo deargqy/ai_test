@@ -1,0 +1,13 @@
+{
+  "observed": "购买16金成功77→61；手右中1628与1634两次拖放均未入槽，第一次目标插槽无效，第二次仍在库存且CD5。停止手部目标。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-buy-cooldown-check.jpg",
+    "playtest-2026-11-16-run05/day12-cooldown-equipped.jpg",
+    "playtest-2026-11-16-run05/day12-cooldown-second.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "空孔看似可用不代表实际安装成功；数值预测依赖装入被反驳",
+  "nextAction": "改用于背部空左中，若失败保留候选不继续耗时"
+}

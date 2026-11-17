@@ -1,0 +1,11 @@
+{
+  "observed": "免费2→1，金币0，换成Abondance。弹窗标题仍kbkn，沿用BUG001；新装备已变化。未打原对手。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-rerolled.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "换敌成功；原胜负方向是未验证反事实。",
+  "nextAction": "保留新对手并记录正式战前预测"
+}

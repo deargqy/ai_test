@@ -1,0 +1,70 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:54:02.370Z",
+  "before": {
+    "state": "Oniten Lv7/30000HP。A力量剑5.5秒3×275/5力，命中力量+8%；A力量炮10.5秒4×375/18力，冷却结束自身+30力；B背6.5秒160盾46力、全敌慢1秒，使用所有力量装备+5力；A寄生甲11.5秒870盾88寄生，寄生每层额外1盾。C力无人机20/5。C开战禁用敌1秒，B全装备元素+15%。配件：剑甲C用后CD-4%，B元素+36%；甲炮互充1.5秒；炮背每秒主属性+8%（加算）；背附魔8力；剑+10%伤害每日+10%。我方34000HP/23金三桥已核实。",
+    "goal": "利用A军械库的即战增伤，在敌力量与每秒成长放大前结束战斗",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-preview.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-layout.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-sword2.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-cannon.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-a-bridge.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-b-long.jpg",
+      "playtest-2026-11-16-run05/day05-enemy-tech2.jpg",
+      "playtest-2026-11-16-run05/day05-old-bridge-reuse.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核查双方启动与完整增长链"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按每秒加算而非复利估计对方成长"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "全部关键A被动与配件已读"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "战后分别核对方向/时间/伤害"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接战斗",
+        "benefit": "我方两核心静态伤害高约5倍；坚固及力量背续盾；敌开战没有已读初始力量增益",
+        "cost": "若拖长对方力量百分比/主属性成长/互充会追上",
+        "risk": "对方1秒全禁用抵消部分开局加速，动画可能延迟首次命中",
+        "unknown": "精确动画和寄生吸血结算未知"
+      },
+      {
+        "action": "免费重随",
+        "benefit": "可能避开力量成长链",
+        "cost": "失去当前可判断的30k对手",
+        "risk": "可能遇到更完整S级链",
+        "unknown": "下个对手未知"
+      }
+    ],
+    "chosenAction": "不重随，直接战斗，沿用最快速度。",
+    "prediction": "方向偏胜，预计18–30秒结束；主武器伤害高于肩炮；我方剩余生命>20000。首轮我方加速被敌全禁用1秒削弱，不能据CD断言先命中；若敌早期爆发把生命压过半则否定安全窗口判断。"
+  }
+}

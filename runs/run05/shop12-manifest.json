@@ -1,0 +1,79 @@
+{
+  "batchId": "shop12",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "entries": [
+    {
+      "id": "part1",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-part1.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "part2",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-part2.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "consumable",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-consumable.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "slot1",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-slot1.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "slot2",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-slot2.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "slot3",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-slot3.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    },
+    {
+      "id": "slot4",
+      "source": "../../docs/playtest-2026-11-16-run05/day12-shop-slot4.jpg",
+      "box": [
+        0,
+        0,
+        900,
+        690
+      ]
+    }
+  ]
+}

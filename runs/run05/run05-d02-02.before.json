@@ -1,0 +1,58 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:08:01.826Z",
+  "before": {
+    "state": "三个C科技可选，当前剑195×3、护甲725、背150、无人机25",
+    "goal": "让持续主属性成长转换为稳定即战力",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-tech1.jpg",
+      "playtest-2026-11-16-run05/day02-tech2.jpg",
+      "playtest-2026-11-16-run05/day02-tech3.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "科技适用全排，不必为属性标签强行选"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟只增主属性，全局百分比与成长兼容"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "弹幕核心+10%主属性",
+        "benefit": "所有4件即时增幅且未来装备通用",
+        "cost": "放弃反冲充能",
+        "risk": "对力量额外伤害是否放大未知",
+        "unknown": "整数取整与成长顺序"
+      },
+      {
+        "action": "反冲中继I：敌用同槽充6%",
+        "benefit": "缩短循环尤其敌频发时",
+        "cost": "依赖敌方同槽",
+        "risk": "敌慢或空槽则弱",
+        "unknown": "换序同槽判定"
+      },
+      {
+        "action": "加固：得坚固50%几率+2力",
+        "benefit": "背部可触发",
+        "cost": "每6秒才一次概率事件",
+        "risk": "增量远低甲45力",
+        "unknown": "按获得事件还是层数"
+      }
+    ],
+    "chosenAction": "弹幕核心",
+    "prediction": "选择后四件主属性约797/214/165/27，副属性45/1/20/4不变；不保证战斗胜负"
+  }
+}

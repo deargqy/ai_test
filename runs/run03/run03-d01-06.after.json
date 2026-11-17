@@ -1,0 +1,12 @@
+{
+  "observed": "B寒冷肩炮已替换旧肩炮，C寒冷无人机自动装上；金币14→2。旧肩炮首次两次拖售无效，移到仓库下方再拖入出售区后成功，金币2→4，仓库空。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-launcher-equipped.jpg",
+    "playtest-2026-11-16-run03/day01-old-shoulder-sold.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "装配与变现均有结果截图；首行拖售失败存在定位因素，暂不确认游戏Bug。",
+  "nextAction": "按实际槽位尝试把320盾桥同时连到无人机与手武，预算4且售价也是4可回收。"
+}

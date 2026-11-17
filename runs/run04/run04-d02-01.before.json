@@ -1,0 +1,70 @@
+{
+  "runId": "run04",
+  "day": 2,
+  "id": "run04-d02-01",
+  "phase": "shop",
+  "before": {
+    "state": "25金。半价S触媒短桥16：每秒镶嵌攻击型装备伤害+16%，售价16。B燃烧洗礼肩炮8：9.5秒4×70/4×24燃烧，命中追加敌燃烧层数2倍燃烧伤害，L下/R下槽。现锯L下、C寄生肩L下，甲—背长桥占两者R下。",
+    "goal": "用两件武器共享每秒成长，解决上战总输出5406。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day02-s-damage-growth.jpg",
+      "playtest-2026-11-16-run04/day02-burn-launcher.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新肩替旧肩后移到锯左侧：甲—背—燃肩—锯—无人机。S短桥连接燃肩R下与锯L下；甲背旧长桥不冲突。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先确定新主力，不买旧C肩强化。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "8+16=24，余1；旧C肩出售2后余3，不依赖未到账金币买入。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "每秒伤害成长+燃烧按层转换提供两条输出路径，寄生锯和背继续回复。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买B燃肩8+S触媒16，重排双武器共享",
+        "benefit": "每秒成长作用两武器，燃烧命中按层额外伤害，保留双盾",
+        "cost": "24金并丢失C肩寄生，卖旧回2",
+        "risk": "S成长倍率语义与战斗时长待验证",
+        "unknown": "是否线性/复利及实际伤害"
+      },
+      {
+        "action": "仅S触媒16",
+        "benefit": "留9金币",
+        "cost": "现两武器槽均左下无法短桥双端连接",
+        "risk": "只有一件武器受益",
+        "unknown": "之后新装备"
+      },
+      {
+        "action": "买4金固定+50%桥",
+        "benefit": "低成本",
+        "cost": "无持续成长",
+        "risk": "对大生命敌仍不足",
+        "unknown": "是否能共享"
+      }
+    ],
+    "chosenAction": "买燃肩和S触媒，替旧肩并出售，改序甲—背—燃肩—锯—无人机，再接S短桥。",
+    "prediction": "最终3金币；旧护盾甲675/背400保留，S桥连接两件攻击装备。下战肩与手均应出现随时间增长的卡面伤害，不能把一次总伤害增幅全归因配件。"
+  }
+}

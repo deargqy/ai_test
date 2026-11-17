@@ -1,0 +1,280 @@
+{
+  "entries": [
+    {
+      "id": "drone",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "hand",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "shoulder",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "armor",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "back",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech5",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket5",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket6",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket7",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket8",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "socket9",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    }
+  ]
+}

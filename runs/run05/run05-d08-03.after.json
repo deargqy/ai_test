@@ -1,0 +1,14 @@
+{
+  "observed": "进入黑市金币93未变；A镀层用装备自身增益+10%，B精械每秒主属性+8%。现有槽形没有已验证额外长桥位置；替换100%桥要12.5s才追平且失初期收益。XP栏与说明均0/8。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day08-blackmarket.jpg",
+    "playtest-2026-11-16-run05/day08-shop-a-bridge.jpg",
+    "playtest-2026-11-16-run05/day08-shop-b-bridge.jpg",
+    "playtest-2026-11-16-run05/day08-xp-detail.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "查看本身兑现但未知候选并不保证值得放弃10金；先不买不适配商品。",
+  "nextAction": "买经验核实后升级/刷新"
+}

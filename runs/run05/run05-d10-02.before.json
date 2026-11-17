@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T15:40:47.038Z",
+  "before": {
+    "state": "三项SS：堡垒V施加燃烧50%得6力；充能脉冲V每3秒随机一装备充能3秒；顺风V得力量50%施6燃烧。当前无燃烧源，力量每秒增长，双核心伤害高。",
+    "goal": "提高核心或防御的实际启动频率",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-tech-left.jpg",
+      "playtest-2026-11-16-run05/day10-tech-mid.jpg",
+      "playtest-2026-11-16-run05/day10-tech-right.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "科技服务五件已有连接和触发"
+      },
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "首轮充能不等于保证首击提前"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不把按得力事件概率算成每层概率"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "充能脉冲V",
+        "benefit": "每3秒推进一件已有装备循环，所有五件均有实际用途",
+        "cost": "放弃力量燃烧转化",
+        "risk": "随机落点可能首轮无核心收益",
+        "unknown": "首触发时点、分布未测"
+      },
+      {
+        "action": "顺风V",
+        "benefit": "现有余烬每秒得力可触发燃烧",
+        "cost": "无燃烧增幅/充能链",
+        "risk": "零散状态伤害弱于核心",
+        "unknown": "按事件还是层数判定未知"
+      },
+      {
+        "action": "堡垒V",
+        "benefit": "若有燃烧源可增力",
+        "cost": "需要改装引入燃烧",
+        "risk": "当前无触发",
+        "unknown": "未来商品未知"
+      }
+    ],
+    "chosenAction": "选择中间充能脉冲V",
+    "prediction": "112金币不变；战中每3秒应出现一次随机充能，若能观察到至少一次提前冷却则支持；落点不保证核心"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "observed": "S购买32金币→10。第一次换装拖拽失败，改从卡下缘到装备上缘成功；军械库手L中→肩L中成功，手1.5K肩2.5K，背819机80。短桥中心对下排、左端对甲右下两种尝试均未装上，仍在仓库。旧A也在仓库尚未售。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-s-equipped.jpg",
+    "playtest-2026-11-16-run05/day06-s-equipped2.jpg",
+    "playtest-2026-11-16-run05/day06-long-reconnected.jpg",
+    "playtest-2026-11-16-run05/day06-short-reconnected.jpg",
+    "playtest-2026-11-16-run05/day06-short-reconnected2.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "S及400%双端成功，但预期短桥50%未兑现，手只有1.5K非1.7K。按两次失败上限停止同装配；新决策保留A作战后回退候选。失盾转伤预测待实战，不用失败拖拽否定装备机制。",
+  "nextAction": "记录现有可行装配出战，不继续重复拖拽"
+}

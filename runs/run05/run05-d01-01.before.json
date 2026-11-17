@@ -1,0 +1,49 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-01",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T08:50:19.044Z",
+  "before": {
+    "state": "day01，0/0，Lv1/1500HP，0金，空装备。初始装甲可自选或随机+3金。",
+    "goal": "先取得可读的装甲方向，减少首日随机偏配",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-start-confirmed.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先确定可出战核心再专属强化"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较3金币与选择信息"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "自选初甲",
+        "benefit": "可比较主属性与防御启动",
+        "cost": "失去3金币",
+        "risk": "候选可能没有理想属性",
+        "unknown": "实际三选池未展示"
+      },
+      {
+        "action": "随机初甲+3金",
+        "benefit": "早期经济",
+        "cost": "放弃选择",
+        "risk": "初甲可能不利后续协同",
+        "unknown": "随机池未知"
+      }
+    ],
+    "chosenAction": "自选初始装甲并查看候选，尚不预选属性",
+    "prediction": "进入可选装甲列表；选择后的装备主属性建立莫瑟跨天基线。"
+  }
+}

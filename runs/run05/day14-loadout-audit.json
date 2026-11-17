@@ -1,0 +1,28 @@
+{
+  "checkedCandidates": 96,
+  "evidenceFilesChecked": 17,
+  "tests": "9 unittest tests passed, including recorded baseline and core-charge distinction",
+  "page": "384 candidate views exercised with offline DOM smoke; no browser visual QA",
+  "search": [
+    {
+      "policy": "solid",
+      "equipmentOrders": 1440,
+      "expandedStates": 380789,
+      "evaluatedFinals": 19863,
+      "retained": 48,
+      "seconds": 11.916,
+      "beamPerObjective": 5
+    },
+    {
+      "policy": "endpoints",
+      "equipmentOrders": 1440,
+      "expandedStates": 407926,
+      "evaluatedFinals": 19765,
+      "retained": 48,
+      "seconds": 10.193,
+      "beamPerObjective": 5
+    }
+  ],
+  "gameValidation": "not performed; day14 remains paused; loadout installation incomplete",
+  "decision": "保留离线候选生成工具；整体速度、合法安装和胜负改善待游戏验证"
+}

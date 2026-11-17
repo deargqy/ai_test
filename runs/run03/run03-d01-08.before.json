@@ -1,0 +1,55 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-08",
+  "phase": "opponent",
+  "before": {
+    "state": "我方7500生命，若茜，四装备冷枪/冷肩炮/冷无人机/力甲，共享320盾；对手30000生命，C电枪3×60/5.5s,C燃肩4×60/10s,冷甲495盾33坚韧/13s。免费换对手2次。",
+    "goal": "优先保存仅3次失败机会，寻找较低耐久且无强控制的对手。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-opponent-before-reroll.jpg"
+    ],
+    "memorySearch": "opponent: 启动 成长 护盾 克制",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "notApplied",
+        "reason": "现对手无禁用，但继续检查后续对手。"
+      },
+      {
+        "id": "M02",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "我方初始输出高但对手四倍HP+坚韧成长，不能只比攻击。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "刷新后核对面板而不依赖可能残留名称。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接打30000HP对手",
+        "benefit": "保留免费刷新",
+        "cost": "可能失去一条生命",
+        "risk": "坚韧成长使我方小段伤害失效",
+        "unknown": "寒冷肩炮能否及时成长"
+      },
+      {
+        "action": "最多使用2次免费刷新，每次看完整装备",
+        "benefit": "争取更低耐久或更少护盾成长",
+        "cost": "0金币",
+        "risk": "最后一个可能更强",
+        "unknown": "匹配强度分布"
+      }
+    ],
+    "chosenAction": "最多免费刷新2次，遇到更低耐久且无禁用/快速防御成长则停；若都30000HP，选择最后可打对手并记录不确定性。",
+    "prediction": "当前硬打胜负不确定偏不利；免费刷新可寻找更适配寒冷开局的对手，不预设一定更弱。"
+  }
+}

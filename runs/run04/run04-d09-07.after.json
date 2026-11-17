@@ -1,0 +1,18 @@
+{
+  "observed": "Lv14/160000HP/27金升级成功；战败6胜3负终局。剩余24秒画面己0、敌134141，己燃烧约21k。己伤害手10307、肩10176、感电3104、SS召唤482；寄生+8946，甲盾5310背2328；寒冷手27、SS244。敌燃烧94126、手50171、肩26208、无人机16665、甲9481。核实SS斧命中敌燃烧+15%；燃伤给肩充能1.4秒、给全部燃烧装备+3燃烧；每施加140燃烧额外召唤无人机；甲每1.8秒按敌燃烧额外结算一次。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day09-start-160k.jpg",
+    "playtest-2026-11-16-run04/day09-terminal-zero.jpg",
+    "playtest-2026-11-16-run04/day09-result.jpg",
+    "playtest-2026-11-16-run04/day09-damage.jpg",
+    "playtest-2026-11-16-run04/day09-defense.jpg",
+    "playtest-2026-11-16-run04/day09-enemy-ss-axe.jpg",
+    "playtest-2026-11-16-run04/day09-enemy-burn-back.jpg",
+    "playtest-2026-11-16-run04/day09-enemy-burn-shoulder.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "升级与首甲出盾、寒冷施加得到支持，但倾向胜再次反驳。敌是燃烧百分比命中成长+充能+召唤+全队属性增长闭环；我只排查了已见力量链，未识别同构燃烧链。肃卫低频削减没有压住整体增长；是否每次实际消层未获独立数值证据。SS寒冷额外伤害归属仍待核，不凭低召唤总量判bug。",
+  "nextAction": "第四局已结束；保存终局与反例，下一局优先识别任意属性的百分比增长和多触发闭环，首领按用户先验不掉命参与。",
+  "operationResult": "succeeded",
+  "memoryDecision": "revise"
+}

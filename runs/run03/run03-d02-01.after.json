@@ -1,0 +1,11 @@
+{
+  "observed": "点击C背部卡面未完成购买，未核对便刷新；现金27→25而非21，仍然四装备。新商店出现半价B冷甲4金与B感电背部8金。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day02-refreshed-shop.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "操作失误：装备购买应点击价格区并立即核对；本次遗漏C背部，不能按已买计算。",
+  "nextAction": "采用现有更契合的B冷甲与感电背部，每次买后核对现金。",
+  "operationResult": "failed",
+  "memoryDecision": "revise"
+}

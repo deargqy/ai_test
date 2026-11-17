@@ -1,0 +1,11 @@
+{
+  "observed": "免费2→1，52金未变，新D_HM120kLv13；旧标题残留。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day11-reroll.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "动作成功，不可证实旧敌必输",
+  "nextAction": "读取新敌"
+}

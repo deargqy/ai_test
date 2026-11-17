@@ -1,0 +1,59 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-07",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:40:16.124Z",
+  "before": {
+    "state": "敌Neophantom Lv8/42000HP，A燃手4.5秒4×115(卡面230)命中燃烧+8%，A燃肩9秒4×190(380)命中额外燃烧层数3倍伤；S能量水蛭6.5秒部署，每单位每秒回3%最大生命。B寄生甲/C电背，2桥、巨像核心/减速脉冲II未全读。",
+    "goal": "避开早期高百分比回血叠燃烧增长的对局",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-enemy-detail.jpg",
+      "playtest-2026-11-16-run05/day04-enemy-hand.jpg",
+      "playtest-2026-11-16-run05/day04-enemy-shoulder.jpg",
+      "playtest-2026-11-16-run05/day04-enemy-drone.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "关键已读链是命中放大燃烧+额外结算"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "这里S被动明确是回复，不把寄生最大生命混算；单单位每秒1260已超过早期输出量级"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "面板和说明分开记录，不凭属性图标猜机制"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "避开单无人机即约1260HP/s恢复，减少陷入长燃烧循环",
+        "cost": "消耗一次免费",
+        "risk": "新敌可能更强",
+        "unknown": "未实战反事实无法判输赢"
+      },
+      {
+        "action": "直接打",
+        "benefit": "己早起手4秒且坚固能成长",
+        "cost": "潜在1命",
+        "risk": "敌高回血延长战斗，使燃烧百分比+三倍额外结算爆发",
+        "unknown": "敌科技及配件具体内容未知，不编完整伤害"
+      }
+    ],
+    "chosenAction": "免费重随一次；当前敌偏不利，倾向败但不报数值胜率",
+    "prediction": "免费2变1、金币16不变、敌配置改变；本次未打，不把倾向败计为预测命中。"
+  }
+}

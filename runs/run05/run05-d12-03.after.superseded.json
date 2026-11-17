@@ -1,0 +1,12 @@
+{
+  "observed": "背左中一次成功，仓库空，背详情CD6.3，五桥保持，61金。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-cooldown-back.jpg",
+    "playtest-2026-11-16-run05/day12-back-cd.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "背端点和CD均已核实；手目标不可行原因未知",
+  "nextAction": "按已批准预算两次刷新以内"
+}

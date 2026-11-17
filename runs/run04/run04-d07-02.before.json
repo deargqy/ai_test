@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 7,
+  "id": "run04-d07-02",
+  "phase": "build",
+  "before": {
+    "state": "70金，获得S虹吸守卫短桥，当前A过载短桥+200%。背160基础、甲720基础均寄生，连接背R下→甲L下。",
+    "goal": "直接提升两件寄生防御，不动输出布局。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day07-s-shield.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "同形替换且两个防御都满足寄生条件。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "旧A桥出售8，确认后现金78。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "S替A短盾",
+        "benefit": "背480→1120、甲2160→5040",
+        "cost": "无购买费用",
+        "risk": "需要核实连接",
+        "unknown": "无"
+      },
+      {
+        "action": "保留S仓库",
+        "benefit": "避免操作",
+        "cost": "放弃即时免费升级",
+        "risk": "生存较弱",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "领取S，移除旧A后接回原两端，卖A桥。",
+    "prediction": "背1120甲5040，现金78，两个输出S桥完整。"
+  }
+}

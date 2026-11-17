@@ -1,0 +1,48 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-02",
+  "phase": "build",
+  "before": {
+    "state": "初始武器事件，可自选或随机并得3金币；当前只有力量躯干、0金币。",
+    "goal": "获得可出战武器，保留早期升级资金。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-weapon-options.jpg"
+    ],
+    "memorySearch": "沿用本日已完整读取的build阶段经验；M06用于资源与库存比较，M08核对随机结果。其它核心换装/配件/对手条件暂未满足。",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "额外3金币可用于早期经验或替换，先确认随机武器再考虑购买，避免重复买已有装备。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核对装备与金币实际到账，随机不适配时保留调整机会。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机武器并得3金币",
+        "benefit": "确定多3金币，初始武器仍能直接出战。",
+        "cost": "失去选择武器的控制。",
+        "risk": "可能属性不匹配或冷却较长。",
+        "unknown": "具体随机武器未知。"
+      },
+      {
+        "action": "自选初始武器",
+        "benefit": "有机会找短冷却或多段力量武器。",
+        "cost": "放弃3金币。",
+        "risk": "候选也可能没有理想武器。",
+        "unknown": "候选未展示。"
+      }
+    ],
+    "chosenAction": "随机武器拿3金币，读词条后评估事件战。",
+    "prediction": "随机武器进入空手部槽、金币变3；随后按实际冷却预测首次出手。"
+  }
+}

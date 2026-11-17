@@ -1,0 +1,16 @@
+{
+  "observed": "胜，10胜0负4命；45→31秒敌0，我46139HP1032盾。40秒敌80024，39秒敌1进入紧急，故首次有效命中5-6秒，≤5未获支持；31秒敌0比39秒晚8秒，包含6秒紧急及随后攻击间隔。手240009肩112650电1588无人机1004；敌燃烧33912肩22053蓝环11380手3748无人机2230电580。背盾15562甲7171坚固3341。肩380坚固204电，手130坚固；统计次数非纯攻击次数。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-fight-14.jpg",
+    "playtest-2026-11-16-run05/day10-fight-15.jpg",
+    "playtest-2026-11-16-run05/day10-fight-22.jpg",
+    "playtest-2026-11-16-run05/day10-damage.jpg",
+    "playtest-2026-11-16-run05/day10-defense.jpg",
+    "playtest-2026-11-16-run05/day10-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "5秒内命中未支持；敌紧急延命、燃烧最高、双盾均支持。统计不能单独归因S加速或SS充能。",
+  "nextAction": "继续十胜后阶段"
+}

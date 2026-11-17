@@ -1,0 +1,53 @@
+{
+  "batchId": "run05-d10-tech",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "context": {
+    "gold": 112,
+    "knownTech": [
+      "弹幕I",
+      "锚定II",
+      "余烬III",
+      "突进IV"
+    ],
+    "needs": [
+      "双核心启动",
+      "生存"
+    ],
+    "opportunityCost": 50
+  },
+  "entries": [
+    {
+      "id": "tech-left",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-tech-left.jpg",
+      "box": [
+        630,
+        305,
+        1025,
+        505
+      ]
+    },
+    {
+      "id": "tech-mid",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-tech-mid.jpg",
+      "box": [
+        940,
+        305,
+        1335,
+        505
+      ]
+    },
+    {
+      "id": "tech-right",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-tech-right.jpg",
+      "box": [
+        1255,
+        305,
+        1650,
+        505
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-07",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T08:56:09.153Z",
+  "before": {
+    "state": "18金，Lv3/4500HP。力量C无人机20攻击/4力量，8.5秒召唤、无被动、左中孔、价4。现有剑145×3/6秒；甲和剑提供力量，背早盾。",
+    "goal": "补独立攻击次数并搜实际输出升级",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-drone-detail.jpg",
+      "playtest-2026-11-16-run05/day01-level3.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心暂未成型，买独立输出而非专属强化"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "设定刷新预算，不无限搜"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "无人机左中孔不与剑右上盲接"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "无人机次日主属性预期+5而非50"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买无人机4再刷新2",
+        "benefit": "增加召唤输出及力量来源，刷新可找B核心",
+        "cost": "6金，余12；利息3→2",
+        "risk": "8.5秒部署慢，无百分比链",
+        "unknown": "召唤物实际攻击频率待战报"
+      },
+      {
+        "action": "只刷新2",
+        "benefit": "保留16金找B输出",
+        "cost": "失去当前同属性召唤",
+        "risk": "新池可能没有有效商品",
+        "unknown": "刷新随机"
+      },
+      {
+        "action": "买互充桥6",
+        "benefit": "加快两件循环",
+        "cost": "现有无高阶被动且余12",
+        "risk": "0.5秒边际低",
+        "unknown": "端点尚未试"
+      }
+    ],
+    "chosenAction": "买力量无人机4，再付2刷新一次；新池再比较",
+    "prediction": "无人机自动装备，余额18→14→12；正式战报应有召唤伤害，不能把卡面20当整场输出。"
+  }
+}

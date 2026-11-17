@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:11:11.874Z",
+  "before": {
+    "state": "20金；B坚固肩链法手枪8金，10秒3×290伤/3×10坚固，自身每坚固本装备伤+3，左中右上孔；B齐射长桥12金主属性+100%。剑右上孔。",
+    "goal": "新增多段攻击兑现力量与背部护盾，并让一桥覆盖两主攻",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-shoulder.jpg",
+      "playtest-2026-11-16-run05/day02-link2.jpg",
+      "playtest-2026-11-16-run05/day02-refreshed.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先整排布局：甲-剑-肩-力量背-无人机，两右上端点跨卡"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两种失败后换策略，不死拖"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确牺牲4利息换双输出与护盾链"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不换剑，现有成长保留并服务双核心"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "肩8+齐射12，肩放剑右边，长桥接剑右上至肩右上",
+        "benefit": "双主攻主属性约翻倍，肩吃力量且3段生盾；每日成长也放大",
+        "cost": "花尽20，损失4利息",
+        "risk": "桥若跨度或端点不匹配，需换序；最多两次失败后保留候选",
+        "unknown": "加成与科技加算/乘算及配件孔约束"
+      },
+      {
+        "action": "只肩8",
+        "benefit": "补空位且留下12金",
+        "cost": "无桥增幅",
+        "risk": "输出增长慢",
+        "unknown": "未来核心商店"
+      },
+      {
+        "action": "继续刷力量肩",
+        "benefit": "属性统一",
+        "cost": "刷新开销且不确定",
+        "risk": "错过已见B多段输出",
+        "unknown": "随机池"
+      }
+    ],
+    "chosenAction": "买肩和齐射，肩移到剑右；尝试长桥共享双攻击，不为标签放弃已见联动",
+    "prediction": "20→0金；肩基础装后319×3，剑215×3；若加算+100%则剑约410/肩609，若乘算则430/638；必须确认两端数值后出战"
+  }
+}

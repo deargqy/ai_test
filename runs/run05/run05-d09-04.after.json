@@ -1,0 +1,13 @@
+{
+  "observed": "仓库开启后，从肩卡下部1380,960拖到手卡上部1195,785一次成功换序。600%桥回仓库后左端930,72→1149,870恢复。短桥中心1196,923→1293,923成功跨两件；手卡3.2K→3.4K，肩4.7K不变。金币103，背/无人机桥保持。3420由基础450×7.6推算，卡面仅3.4K显示。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-swap-low-to-top.jpg",
+    "playtest-2026-11-16-run05/day09-long-shared-restored.jpg",
+    "playtest-2026-11-16-run05/day09-short-two-core.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "玩家提出整体换序在实机成功；记录操作锚点，不能把曾经拖动失败当不支持换序。",
+  "nextAction": "进一步比较100%桥从背无人机转手背"
+}

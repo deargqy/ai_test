@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:07:23.607Z",
+  "before": {
+    "state": "32金，Lv3；力量三件、坚固背，无科技，日成长已核",
+    "goal": "用科技补足力量输出链而非随机堆属性",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-events.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "科技绑定收益需服务最终核心"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较10金机会成本"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟力量副属性不成长，科技可能补足"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "三选一C科技",
+        "benefit": "增加挑到适合当前3件力量的机会",
+        "cost": "放弃随机奖励10金及2利息潜力",
+        "risk": "三个全不匹配",
+        "unknown": "选项内容未知"
+      },
+      {
+        "action": "随机C科技+10金",
+        "benefit": "现金42，可升级或核心购买",
+        "cost": "失去选择科技机会",
+        "risk": "可能全局无效",
+        "unknown": "随机池未知"
+      }
+    ],
+    "chosenAction": "选择三选一；看到内容后再选具体科技",
+    "prediction": "出现三项科技，金币保持32；若无力量则按直接即战收益选择，不声称主动选择必胜"
+  }
+}

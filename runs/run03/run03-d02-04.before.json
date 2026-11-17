@@ -1,0 +1,63 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-04",
+  "phase": "build",
+  "before": {
+    "state": "Lv5 12500HP，0/14XP，15金币；对手30000HP，无刷新。B修复桥售价4，上战贡献手武1600盾，无人机盾未证实。",
+    "goal": "用现有可变现资产提高当前生存，争取避免第二败。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-opponent-final.jpg",
+      "playtest-2026-11-16-run03/day01-defense.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "4金桥变现后19金币足够16金升Lv6。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "7500基础生命提升大于上一场1600累计盾，优先生存。"
+      },
+      {
+        "id": "M05",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "拆桥同时损失已验证手武盾，未把无人机未知盾当收益。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "每次实际出售/升级均核对。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "拆卖修复桥4金，购买16XP升Lv6",
+        "benefit": "生命12500→20000，+7500",
+        "cost": "失去手武使用320盾；16金币与利息",
+        "risk": "若新对手战斗更长，护盾损失更高",
+        "unknown": "能否靠更长存活滚起寒冷"
+      },
+      {
+        "action": "保留原配置和15金",
+        "benefit": "3利息及护盾保留",
+        "cost": "少7500HP",
+        "risk": "面对30000HP仍可能被耗死",
+        "unknown": "实际生存时长"
+      }
+    ],
+    "chosenAction": "卖B修复桥4，再买4次经验共16升Lv6；保留3金，不增加盲目购买。",
+    "prediction": "金币15→19→3，Lv6 20000HP，2/18XP；共享桥移除。预计生存延长，但总体仍不利，未给出高胜率。"
+  }
+}

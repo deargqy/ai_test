@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:24:48.276Z",
+  "before": {
+    "state": "SS链法9s3×620/30坚固，每层坚固伤+6，左中与旧B相同且多槽；旧B成长后640/10坚固10s每层+3。SS坚峰5s3×420/5力命中自身力+15%；SS稻荷7.5s召唤每只20%吸血，单位频率未读。",
+    "goal": "保留已验证首轮爆发并提高第二轮成长",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-ss-shoulder.jpg",
+      "playtest-2026-11-16-run05/day09-ss-sword.jpg",
+      "playtest-2026-11-16-run05/day09-ss-drone.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留核心两端600%且读新实例孔"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "计入旧350成长，不凭阶级判断"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先核心后专属强化"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "及时卖已替代候选回收经济"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "SS链法替B",
+        "benefit": "CD10→9；坚固30vs10、层转伤6vs3；600%有效连接可原位重接",
+        "cost": "失旧350成长但620仅比旧640低20，放弃另两SS",
+        "risk": "需核新实例中孔",
+        "unknown": "战报比值受敌与时长影响"
+      },
+      {
+        "action": "SS力刀+库存S力肩",
+        "benefit": "375力按命中15%增长，长期力链强",
+        "cost": "手600%→通用200%，4段→3，失虚空失盾成长；又需布局",
+        "risk": "短期首轮会下降且S肩连接未证",
+        "unknown": "新布局可能有3连续孔可接，未验证"
+      },
+      {
+        "action": "SS吸血无人机",
+        "benefit": "每只20%吸血可能大幅提高续航",
+        "cost": "放弃肩升级，换旧B部署24力和已积累30主",
+        "risk": "首轮6秒前未起效",
+        "unknown": "攻击频率、吸血作用范围未测"
+      }
+    ],
+    "chosenAction": "选SS坚固肩，原位替B并原中排长桥重接；当连接成功后旧B售4，库存S力量肩已无近期用途可售16，短桥待另有新槽时试。",
+    "prediction": "83金不变入仓；SS裸682，桥后4402，手3195不变；坚固30×3/轮且层增伤6。若出售成功最终103金。"
+  }
+}

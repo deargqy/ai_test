@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-08",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T10:06:35.454Z",
+  "before": {
+    "state": "太初之翼112000HP，A感电手4.5秒3×105/12感电，雷伤时所有感电装备+2感电；S背5秒210盾42感电，雷伤等额产盾，慢敌2秒；S肩9.5秒2×580/42感电，命中感电层数+20%；S亲卫背肩每使用敌增益-16%；S长桥甲背+240%主每日+80；A燃甲与科技、手甲A短桥未全读。",
+    "goal": "避开明确克制我方力量/坚固且有高HP续盾成长的对手",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-reroll.jpg",
+      "playtest-2026-11-16-run05/day06-enemy2-back.jpg",
+      "playtest-2026-11-16-run05/day06-enemy2-shoulder.jpg",
+      "playtest-2026-11-16-run05/day06-enemy2-hand.jpg",
+      "playtest-2026-11-16-run05/day06-enemy2-s-short.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "优先查克制与续航链"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "增益移除会破坏我方力量供给"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不凭少一装备或静态伤害断言弱"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "用最后免费重随",
+        "benefit": "避开每5秒削力/坚固16%并雷伤回盾的高HP链",
+        "cost": "消耗最后免费次数",
+        "risk": "后续仍可能强",
+        "unknown": "未读科技可能再加强防御"
+      },
+      {
+        "action": "直接挑战",
+        "benefit": "可检验S失盾转伤反制",
+        "cost": "112k需更长时间，被削核心成长",
+        "risk": "感电增长+等额产盾大幅拉长战斗",
+        "unknown": "S被动是否足以追上未知"
+      }
+    ],
+    "chosenAction": "使用第二次免费重随。",
+    "prediction": "该候选偏负：预期核心增益被周期性削弱、伤害难穿112k及雷伤盾；未实际战斗不计命中。重随1→0，现金10不变。"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "四S均连接：双寄生盾背R下→甲L下；肃卫甲R上→电肩L上；800长桥电肩L中→手L中；轮转手L上→SS L上。寒冷单孔手L下，B冰霜SS中排双孔。甲5040背1120、肩4950、手1665、SS105；现金71。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day09-four-s-build.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "实际新实例孔位匹配，连接与现金均核实。",
+  "nextAction": "进入选敌，按新版M01慎重处理快力量/充能组合。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

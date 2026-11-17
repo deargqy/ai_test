@@ -1,0 +1,14 @@
+{
+  "observed": "购买121→105；原感电桥移库存成功；军械库中心977,73→1293,923一次安装成功。肩5.5k→7.0k、坚固95不变，甲/肩感电消失、手4.3k不变。旧桥出售+8到113，库存空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day13-buy-damage.jpg",
+    "playtest-2026-11-16-run05/day13-remove-shock.jpg",
+    "playtest-2026-11-16-run05/day13-install-damage.jpg",
+    "playtest-2026-11-16-run05/day13-sell-shock.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "revise",
+  "reason": "玩家提醒触发的低贡献槽位重审；一个高收益核心端可优于两低收益端。面板预测支持，战斗收益无同敌对照。",
+  "nextAction": "保持新桥出战，修订M05加入低贡献配件审计"
+}

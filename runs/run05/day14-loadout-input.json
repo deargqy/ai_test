@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "run05 day14 paused / 2026-11-17",
+  "gold": 116,
+  "stride": 4,
+  "mainBonus": 0.1,
+  "slots": [
+    "back",
+    "armor",
+    "shoulder",
+    "hand",
+    "drone"
+  ],
+  "equipment": [
+    {
+      "id": "back-b",
+      "name": "深红尊",
+      "slot": "back",
+      "grade": "B",
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 740,
+      "element": 38,
+      "cooldown": 7,
+      "price": 0,
+      "passive": "物理伤害产生等于力量层数的盾；使用减速全部敌装1秒",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "growth": "原实例跨日积累，740按每日快照推算；卡面5.3K作交叉核对"
+    },
+    {
+      "id": "armor-b",
+      "name": "祸津神",
+      "slot": "armor",
+      "grade": "B",
+      "ports": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "force"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 1160,
+      "element": 44,
+      "cooldown": 10.5,
+      "price": 0,
+      "passive": "超载II；力量额外提供1层伤害，精确系数待核",
+      "evidence": "playtest-2026-11-16-run05/day03-drone-equipped.jpg",
+      "growth": "保留旧成长与0.5秒CD消耗品；1160据跨日快照"
+    },
+    {
+      "id": "shoulder-ss",
+      "name": "链法手枪",
+      "slot": "shoulder",
+      "grade": "SS",
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "damage": 820,
+      "hits": 3,
+      "shield": 0,
+      "element": 30,
+      "cooldown": 9,
+      "price": 0,
+      "passive": "每层坚固使本装备伤害+6；本工具未模拟战中转伤",
+      "evidence": "playtest-2026-11-16-run05/day14-long-bottom.jpg",
+      "growth": "820由第14天原始说明确认；新实例不继承"
+    },
+    {
+      "id": "hand-s",
+      "name": "虚空撕裂",
+      "slot": "hand",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "kind": "attack",
+      "tags": [
+        "firm"
+      ],
+      "damage": 650,
+      "hits": 4,
+      "shield": 0,
+      "element": 4,
+      "cooldown": 5,
+      "price": 0,
+      "passive": "获得相当于失去护盾12%的伤害；未模拟",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "growth": "旧实例每日+50；650按卡面4.6K与增幅反核"
+    },
+    {
+      "id": "drone-b",
+      "name": "野衾",
+      "slot": "drone",
+      "grade": "B",
+      "ports": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "kind": "summon",
+      "tags": [
+        "force"
+      ],
+      "damage": 73,
+      "hits": 1,
+      "shield": 0,
+      "element": 6,
+      "cooldown": 8,
+      "price": 0,
+      "passive": "部署获得24力量；无人机攻击间隔须单列，不能把部署CD当DPS",
+      "evidence": "playtest-2026-11-16-run05/day03-drone-equipped.jpg",
+      "growth": "旧实例每日+5；两左孔由原图确认，修正先前只记一个孔"
+    },
+    {
+      "id": "armor-a",
+      "name": "塞玛·量产",
+      "slot": "armor",
+      "grade": "A",
+      "ports": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "firm"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 990,
+      "element": 66,
+      "cooldown": 13,
+      "price": 16,
+      "passive": "获得坚固时，随机一件装备加速2秒；可能与两核命中联动，频率未模拟",
+      "evidence": "playtest-2026-11-16-run05/day14-shop.jpg",
+      "growth": "商店新实例，无旧成长，CD消耗品不继承"
+    },
+    {
+      "id": "back-a",
+      "name": "天火反应堆",
+      "slot": "back",
+      "grade": "A",
+      "ports": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "defense",
+      "tags": [
+        "burn"
+      ],
+      "damage": 0,
+      "hits": 1,
+      "shield": 190,
+      "element": 38,
+      "cooldown": 5.5,
+      "price": 16,
+      "passive": "使用慢全敌装1.5秒；燃烧伤害等额转盾，当前缺燃烧链",
+      "evidence": "playtest-2026-11-16-run05/day14-s0-g0.jpg",
+      "growth": "新实例，失去原物理伤害转盾；有3孔但不自动更好"
+    },
+    {
+      "id": "drone-s-force",
+      "name": "式神稻荷",
+      "slot": "drone",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "kind": "summon",
+      "tags": [
+        "force"
+      ],
+      "damage": 50,
+      "hits": 1,
+      "shield": 0,
+      "element": 10,
+      "cooldown": 8,
+      "price": 32,
+      "passive": "每台提供14%吸血；部署前无吸血，未模拟无人机频率",
+      "evidence": "playtest-2026-11-16-run05/day14-shop.jpg",
+      "growth": "新增右侧孔位；原73伤害成长不继承"
+    },
+    {
+      "id": "drone-s-shock",
+      "name": "潜伏者",
+      "slot": "drone",
+      "grade": "S",
+      "ports": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "kind": "summon",
+      "tags": [
+        "shock"
+      ],
+      "damage": 21,
+      "hits": 1,
+      "shield": 0,
+      "element": 7,
+      "cooldown": 6,
+      "price": 32,
+      "passive": "每台额外造成20%雷电伤害；当前无感电核心",
+      "evidence": "playtest-2026-11-16-run05/day14-s0-g3.jpg",
+      "growth": "较快部署与更多孔；原成长不继承"
+    }
+  ],
+  "parts": [
+    {
+      "id": "main-long",
+      "name": "S力量主属性长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "main_pct",
+        "value": 2,
+        "tag": "force",
+        "tagValue": 6
+      },
+      "description": "主属性+200%，力量装备改为+600%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "price": 0,
+      "sell": 24
+    },
+    {
+      "id": "damage-long",
+      "name": "A坚固伤害长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "damage_pct",
+        "value": 2,
+        "tag": "firm",
+        "tagValue": 6
+      },
+      "description": "伤害+200%，坚固装备改为+600%",
+      "evidence": "playtest-2026-11-16-run05/day14-restore-damage-endpoint.jpg",
+      "price": 0,
+      "sell": 12
+    },
+    {
+      "id": "damage-short",
+      "name": "A200%伤害短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "damage_pct",
+        "value": 2
+      },
+      "description": "进攻型装备伤害+200%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-damage-short.jpg",
+      "price": 0,
+      "sell": 8
+    },
+    {
+      "id": "firm-short",
+      "name": "S216%坚固短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "element_pct",
+        "value": 0.72,
+        "tag": "firm",
+        "tagValue": 2.16
+      },
+      "description": "元素+72%，坚固装备改+216%",
+      "evidence": "playtest-2026-11-16-run05/day14-remove-firm-short.jpg",
+      "price": 0,
+      "sell": 16
+    },
+    {
+      "id": "charge-short",
+      "name": "S互充2秒短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "charge",
+        "value": 2
+      },
+      "description": "使用一端给另一端充能2秒；不是每段命中充能",
+      "evidence": "playtest-2026-11-16-run05/day13-current.jpg",
+      "price": 0,
+      "sell": 16
+    },
+    {
+      "id": "cd-single",
+      "name": "S10%冷却单孔",
+      "shape": [
+        [
+          0,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "cd_pct",
+        "value": -0.1
+      },
+      "description": "面板冷却-10%",
+      "evidence": "playtest-2026-11-16-run05/day14-cd-to-back.jpg",
+      "price": 0,
+      "sell": 8
+    },
+    {
+      "id": "hits-long",
+      "name": "S+6段长桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "hits",
+        "value": 6
+      },
+      "description": "进攻型装备攻击段数+6；召唤是否适用未确认，本版不计",
+      "evidence": "playtest-2026-11-16-run05/day14-s0-p1.jpg",
+      "price": 0,
+      "sell": 24
+    },
+    {
+      "id": "hits-short-shop",
+      "name": "商店S+3段短桥",
+      "shape": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "effect": {
+        "stat": "hits",
+        "value": 3
+      },
+      "description": "进攻型装备攻击段数+3",
+      "evidence": "playtest-2026-11-16-run05/day14-s0-p0-read.jpg",
+      "price": 32,
+      "sell": 16
+    }
+  ],
+  "currentOrder": [
+    "back-b",
+    "armor-b",
+    "shoulder-ss",
+    "hand-s",
+    "drone-b"
+  ],
+  "baselineNote": "试装前：肩约7.5K×3、95坚固，手约4.6K×4、13坚固、CD4.5秒；背约5.3K盾CD7秒，甲约8.2K盾CD10.5秒。暂停前：两下排短桥已拆，肩5.8K×3/30坚固，手4.6K×4/4坚固；单孔CD在背。最后中心试装被Esc中断，现场须重看。",
+  "unknown": [
+    "桥身可否交叠尚未确认，双假设结果不可混为已验证。",
+    "长桥失败可能涉及拖拽锚点，未排除合法几何；不录为禁止布局。",
+    "旋转/斜向配件未验证；当前仅录入可见水平形状。",
+    "商店候选在暂停后是否还在原位，需要恢复时新截图。",
+    "商店装备孔位为人工从截图转录，安装前核实；不按阶级自动补孔。",
+    "额外段数对召唤装备曾显示数量变化，但实际部署/无人机机制未验证，数值模型暂不计。",
+    "双端落在同一装备时只计算一次属性；互充在同件两孔的行为未验证。",
+    "主属性加算、取整为卡面近似；按静态原始伤害比较，不把被动价值设为零强度结论。",
+    "买下所有候选前先看预算与组合；当前拥有的+6长桥不重复算24金币采购。"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T08:51:26.868Z",
+  "before": {
+    "state": "初甲三选详读：力量AGM-K07建御雷480盾/32力量/12秒/无被动，感电X09同盾CD12，X05盾450/CD11.5；槽位分别左下、右下、右中。",
+    "goal": "先用力量支持后续多段武器，数值尚不能证明流派强弱",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-armor-middle-detail.jpg",
+      "playtest-2026-11-16-run05/day01-armor-right-detail.jpg",
+      "playtest-2026-11-16-run05/day01-armor-left-detail.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "使用实际文字确认力量，不凭红图标"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "把莫瑟成长作为同件跨天实验"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "记录左下孔，后续先考虑整排共享"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "取力量甲",
+        "benefit": "后续武器可共享力量收益；480盾",
+        "cost": "失去感电来源",
+        "risk": "12秒启动慢且无被动",
+        "unknown": "后续能否得到力量转伤或多段核心未知"
+      },
+      {
+        "action": "取450感电甲",
+        "benefit": "首盾早0.5秒",
+        "cost": "少30盾",
+        "risk": "本阶段差距小",
+        "unknown": "感电协同未知"
+      }
+    ],
+    "chosenAction": "选力量建御雷；后续根据武器池决定科技，不预设完整流派",
+    "prediction": "初甲自动进入装备栏，主盾480/力量32；每日成长究竟加哪个字段以次日同件核对。"
+  }
+}

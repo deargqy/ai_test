@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 8,
+  "id": "run04-d08-03",
+  "phase": "opponent",
+  "before": {
+    "state": "我135000HP、三S桥+寄生成长。敌475731756，56000HP/Lv9：A甲870盾58力量、A无人机48/8燃烧、S肩约2000×4/19燃、SS刀约1700×3/5力量、SS背375盾75力量；有穿刺II/巨灵III/焕发核心等科技。",
+    "goal": "评估装备高投入的前段爆发是否能压过我方启动生命。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day08-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "两件高输出但未见明确禁用；135k起始生命可承受若干轮，实际完整被动未知。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "敌无可见寄生主轴，我方成长后生存更强；不能只因敌56k就判弱。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "迎战",
+        "benefit": "我方生命与后段成长优势",
+        "cost": "失败一命",
+        "risk": "SS武器/穿刺爆发超预估",
+        "unknown": "详细被动"
+      },
+      {
+        "action": "重随",
+        "benefit": "避双SS",
+        "cost": "放弃已知56k对手",
+        "risk": "可能遇控制",
+        "unknown": "新敌"
+      }
+    ],
+    "chosenAction": "迎战，按首轮伤害与结果修正。",
+    "prediction": "倾向获胜中等信心；若启动阶段生命骤降则说明高爆发估计不足。"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T15:42:15.048Z",
+  "before": {
+    "state": "84金Lv11，黑市可进或跳过+15（金文案仍5，BUG010重复）。目标保留核心，优先找能替换B桥且不破连接的配件。",
+    "goal": "利用升级后概率找明确补强",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-shop-event.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "84充裕但15机会成本真实"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "以替换旧桥净收益作购买门槛"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "强化仅用于确定的主力"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进入",
+        "benefit": "可查看新配件/消耗品",
+        "cost": "放弃15金",
+        "risk": "无适配商品则损失机会成本",
+        "unknown": "商品未知"
+      },
+      {
+        "action": "跳过",
+        "benefit": "确定+15，现金99",
+        "cost": "失去当日选购机会",
+        "risk": "无法补强已知承伤",
+        "unknown": "敌人未知"
+      }
+    ],
+    "chosenAction": "进入，仅买有明确有效端点或绑定现核心的强化，不为阶级替换",
+    "prediction": "84金不变进入商品页；找到适配物品前不继续刷新"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-02",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:45:38.745Z",
+  "before": {
+    "state": "65金Lv6XP4/18，24000HP。黑市选项跳过+10（叙述5，文案冲突）或进店。已有A主手/B其余，仓库空，主攻两桥。",
+    "goal": "保留采购窗口，提高生命和多一商品位置",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-shop-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "升级保留49金，不机械花光"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟今天又+50/无人机5，旧件主属性成长不替代被动升级"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进店并16金升级Lv7",
+        "benefit": "+10000生命，解锁第4商品位，提高高阶概率",
+        "cost": "16金且放弃跳过10金，余49金",
+        "risk": "升级不提高已装备等级",
+        "unknown": "店内核心候选未知"
+      },
+      {
+        "action": "不升直接采购",
+        "benefit": "65金更容易买S桥/装备",
+        "cost": "少10000生命及商品位",
+        "risk": "若店内差可能浪费搜索",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "跳过10金",
+        "benefit": "75金满利息",
+        "cost": "放弃当前补强",
+        "risk": "B核心难跟后段",
+        "unknown": "未来池未知"
+      }
+    ],
+    "chosenAction": "先进入；预算16经验到Lv7即停，再依现货选择",
+    "prediction": "49金Lv7XP2/22，34000HP，4商品位；已有装备品质不变。"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "batchId": "run05-day09-replay",
+  "createdAt": "2026-11-16T15:09:02.016270+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "scope": "历史截图回放，不是现场商店",
+    "runId": "run05",
+    "day": 9,
+    "goldLastObserved": 55,
+    "inventory": [],
+    "purchases": [
+      {
+        "name": "MP-6155 标准型屏障增幅器",
+        "cost": 32
+      },
+      {
+        "name": "MP-6065 后卫",
+        "cost": 16
+      }
+    ],
+    "needs": [
+      "保留五桥连接",
+      "正式选敌后考虑生命"
+    ],
+    "unknown": [
+      "第9天正式对手",
+      "当前窗口绑定需恢复"
+    ]
+  },
+  "entries": [
+    {
+      "id": "s-element",
+      "label": "s-element",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-shop-s-bridge.jpg",
+      "sourceSha256": "25adb2ea8f36c69a318c05cd07543fc727f30554f988f222b5db55b880b0426a",
+      "box": [
+        625,
+        145,
+        1175,
+        410
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "7ae0975c0cdddcc96c3ad5aa9dd8da24768f93420d60834111f3227df9144ac1",
+      "reading": null
+    },
+    {
+      "id": "a-enchant",
+      "label": "a-enchant",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-shop-a-bridge.jpg",
+      "sourceSha256": "9ede3a43c7f6e6a099eb2d5625722c3b0ab3765f6729be440e4fbffff1763228",
+      "box": [
+        950,
+        145,
+        1500,
+        410
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "ebdc1ac65076a79f82593626ba9a42895f41735c89cae31cd2c9e6a3fbdeaeba",
+      "reading": null
+    },
+    {
+      "id": "boss-hand",
+      "label": "boss-hand",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-boss-hand-active.jpg",
+      "sourceSha256": "845da9929365f5c10de37cf1fa22ebc103a0b30ccfc6a7319cd9adde65aa8263",
+      "box": [
+        275,
+        232,
+        1040,
+        595
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "1edca21bb3958f602c0b43ec777033d2e08716894dedde1b948b2a9c91bb1c5f",
+      "reading": null
+    },
+    {
+      "id": "boss-shoulder",
+      "label": "boss-shoulder",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day09-boss-shoulder.jpg",
+      "sourceSha256": "6150043013ad87663b42d312d9a5509ebbadea856c11fad8399d6b091bb6a716",
+      "box": [
+        420,
+        230,
+        890,
+        570
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "2d6a2da900196ff71c85669235ae26e61d52cadf59e0b9933acb552fbf2adbbe",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 4,
+    "uniqueCrops": 4,
+    "packSeconds": 0.308
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "runId": "run04",
+  "day": 4,
+  "id": "run04-d04-02",
+  "phase": "build",
+  "before": {
+    "state": "44金。A寄生手NVT-C01共生体185×4/4寄生，5.5秒；使用时所有寄生装备+10寄生，L上中下可保留S短桥。单孔C壁垒2金：给装备附魔2寒冷。24金A长桥主属性+40%、每天再+40%，现有布局无空闲合适双端。",
+    "goal": "升级末位主力并保留所有现有连接，便宜探索跨属性触发。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day04-a-parasite-hand.jpg",
+      "playtest-2026-11-16-run04/day04-cold-part.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "A手左下与旧C手一致，先取下S桥再换、再装回；不为新长桥破坏已验证三连接。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "18金买手和单孔；旧手卖2，预计28金利息5。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "单孔寒冷能否附到无人机攻击尚未知，用2金低成本验证。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买A手16与单孔寒冷2",
+        "benefit": "主力基础翻倍、全寄生装备成长；多属性控制探索",
+        "cost": "18金，卖旧手回2",
+        "risk": "无人机附魔可能只部署触发",
+        "unknown": "寒冷实际施加量"
+      },
+      {
+        "action": "买A长桥24",
+        "benefit": "跨天成长",
+        "cost": "挤占装备预算",
+        "risk": "当前无空闲双端，可能破坏S/盾连接",
+        "unknown": "单端是否值得"
+      }
+    ],
+    "chosenAction": "买A寄生手与单孔寒冷；新手替旧锯，S短桥仍双武器；寒冷插A无人机空闲左下；卖旧C手。",
+    "prediction": "现金28；新手185×4且保留S成长，三连接均保留；战后检查是否出现寒冷统计。"
+  }
+}

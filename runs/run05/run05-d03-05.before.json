@@ -1,0 +1,68 @@
+{
+  "runId": "run05",
+  "day": 3,
+  "id": "run05-d03-05",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:27:28.795Z",
+  "before": {
+    "state": "2胜0负4命，16500HP16金。敌eternal_destiny1121 20kHP：寄生手5.5秒225×4/+8%伤每秒；背6秒1879盾29感电/20%递归/减速1秒；甲13秒1825盾48坚固且坚固每秒+1盾；肩10秒360×2/命中感电+16%、每秒伤+16%；坚固无人机28/4。守卫核心防具+640。己方剑515×3/6秒，肩714×3/10秒，双端+100%，背按物伤产力量盾，祸津神力额外+1伤，野衾8秒+24力。",
+    "goal": "以启动后力量增长突破持续护盾，保留可检验方向和时间范围",
+    "evidence": [
+      "playtest-2026-11-16-run05/day03-enemy-hand.jpg",
+      "playtest-2026-11-16-run05/day03-enemy-armor.jpg",
+      "playtest-2026-11-16-run05/day03-enemy-shoulder.jpg",
+      "playtest-2026-11-16-run05/day03-enemy-back.jpg",
+      "playtest-2026-11-16-run05/day03-enemy-long.jpg",
+      "playtest-2026-11-16-run05/day03-enemy-tech.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较首击、护盾增长、百分比感电与递归触发"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "时间与方向独立核对，不把加伤当复利"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "读实际说明，寄生减最大HP不可当纯伤害"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核对实际开战和结算"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接出战",
+        "benefit": "保留完整已读对手，力量伤害与被动盾可共同成长",
+        "cost": "可能掉1命",
+        "risk": "敌感电递归和双加伤拖到后段爆发",
+        "unknown": "敌无人机具体频率未读，坚固实际供给速度不确定"
+      },
+      {
+        "action": "免费重随",
+        "benefit": "可能找到更弱构筑",
+        "cost": "失去已知对手，消耗一次免费",
+        "risk": "新敌可能有更快触发链",
+        "unknown": "随机池强度未知"
+      }
+    ],
+    "chosenAction": "直接出战，最快速度；此处不是用重随次数省钱，而是当前已读对局倾向可赢",
+    "prediction": "倾向胜，预计30–50秒；敌首攻5.5秒先于己6秒，己7–11秒启动强度。己方物理总伤高于上日23197，背部产盾>4000；若拖过50秒或早期HP快速损失则当前模型被反驳。100力剑面板约1145只在捕获相应时点才能判定。"
+  }
+}

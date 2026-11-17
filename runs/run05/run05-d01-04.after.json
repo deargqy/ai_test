@@ -1,0 +1,13 @@
+{
+  "observed": "NPC获胜+25金，当前28金，正式0胜0负。倒计时33秒时我1278HP+480盾，力量36，敌400HP；结算剑1040伤害/甲480盾/力量38。最快速度按钮已点击。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-npc-result.jpg",
+    "playtest-2026-11-16-run05/day01-npc-fast.jpg",
+    "playtest-2026-11-16-run05/day01-supply.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "12秒首盾被观察到，6秒首击未精确截到，保留未知；NPC不计正式胜场已验证。",
+  "nextAction": "进入黑市找核心和即战力"
+}

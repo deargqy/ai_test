@@ -1,0 +1,220 @@
+{
+  "entries": [
+    {
+      "id": "slot1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "slot5",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "tech5",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge4",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "bridge5",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "part1",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "part2",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    },
+    {
+      "id": "part3",
+      "name": null,
+      "grade": null,
+      "price": null,
+      "stats": {},
+      "passive": null,
+      "slots": null,
+      "uncertain": [
+        "not read"
+      ]
+    }
+  ]
+}

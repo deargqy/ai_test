@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T15:39:45.171Z",
+  "before": {
+    "state": "112金，Lv10 XP6/34，9胜0负4命。莫瑟跨日肩5.3→5.8K手3.9→4.3K背1.1→1.2K无人机59→64，副属性未变。SS科技三选一或随机加50金。",
+    "goal": "用科技补启动/生存或强化现核心；已有经济够至少一次升级",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-reward.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "112已高于利息上限，现金足以升级，比较50机会成本"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "科技须服务已有双核心连接"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不为品质丢成长，科技无需换核心"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "主动三选一",
+        "benefit": "增加找到当前双核心适用科技概率",
+        "cost": "放弃50金币",
+        "risk": "三项可能都弱",
+        "unknown": "候选尚未揭晓"
+      },
+      {
+        "action": "随机SS加50金",
+        "benefit": "现金162，可多升一级或买配件",
+        "cost": "失去选择权",
+        "risk": "获得不适用科技，不能提升触发链",
+        "unknown": "随机池和概率未知"
+      }
+    ],
+    "chosenAction": "选三选一，查看实际SS科技后再决定",
+    "prediction": "余额仍112，出现3候选；机会成本50金，未见候选前不宣称必有好科技"
+  }
+}

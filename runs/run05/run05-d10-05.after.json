@@ -1,0 +1,13 @@
+{
+  "observed": "双购成功84→4。S短一次装在肩右上1245—手左上1340。S长首次装到背左中1534—无人机左中1726，背4189无人机412；两次平移失败。收回后左端/中心对准手右1437均未成功，其中一次明确目标插槽无效。原计划手背长桥未实现，现S长在库、旧B两桥在库。仓库另有绿色消耗品，旧空仓快照不符，需读。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-buy-short.jpg",
+    "playtest-2026-11-16-run05/day10-new-short-equipped.jpg",
+    "playtest-2026-11-16-run05/day10-long-center-hand.jpg"
+  ],
+  "operationResult": "failed",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "数值预测依赖手背连接，已被实际装配反驳；不硬归因槽位机制，停止手背新桥尝试，改已验证背无人机位置",
+  "nextAction": "重新比较背无人机桥布局并读消耗品"
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "刷新一次花2金币，余额14；出现B寒冷肩炮8、C寒冷无人机4、C燃烧无人机4、半价B使用得320盾桥4。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-shop-refresh.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "预算和刷新结果确认，已有可考虑的空部位及核心替换，停止刷新。",
+  "nextAction": "比较B肩炮的更高单轮伤害与C无人机的寒冷配合，确定主武器再买强化。"
+}

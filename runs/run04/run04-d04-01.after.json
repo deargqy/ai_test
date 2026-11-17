@@ -1,0 +1,11 @@
+{
+  "observed": "随机得到风暴核心II：每秒施加6感电。64金花20买XP，Lv8/42000HP、2/26XP、44金，商店S5%A25%B40%C30%。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day04-level8-tech.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "升级与金币吻合；感电亦在寄生甲扩展触发范围。",
+  "nextAction": "进店比较主力升级与插槽。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

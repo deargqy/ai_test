@@ -1,0 +1,18 @@
+{
+  "batchId": "run05-day09-replay",
+  "expectedSize": [1920, 1080],
+  "context": {
+    "scope": "历史截图回放，不是现场商店",
+    "runId": "run05", "day": 9, "goldLastObserved": 55,
+    "inventory": [],
+    "purchases": [{"name": "MP-6155 标准型屏障增幅器", "cost": 32}, {"name": "MP-6065 后卫", "cost": 16}],
+    "needs": ["保留五桥连接", "正式选敌后考虑生命"],
+    "unknown": ["第9天正式对手", "当前窗口绑定需恢复"]
+  },
+  "entries": [
+    {"id": "s-element", "source": "../../docs/playtest-2026-11-16-run05/day09-shop-s-bridge.jpg", "box": [625, 145, 1175, 410]},
+    {"id": "a-enchant", "source": "../../docs/playtest-2026-11-16-run05/day09-shop-a-bridge.jpg", "box": [950, 145, 1500, 410]},
+    {"id": "boss-hand", "source": "../../docs/playtest-2026-11-16-run05/day09-boss-hand-active.jpg", "box": [275, 232, 1040, 595]},
+    {"id": "boss-shoulder", "source": "../../docs/playtest-2026-11-16-run05/day09-boss-shoulder.jpg", "box": [420, 230, 890, 570]}
+  ]
+}

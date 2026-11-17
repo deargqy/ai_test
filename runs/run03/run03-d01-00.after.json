@@ -1,0 +1,11 @@
+{
+  "observed": "进入第1天，0/10胜、0/3负，Lv1，1500生命、0金币、装备为空；若茜的先人一步图标仍可见。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-start.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "新局及3次失败上限已确认；角色充能的实战效果尚未验证。",
+  "nextAction": "读取build阶段经验，自选初始躯干，按实际属性与启动时间选。"
+}

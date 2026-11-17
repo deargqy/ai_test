@@ -1,0 +1,12 @@
+{
+  "observed": "未执行离店。用户提醒感电桥价值低，发现漏比甲—肩短桥可换200%伤害；原不买结论撤回，另记d13-03。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day13-old-shock-bridge.jpg",
+    "playtest-2026-11-16-run05/day13-new-damage-bridge.jpg"
+  ],
+  "operationResult": "unknown",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "原候选只考虑核心两短桥，遗漏低贡献附魔桥。不能把人工指出记成自主发现。",
+  "nextAction": "购买军械库并在原甲肩跨度替换后核数字"
+}

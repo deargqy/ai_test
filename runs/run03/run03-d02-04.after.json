@@ -1,0 +1,12 @@
+{
+  "observed": "出售未生效，金币始终15，未购买经验。修复桥曾拆到仓库，最终用左端(585,228)→无人机槽(622,460)成功恢复双端连接。实际仍Lv5/12500HP。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day02-bridge-restored.jpg",
+    "playtest-2026-11-16-run03/day02-final-build.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "计划没有兑现，不能把20000HP计入战力。多次拖拽没有改变状态，尚不清楚是操作命中/阶段限制或游戏问题；中心对齐不是可稳定复用的规则，M04需再次收紧。",
+  "nextAction": "按真实12500HP配置开战，下一购物阶段再比较升级。",
+  "operationResult": "failed",
+  "memoryDecision": "revise"
+}

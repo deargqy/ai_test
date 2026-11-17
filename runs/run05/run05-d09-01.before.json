@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-01",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:23:29.700Z",
+  "before": {
+    "state": "第9天8胜0负/4命，83金Lv10/76kHP；SS三选后挑战首领/随机SS跳首领/+100金币三项。正文失败扣命与用户先验冲突BUG009。",
+    "goal": "按用户已给先验参与首领，并选适配核心的SS",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-reward.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "player",
+        "use": "applied",
+        "reason": "用户明确首领失败不扣命，应参与并核结算"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按现有核心选择SS"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "100金机会成本明确"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "SS三选+首领",
+        "benefit": "能选适配核心；检验首领结算",
+        "cost": "放弃100金或免战随机",
+        "risk": "首领机制未知，按用户先验失败不扣命但要核",
+        "unknown": "实际结算待测"
+      },
+      {
+        "action": "跳首领随机SS",
+        "benefit": "获一SS免战",
+        "cost": "不选适配",
+        "risk": "可能不支持物理核心",
+        "unknown": "抽池未知"
+      },
+      {
+        "action": "放弃拿100",
+        "benefit": "可升等级和搜核心",
+        "cost": "放弃SS选择",
+        "risk": "花钱也未必出适配",
+        "unknown": "后续商品未知"
+      }
+    ],
+    "chosenAction": "选SS三选再挑战；采用M09玩家先验，不再按冲突文案规避首领；真正出战前另写敌方与预测。",
+    "prediction": "83金不变出现三SS选项；本点击不当作已开战，首领失败计数仍待实测。"
+  }
+}

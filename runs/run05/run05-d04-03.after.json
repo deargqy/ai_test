@@ -1,0 +1,11 @@
+{
+  "observed": "12金购买12经验，38金、Lv6 XP2/18、24000HP。概率S1/A10/B45/C44，已有装备品质未变。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-level6.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "升级用于增加7500HP和商店质量，核心升阶仍需另购。",
+  "nextAction": "预算6金内刷新寻找力量主武器/核心升阶"
+}

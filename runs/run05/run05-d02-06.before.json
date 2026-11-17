@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:13:17.509Z",
+  "before": {
+    "state": "kbkn，20kHP Lv6，四B感电，剑5秒3×320且雷电伤害全感电装备+1，肩10秒2×1440且命中敌感电+16%，背6秒29感电/20%递归，双攻雷霆猛攻+300%，反冲6%。我11500HP，慢甲12秒",
+    "goal": "避免敌方更快启动且百分比成长的感电循环",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-enemy-detail.jpg",
+      "playtest-2026-11-16-run05/day02-enemy-sword-read.jpg",
+      "playtest-2026-11-16-run05/day02-enemy-shoulder-read.jpg",
+      "playtest-2026-11-16-run05/day02-enemy-back-read.jpg",
+      "playtest-2026-11-16-run05/day02-enemy-link.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌百分比+递归+快速启动，不仅比血"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "我线性成长并被甲消耗，对方状态反馈链"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "关键原文已读，敌甲未知明确保留"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "获得其他对位机会",
+        "cost": "用掉1/2免费",
+        "risk": "可能更强",
+        "unknown": "新对手未知"
+      },
+      {
+        "action": "保留出战",
+        "benefit": "检验新力量链",
+        "cost": "承担失败风险",
+        "risk": "敌5秒启动、2万血使我无法早杀，成长有递归",
+        "unknown": "敌甲被动未完整读取；雷电实际频率未知"
+      }
+    ],
+    "chosenAction": "使用一次免费重随；此对位偏负，不计作实际战斗预测命中",
+    "prediction": "免费次数2→1，金币0不变，换新对手；未战无法验证kbkn胜负"
+  }
+}

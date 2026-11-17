@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "batchId": "enemy10-mengxin",
+  "createdAt": "2026-11-16T16:00:34.097963+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "name": "萌新",
+    "hp": 80000,
+    "rerolls": 0,
+    "gold": 14
+  },
+  "entries": [
+    {
+      "id": "drone",
+      "label": "drone",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-drone.jpg",
+      "sourceSha256": "bfef5397ad6df585720e3ef91d6e2a169740b00eca3367f0e8c6c693c2754a56",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "7633f1bd44a1326d0eb3ef7ad44d2e858ef59c2c542c1624b3f646d8133b5b74",
+      "reading": null
+    },
+    {
+      "id": "hand",
+      "label": "hand",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-hand.jpg",
+      "sourceSha256": "4c891f85f0932315ff89011373040960970a6c5436e1f4e49a689184bc1d43a2",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "8663d0e71d5b30698a8d8e68db37afe3db33906ed21045781dff8e3dcd21fc01",
+      "reading": null
+    },
+    {
+      "id": "shoulder",
+      "label": "shoulder",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-shoulder.jpg",
+      "sourceSha256": "2599bcc1b2991f6490d6eedea6de9e1379fa7dcd507cc97b9fb0ceee1d479649",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "0e9b3707e1064e29312edbcfe56a30cc39d31f1329263326d6a1839509003b16",
+      "reading": null
+    },
+    {
+      "id": "armor",
+      "label": "armor",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-armor.jpg",
+      "sourceSha256": "e55fa874c459d8597eb326c87fca4ce84da973a4f979f116f2609b78b6905da3",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "0ab568bf4853ced0cf8c03df2b61c054ce92a02f30005391d796a57d0968a109",
+      "reading": null
+    },
+    {
+      "id": "back",
+      "label": "back",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-back.jpg",
+      "sourceSha256": "90b31b3fb2bc9f36eee046ef1146503565bb159c72bc9e4f42b3f51815350018",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "e2e805817785d8be78dc9f4e2755b439ef266021e37acee69e1ba3b28cee6471",
+      "reading": null
+    },
+    {
+      "id": "tech1",
+      "label": "tech1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-tech1.jpg",
+      "sourceSha256": "5cc1b4aa39ac409436e28410c8d30755f05717b171191d0a8fdb315370b9b1f6",
+      "box": [
+        213,
+        90,
+        833,
+        550
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "d489a8bddb19fe65dc954a46b711ea03319ce9e1a337f6e9444e85d4234f6d64",
+      "reading": null
+    },
+    {
+      "id": "tech2",
+      "label": "tech2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-tech2.jpg",
+      "sourceSha256": "456e6d822c4f828aca4db1e403a9eb3e14dcb71450d3fbf53043fe8914eaa7ba",
+      "box": [
+        306,
+        90,
+        926,
+        550
+      ],
+      "crop": "crop-07.png",
+      "cropSha256": "db4a7a2744be5471c781653df22f9933693e2f998f8f8b73a703c196be500136",
+      "reading": null
+    },
+    {
+      "id": "tech3",
+      "label": "tech3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-tech3.jpg",
+      "sourceSha256": "1321096726c1533003f5088604145b1689dfe2e813b5f3cb8c6bee7b1545f8ef",
+      "box": [
+        400,
+        90,
+        1020,
+        550
+      ],
+      "crop": "crop-08.png",
+      "cropSha256": "0e533e98f88d84b46568aa4a01ca35aa3ae55a2fb80cf0dc0843bcac7d0074ff",
+      "reading": null
+    },
+    {
+      "id": "tech4",
+      "label": "tech4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-tech4.jpg",
+      "sourceSha256": "e3f530cd6c19696d606a06228f6ec4f90b8c1d259359b6f6674850d601a13632",
+      "box": [
+        496,
+        90,
+        1116,
+        550
+      ],
+      "crop": "crop-09.png",
+      "cropSha256": "87bba4d0ced9450842ca8509095164664d52d5b903daed26415f147139dc2748",
+      "reading": null
+    },
+    {
+      "id": "tech5",
+      "label": "tech5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-tech5.jpg",
+      "sourceSha256": "2b4edd3cd380527e0ac05decc1df8ac8726450c2e203108227abf18df4866d31",
+      "box": [
+        589,
+        90,
+        1209,
+        550
+      ],
+      "crop": "crop-10.png",
+      "cropSha256": "f44baa8a54ef9cdb0f23dda08e0fe35ab8978280413c3e2d2da479522f13de74",
+      "reading": null
+    },
+    {
+      "id": "bridge1",
+      "label": "bridge1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-bridge1.jpg",
+      "sourceSha256": "a5af4f1b40561d89603b76489fa5738ad5452ffb394d5709adb5eaac3ec2b230",
+      "box": [
+        340,
+        220,
+        960,
+        750
+      ],
+      "crop": "crop-11.png",
+      "cropSha256": "dd6249864a1172052ba9cd3fb8756876e52fc069d1b937a693c1388112aa0de3",
+      "reading": null
+    },
+    {
+      "id": "bridge2",
+      "label": "bridge2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-bridge2.jpg",
+      "sourceSha256": "82a7df9b5d3cb5d6e6eeb02594718f3c38afdbc4af1fe8dac0e581505e2354e4",
+      "box": [
+        556,
+        220,
+        1176,
+        750
+      ],
+      "crop": "crop-12.png",
+      "cropSha256": "0620427e065cc86376ebd9ae2ede77b7a4d25fb24c6665300f1c8233d85a115c",
+      "reading": null
+    },
+    {
+      "id": "bridge3",
+      "label": "bridge3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-bridge3.jpg",
+      "sourceSha256": "64a0d279c3179a5fb09fba930cf135df9d597586a2a5595d739edcbfb31561b5",
+      "box": [
+        629,
+        220,
+        1249,
+        750
+      ],
+      "crop": "crop-13.png",
+      "cropSha256": "ad20023ee02e2111d16e4a58a035843ee869a2393317f4b934ebd17bc37fd032",
+      "reading": null
+    },
+    {
+      "id": "bridge4",
+      "label": "bridge4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-bridge4.jpg",
+      "sourceSha256": "885e73e83ea14bff2000238abbf8f50dd47102cdbfec5f5c0e43acea790d0aa1",
+      "box": [
+        701,
+        220,
+        1321,
+        750
+      ],
+      "crop": "crop-14.png",
+      "cropSha256": "82342334cd8c42501026a49fa48e7f1bb52f918c6523636edeb4f9e1d68fb88e",
+      "reading": null
+    },
+    {
+      "id": "socket1",
+      "label": "socket1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket1.jpg",
+      "sourceSha256": "15784893610582f854a62ebe55bb685278f96f662e1a81f63859a601a03bb4c2",
+      "box": [
+        198,
+        220,
+        818,
+        750
+      ],
+      "crop": "crop-15.png",
+      "cropSha256": "ca7373db2c5b5699439d67648420a8a8bfe4e78a39510e8d655e5ced362189e8",
+      "reading": null
+    },
+    {
+      "id": "socket2",
+      "label": "socket2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket2.jpg",
+      "sourceSha256": "7bfa38d411cbdd2d780ed7f33dd916d88b2c6d6856ea4712103a5640f8756fe0",
+      "box": [
+        268,
+        220,
+        888,
+        750
+      ],
+      "crop": "crop-16.png",
+      "cropSha256": "e14e334ec2be483a0bb8481ae75d9445d92d9154c7ec1b392b288aca9df22e9f",
+      "reading": null
+    },
+    {
+      "id": "socket3",
+      "label": "socket3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket3.jpg",
+      "sourceSha256": "361f1b6afcc1ba54b77f219f1335c3b83dcf3cf967c27aaeda9b47e9764c1835",
+      "box": [
+        198,
+        220,
+        818,
+        750
+      ],
+      "crop": "crop-17.png",
+      "cropSha256": "f25c5462a3ceecf737114a707a91831d2c088d16d8952e42bd568381831b0466",
+      "reading": null
+    },
+    {
+      "id": "socket4",
+      "label": "socket4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket4.jpg",
+      "sourceSha256": "668d235a0e4d6b25b3b3348f8777c3d2f8657bd6328bb327bd4305b2e019356f",
+      "box": [
+        485,
+        220,
+        1105,
+        750
+      ],
+      "crop": "crop-18.png",
+      "cropSha256": "20853184a273bab41efb483dad52a42867a70b407a4f681a9b07e586a6b4b849",
+      "reading": null
+    },
+    {
+      "id": "socket5",
+      "label": "socket5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket5.jpg",
+      "sourceSha256": "df711870a85d7f3157606e0776d28c033c2d1e010fd0d4513764dbb2766bb17b",
+      "box": [
+        485,
+        220,
+        1105,
+        750
+      ],
+      "crop": "crop-19.png",
+      "cropSha256": "d37ef262859d57a6e2cfcfdc6300113ab06b96b69bf2af9774bfcb1a534aab9b",
+      "reading": null
+    },
+    {
+      "id": "socket6",
+      "label": "socket6",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket6.jpg",
+      "sourceSha256": "92a0c71a64966e71f4d3ca53dc72ba1f1eb4dc9dd26e07f4aeab0b225832687e",
+      "box": [
+        699,
+        220,
+        1319,
+        750
+      ],
+      "crop": "crop-20.png",
+      "cropSha256": "cb17121ffa4257af6b592b06d79c7d33968ed9a89d453f4bb6ba6ad4a4d34678",
+      "reading": null
+    },
+    {
+      "id": "socket7",
+      "label": "socket7",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket7.jpg",
+      "sourceSha256": "ce6c455002e799b27fbf73ac355b99e9a572aed3836c0e6139bfcd31076ed520",
+      "box": [
+        773,
+        220,
+        1393,
+        750
+      ],
+      "crop": "crop-21.png",
+      "cropSha256": "3aa388cbfb66e1cbc0574e02ea001d1454073f1dd23976491d4b8559549142f6",
+      "reading": null
+    },
+    {
+      "id": "socket8",
+      "label": "socket8",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket8.jpg",
+      "sourceSha256": "032f182a26dd989aaac76bc53f69f525fe24e656b2ba1ce65001c45370789aa2",
+      "box": [
+        844,
+        220,
+        1464,
+        750
+      ],
+      "crop": "crop-22.png",
+      "cropSha256": "beab896e1329386b560f814647a98c7d086d07d69dec9ae6e843988794a1750e",
+      "reading": null
+    },
+    {
+      "id": "socket9",
+      "label": "socket9",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-mengxin-socket9.jpg",
+      "sourceSha256": "f32d600c8c6c2aaa2ff509f3534951b19077790a99da043ec64dee576f9856ef",
+      "box": [
+        844,
+        220,
+        1464,
+        750
+      ],
+      "crop": "crop-23.png",
+      "cropSha256": "ee1d796da0366a4c306ec481c9b07b6c85109f4e38f1cf813f56d51dce93cac8",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg",
+    "contact-03.jpg",
+    "contact-04.jpg",
+    "contact-05.jpg",
+    "contact-06.jpg"
+  ],
+  "metrics": {
+    "inputImages": 23,
+    "uniqueCrops": 23,
+    "packSeconds": 1.72
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-06",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:37:45.023Z",
+  "before": {
+    "state": "A手已替换成功，旧剑与两桥在仓库，14金。两种换序拖动（卡底/标题）均未交换手肩，第一次明确目标插槽无效。按两次失败规则停止此排列尝试。",
+    "goal": "先兑现主手强化并恢复已知有效双主攻桥",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-equip-hand.jpg",
+      "playtest-2026-11-16-run05/day04-swap-hand-shoulder.jpg",
+      "playtest-2026-11-16-run05/day04-reorder-header.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次不同失败后改成已知槽位方案"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确短桥只有一个有效伤害端点，不把装上当两件收益"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "区分换武器成功和换序失败"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保原序甲手肩背无人机；长桥手右上肩右上，短桥甲右中手左中",
+        "benefit": "长桥恢复双主攻，短桥只增加A手50%伤，4金约24%边际核心伤害",
+        "cost": "短桥另一端甲不吃伤害，放弃无人机第二受益",
+        "risk": "锚点需核实，失败就保留候选",
+        "unknown": "换序正确操作以后再研究，不重复盲拖"
+      },
+      {
+        "action": "只恢复长桥卖短桥",
+        "benefit": "4金回收，手肩保持100%",
+        "cost": "丢失主手50%倍率",
+        "risk": "少即战力",
+        "unknown": "当前短桥对甲无伤害收益是明确的"
+      }
+    ],
+    "chosenAction": "恢复原序长桥并给手单端短桥，卖已被替换旧剑；不再尝试第三次相同排列",
+    "prediction": "长桥下手567肩819；短桥手702，甲781不变，无人机31不变；金币卖旧剑后16。"
+  }
+}

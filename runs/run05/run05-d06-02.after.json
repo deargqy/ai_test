@@ -1,0 +1,12 @@
+{
+  "observed": "选择余烬III成功，静态面板与64金币不变；第6战科技栏明确120力量，总力量来源120+84+76+44=324。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-tech-picked.jpg",
+    "playtest-2026-11-16-run05/day06-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "每秒力量独立贡献被战报支持；120对应15次8力，但未捕获倒计时，不能把15次直接等同精确战斗时长。相对120%科技/30金币没有对照。",
+  "nextAction": "后续继续观察与背产盾联动"
+}

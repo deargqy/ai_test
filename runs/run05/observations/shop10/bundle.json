@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "batchId": "run05-d10-shop-attachments",
+  "createdAt": "2026-11-16T15:42:57.976652+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {
+    "gold": 84,
+    "purchases": [
+      {
+        "name": "买经验",
+        "cost": 28
+      }
+    ],
+    "inventory": [],
+    "equippedBridges": [
+      "A600双核心",
+      "B100手背",
+      "S216坚固",
+      "A16电甲肩",
+      "B150/50肩手"
+    ]
+  },
+  "entries": [
+    {
+      "id": "long",
+      "label": "long",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-long.jpg",
+      "sourceSha256": "6d27096313a692b93423c5972dfd163c8f98179409dbb6e074400b1f6301fd8b",
+      "box": [
+        580,
+        80,
+        1220,
+        620
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "ee66d5d63b2c4a30263cbd7bd4711101dbb008d0ca3810a9853ee22d40460db3",
+      "reading": null
+    },
+    {
+      "id": "short",
+      "label": "short",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-short.jpg",
+      "sourceSha256": "e35cf624770971e6fdc52358e2374f202be4e34196a8a6eb08fc7381877e6533",
+      "box": [
+        910,
+        80,
+        1550,
+        620
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "156e5916b571647f69cc9446a137c9a2e08f6dacbc055e392cdb87c65c6b2a33",
+      "reading": null
+    },
+    {
+      "id": "consumable",
+      "label": "consumable",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-shop-consumable.jpg",
+      "sourceSha256": "a69856b5ebdf9583890ddf0f37059a495ae1ac066e461439d6b0741732ff41a9",
+      "box": [
+        1240,
+        80,
+        1880,
+        620
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "8c9a195ea90fa147b2d61173d5785dc98dedb0c6b9a8b800e1bb6770cd484b76",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 3,
+    "uniqueCrops": 3,
+    "packSeconds": 0.342
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

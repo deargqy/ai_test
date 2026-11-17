@@ -1,0 +1,2 @@
+import json,pathlib
+p=pathlib.Path('data/playtest.json');d=json.loads(p.read_text(encoding='utf-8'));d['issues'].append({'id':'008','title':'召唤装备共享护盾触发待核','status':'候选：未排除召唤机制','summary':'修复短桥连接冷枪与冷无人机，防御统计仅手武1600和装甲1440；召唤卡是否触发使用事件待核。','source':'bugs/008-summon-shield/index.html','detailHtml':'<p>连接和统计截图均见独立报告。暂不能证明游戏漏算；召唤物攻击与使用装备可能是不同事件。</p>','occurrences':[{'runId':'run03','day':1}]});p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

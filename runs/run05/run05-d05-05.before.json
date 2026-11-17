@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:50:48.726Z",
+  "before": {
+    "state": "军械库成功替换齐射；23金币；仓库旧B齐射长桥，背L中1534和无人机L中1726均空，间距约192。",
+    "goal": "重新利用库存双端，而非按原计划直接出售",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-bridge-swap.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核实两端实际有效"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "旧配件转移至新可行孔"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "卖前重新盘点用途"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "旧齐射移到背L中—无人机L中",
+        "benefit": "预期同时增加背护盾与无人机伤害",
+        "cost": "放弃6金币出售，可能穿过未使用背R孔",
+        "risk": "端点可能判定为同件或冲突",
+        "unknown": "必须看数值和连线"
+      },
+      {
+        "action": "卖旧桥",
+        "benefit": "现金预计29",
+        "cost": "损失已有可兑现配件",
+        "risk": "忽略新可行插槽",
+        "unknown": "售价尚未实测"
+      }
+    ],
+    "chosenAction": "保留旧齐射，尝试背L中至无人机L中；最多2次不同锚点失败再卖。",
+    "prediction": "背374→714（340×2.1），无人机37→约70；军械库手肩与短桥不变。若只一件变化则不算双端成功。"
+  }
+}

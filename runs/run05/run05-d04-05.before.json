@@ -1,0 +1,79 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-05",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:36:07.624Z",
+  "before": {
+    "state": "34金，A MP-T01燼16金4×270/5.5秒，每击坚固+8%；左中/右上/右下。旧C剑295×3/6秒，每击1力，右上，有莫瑟+150成长。B雷霆短桥4金伤害+50%（感电才150%），长齐射+100%在手肩右上。无人机左中左下，背左右中，甲右中右下，肩左中右上。",
+    "goal": "加快有效命中并让坚固与肩炮形成增长链，强化核心而非盲追同属性",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-a-hand.jpg",
+      "playtest-2026-11-16-run05/day04-short-link.jpg",
+      "playtest-2026-11-16-run05/day04-refresh2.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先确定A手再做配件强化"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "最多两次不同拖动失败就换策略"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先算完整布局；右上长桥双主攻、右下短桥手与无人机"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不留无明确用途旧剑，16金仍保3利息"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "显式计旧剑150点莫瑟成长损失"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买A燼与短桥，卖旧C剑；整排甲-肩-手-无人机-背",
+        "benefit": "4段/5.5秒比3段/6秒高约45%频率；坚固提升肩伤；长桥肩右上连手右上，短桥手右下连无人机左下",
+        "cost": "20买-2卖净18，最终16金；失旧剑150成长与每击1力",
+        "risk": "换位可能断原桥，需重新接并核实；失去力量剑未来升级线",
+        "unknown": "短桥实际跨度/端点需实装核对；坚固百分比按击还是批次以战报为线索"
+      },
+      {
+        "action": "只买A手",
+        "benefit": "保留20金，新增坚固链",
+        "cost": "少50%手部倍率",
+        "risk": "原桥可能需重装",
+        "unknown": "力量损失对供给影响"
+      },
+      {
+        "action": "保持C剑找力量升级",
+        "benefit": "保留34金与已有成长",
+        "cost": "错过高频与坚固联动",
+        "risk": "C无被动后期可能落后",
+        "unknown": "未来商品未知"
+      }
+    ],
+    "chosenAction": "买A手与4金短桥，先换手验证长桥，再按甲肩手无人机背换序，连接两桥；两次不同失败就用单端或原序，不盲拖。旧剑用途被A替代后卖2。",
+    "prediction": "余额16；A手原长桥下567伤/3坚固，若短桥也接上约702；肩819不变，无人机31→约45；长桥双主攻，短桥主手与无人机两端均有效。后续坚固总来源/肩伤应显著增长，但跨敌不作单变量因果结论。"
+  }
+}

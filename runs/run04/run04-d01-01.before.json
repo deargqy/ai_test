@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-01",
+  "phase": "build",
+  "before": {
+    "state": "胡班，30金币，尚无装备。初始装备可自选或随机+3。",
+    "goal": "建立能持续输出的基础，留足升级与商店预算。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-start.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "胡班无初始充能加速，按完整CD判断。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "初装先看属性及槽位，后续排列不锁死。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "优先力量多段或直接输出，不能只有控场无击杀。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "自选装甲和武器",
+        "benefit": "确认成长与多段输出相匹配",
+        "cost": "最多放弃6金币随机奖励",
+        "risk": "候选不契合时仍需转型",
+        "unknown": "本次候选"
+      },
+      {
+        "action": "全部随机",
+        "benefit": "额外6金币",
+        "cost": "失去初装选择",
+        "risk": "重复得到缺乏输出的组合",
+        "unknown": "随机结果"
+      }
+    ],
+    "chosenAction": "自选查看初甲与武器；优先力量成长配多段快武器，若没有则按实际候选重新比较。初始NPC前用12金币经验升Lv4保证生存。",
+    "prediction": "初始装备词条与槽位均有截图，升级后预计7500生命、18金币；早期胜负仍看实际敌人。"
+  }
+}

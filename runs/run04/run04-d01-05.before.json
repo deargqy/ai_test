@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-05",
+  "phase": "shop",
+  "before": {
+    "state": "Lv4/7500HP/0-10XP，43金币，感电甲450/32、虹吸锯90×4/2寄生、免费寄生肩280×2/10；甲R下，锯L下，肩L下；背部和无人机空。",
+    "goal": "利用胡班启动资金，同时获得足够生命与完整装配。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-before-shop.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "预算先扣24升Lv6，余19购物；不上Lv7避免无装配预算。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "上局12500对30000HP，优先消除明显耐久差。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "甲可与锯或肩共享下槽，优先比较高频锯；新装重新读端口。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "24金币经验升Lv6后入店",
+        "benefit": "7500→20000生命，提高高级装备概率",
+        "cost": "余19金币",
+        "risk": "商店好东西可能买不起",
+        "unknown": "货品"
+      },
+      {
+        "action": "只升Lv5花12",
+        "benefit": "余31可以买更多装备",
+        "cost": "生命只有12500",
+        "risk": "重演基础生命缺口",
+        "unknown": "装备能否补足7500生命差"
+      }
+    ],
+    "chosenAction": "6次4金币经验升Lv6，随后进入商店。先看库存与全套排列，不直接买无法触发的配件。",
+    "prediction": "预计19金币，Lv6/20000HP/0-18XP；不预设商店联动。"
+  }
+}

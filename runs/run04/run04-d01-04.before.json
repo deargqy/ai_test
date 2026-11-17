@@ -1,0 +1,41 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-04",
+  "phase": "opponent",
+  "before": {
+    "state": "必经初始NPC事件，Lv4/7500生命，感电甲与4段虹吸锯。",
+    "goal": "尽快通过教学事件并核对基本输出。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-core-and-level4.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "胡班没有若茜首轮50%充能，预计武器5.5秒首轮。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "生命提前升级，避免只有输出无生存。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "开始必经事件",
+        "benefit": "获取正常事件奖励推进商店",
+        "cost": "一次战斗",
+        "risk": "敌方具体词条尚未显示",
+        "unknown": "事件敌人实际配置"
+      }
+    ],
+    "chosenAction": "进入战斗后使用最高速度，保存结算，不为普通NPC反复逐帧。",
+    "prediction": "倾向胜（中等信心）；预计虹吸锯为主要直接输出，额外感电伤害在增益项出现。"
+  }
+}

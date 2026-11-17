@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 5,
+  "id": "run04-d05-04",
+  "phase": "opponent",
+  "before": {
+    "state": "双方56000HP。敌くろばなな：A寄生甲945盾63、B寄生手125×4/3、B燃肩80×4/24、C燃无人机20/27、B燃背50盾130；A长桥、2单孔；科技减速脉冲I/虹吸核心II。",
+    "goal": "评估同类寄生燃烧镜像，靠更强双武器成长和双盾取胜。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day05-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "双方生命相同，对方燃烧较强，我方S双成长、A手寄生成长、双盾领先；敌详细被动仍未知。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "敌有减速但未见可靠禁用，需注意启动。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "不把敌上方92当准确战力分。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "迎战",
+        "benefit": "有持续成长优势",
+        "cost": "1生命风险",
+        "risk": "敌寄生加燃烧可能同样滚起",
+        "unknown": "敌装备完整被动"
+      },
+      {
+        "action": "免费换敌",
+        "benefit": "可避镜像",
+        "cost": "放弃已知构筑",
+        "risk": "可能遇硬控",
+        "unknown": "下一敌"
+      }
+    ],
+    "chosenAction": "迎战，保留53金。",
+    "prediction": "倾向获胜但仅中低信心；若拖到后段仍无法压血，需重新估算敌寄生增长。"
+  }
+}

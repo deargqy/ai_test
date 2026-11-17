@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-07",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T14:39:01.422Z",
+  "before": {
+    "state": "103金，黑市入店或跳过+15（正文仍写5，BUG010已有）。三桥全共享且核心伤害已成，尚有空槽可容短桥，甲/背/无人机均B需比较被动及成长后决定。",
+    "goal": "寻找直接改善核心触发或倍率的配件，避免为了阶级换掉有效连接",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-next-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心已定，优先服务当前触发链"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先算实装端点"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "103金币超利息上限，搜件机会有用途"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进入黑市",
+        "benefit": "有资金购买核心配件/同线改善，尚未见商品",
+        "cost": "放弃15金币",
+        "risk": "可能无适配货，相当损失机会收益",
+        "unknown": "商品未知"
+      },
+      {
+        "action": "跳过+15",
+        "benefit": "103→118预计，保留未来经济",
+        "cost": "失本次高质量搜件机会",
+        "risk": "连续低收益囤钱",
+        "unknown": "到账15与正文5冲突"
+      }
+    ],
+    "chosenAction": "进入，先看能匹配现有槽位的配件，再比较装备；不强买。",
+    "prediction": "余额103入店；若无适配提升不买，记录放弃15的机会成本。"
+  }
+}

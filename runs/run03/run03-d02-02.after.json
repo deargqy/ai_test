@@ -1,0 +1,11 @@
+{
+  "observed": "B冷甲与B感电背部已购并装备；旧力甲出售成功，余额15。出售在文字上方多次失败，改投放金币图标位置(220,426)成功。五装备齐全，保留无人机—冷枪护盾桥。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day02-build-ready.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "购买、换装与最终现金吻合；战斗收益尚未验证。拖拽后必须逐次核对，不能批量假设成功。",
+  "nextAction": "保留15金币，进入对手选择。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

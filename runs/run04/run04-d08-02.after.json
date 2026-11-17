@@ -1,0 +1,11 @@
+{
+  "observed": "Lv13/135000HP、0/46XP、67金；三桥保持，跳店+10与40金经验均确认。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day08-level13.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "已升23k生命仍满利息。",
+  "nextAction": "进对手页先观察再操作。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

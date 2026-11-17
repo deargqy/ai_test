@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-04",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:38:44.412Z",
+  "before": {
+    "state": "M97k，开场全体慢6秒+375坚固；背5.5双施法慢2秒、甲11秒三施法16.2k盾；手虚空失盾成长配1200%伤害长桥；盾与手已形成互相反馈。",
+    "goal": "避开开场控制为大盾及失盾转伤争取启动的完整链",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-enemy-open.jpg",
+      "playtest-2026-11-16-run05/day13-e-t4.jpg",
+      "playtest-2026-11-16-run05/day13-e-g0.jpg",
+      "playtest-2026-11-16-run05/day13-e-g3.jpg",
+      "playtest-2026-11-16-run05/day13-e-p8.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "这次控制开战即生效，不是后期才用"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "大盾被消耗转手伤闭环会抵消我方爆发"
+      },
+      {
+        "id": "M05",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌1200%伤害配件和3施法盾需合算"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费换敌",
+        "benefit": "绕开开场6秒慢与大盾接续",
+        "cost": "消耗1/2机会",
+        "risk": "下敌仍可能更强",
+        "unknown": "本敌充能目标/加速随机"
+      },
+      {
+        "action": "直接打",
+        "benefit": "若3秒充能到主核仍可抢杀",
+        "cost": "一旦甲三盾启动，敌手失盾加伤被1200%放大",
+        "risk": "预计拖到12秒后劣势；方向不确定偏不利",
+        "unknown": "不能只看97k生命判断"
+      }
+    ],
+    "chosenAction": "免费换敌一次",
+    "prediction": "次数2→1，113金保持，原对手胜负未知"
+  }
+}

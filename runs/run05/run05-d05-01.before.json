@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 5,
+  "id": "run05-d05-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:44:50.292Z",
+  "before": {
+    "state": "53金Lv6XP4/18，4胜0负，仓库空，已两桥。补给B三选一、随机A配件或12金。A主手右下空、肩左中空、背左右中、无人机左中下空；已有长桥双主攻/短桥手加伤。",
+    "goal": "把奖励用于核心升阶与商店质量，避免无用途随机库存",
+    "evidence": [
+      "playtest-2026-11-16-run05/day05-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较库存、已占孔与现金灵活性"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "剩余核心可用孔有限，随机桥不保证双端收益"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已有A主手核心，优先其升阶机会"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "12金币",
+        "benefit": "65金，可升7级后保49金和采购空间",
+        "cost": "放弃免费配件机会",
+        "risk": "可能错过适合核心的高阶桥",
+        "unknown": "商店候选未知"
+      },
+      {
+        "action": "B配件三选一",
+        "benefit": "可选适合主攻的单孔或桥",
+        "cost": "B多数购买价值4–12，放弃12现金",
+        "risk": "三个都不适配现布局",
+        "unknown": "候选未知"
+      },
+      {
+        "action": "随机A",
+        "benefit": "高阶潜力，售价或应用价值可能高",
+        "cost": "随机属性/形状风险，放弃12",
+        "risk": "首日随机奖励已出现卖出不如现金",
+        "unknown": "是否核心配件未知"
+      }
+    ],
+    "chosenAction": "领12金；下一步依现货决定升级与购物，不预先全花",
+    "prediction": "金币53→65，装备配件不变；这次不机械认定可选配件优于现金。"
+  }
+}

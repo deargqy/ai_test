@@ -1,0 +1,17 @@
+{
+  "observed": "第7天胜7胜0负/4命，收入51=43+8利息，42→93金，XP4/30。首个敌0帧倒计时31（开场45），己29887HP/0盾/274力54坚固，敌275力；之后胜利动画时钟还走到30，故约14秒观察，不声称精确击杀瞬间。己伤手36195肩24837机844；敌肩19186手11269雷1792燃1458机534。己盾背2866甲946坚固314；敌甲1366背340。己力科技112背76机60甲44=292，坚固肩30手24=54；敌力科技150机96甲53=299，燃肩381背97，电手96。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day07-combat-7.jpg",
+    "playtest-2026-11-16-run05/day07-combat-8.jpg",
+    "playtest-2026-11-16-run05/day07-combat-10.jpg",
+    "playtest-2026-11-16-run05/day07-combat-13.jpg",
+    "playtest-2026-11-16-run05/day07-stats.jpg",
+    "playtest-2026-11-16-run05/day07-defense.jpg",
+    "playtest-2026-11-16-run05/day07-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "偏胜与主手最大输出支持；剩血>30000被29887反驳。约14秒观察在区间内但首次有效攻击未捕获，不能判3.5秒命中。敌肩最大伤害来自已读额外燃烧结算；终场累计与截帧层数仍不同，末动画可继续增益。",
+  "nextAction": "第8天优先核心等级与续航，不因7连胜忽略对手启动"
+}

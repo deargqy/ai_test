@@ -1,0 +1,12 @@
+{
+  "observed": "第一次刷新花2金币，49→47；出现A军械库长配件+400%进攻装备伤害，停止刷新；HP34000已确认。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-refresh1.jpg",
+    "playtest-2026-11-16-run05/day05-a-long.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "命中高价值双端核心配件，余下4金币刷新预算不使用。",
+  "nextAction": "评估军械库替换齐射"
+}

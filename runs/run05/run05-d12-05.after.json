@@ -1,0 +1,11 @@
+{
+  "observed": "免费次数2→1、57金不变，敌人洛侠112k；左侧旧名字BUG001仍在",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-reroll-enemy.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "换敌操作成功，旧对手胜负未知",
+  "nextAction": "读取新敌完整链"
+}

@@ -1,0 +1,11 @@
+{
+  "observed": "随机得到B潜伏者，6.5秒召唤/13伤5电，每存在一台雷电+16%；当前无感电支持，不替换力量无人机。金币28。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day03-reward-detail.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "随机未中适用核心，相比6金补偿实际少2金，诚实记录成本。",
+  "nextAction": "卖B回收4、进商店升级品质"
+}

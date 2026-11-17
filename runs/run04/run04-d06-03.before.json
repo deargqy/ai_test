@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 6,
+  "id": "run04-d06-03",
+  "phase": "opponent",
+  "before": {
+    "state": "我91000HP。敌eyeq80076000HP，四A装备：寒甲约5.6k盾63、寒背1.7k盾48、寒肩570×3/24、燃手130×4/7；一条长桥。科技护盾/充能/加速类，详细被动未核。",
+    "goal": "验证新元素循环能否对抗高盾寒冷，同时保持双伤害成长。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day06-final-build-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "寒冷可能延迟启动，不能等同禁用；优先观察双方生命与核心数值。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "对手护盾大，我方91k与持续成长，倾向后段压过防御。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新桥双向与加算乘算未知，取战中数值验证。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "迎战",
+        "benefit": "有成长与生命优势",
+        "cost": "1生命风险",
+        "risk": "寒冷减速拖慢循环",
+        "unknown": "敌被动和轮转算法"
+      },
+      {
+        "action": "重随",
+        "benefit": "可避寒冷",
+        "cost": "放弃较低直接输出敌",
+        "risk": "可能遇禁用",
+        "unknown": "新敌"
+      }
+    ],
+    "chosenAction": "迎战，最快速度，取一张中段数值后看统计。",
+    "prediction": "倾向获胜中等信心；无人机燃烧应超过5，若手寄生明显超过本体每次+10增长才支持反向触发。"
+  }
+}

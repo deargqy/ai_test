@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 7,
+  "id": "run04-d07-03",
+  "phase": "shop",
+  "before": {
+    "state": "78金，本店装备不保留关键寄生甲/共生体/燃烧肩被动。S长桥48每嵌入配件伤害+64%，与已有桥冲突；8金全元素+3%相对轮转128%收益小。",
+    "goal": "有限刷新找同被动升级，避免买高品质但破坏核心。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day07-rejected-damage-bridge.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "核心已形成，只找同被动可接槽位升级。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "设刷新上限2次共4金；保留至少50利息除非明确核心升级。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "当前3桥完整，装备更换必须保留连接。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "最多刷新2次",
+        "benefit": "S概率55%，找燃肩或寄生甲升级",
+        "cost": "最多4",
+        "risk": "无合适商品",
+        "unknown": "货品"
+      },
+      {
+        "action": "不刷新",
+        "benefit": "省4金",
+        "cost": "仍用B基础主力",
+        "risk": "后续增长敌更强",
+        "unknown": "对手"
+      }
+    ],
+    "chosenAction": "最多两次刷新，看到合适货再记录采购，否则离开。",
+    "prediction": "余额至少74（购买另记），不为品质破坏被动。"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-07",
+  "phase": "opponent",
+  "before": {
+    "state": "我方Lv6/20000HP五装备，双端675/400盾，寄生手肩背与高频感电无人机。敌Pascal_Gerster30000HP，仅C冷甲13秒495盾33寒冷、C电枪5.5秒3×60/7感电、C燃肩10秒4×60/15燃烧，无配件/回复/禁用被动。",
+    "goal": "以完整循环对抗基础生命差，避免盲目把已知低配对手刷新为高成长敌人。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-opponent.jpg",
+      "playtest-2026-11-16-run04/day01-opponent-armor.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "对方多10000HP但少两件装备且无回复；我方有寄生恢复、共享盾和高频感电，按循环比较。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "对手仅寒冷减速，缺硬禁用；我方启动5.5/6.5秒，无若茜加速。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "已实际实现甲和B背部共享盾，检查战报两端贡献。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留当前低配高HP对手",
+        "benefit": "敌仅3C，无复杂成长或回复，构筑信息完整",
+        "cost": "面对10000HP差",
+        "risk": "敌燃烧积累与我方输出不足",
+        "unknown": "寄生恢复和感电增长能否支撑"
+      },
+      {
+        "action": "免费刷新",
+        "benefit": "可能遇低HP",
+        "cost": "放弃已知低配对手",
+        "risk": "上一局曾刷新成4B高成长",
+        "unknown": "匹配分布"
+      }
+    ],
+    "chosenAction": "保留当前对手，最高速对战；结算读取三页，重点看感电/寄生与甲背盾贡献。",
+    "prediction": "倾向胜（中低信心）；背部与甲应都出现防御统计，无人机及感电应提供显著伤害，寄生提供回复。未知最后禁用触发，不据此保证获胜。"
+  }
+}

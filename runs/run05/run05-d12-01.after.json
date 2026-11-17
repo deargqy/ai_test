@@ -1,0 +1,12 @@
+{
+  "observed": "117→77，Lv13 XP0/46，139000HP，S70/A25/B4/C1；进黑市未扣费。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day12-level.jpg",
+    "playtest-2026-11-16-run05/day12-shop-part1.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "已核升级与商品页；装备阶级不变",
+  "nextAction": "买有空闲端点的冷却件"
+}

@@ -1,0 +1,77 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T12:07:46.465Z",
+  "before": {
+    "state": "76金；双核心均坚固，S手原始350、B肩540；现有400%手左中—肩左中。仓库A燼/B短桥。",
+    "goal": "用少量净成本同时提高两个主要输出",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-long.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "实际核心收益"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "原双端有效可复用"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "装后看两端数值"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "无用途及时出售"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留成长装备"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买600%长桥换400%",
+        "benefit": "双核心总倍率5.1→7.1，约+39.2%",
+        "cost": "24金，卖旧回12净12",
+        "risk": "重接失败",
+        "unknown": "安装需验证"
+      },
+      {
+        "action": "留400%升等级",
+        "benefit": "保留现金与生命",
+        "cost": "放弃确定39%输出",
+        "risk": "输出成长不足",
+        "unknown": "下敌未知"
+      },
+      {
+        "action": "400%转背无人机",
+        "benefit": "提高无人机伤",
+        "cost": "挤掉100%主属性桥，背盾下降440",
+        "risk": "丢盾损失大于次要输出收益",
+        "unknown": "战斗净收益未知"
+      }
+    ],
+    "chosenAction": "买A力场猛攻替换军械库同一双端；确认手肩数值后卖旧400%长桥12、旧A燼8、无可用位B短桥4，保留B齐射。",
+    "prediction": "新手350×7.1=2485（2.5K），肩540×7.1=3834（3.8K）；背924/机91不变；买后52，三项卖出后76。"
+  }
+}

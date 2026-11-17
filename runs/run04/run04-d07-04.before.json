@@ -1,0 +1,62 @@
+{
+  "runId": "run04",
+  "day": 7,
+  "id": "run04-d07-04",
+  "phase": "build",
+  "before": {
+    "state": "74金；新S长军械库48，伤害+800%。旧S触媒短桥每秒16%，通常45秒约+720%。肩L下空闲、手L下接旧S；两者同侧相距96可用长桥。轮转占手/无人机L中，双盾在前两件。",
+    "goal": "把后段成长换成更高初始双武器输出，缩短敌方成长时间，同时保留寄生元素循环。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day07-s-800-damage.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "固定800%在首轮攻击即生效，解决低初始输出。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "S长桥肩L下→手L下，旧S短桥拆下；轮转中排与盾桥不冲突。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "每秒16%前50秒均不及固定800%，当前45秒后进入Exhaust，预计净收益大。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "48买、旧S卖16，净32后42金；利息少2换显著前置输出。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换S800长桥",
+        "benefit": "肩70→630，手185→1665，从第一轮生效",
+        "cost": "净32金；失去超过50秒后的更高比例",
+        "risk": "统计是否按预期以及Exhaust长战",
+        "unknown": "实战杀伤转换"
+      },
+      {
+        "action": "留每秒16%",
+        "benefit": "50秒后倍率更高",
+        "cost": "启动输出低",
+        "risk": "敌方有时间成长",
+        "unknown": "后续长战需求"
+      }
+    ],
+    "chosenAction": "买S军械库48，拆旧S触媒、改长桥肩L下→手L下，旧S卖16。",
+    "prediction": "余额42；肩630×4、手1665×4，轮转与双盾均完整。"
+  }
+}

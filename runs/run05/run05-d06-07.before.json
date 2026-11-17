@@ -1,0 +1,60 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-07",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T10:05:18.267Z",
+  "before": {
+    "state": "Bilibili.二非 Lv10/80000HP；S寒冷手5.5秒3×340/13寒冷，寒冷每秒按层数伤害；SS雪螟7秒召唤，命中按敌寒冷200%额外伤害；A低温短桥手+机元素108%，B轮转互增元素32%/次（加算），S手用后CD-5%跨同件两孔。B祸津甲1940盾44力同我甲被动，A燃背/力量肩及三科技尚未全读。",
+    "goal": "避开需要较长击杀窗口的寒冷伤害转化链",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-preview.jpg",
+      "playtest-2026-11-16-run05/day06-enemy-ss-drone.jpg",
+      "playtest-2026-11-16-run05/day06-enemy-s-hand.jpg",
+      "playtest-2026-11-16-run05/day06-enemy-a-short.jpg",
+      "playtest-2026-11-16-run05/day06-enemy-b-long.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "识别冷伤额外结算完整链，未知时用重随"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "控制和增长与80k生存窗口合并"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "轮转加算/无人机频率未知"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "避开高HP承载SS冷层额外伤、手持续冷伤和元素增长",
+        "cost": "消耗1次免费重随",
+        "risk": "后续对手也可能更强",
+        "unknown": "未战斗无反事实胜负"
+      },
+      {
+        "action": "直接打",
+        "benefit": "新S失盾转伤有可能足够",
+        "cost": "80k要求更多循环，冷层增加我方全装备CD",
+        "risk": "SS无人机命中频率未知，不能套燃烧无人机；可能滚出大额冷伤",
+        "unknown": "部分A装备与科技仍未知"
+      }
+    ],
+    "chosenAction": "使用第1次免费重随，不把这个SS寒冷对手当作简单低面板敌人。",
+    "prediction": "对当前候选方向偏负/高风险，若硬打预期20秒后冷伤可能成为最大威胁；此反事实不计实际预测命中。重随应2→1，不花金币。"
+  }
+}

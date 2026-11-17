@@ -1,0 +1,49 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-03",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T08:52:15.968Z",
+  "before": {
+    "state": "初甲已固定力量，初武自选或随机+3金币；没有专属强化和其他库存。",
+    "goal": "获得早期可用武器并保留首轮购物现金",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-weapon-choice-event.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "未承诺C级为长期核心"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "没有专属投入，3金短期有购买价值"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机武器+3金币",
+        "benefit": "获得武器同时3金",
+        "cost": "失去初武选择",
+        "risk": "可能缺力量协同",
+        "unknown": "随机武器内容未知"
+      },
+      {
+        "action": "自选武器",
+        "benefit": "更可能匹配力量或多段",
+        "cost": "放弃3金",
+        "risk": "候选不保证协同",
+        "unknown": "候选池未知"
+      }
+    ],
+    "chosenAction": "随机武器拿3金币；C初武暂用，核心以商店和实际被动决定",
+    "prediction": "余额0→3，增加一件武器；若非力量仍不为匹配颜色强买配件。"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "observed": "正式首日获胜1胜0负。13秒时我8180HP+735盾、力量58，敌625HP；已见无人机。伤害剑1925/无人机88，敌枪960；防御甲675、背300、增益盾340；力量甲45/无人机12/剑9，敌寒冷甲34/枪18。奖励+26=收入25+利息1，EXP+2。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-battle-confirmed.jpg",
+    "playtest-2026-11-16-run05/day01-formal-result.jpg",
+    "playtest-2026-11-16-run05/day01-stats.jpg",
+    "playtest-2026-11-16-run05/day01-defense.jpg",
+    "playtest-2026-11-16-run05/day01-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "剑与部署在敌首盾13.5秒前已发生；常规阶段胜利，预测支持。不是对整个力量/寒冷流派强弱的比较。",
+  "nextAction": "第二天读取同件成长，优先输出核心等级/触发链"
+}

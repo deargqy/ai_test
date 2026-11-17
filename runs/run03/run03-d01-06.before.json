@@ -1,0 +1,64 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-06",
+  "phase": "shop",
+  "before": {
+    "state": "14金币；B寒冷肩炮11秒3×410/3×20寒冷，冷却完成时根据敌方寒冷提升自身伤害；C寒冷无人机8秒召唤，卡面6伤害/5寒冷。已装备C燃烧肩炮9.5秒4×50/4×15燃烧，卖价2。",
+    "goal": "以可负担的寒冷组合提升首轮伤害和减速，保留力量躯干供给。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-cold-launcher.jpg",
+      "playtest-2026-11-16-run03/day01-cold-drone.jpg",
+      "playtest-2026-11-16-run03/day01-reward-shoulder.jpg"
+    ],
+    "memorySearch": "shop已读M06/M03/M04/M05/M08；按实际可兑现收益比较换装。",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不是重复盲买肩炮：新B肩炮单轮1230远高于旧200，补无人机4；只在售出到账后计旧件2。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先定寒冷肩炮与无人机，暂不买绑定强化。"
+      },
+      {
+        "id": "M05",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "当前无已安装配件，换装不会拆桥；之后以新肩炮槽位决定配件。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "买入后可能在仓库，需确认装上与出售到账。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买B寒冷肩炮8＋C寒冷无人机4，替换并卖旧肩炮",
+        "benefit": "主轮1230基础伤害，寒冷枪/肩炮/无人机同属性；若茜肩炮理论首轮5.5秒。",
+        "cost": "先花12至2金币，旧件确认出售后回2。",
+        "risk": "肩炮11秒后续周期比原来慢，失去燃烧伤害。",
+        "unknown": "寒冷层数到减速的精确收益未实测，不能预估具体胜率。"
+      },
+      {
+        "action": "保留燃烧肩炮，买C燃烧无人机4",
+        "benefit": "资金充裕，形成燃烧来源。",
+        "cost": "肩炮单轮物理200，放弃B肩炮更高基础。",
+        "risk": "当前躯干和手武不提供燃烧被动强化。",
+        "unknown": "持续燃烧有效输出未知。"
+      }
+    ],
+    "chosenAction": "买B寒冷肩炮和C寒冷无人机；先确认装备，再卖旧件。",
+    "prediction": "购买后2金币，替换后寒冷肩炮三段、无人机入场，旧肩炮出售后4金币；首轮与实际对手另作判断。"
+  }
+}

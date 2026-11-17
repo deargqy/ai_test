@@ -1,0 +1,62 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-02",
+  "phase": "build",
+  "before": {
+    "state": "SS雪蝎42/17寒冷，7秒，召唤物命中追加敌寒冷×2伤害；有L中可保轮转，L上R上可放备用B短寒冷桥。A燃无人机40/5，6秒部署结算燃烧2次。135000HP/123金，剩1生命。",
+    "goal": "以高频寒冷增长压慢敌方并产生按层伤害，同时保寄生触发与轮转。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-ss-drone.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新无人机慢1秒，但寒冷叠层可拖慢敌人，首轮爆发仍需慎选敌。"
+      },
+      {
+        "id": "M02",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "主输出从部分燃烧变为寒冷按层伤害；寄生甲仍允许寒冷触发，手上寒冷也支持。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新SS同L中接轮转；免费B寒冷短桥可跨SS自身L上R上（单件两孔），不牺牲跨两件的三S桥。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "无购买费，旧A无人机卖8；备用B桥优先给SS验证。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换SS雪蝎并接B冰霜桥",
+        "benefit": "寒冷高频控制+按层输出，轮转扩大17基础寒冷",
+        "cost": "失部署燃烧两次，部署慢1秒",
+        "risk": "冷启动及召唤伤害附魔适用性",
+        "unknown": "B桥对召唤实际伤害提升"
+      },
+      {
+        "action": "保A燃无人机",
+        "benefit": "已验证燃烧链",
+        "cost": "放弃高品质控制输出",
+        "risk": "对爆发无控制改善",
+        "unknown": "后续匹配"
+      }
+    ],
+    "chosenAction": "领取SS替末位A无人机，轮转接回手L中→SS L中；B冰霜短桥尝试SS自身L上→R上，卖旧A。",
+    "prediction": "现金131，三S完整；B桥若作用召唤基础伤害则42→105，若未生效如实记录；下一战检验寒冷伤害。"
+  }
+}

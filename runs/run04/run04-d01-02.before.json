@@ -1,0 +1,55 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-02",
+  "phase": "build",
+  "before": {
+    "state": "装甲候选无力量：感电450盾32感电/11.5秒；燃烧480盾32燃烧/12秒；寒冷510盾34寒冷/13.5秒，均C无被动。",
+    "goal": "建立快循环与可转换成直接伤害的状态。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day01-armor-options.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "寒冷无现成输出转换，不为更高盾牺牲启动。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "初甲只有1槽，后续更换时重新布局。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "感电装甲",
+        "benefit": "最快循环，感电可放大多次命中",
+        "cost": "比冷甲少60盾",
+        "risk": "需要足够命中频率",
+        "unknown": "武器候选"
+      },
+      {
+        "action": "燃烧装甲",
+        "benefit": "独立持续输出",
+        "cost": "慢0.5秒",
+        "risk": "尚无燃烧转换被动",
+        "unknown": "商店联动"
+      },
+      {
+        "action": "寒冷装甲",
+        "benefit": "510盾与控制",
+        "cost": "13.5秒最慢",
+        "risk": "重复只有控制缺输出",
+        "unknown": "寒冷转换供给"
+      }
+    ],
+    "chosenAction": "选11.5秒感电装甲，再自选武器，优先多段高频。",
+    "prediction": "获得450盾32感电甲；后续多段武器应兑现感电额外伤害，需战报验证。"
+  }
+}

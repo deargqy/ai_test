@@ -1,0 +1,56 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-05",
+  "phase": "opponent",
+  "before": {
+    "state": "实际Lv5/12500HP/15金，B冷甲+B冷肩+B感电背部+C冷枪+C冷无人机，320盾桥恢复。敌30000HP，B力甲720/48、力枪90×4、燃肩70×4/24燃烧、感电背部130/26，无刷新。",
+    "goal": "尽可能利用寒冷成长与感电护盾生存，核查新构筑贡献。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-final-build.jpg",
+      "playtest-2026-11-16-run03/day02-opponent-final.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "17500HP差+燃烧威胁，预测必须按实际数值。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "未读到禁用，不能声称绝对无控制；己方背部约2.75秒开始减速。"
+      },
+      {
+        "id": "M09",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "若茜只降低首轮等待；后续冷甲13.5、肩11、背5.5秒。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "升级失败按12500HP参战，不按计划代替事实。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "以恢复后的配置作战",
+        "benefit": "全部现有装备和护盾投入",
+        "cost": "失败将只剩1条命",
+        "risk": "基础HP差与燃烧压力",
+        "unknown": "寒冷成长能否形成反压"
+      }
+    ],
+    "chosenAction": "开始战斗，保持慢速采样，战后读取伤害防御增益三页。",
+    "prediction": "预测偏向负，信心中；可核查寒冷肩炮是否超过首日5076、感电背部是否有额外护盾；这些对手不相同，仅作贡献线索。"
+  }
+}

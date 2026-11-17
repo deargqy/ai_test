@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 7,
+  "id": "run05-d07-02",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T12:07:04.398Z",
+  "before": {
+    "state": "76金，Lv8 XP4/26，四件B有成长，仓库旧A燼和B雷霆短桥。",
+    "goal": "找真正能提升核心的现货并清理无效库存",
+    "evidence": [
+      "playtest-2026-11-16-run05/day07-shop-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按现货决定"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "盘点已持有备用"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "计入莫瑟成长"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进商店",
+        "benefit": "搜A/S替换或伤害/段数核心配件",
+        "cost": "放弃跳过10金币",
+        "risk": "无合适商品",
+        "unknown": "现货未知"
+      },
+      {
+        "action": "跳过",
+        "benefit": "得10金币保利息",
+        "cost": "丢一次升级窗口",
+        "risk": "当前HP与B阶可能后续不足",
+        "unknown": "下个对手未知"
+      }
+    ],
+    "chosenAction": "进入商店先查现货，不为填槽购入弱物。",
+    "prediction": "金币仍76，准备升级不自动改变旧装备品质。"
+  }
+}

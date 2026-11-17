@@ -1,0 +1,69 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-08",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:41:46.106Z",
+  "before": {
+    "state": "己24000HP16金，A坚固手702×4/5.5秒命中坚固+8%；B肩819×3/10秒每坚固+3伤；力量甲背无人机，开场3秒加速。敌酸奶与狐Lv8/42000HP，A甲13秒990盾66坚固，获坚固随机加速2秒；B手6秒210×4，命中坚固+6%；A肩10.2秒540×3/18坚固×3，受伤5%+6坚固；A无人机7.5秒，命中偷防具10盾，30伤8坚固。无背。科技每3秒随机禁用1秒、得力量50%施感电3（可见装备无力源）。3个C配件具体未读，仅肩冷却与现面板作为实效。",
+    "goal": "比较成长能否突破坚固防御及开场禁用风险",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-enemy2-armor.jpg",
+      "playtest-2026-11-16-run05/day04-enemy2-shoulder.jpg",
+      "playtest-2026-11-16-run05/day04-enemy2-drone.jpg",
+      "playtest-2026-11-16-run05/day04-enemy2-tech1.jpg",
+      "playtest-2026-11-16-run05/day04-enemy2-tech2.jpg",
+      "playtest-2026-11-16-run05/day04-enemy2-hand.jpg",
+      "playtest-2026-11-16-run05/day04-final-shop.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确3秒随机禁用和新手4秒理论启动"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌坚固加速循环不等于输出增长；己双属性有实际相互增益"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "堡垒II实际是力量转感电，不从名字推坚固"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "详情旧名属于BUG001，按主面板识别对手"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "保留直接战斗",
+        "benefit": "敌无明显伤害增长链；己力量增伤+坚固转肩伤有双增长",
+        "cost": "普通对战失利掉命",
+        "risk": "敌坚固增长削减每段伤害且加速可能提高防御频率",
+        "unknown": "C配件与无人机频率未全读，随机禁用目标不可预定"
+      },
+      {
+        "action": "再免费重随",
+        "benefit": "可避随机禁用",
+        "cost": "失去已读对手，最后一次免费",
+        "risk": "新敌可能高回复或百分比伤害链",
+        "unknown": "随机池未知"
+      }
+    ],
+    "chosenAction": "保留出战，最快速度",
+    "prediction": "倾向胜，20–35秒；己A手首充完成约4秒，若3秒禁用落手则约5秒，动画命中再延后；敌首手6秒但坚固触发加速后循环更快。预测己终局HP>15000，坚固总增益>100，肩炮伤害>10000。首轮精确时点只在截图捕获才判。"
+  }
+}

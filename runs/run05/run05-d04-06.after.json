@@ -1,0 +1,13 @@
+{
+  "observed": "原序甲手肩背无人机。长桥一次恢复手567肩819；短桥首拖失败，中心对中心第二次成功，手702，甲781与无人机31未变。卖旧剑2到账，16金，仓库空。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-long-restored.jpg",
+    "playtest-2026-11-16-run05/day04-short-confirmed.jpg",
+    "playtest-2026-11-16-run05/day04-sell-old-sword.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "有效端点已核实：长桥两件攻击，短桥仅手部伤害受益。",
+  "nextAction": "保持配置出战"
+}

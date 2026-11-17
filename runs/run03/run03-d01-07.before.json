@@ -1,0 +1,63 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-07",
+  "phase": "build",
+  "before": {
+    "state": "4金币，C躯干左中槽、C手武左下槽、B肩炮左下/右上槽、C无人机右下槽；没有已安装配件。半价B短桥使用所连装备时获得320盾，买4卖4。",
+    "goal": "用一件配件覆盖两个较快启动的装备，补早期护盾。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-old-shoulder-sold.jpg",
+      "playtest-2026-11-16-run03/day01-shield-bridge.jpg"
+    ],
+    "memorySearch": "build本日全部经验已读；M05比较两端，M04指导不匹配时检查槽高与拖拽，M06预算与可回收售价。",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "无人机右下与手武左下可通过邻位短桥共享；同品质固定盾优先给更快使用者，不机械只给B肩炮。"
+      },
+      {
+        "id": "M04",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先换序再按左端点放桥，若失败检查槽位和仓库坐标。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "当前4金币无利息，买4卖4可回收，试装成本较低。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "确认桥实际两端连线，失败不计收益。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "把无人机放到手武左邻，买320盾短桥连接下排",
+        "benefit": "手武与无人机使用均可触发护盾，首轮预期3.25与4秒前后开始。",
+        "cost": "花完4金币，需要换序。",
+        "risk": "桥端点或槽间距可能不匹配。",
+        "unknown": "召唤组件词条的使用计次是否按每次部署，待战报验证。"
+      },
+      {
+        "action": "留4金币，不装配件",
+        "benefit": "保留后续购买资金。",
+        "cost": "本日4金币无利息档，失去可兑现的早期护盾。",
+        "risk": "现有四件无额外防御。",
+        "unknown": "对手未知。"
+      }
+    ],
+    "chosenAction": "先将无人机移到手武左邻，再购买并尝试连接；失败则回收。",
+    "prediction": "出现连接无人机与手武两个下排槽的桥，金币0；战后可查该配件的护盾贡献。"
+  }
+}

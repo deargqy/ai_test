@@ -1,0 +1,55 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-03",
+  "phase": "opponent",
+  "before": {
+    "state": "我方12500生命5装备；首个对手noobasik20000生命，3B装备含冷手武260×3、冷肩400×3、成长背部，另有共享配件。2次免费刷新。",
+    "goal": "避开高耐久同路线更强对手，保护剩余2次失败机会。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-first-opponent.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "上一日低估生命差，此敌方同路线装备且多7500HP。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "需检查控制，当前具体tooltip未成功显示，不能假定没有控制。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "刷新后重新展开并核对对手。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "接受20000HP且同路线更高面板对手",
+        "benefit": "保留刷新",
+        "cost": "高失败风险",
+        "risk": "对方输出与耐久都占优",
+        "unknown": "部分被动未读到"
+      },
+      {
+        "action": "最多2次免费刷新",
+        "benefit": "争取更低HP或输出更低",
+        "cost": "0金币",
+        "risk": "下一位更强",
+        "unknown": "新对手"
+      }
+    ],
+    "chosenAction": "免费刷新，逐个检查，优先停在不高于12500生命且无明显高成长/强控制对手；否则使用第二次。",
+    "prediction": "当前不利；换敌优先解决基础耐久和重复输出差，不只看品质。"
+  }
+}

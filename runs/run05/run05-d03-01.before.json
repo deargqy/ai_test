@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 3,
+  "id": "run05-d03-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:17:17.262Z",
+  "before": {
+    "state": "2胜0负，28金，Lv4XP4/10；莫瑟再次成长，甲853/剑515/肩714/背264/无人机33；无库存。事件C三选一、随机B、6金",
+    "goal": "获取可能可用的B核心或替代甲，保留买入预算",
+    "evidence": [
+      "playtest-2026-11-16-run05/day03-events.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "随机B有已知4金回收保底但到账才记"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先看核心再决定强化"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "成长留在旧实例，不能机械替换高品质"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机B装备",
+        "benefit": "可能升阶/替甲，最低已知B卖4",
+        "cost": "相对6金少2保底",
+        "risk": "不适用需转卖",
+        "unknown": "随机种类"
+      },
+      {
+        "action": "三选C",
+        "benefit": "更可能找剑重复合成",
+        "cost": "品质低，卖2",
+        "risk": "三个不相关",
+        "unknown": "池未知"
+      },
+      {
+        "action": "6金币",
+        "benefit": "现金34确定",
+        "cost": "放弃B选项价值",
+        "risk": "核心仍C",
+        "unknown": "后续商店"
+      }
+    ],
+    "chosenAction": "随机B，收到后先看库存和被动，再决定换装或出售",
+    "prediction": "金币28不变，获得一件B；不直接装未知核心，不购买配套前先核适用性"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "observed": "SS奖励已在首领前到账，换装裸682、原中排桥成功后手3.2K/肩4.4K，保留双600%。旧B卖4成功，S八光玉第一次出售未生效，换底部锚点到售区中心成功+16，83→103；S仓库500跨日未增长，再支持仓库不成长。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-input-check.jpg",
+    "playtest-2026-11-16-run05/day09-ss-equipped.jpg",
+    "playtest-2026-11-16-run05/day09-ss-bridge.jpg",
+    "playtest-2026-11-16-run05/day09-old-b-sold.jpg",
+    "playtest-2026-11-16-run05/day09-s-sold-retry.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "关键端点与金额兑现；前日S买卖净损16如实保存，不因回收而抹除。",
+  "nextAction": "用库存短桥试新SS下排，查看首领"
+}

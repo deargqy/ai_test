@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-04",
+  "phase": "build",
+  "before": {
+    "state": "购入后原尺寸确认这件S电肩只有L上/L中与R上/R下，L下不存在；d09-03原计划沿用肩L下不成立。其他装备槽位已核，所有配件可重新分行。",
+    "goal": "纠正按旧实例假设孔位，保留四S共享目标。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-new-shoulder-ports.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "逐实例核孔：改800长桥肩L中→手L中；轮转改手L上→SS L上；肃卫甲R上→肩L上；寒冷单孔手L下；SS冰霜短桥移到自身中排。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "先记录原计划不可行，再执行可行新排；不是游戏bug。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "分行重接全部核心",
+        "benefit": "保留四S、冷附魔、SS冰桥",
+        "cost": "多次装配操作",
+        "risk": "接漏要全图复核",
+        "unknown": "无"
+      },
+      {
+        "action": "放弃电肩",
+        "benefit": "恢复旧布局",
+        "cost": "失去采购收益与反增益双触发",
+        "risk": "继续旧爆发短板",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "按新行位安装并逐条核对，旧B肩最后出售。",
+    "prediction": "双盾仍1120/5040，电肩4950×2，手1665×4，SS105；四S连接完整，预计71金。"
+  }
+}

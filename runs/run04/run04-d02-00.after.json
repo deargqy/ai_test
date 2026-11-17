@@ -1,0 +1,11 @@
+{
+  "observed": "Lv7/30000HP/0-22XP，25金币；科技燃烧核心：开战对所有敌方装备减速2秒。高级概率S2%/A15%/B45%/C38%。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day02-level7-tech.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "预算、生命升级兑现；随机科技本次有通用启动作用，未证明长期最优。",
+  "nextAction": "进店优先看主武/肩炮伤害成长和可共享配件。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-04",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T08:52:54.850Z",
+  "before": {
+    "state": "首日林恩强制事件，仅开战选项。3金币不足4金升级；我1500生命，C剑6秒3×145力量1，C甲12秒480盾/32力量。敌尚不可读。",
+    "goal": "验证启动并取得首日事件资源",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-lin-event.jpg",
+      "playtest-2026-11-16-run05/day01-sword-detail.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "只作我方启动预测，敌未知"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不凭现有血量虚构胜率"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "NPC与正式挑战分别记"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "参与NPC战",
+        "benefit": "推进并获取资源",
+        "cost": "战斗耗时",
+        "risk": "敌信息未展示",
+        "unknown": "敌生命与被动未知"
+      }
+    ],
+    "chosenAction": "参与并切可用最快速度",
+    "prediction": "我剑应在约6秒首轮输出，甲需12秒且进入超载；未知敌不作胜率/方向保证，正式战绩应不因事件战改变。"
+  }
+}

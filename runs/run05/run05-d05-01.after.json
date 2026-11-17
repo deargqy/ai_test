@@ -1,0 +1,11 @@
+{
+  "observed": "补给53→65金，实收12，无新增配件；事件上句写+12到账，下句写十枚金币，存在单次文案矛盾，数值到账正确。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-reward-cash.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "现金预测兑现，随机配件反事实未测试。",
+  "nextAction": "进商店看现货"
+}

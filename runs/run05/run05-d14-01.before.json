@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "id": "run05-d14-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:47:42.875Z",
+  "before": {
+    "state": "184金 Lv13 4/46 S70%；昨日3秒零输出败。需搜启动配件，已装桥不能机械保护。",
+    "goal": "先提升商店质量，再有预算搜核心连接",
+    "evidence": [
+      "playtest-2026-11-16-run05/day14-confirmed.jpg",
+      "playtest-2026-11-16-run05/day13-stats.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "升级收益和实际购买预算同算"
+      },
+      {
+        "id": "M05",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按实际空孔及替换收益搜配件"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "低阶成长旧装要比较启动而非仅主属性"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "先升一级再进店",
+        "benefit": "提升HP及S概率，后续多轮刷新均受益",
+        "cost": "预计44金，剩140",
+        "risk": "5个百分点概率提升有限，升级不能单独救昨日对局",
+        "unknown": "具体升后概率/HP现场核实"
+      },
+      {
+        "action": "不升级直接搜",
+        "benefit": "多44金搜货和购买",
+        "cost": "139k生存不变",
+        "risk": "店S70仍可搜到",
+        "unknown": "搜货收益随机"
+      },
+      {
+        "action": "升两级",
+        "benefit": "更多HP和商店质量",
+        "cost": "约92金占用采购",
+        "risk": "不能靠HP硬接指数伤害",
+        "unknown": "第二级边际概率未知"
+      }
+    ],
+    "chosenAction": "先买11次经验升1级，核实后进入黑市",
+    "prediction": "预计184→140，Lv14、余XP2，S概率增加；不将升级当作核心装备升阶。之后优先CD/充能/多段配件和更快可兼容核心。"
+  }
+}

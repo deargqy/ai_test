@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-05",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T08:54:07.790Z",
+  "before": {
+    "state": "28金币，只有力量C甲/力量C剑，无库存配件；黑市可进或跳过+5。",
+    "goal": "以购物机会弥补当前仅两件装备的输出/防御缺口",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-supply.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "28金与库存两件共同评估"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "商品实际词条决定核心"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先有可装端点再买配件"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进入黑市",
+        "benefit": "观察并购买可兑现核心/插槽配件",
+        "cost": "放弃5金币",
+        "risk": "商品不合用导致机会成本",
+        "unknown": "池内容未知"
+      },
+      {
+        "action": "跳过+5",
+        "benefit": "现金33、更接近利息上限",
+        "cost": "失去本次商品选择",
+        "risk": "两件装备首日战力薄弱",
+        "unknown": "后续商店是否充足未知"
+      }
+    ],
+    "chosenAction": "进入黑市，未读商品前不盲买或补满",
+    "prediction": "出现商品列表，余额仍28；仅购买能提升实际触发/核心输出的物品。"
+  }
+}

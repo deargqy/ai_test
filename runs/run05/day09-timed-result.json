@@ -1,0 +1,68 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "wins": 9,
+  "losses": 0,
+  "opponent": "Tang",
+  "enemyPreviewHP": 91000,
+  "enemyBattleHP": 96000,
+  "remainingHP": 20571,
+  "remainingShield": 710,
+  "endClock": 29,
+  "approxFightSeconds": 16,
+  "firstHitSeconds": null,
+  "beforePrediction": null,
+  "protocolFailure": "误将战斗按钮当配置入口。实际开战前未写预测，不能事后补记。两次点模型均未展开应查既有操作记录/图标。",
+  "ownDamage": {
+    "hand": 238729,
+    "shoulder": 90456,
+    "shock": 1591,
+    "drone": 970
+  },
+  "enemyDamage": {
+    "shoulder": 26130,
+    "hand": 18000,
+    "burn": 12027,
+    "shock": 9096,
+    "drone": 1722
+  },
+  "ownDefense": {
+    "back": 8438,
+    "firm": 2762,
+    "armor": 1056
+  },
+  "enemyDefense": {
+    "back": 36004,
+    "armor": 23400,
+    "heal": 1
+  },
+  "ownBuffs": {
+    "force": {
+      "opening": 375,
+      "tech": 120,
+      "drone": 84,
+      "back": 76,
+      "armor": 44
+    },
+    "firm": {
+      "shoulder": 285,
+      "hand": 117,
+      "tech": 1
+    },
+    "shock": {
+      "shoulder": 153,
+      "armor": 16
+    }
+  },
+  "income": {
+    "base": 49,
+    "interest": 10,
+    "total": 59,
+    "xp": 2
+  },
+  "unknown": [
+    "首击未采",
+    "敌完整被动链未在开战前读取",
+    "统计触发次数不是装备出手次数，不能把手x56当56轮"
+  ]
+}

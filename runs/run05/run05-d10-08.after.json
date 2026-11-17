@@ -1,0 +1,11 @@
+{
+  "observed": "原求霸天已换走；曾见zhang，最新为萌新80000HP、免费0；最后一次刷新在输入中断期间发生，未保存自主决策，不归为自主优化。余额14。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-resume-visible.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "pending",
+  "reason": "更换事实可核，最后刷新动作归因和比较过程不完整",
+  "nextAction": "以萌新23图为准先记录战前判断"
+}

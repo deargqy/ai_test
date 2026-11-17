@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "batchId": "enemy10-defense-tech",
+  "createdAt": "2026-11-16T15:55:51.877494+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "armor",
+      "label": "armor",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-enemy-armor.jpg",
+      "sourceSha256": "92d7035ac174e1356cca488a2b1b90fadfb739d5ba7d6bdbb83f65a7b5cecec0",
+      "box": [
+        680,
+        230,
+        1200,
+        610
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "102e5c56f2c4688c082481259452291f0469d606be487d62caa19dba99b2bf93",
+      "reading": null
+    },
+    {
+      "id": "back",
+      "label": "back",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-enemy-back.jpg",
+      "sourceSha256": "701430f8c917a917e91a94b84f8cbb7de216151d22138c9d2f393fc691122edc",
+      "box": [
+        870,
+        230,
+        1400,
+        610
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "cf2776193af77bd7df0e8b4014add1c79bf223293d5a1f54491a3179fc92d780",
+      "reading": null
+    },
+    {
+      "id": "disable",
+      "label": "disable",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-enemy-disable.jpg",
+      "sourceSha256": "566eb1992b8fc119afc0e6d851860dc1fd7af3d3303bd0e94f777a2608dd9147",
+      "box": [
+        500,
+        80,
+        1020,
+        460
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "5effdaa75c4f8be1cd06993c15646e9c9ef11d5844fec3dc393f621bce3a0cef",
+      "reading": null
+    },
+    {
+      "id": "speed",
+      "label": "speed",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day10-enemy-speed.jpg",
+      "sourceSha256": "9564368dd51db329c61b617f052beb7a030326c99666fb9dedab2f375c00b9e0",
+      "box": [
+        210,
+        80,
+        730,
+        460
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "4d20d3f9c8ee4670e58b28e071fa2ec4ea11483d9a11adfa4d31ee89751c21cb",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg"
+  ],
+  "metrics": {
+    "inputImages": 4,
+    "uniqueCrops": 4,
+    "packSeconds": 0.349
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

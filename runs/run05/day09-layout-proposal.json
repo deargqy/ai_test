@@ -1,0 +1,11 @@
+{
+  "status": "proposal-not-executed",
+  "origin": "player",
+  "trigger": "用户询问肩炮换位置后配件能否一对多；此前物理Esc已停止Computer Use",
+  "baseline": "甲—S虚空—SS链法肩—背—无人机。A600%长桥已增强手肩两件；B50%短桥占SS肩自身两个下孔，只增强肩。手3195、肩4712。",
+  "candidate": "甲—SS链法肩—S虚空—背—无人机。长桥SS肩左中—S手左中；短桥SS肩右下—S手左下。辅助桥保持背左中—无人机左中。",
+  "prediction": "若连接实际成功，手倍率7.1→7.6，450基础伤害对应3195→3420，肩4712不变；两件核心均得到短桥50%伤害，仍享长桥600%。无新购买。",
+  "cost": "换序可能使原桥退回仓库，需要重接，最多两次不同失败后换策略。",
+  "unknown": "换序操作锚点尚未稳定成功；可见孔位推断不等于已验证连接。",
+  "evidence": ["playtest-2026-11-16-run05/day09-short-ss-center.jpg", "playtest-2026-11-16-run05/day09-boss-input-check.jpg"]
+}

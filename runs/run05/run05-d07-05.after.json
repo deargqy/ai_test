@@ -1,0 +1,11 @@
+{
+  "observed": "重随2→1，42金不变，新Metadox Lv9/60000HP。旧Pascal标题残留为BUG001。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day07-reroll-dismiss.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "旧候选未实战，不验证偏负预测。新候选需单独比较。",
+  "nextAction": "对Metadox出战"
+}

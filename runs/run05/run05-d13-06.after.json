@@ -1,0 +1,16 @@
+{
+  "observed": "约3秒死亡（倒计时42），敌首次有效伤害1–2秒；我伤害/护盾栏均空，无有效启动。敌手169102伤害，雷电64，背146599盾，敌满227kHP；我只有375初始力+24秒力/随机充能一次。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day13-fight-11.jpg",
+    "playtest-2026-11-16-run05/day13-fight-12.jpg",
+    "playtest-2026-11-16-run05/day13-fight-14.jpg",
+    "playtest-2026-11-16-run05/day13-stats.jpg",
+    "playtest-2026-11-16-run05/day13-defense.jpg",
+    "playtest-2026-11-16-run05/day13-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "revise",
+  "reason": "方向偏败正确、敌1–4秒先手支持；我方6–12秒首击完全未发生，实际3秒即死。敌甲/肩/无人机未形成贡献，不能归因整套后期循环。",
+  "nextAction": "下日优先投资源改善首次有效出手；取消无依据2刷上限"
+}

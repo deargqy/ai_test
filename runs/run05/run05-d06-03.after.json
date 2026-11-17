@@ -1,0 +1,15 @@
+{
+  "observed": "进店成功64金未变。B打击者400×3/11秒，受伤5%+5坚固；替换当前链法会丢+200莫瑟主属性及每坚固+3伤。S感电短桥100%主，感电装备300%，32金；本构筑无感电。B单孔CD-1%每日-1%，价2。B甲超驰4金甲CD-5%。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day06-shop.jpg",
+    "playtest-2026-11-16-run05/day06-firm-cannon.jpg",
+    "playtest-2026-11-16-run05/day06-s-short.jpg",
+    "playtest-2026-11-16-run05/day06-b-single.jpg",
+    "playtest-2026-11-16-run05/day06-consumable.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "现货没有明确核心升级。低价不等于必须买，小CD提升不占用本次装配时间。",
+  "nextAction": "升Lv8并有限搜核心"
+}

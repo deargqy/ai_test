@@ -1,0 +1,14 @@
+import json,pathlib,datetime
+p=pathlib.Path('data/playtest.json');d=json.loads(p.read_text(encoding='utf-8'));r=next(x for x in d['runs'] if x['id']=='run03');day=next(x for x in r['days'] if x['day']==2)
+day.update(title='寒冷未兑现输出，按要求停止重开',phase='挑战赛',outcome='loss',wins=0,losses=2,before='Lv5/12500生命，B冷甲、B冷肩、B感电背部、C冷枪与冷无人机。共享护盾仍在无人机—冷枪。最后匹配30000生命对手。',after='0胜2负。总伤害6915，肩炮2991；感电背部护盾2387。对手肩炮9948、燃烧5341，并有回复4896与护盾2722。用户要求重开，未耗尽最后一条生命。',detailHtml='<p>不把本局两败解释为整个寒冷流派弱：等级和生命差、实际输出不足、装配未优化、一次升级计划未成功兑现等同时存在。</p><p>统计中的回复和护盾均为累计量，不能直接相加当作有效抵消伤害。原决策回填中“对方累计防御高于我方输出”仅是压力线索，不能证明全部输出被抵消。</p><p>玩家指出换序可利用高品质装备插槽。原分辨率截图明确显示B冷甲左右下槽，可以移到冷枪或冷肩旁共享护盾；之前没有重新检查新装甲插槽，继续连接无人机与C枪，属于经验调用未完整落实。</p><p>退出与重开是玩家要求，当前0胜2负为停止战绩，不是自然终局。所有原决策保留。</p>',images=[{'src':'playtest-2026-11-16-run03/day02-damage.jpg','label':'第二战伤害和完整插槽'},{'src':'playtest-2026-11-16-run03/day02-defense.jpg','label':'第二战防御'},{'src':'playtest-2026-11-16-run03/day02-result.jpg','label':'第二战失败'}])
+r.update(status='abandoned',wins=0,losses=2,result='0胜2负；按用户要求重开（非自然终局）',endedAt=None,stoppedAt='2026-11-16T14:39:46+08:00',finalImage='playtest-2026-11-16-run03/day02-result.jpg')
+m=next(x for x in d['memories'] if x['id']=='M05');old={k:v for k,v in m.items() if k!='history'};m['revision']=3
+m.update(action='每次换装备后重新读取全部左右槽位和行高，至少比较现有顺序与把主力移到中间的可行顺序。先验证两端触发语义，再以两端实际收益、触发频率及被动联动决定连接，品质作为因素之一。',caveat='玩家在run03第2天再次指出漏用换序：B冷甲两侧下槽可接主动冷枪/冷肩，原桥却仍接无人机。该候选排列未在本局实战验证，不能称自主掌握。',status='玩家再次纠偏，下一局检验执行')
+m['history'].append({'date':'2026-11-16','revision':3,'change':'保留M05被引用但未完整落实的反例；玩家要求换序利用高品质槽位，增加每次换装后的全排复查。','previous':old})
+m['evidence'].append({'runId':'run03','day':2,'note':'玩家提醒，完整结算图显示B冷甲两侧下槽未使用；可与冷枪或冷肩相邻共享配件，但当局未验证候选。','href':'playtest-2026-11-16-run03/day02-damage.jpg'})
+d['updatedAt']=datetime.datetime.now(datetime.timezone.utc).isoformat();p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+snap='第三局run03按用户要求停止重开，正式对局0胜2负，另有首日NPC事件胜利，不混入正式胜场。第二战统计与停点已保存；没有打到自然终局。当前在第四局选角页，准备选择胡班·本·帕尔文（额外30金币，3次失败上限），优先解决前期生命和装备预算。M05修订3来自玩家再次提醒：每次换装后重查全排槽位与候选排列，不能只记录经验编号。'
+p=pathlib.Path('GAME-NOTES.md');s=p.read_text(encoding='utf-8');a=s.index('## 本局快照')+len('## 本局快照');b=s.index('### Mac 串流阶段');s=s[:a]+'\n\n'+snap+'\n\n'+s[b:];p.write_text(s,encoding='utf-8')
+p=pathlib.Path('README.md');s=p.read_text(encoding='utf-8');a=s.index('## 当前进度')+len('## 当前进度');b=s.index('\n\n2026-11-16，本机');s=s[:a]+'\n\n'+snap+s[b:];s=s.replace('## 工作日志\n','## 工作日志\n\n- 2026-11-16 14:38—14:42：第三局0胜2负，按玩家要求停止重开。第二战寒冷肩炮2991，对方肩炮9948；无法归因为流派本身弱。玩家再次指出换序漏项，M05升至修订3并明确提醒来源。BUG001追加第三局截图，BUG008保留为召唤触发语义候选。所有原始决定与反例保留。\n',1);p.write_text(s,encoding='utf-8')
+# 修正独立候选报告的返回路由
+p=pathlib.Path('docs/bugs/008-summon-shield/index.html');s=p.read_text(encoding='utf-8').replace('#run/run03/day/1','#runs/run03/1');p.write_text(s,encoding='utf-8')

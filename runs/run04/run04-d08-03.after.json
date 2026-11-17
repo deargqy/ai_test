@@ -1,0 +1,16 @@
+{
+  "observed": "失败6胜2负，67+56=123金、2/46XP，只剩1生命。己手5112、肩746、感电358、无人机100、燃烧24；寄生+3692、仅背1144盾，甲0。敌力量肩131100、SS力量刀52280。战后核实：突进II开战225力量；SS刀命中力量+15%；肩每层力量伤害+5；A桥力量装备伤害+300%；B桥相互充能0.5秒。战前误把力量肩当燃烧。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day08-result.jpg",
+    "playtest-2026-11-16-run04/day08-damage.jpg",
+    "playtest-2026-11-16-run04/day08-defense.jpg",
+    "playtest-2026-11-16-run04/day08-enemy-shoulder.jpg",
+    "playtest-2026-11-16-run04/day08-enemy-sword.jpg",
+    "playtest-2026-11-16-run04/day08-starting-force-tech.jpg"
+  ],
+  "predictionResult": "refuted",
+  "reason": "启动保障模型失败：135k不足以承受首轮力量滚动爆发；前期力量、命中百分比增长、充能与按力量转伤需要合并。不能仅凭SS初始卡面估若干轮，也不能将未知图标当燃烧。",
+  "nextAction": "收紧选敌：优先避开已知力量百分比增长+充能+高爆发组合；有免费重随且关键被动不清时不再按中等信心迎战。",
+  "operationResult": "succeeded",
+  "memoryDecision": "revise"
+}

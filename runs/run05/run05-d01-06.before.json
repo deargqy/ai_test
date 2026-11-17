@@ -1,0 +1,73 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-06",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T08:55:11.386Z",
+  "before": {
+    "state": "28金/Lv1/1500HP。C背曙光盾6.5秒110盾/22坚固/全敌减速0.5秒，右上孔，特价2售2；已有甲左下、剑右上。升级4金币=4XP，Lv2+1000生命。",
+    "goal": "先补早盾与生命并解锁Lv3商品，再找输出核心",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-back-detail.jpg",
+      "playtest-2026-11-16-run05/day01-bridge-detail.jpg",
+      "playtest-2026-11-16-run05/day01-consumable-detail.jpg",
+      "playtest-2026-11-16-run05/day01-xp-detail.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "现金与即战力比较，不机械存满"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "未花钱强化临时剑"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "记录右上孔，暂不买未知或低收益桥"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "多一件有用装备可参与莫瑟次日成长"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买背2+买两次经验8",
+        "benefit": "6.5秒早盾/减速，基础生命和商品位改善",
+        "cost": "共10金，现金18，利息由5降3",
+        "risk": "尚未提高核心品质或主伤害",
+        "unknown": "Lv3新商品内容待看"
+      },
+      {
+        "action": "买互充桥6",
+        "benefit": "剑/背相近CD可互充",
+        "cost": "6金，需两端实际接入",
+        "risk": "0.5秒增益有限，当前没有高价值被动",
+        "unknown": "跨右上孔装配可行性未测"
+      },
+      {
+        "action": "保留28金",
+        "benefit": "5利息",
+        "cost": "缺防御且Lv1",
+        "risk": "正式敌人爆发可能击杀",
+        "unknown": "敌未知"
+      }
+    ],
+    "chosenAction": "买2金背，然后按4金/4XP买两次经验，预算10金；不买低收益消耗品或互充桥",
+    "prediction": "背自动装入；现金28→26→22→18，生命至少2500并到Lv3，初甲480/剑145不因英雄升级升阶。"
+  }
+}

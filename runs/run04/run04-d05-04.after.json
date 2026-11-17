@@ -1,0 +1,13 @@
+{
+  "observed": "胜利4胜1负，53+47=100金，利息10，4/30XP。肩27685、手21364、燃烧14871、感电11034、无人机5238；寄生+113103，甲6480盾背5040。敌燃烧68216但寄生仅+23217。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day05-result.jpg",
+    "playtest-2026-11-16-run04/day05-damage.jpg",
+    "playtest-2026-11-16-run04/day05-defense.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "镜像下我方成长与触发量更高；单局多变量不能独立量化各配件收益。",
+  "nextAction": "第6天有100金可升等级并采购适配S主力。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

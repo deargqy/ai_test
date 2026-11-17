@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T14:20:19.293Z",
+  "before": {
+    "state": "伊芙酱72k预览+巨像5000=预计77k，S复活50%首次致死+净化50%；B冷核心禁用1.5s；A每3s随机充能2s。A冷手5.5s3×300/16冷，每秒冷层伤害；A背6s210盾133冷全减速1.5s且冷每层每秒盾；B甲13.5s780盾52冷用后全冷装备+15；A冷肩9.7s3×490/28冷，冷层转伤原始式0.2*层+30；S力量无人机，S216%冷增幅背手，B手肩互加速2s。剩余小配件及无人机频率未逐一重读。己76k、375初力+8/s、双600%核心、原序未变。",
+    "goal": "在寒冷堆积与复活续航之前兑现力量物理爆发",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-enemy-build.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-hand.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-back.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-armor.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-shoulder.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-repair.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-charge.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-coldtech.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-hptech.jpg",
+      "playtest-2026-11-16-run05/day08-enemy-main-bridge.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较开战控制与首次攻击，不只比生命"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "冷伤→盾与充能/加速→冷层完整链"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "寒冷不是硬控，科技禁用另算；累计与瞬时区分"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "战报核实未知值"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "应战",
+        "benefit": "敌直接物理较低；己375初力多段转盾与虚空失盾伤害可持续",
+        "cost": "禁用抵消部分己初加速，需打约115.5k生命+盾",
+        "risk": "冷累积减CD加敌充能，复活拉长战线",
+        "unknown": "敌小配件、实际首次/冷层增速"
+      },
+      {
+        "action": "免费重随",
+        "benefit": "可能避开复活与禁用",
+        "cost": "放弃可读敌并消耗一次机会",
+        "risk": "新敌可能是更快烧/力闭环",
+        "unknown": "新敌未知"
+      }
+    ],
+    "chosenAction": "应战，方向偏胜但不报胜率；76k不是唯一依据，敌冷盾链启动后持续加强，需要主手较快多次攻击。",
+    "prediction": "预计我手首有效攻击约5.5–7秒（禁用1.5与开场3秒加速重叠），敌可能先攻；20–35秒获胜、终场HP>35000；敌复活应贡献约38500治疗；手伤害高于肩，突进力量375计入增益统计。首次捕获零血时间取近似并区分动画。"
+  }
+}

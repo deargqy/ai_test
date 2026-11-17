@@ -1,0 +1,51 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-05",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:42:42.645Z",
+  "before": {
+    "state": "ZFJ187000HP，肩3.2/手3.5九连/无人机1.8秒；SS开场全装充3秒；每秒10寒冷，手每击追加寒冷层×10伤害。",
+    "goal": "避免先手叠冷使我方延迟后敌多轮九连爆发",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-eb-g2.jpg",
+      "playtest-2026-11-16-run05/day13-eb-t4.jpg",
+      "playtest-2026-11-16-run05/day13-current.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较全装开场充能对启动的改变"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "看叠冷→九连追加→冷却拖延完整链"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费换敌",
+        "benefit": "规避已知开场抢先链",
+        "cost": "最后一次免费",
+        "risk": "后敌可能更强",
+        "unknown": "敌全部桥未读，故不量化败率"
+      },
+      {
+        "action": "直接打",
+        "benefit": "保留机会但本日无用途",
+        "cost": "可能吃开场连续爆发",
+        "risk": "187k使抢杀门槛高",
+        "unknown": "寒冷实际减CD累积及对方桥尚未知"
+      }
+    ],
+    "chosenAction": "免费换敌",
+    "prediction": "免费1→0，113金不变；未交战不判原敌胜负"
+  }
+}

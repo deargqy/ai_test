@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-00",
+  "phase": "observe",
+  "rawSavedAt": "2026-11-16T08:49:37.196Z",
+  "before": {
+    "state": "新截图为选猫页，无进行中局。莫瑟每天全部装备+50主属性/无人机+5，4命。伊芙SS发现图标显示80金币。Steam安装Build26694005；当前页无菜单版本，1.0.0.2218暂未现场复核。",
+    "goal": "利用明确成长改善早期核心数值，同时保留换装判断",
+    "evidence": [
+      "playtest-2026-11-16-run05/pilot-mose-selected.jpg",
+      "playtest-2026-11-16-run05/pilot-eve-current.jpg"
+    ],
+    "memorySearch": "按 observe 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "选角能力和生命数改变本局成长/换装取舍"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先确认新局和初始数值"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "莫瑟",
+        "benefit": "每天主属性增量及4命",
+        "cost": "放弃其他主动收益",
+        "risk": "换装可能丢积累，长期增量不能替代高阶被动",
+        "unknown": "跨天作用时点、仓库是否生效未测"
+      },
+      {
+        "action": "伊芙",
+        "benefit": "可获得SS核心选择机会",
+        "cost": "技能图标80金，实扣未测",
+        "risk": "早期储蓄与使用门槛可能高",
+        "unknown": "发现时机、费用与候选池未知"
+      },
+      {
+        "action": "若茜",
+        "benefit": "首轮50%充能更快启动",
+        "cost": "3命且缺基础成长",
+        "risk": "核心低阶时一次加速不足",
+        "unknown": "与本局实际核心契合度未知"
+      }
+    ],
+    "chosenAction": "选莫瑟开始新局",
+    "prediction": "开局应为day01、0胜0负及4次普通失败容错；记录第一天末装备主属性，第二天同件预计+50、无人机+5，若换装需另作口径核对。"
+  }
+}

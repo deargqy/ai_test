@@ -1,0 +1,49 @@
+{
+  "runId": "run05",
+  "day": 2,
+  "id": "run05-d02-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:08:43.870Z",
+  "before": {
+    "state": "32金，Lv3 XP4/6，8500HP，主武C，肩位空，库存空",
+    "goal": "进入黑市找核心；一次4金经验到Lv4提高可见品质和血量",
+    "evidence": [
+      "playtest-2026-11-16-run05/day02-shop-entry.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "明确购物与升级预算，仓库已空"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "暂不买专属强化，先找核心"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进店+买4XP",
+        "benefit": "提高品质和生命，保留28金挑装备",
+        "cost": "放弃跳过5金，支4金，利息约少1",
+        "risk": "核心仍未升级",
+        "unknown": "商店内容"
+      },
+      {
+        "action": "跳过+5金",
+        "benefit": "保留37金利息",
+        "cost": "没有本轮核心升级机会",
+        "risk": "C输出可能不足",
+        "unknown": "后续商店"
+      }
+    ],
+    "chosenAction": "进店，再买一次4金币经验，不连续盲升",
+    "prediction": "金币32→28，Lv4，HP提升，已有四件阶级不变；随后读商店再决策"
+  }
+}

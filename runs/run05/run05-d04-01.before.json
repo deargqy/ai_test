@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 4,
+  "id": "run05-d04-01",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:30:05.891Z",
+  "before": {
+    "state": "50金，Lv5，科技选3个B或随机B+20金。已有力量甲背无人机、力量剑/坚固肩，仓库空；莫瑟当天+50主属性已核验。",
+    "goal": "为既成力量物伤链挑科技",
+    "evidence": [
+      "playtest-2026-11-16-run05/day04-event.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先围绕现有核心挑科技"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "现有50金足以购物，量化放弃20金"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "日成长保留核心实例但不阻止升级"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "三选一B科技",
+        "benefit": "更可能服务物理/力量/启动，现金50能继续购物",
+        "cost": "放弃20金币",
+        "risk": "三项可能均不契合",
+        "unknown": "候选池未知"
+      },
+      {
+        "action": "随机B+20金",
+        "benefit": "经济70，可更快升阶",
+        "cost": "失去挑选科技权",
+        "risk": "随机可能完全无收益",
+        "unknown": "科技适配未知"
+      }
+    ],
+    "chosenAction": "选3个B科技，再读实际候选",
+    "prediction": "余额保持50，出现3个B候选；能否拿到高于20金机会成本的收益待看候选和战报，不先断言挑选一定优。"
+  }
+}

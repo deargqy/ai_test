@@ -1,0 +1,86 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-08",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T14:40:12.998Z",
+  "before": {
+    "state": "103金。S屏障增幅器32：元素+72%，坚固装备+216%；A后卫16：附魔16感电。当前SS肩Rtop1245与S手Ltop1340空，可接A后卫；底部B雷霆在肩R1245→手L1340，可让S替；旧B改甲Rbottom1053→肩Lbottom1149，肩吃感电150%。中排600%手肩和100%手背保留。",
+    "goal": "用三件短配件服务坚固主核与输出，保留莫瑟成长并避免盲升装备",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-shop-s-bridge.jpg",
+      "playtest-2026-11-16-run05/day09-shop-a-bridge.jpg",
+      "playtest-2026-11-16-run05/day09-layout-final.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核心固定且配件同现槽联动优先于换装备"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "整排包含上中下三排，不把同件或无伤甲算双收益"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "库存B保留具体用途，48支出不降利息"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留S手莫瑟150基础成长"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "逐桥验证可还原"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买S元素与A附魔，并移旧雷霆",
+        "benefit": "预计双核坚固4→13/30→95；感电使雷霆150%，旧桥复用只强化肩，三个新增有效状态端点",
+        "cost": "48金币，余额55仍满利息；手失原50%伤害约225",
+        "risk": "元素倍率是否也放大附魔感电需核；短桥换位可能断",
+        "unknown": "附魔与元素计算顺序、感电实际值待验"
+      },
+      {
+        "action": "只买S替50%短桥",
+        "benefit": "坚固增强双核，省16",
+        "cost": "手-225肩-310静态伤害，旧桥单肩50%可复用",
+        "risk": "没有附魔就无雷霆150%联动",
+        "unknown": "未来短桥未知"
+      },
+      {
+        "action": "32买经验升Lv11",
+        "benefit": "预计+19k基础HP",
+        "cost": "相同32无法买S，短战仍可能不需HP",
+        "risk": "未改变核心触发",
+        "unknown": "下个敌人未知"
+      },
+      {
+        "action": "不买留103",
+        "benefit": "保未来搜索现金",
+        "cost": "错过现槽可用双桥；资金超满利息",
+        "risk": "经济未兑现",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "买S32及A16；先顶部A跨两核心确认感电和雷霆倍率，再底部S换B，B移甲右下—肩左下。最多两次不同失败每件就还原，不卖有具体用途旧桥。",
+    "prediction": "总金币55；原600/100桥完整。新S令手坚固约13肩95；A给双核感电至少16（是否被216%放大未知）。最终手静态约3645，肩约5332；B雷霆跨甲肩但仅肩伤害有效。战报坚固来源应增长，不能跨敌总量作隔离因果。"
+  }
+}

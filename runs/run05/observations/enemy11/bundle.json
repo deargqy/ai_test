@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "batchId": "enemy11",
+  "createdAt": "2026-11-16T16:10:59.446063+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "slot1",
+      "label": "slot1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-slot1.jpg",
+      "sourceSha256": "8f004268cdd3ac09ac2c2ffe3f2698b5637a7b206cc8b34034c1d173d7cff84b",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "00f911aa3c07bf80f37790e644e8758f095bd6660de5a8d56933958181333266",
+      "reading": null
+    },
+    {
+      "id": "slot2",
+      "label": "slot2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-slot2.jpg",
+      "sourceSha256": "88834395f0b761cb939c89efc3a1a0c77fd12557ecfaa6f8ee498e2920cc7186",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "030e8b6a8a4c50cb13a88405db8823b8a1ff3d8095fef6dc9374225ef3b4763a",
+      "reading": null
+    },
+    {
+      "id": "slot3",
+      "label": "slot3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-slot3.jpg",
+      "sourceSha256": "69ec4749c07b7ec25216e57e224abf19c5f179ebac5aa99fde778d2c3ea77578",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "93dd3c718237331e299a6eae89fb12fc11d33c2083389ae1e6dcc08412f89e79",
+      "reading": null
+    },
+    {
+      "id": "slot4",
+      "label": "slot4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-slot4.jpg",
+      "sourceSha256": "0370097bc35d3fd500e6cddd1b63786d3682e7dee18fea450bf0386a9f29bebd",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "107cb7bd60af6acffa9b27d246973fa4795a02d8948eac1d9155ceb65b865372",
+      "reading": null
+    },
+    {
+      "id": "slot5",
+      "label": "slot5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-slot5.jpg",
+      "sourceSha256": "64fc8aee8c855d2ccdf5b83e5eb83fd174379fe1c437007d9f6216b49570d1f3",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "8f8c3d1edcf5839a34ba47dc46365b5e9b9c0af80c2a417fad2fd66c133ffb28",
+      "reading": null
+    },
+    {
+      "id": "tech1",
+      "label": "tech1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-tech1.jpg",
+      "sourceSha256": "e38304cc0f6aec2d526b5fa14e660911a6027138164d41839f899de7730194a1",
+      "box": [
+        208,
+        90,
+        833,
+        560
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "8a8983c6dcadcbc11adb17ae90d36dec3b719310284051f337f1aba3bb56897e",
+      "reading": null
+    },
+    {
+      "id": "tech2",
+      "label": "tech2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-tech2.jpg",
+      "sourceSha256": "6a2c89445f09d8c808b93de95604ac1978ce9222cd9516aa2704176d310a5439",
+      "box": [
+        301,
+        90,
+        926,
+        560
+      ],
+      "crop": "crop-07.png",
+      "cropSha256": "82079fcc7198dce55d218a931da624e2c0e805128de7597480901f1f833493a8",
+      "reading": null
+    },
+    {
+      "id": "tech3",
+      "label": "tech3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-tech3.jpg",
+      "sourceSha256": "172030abe222021fd4f9250ccc00f72eabdc731de2b4250f5058287ebb510a01",
+      "box": [
+        395,
+        90,
+        1020,
+        560
+      ],
+      "crop": "crop-08.png",
+      "cropSha256": "f8bf9ad77fa7fc2a2aa9d03d8b1474b5c7cee5e96f5a8a0cfb327f53326551c4",
+      "reading": null
+    },
+    {
+      "id": "tech4",
+      "label": "tech4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-tech4.jpg",
+      "sourceSha256": "d257ee655805335f2a08c0ba5fef80b61f4b5eee788049126d7c567c1f852007",
+      "box": [
+        491,
+        90,
+        1116,
+        560
+      ],
+      "crop": "crop-09.png",
+      "cropSha256": "2fc3ad92197ec516b90ed99f17fbefb5d1144a9f81d059bfd2e035722ccfc6b7",
+      "reading": null
+    },
+    {
+      "id": "tech5",
+      "label": "tech5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-tech5.jpg",
+      "sourceSha256": "f44fd253336d094095b45938b754c2e2320beca3493316368283826f5fb261cb",
+      "box": [
+        584,
+        90,
+        1209,
+        560
+      ],
+      "crop": "crop-10.png",
+      "cropSha256": "196e8178d0b19cd0e6a937f9b5c73910a7df8cc54d6b9fdfc29e5691527df607",
+      "reading": null
+    },
+    {
+      "id": "bridge1",
+      "label": "bridge1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-bridge1.jpg",
+      "sourceSha256": "5b39befc106b38e7172e3216042625d3b76efda14363baa90c492ccef19ecd79",
+      "box": [
+        300,
+        220,
+        925,
+        750
+      ],
+      "crop": "crop-11.png",
+      "cropSha256": "4ee6e04febc00dd2d936370fcac198b2789d7cb2c21b948ca0ec6443eb2779b0",
+      "reading": null
+    },
+    {
+      "id": "bridge2",
+      "label": "bridge2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-bridge2.jpg",
+      "sourceSha256": "5723d82f7999946d579b7fbaafaa7d163c2f1f0ea07d10acdd9bd04849404a0d",
+      "box": [
+        264,
+        220,
+        889,
+        750
+      ],
+      "crop": "crop-12.png",
+      "cropSha256": "26bebce65d2f85d2a21a8c13d2cfb600730a69ccdd2ce458a4072f5d6102f906",
+      "reading": null
+    },
+    {
+      "id": "bridge3",
+      "label": "bridge3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-bridge3.jpg",
+      "sourceSha256": "f05c6417426f3719a79ce3f1412cf312f366b33520a742bda6819ee948462769",
+      "box": [
+        586,
+        220,
+        1211,
+        750
+      ],
+      "crop": "crop-13.png",
+      "cropSha256": "6cb6028ecd671b8a1ac55a3205221f4caf1a74e47e9f2c3dce26215d7f462ed6",
+      "reading": null
+    },
+    {
+      "id": "part1",
+      "label": "part1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part1.jpg",
+      "sourceSha256": "c6bbec8d7c8587070ea23fecdf606546db5e8132d75a856578e53516b48ac84a",
+      "box": [
+        264,
+        220,
+        889,
+        750
+      ],
+      "crop": "crop-14.png",
+      "cropSha256": "b15377253027af10cb1fb2cb89c688d0d1867dc593faf0dfc6ef517222291bdc",
+      "reading": null
+    },
+    {
+      "id": "part2",
+      "label": "part2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part2.jpg",
+      "sourceSha256": "526ee624866664081618c67aeb8051ea153b40793c58a288b3d52407346e854f",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ],
+      "crop": "crop-15.png",
+      "cropSha256": "7b4db0f2fd0f406bef491a5dd986cbff307f6fbf8c5c0f7ee2e4cbd805c22259",
+      "reading": null
+    },
+    {
+      "id": "part3",
+      "label": "part3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part3.jpg",
+      "sourceSha256": "60d9faeed7595177844d7b9b85bf5f213fc5510e103becdbfc5659b8036718ff",
+      "box": [
+        409,
+        220,
+        1034,
+        750
+      ],
+      "crop": "crop-16.png",
+      "cropSha256": "76fda74d84101195a8adde95798a08d287ecf4ee42e736db43bda20e0dba331c",
+      "reading": null
+    },
+    {
+      "id": "part4",
+      "label": "part4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part4.jpg",
+      "sourceSha256": "f2a664ec6cba9dcf44cfe73347268a4a2843e7f13368350f69a385da15a672b7",
+      "box": [
+        480,
+        220,
+        1105,
+        750
+      ],
+      "crop": "crop-17.png",
+      "cropSha256": "62dd7644440ced8ea6e9dc629882184a3bbeb063dde58334688871545061ca8b",
+      "reading": null
+    },
+    {
+      "id": "part5",
+      "label": "part5",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part5.jpg",
+      "sourceSha256": "195884c330a7f7066c8b0b3159fb2dc2f0efc54e2b670679f6e3f9278307f02d",
+      "box": [
+        625,
+        220,
+        1250,
+        750
+      ],
+      "crop": "crop-18.png",
+      "cropSha256": "d332d9e579dc35da684027dbdde996a40fda46cad73200cb879dece08a4e6371",
+      "reading": null
+    },
+    {
+      "id": "part6",
+      "label": "part6",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part6.jpg",
+      "sourceSha256": "d2bc286158a2e4ca75875a5e83fcba8197df8690620e08c53d42fd35907b421b",
+      "box": [
+        768,
+        220,
+        1393,
+        750
+      ],
+      "crop": "crop-19.png",
+      "cropSha256": "ace18e3382505eae812c2a29265715902d06f240927179d8a7bc59bc9ed4dfa1",
+      "reading": null
+    },
+    {
+      "id": "part7",
+      "label": "part7",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part7.jpg",
+      "sourceSha256": "01959c34992f18cfd0c7077d4065987a36a652d0dfe8cff1ab7e73973eaff4bb",
+      "box": [
+        768,
+        220,
+        1393,
+        750
+      ],
+      "crop": "crop-20.png",
+      "cropSha256": "a85963946606853ffe72a373439a7a5c27348332acf8bccb12f8e33eadbee35c",
+      "reading": null
+    },
+    {
+      "id": "part8",
+      "label": "part8",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day11-enemy-part8.jpg",
+      "sourceSha256": "f7a2ded93a5deac5390a230d78a590e5dbe729d537872415fb940aba34b059bd",
+      "box": [
+        840,
+        220,
+        1465,
+        750
+      ],
+      "crop": "crop-21.png",
+      "cropSha256": "58f112e78b654b18e7111508ca3e28c8f1577a68903c757c2d88cf7360a51944",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg",
+    "contact-03.jpg",
+    "contact-04.jpg",
+    "contact-05.jpg",
+    "contact-06.jpg"
+  ],
+  "metrics": {
+    "inputImages": 21,
+    "uniqueCrops": 21,
+    "packSeconds": 1.91
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

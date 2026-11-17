@@ -1,0 +1,11 @@
+{
+  "observed": "随机B为寄生装甲720盾48寄生/13秒，被动使寄生也可由燃烧、寒冷、雷电伤害触发；L下与R上槽。31金币不变。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day03-parasite-armor.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "获得可与燃肩燃烧伤害联动的高品质装甲。但新槽位与原甲不同，不能直接继承旧双盾连接。",
+  "nextAction": "比较换甲后的护盾总循环与寄生触发收益，再重排装配。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

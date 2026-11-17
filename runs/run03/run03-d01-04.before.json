@@ -1,0 +1,56 @@
+{
+  "runId": "run03",
+  "day": 1,
+  "id": "run03-d01-04",
+  "phase": "shop",
+  "before": {
+    "state": "金币28、Lv1/1500生命，仓库奖励C燃烧肩炮已成功装上，未再买重复肩炮。商店配件使用得160盾4金币；无人机减冷却消耗品2但尚无无人机；两把C肩炮4/2金币。",
+    "goal": "首日先兑现生命与商店等级收益，再看新增货品补短板。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day01-shop-before.jpg",
+      "playtest-2026-11-16-run03/day01-reward-shoulder.jpg"
+    ],
+    "memorySearch": "shop阶段已重新读取M06/M03/M04/M05/M08；当前先升级，不绑定强化或改共享连接。",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先盘已有免费肩炮，比较12金币升级和留息；升级预期生命大幅提升，优于为了几金币利息保持1500生命。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "尚无无人机，不买其专属减冷却消耗品。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "一次肩炮拖拽未生效，换目标空槽后确认成功；经验购买逐次确认等级与扣费。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "花12金币购买三次经验",
+        "benefit": "按前局规律升至4级约7500生命，并解锁第三件商品。",
+        "cost": "金币28降16，利息档下降。",
+        "risk": "新角色是否有等级差异需现场核实。",
+        "unknown": "升级后新增商品未知。"
+      },
+      {
+        "action": "保持28金币留息，先买配件",
+        "benefit": "留更多本金和获得配件即时小护盾。",
+        "cost": "维持1500生命，当前三件装备已能出手。",
+        "risk": "生命不足以承受对手首轮。",
+        "unknown": "未选敌。"
+      }
+    ],
+    "chosenAction": "先买三次经验，查看升级后新增商品；暂不刷新。",
+    "prediction": "扣12金币至16，达到Lv4约7500生命；若结果不同立即修正预算。"
+  }
+}

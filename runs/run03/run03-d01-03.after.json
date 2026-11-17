@@ -1,0 +1,15 @@
+{
+  "observed": "事件战胜利，结算+25金币、0经验，不计日末奖杯。手武伤害1008，躯干护盾480、力量32，寒冷8；敌人伤害540。结束帧倒计时35，我方1440生命。",
+  "evidence": [
+    "playtest-2026-11-16-run03/day01-event-end-frame.jpg",
+    "playtest-2026-11-16-run03/day01-event-result.jpg",
+    "playtest-2026-11-16-run03/day01-event-damage.jpg",
+    "playtest-2026-11-16-run03/day01-event-defense.jpg",
+    "playtest-2026-11-16-run03/day01-event-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "pending",
+  "reason": "胜负预测支持；高速播放导致未捕获首次攻击/供盾，不能宣称约3.25秒预测已验证。事件奖励肩炮出现在结算附近，需进仓核对来源与作用。",
+  "nextAction": "盘库存与商店后分配金币；下次战斗降速并采集早期帧。"
+}

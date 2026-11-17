@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:59:16.475Z",
+  "before": {
+    "state": "64金，Lv7 XP4/22，34000HP。当前商店核心替换收益不足。",
+    "goal": "增加存活时间与A/S候选概率，同时保留至少38金币搜购预算",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-shop.jpg",
+      "playtest-2026-11-16-run05/day06-firm-cannon.jpg",
+      "playtest-2026-11-16-run05/day06-s-short.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先现货对比再升级"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "预设有限搜索成本"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "莫瑟成长在旧装备，升级英雄不等于升装备"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买20经验升Lv8，最多刷新3次",
+        "benefit": "基础生命预计+12000，商店质量提高，找核心真实升阶",
+        "cost": "20+最多6金币，利息最多降3",
+        "risk": "升级本身不强化现装备；可能空搜",
+        "unknown": "Lv8商店概率待核"
+      },
+      {
+        "action": "不升级直接刷新",
+        "benefit": "多留20用于A/S核心",
+        "cost": "HP维持34000，较低概率",
+        "risk": "后续敌爆发升级可能吃亏",
+        "unknown": "未知未来敌强度"
+      },
+      {
+        "action": "购买眼前B炮或S感电桥",
+        "benefit": "有新装备",
+        "cost": "B炮8/S桥32，替换损成长或仅100%效益",
+        "risk": "现核心已高成长，无感电300%不可享受",
+        "unknown": "无明显提升"
+      }
+    ],
+    "chosenAction": "买经验按钮5次共20金至Lv8，然后最多3次2金刷新逐页看，出现强核心即停。",
+    "prediction": "Lv8 XP2/26，金币44，生命46000；旧装备仍原品质。刷新后不低于38金币（新购买需另记决策）。"
+  }
+}

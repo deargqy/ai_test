@@ -1,0 +1,72 @@
+{
+  "runId": "run05",
+  "day": 3,
+  "id": "run05-d03-04",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:21:44.919Z",
+  "before": {
+    "state": "22金；B祸津神8金，11秒660盾44力，被动力额外+1伤，右中/右下孔；旧甲853展示盾45力12秒/扣30%力换减伤，卖4。B式神野衾特价4，8秒召唤23伤6力，部署+24力，左中左下；旧C稻荷33伤4力8.5秒无被动卖2。两主攻齐射连接保持",
+    "goal": "提高力量转换效率与早期供给，保留现金而不追加低效配件",
+    "evidence": [
+      "playtest-2026-11-16-run05/day03-force-armor.jpg",
+      "playtest-2026-11-16-run05/day03-force-drone-detail.jpg",
+      "playtest-2026-11-16-run05/day03-long-link.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "确立力量核心后替代关键被动"
+      },
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "甲右中下、无人机左中下变化不影响剑肩上排桥"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "卖旧实收6，不买12金低即时收益冷却桥"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "换装牺牲莫瑟实例成长，不能只比基础品质"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换祸津神和野衾，卖旧两件",
+        "benefit": "力由每层+2伤变+3伤，8秒部署+24力；甲提前1秒，不扣力量",
+        "cost": "12买-6卖=6净支，剩16；损失旧甲两天+100盾、旧无人机+10伤成长",
+        "risk": "失去甲减伤；新无人机单位频率未读出，不套用旧频率",
+        "unknown": "旧甲扣层生效/统计口径待验证，今次多变量不是对照试验"
+      },
+      {
+        "action": "只换甲",
+        "benefit": "提高全队力量伤害转换",
+        "cost": "净4金",
+        "risk": "旧无人机无部署力",
+        "unknown": "未来合成"
+      },
+      {
+        "action": "继续旧甲",
+        "benefit": "保留成长与潜在减伤",
+        "cost": "力量消耗与输出冲突",
+        "risk": "旧甲实际消耗未知",
+        "unknown": "不因用户直觉强行认定弱"
+      }
+    ],
+    "chosenAction": "买两件，逐一换装卖旧；保留剑肩桥。旧甲机制未验证如实记，不拖慢整局",
+    "prediction": "金币最终16；新甲726盾44力11秒，新无人机25伤6力8秒；力每层+3伤，100力量时基础剑245+300再×2.1≈1145（取整为准）；配置无扣力描述"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "observed": "锚定核心II已装备。第4天战斗6秒图显示己已319盾和62力，支持背与无人机早于无加速时7/8秒启动；A手此时正被禁用，双方生命仍满，无法确认理论4秒首充/动画命中。选科技后换了A手，原预测C剑已不适用。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day04-tech-confirmed.jpg",
+    "playtest-2026-11-16-run05/day04-battle-start.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "narrow",
+  "reason": "开场促进防御与部署有过程证据，但没有精确首充截图，不把理论时点写成实测；相对每秒成长科技反事实未测试。",
+  "nextAction": "后续保持此科技，按当前装备与控制修正启动预测"
+}

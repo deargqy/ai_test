@@ -1,0 +1,11 @@
+{
+  "observed": "花24金币升Lv6，20000生命、0/18XP、19金币；进入商店后看到半价B寄生背部、C感电无人机、寄生护盾长桥。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day01-shop.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "升级与预算一致，有具体可买的属性/被动联动，下一步按全排插槽确定连接。",
+  "nextAction": "购买前比较两种长桥与填空位。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

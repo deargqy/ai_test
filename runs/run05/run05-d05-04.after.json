@@ -1,0 +1,13 @@
+{
+  "observed": "花24金币47→23，A军械库成功覆盖手肩，面板832/924→1.8K/2.2K，与1792/2244预测量级一致但UI缩写未证实个位。旧桥被新决策05保留再利用，未售。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day05-buy-bridge2.jpg",
+    "playtest-2026-11-16-run05/day05-bridge-swap.jpg",
+    "playtest-2026-11-16-run05/day05-old-bridge-reuse.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "unknown",
+  "memoryDecision": "retain",
+  "reason": "双端连线及增伤已证实；精确面板被缩写，售旧预测因新用途未执行。",
+  "nextAction": "准备选敌"
+}

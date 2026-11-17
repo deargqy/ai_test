@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 7,
+  "id": "run04-d07-01",
+  "phase": "shop",
+  "before": {
+    "state": "70金，Lv11/91000HP；补给三选A、随机S、15金。已有完整三桥，空闲甲右上/背右中/肩左下/无人机左下右中。",
+    "goal": "尝试高阶配件补强，先检查可装性再调整。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day07-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新配件以空闲孔与现有3桥为约束，不能为品质破坏核心。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "资金已够，随机S也可保留/变现，不强行使用。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "随机S",
+        "benefit": "可能强被动",
+        "cost": "放弃15现金或定向A",
+        "risk": "不适配",
+        "unknown": "效果与形状"
+      },
+      {
+        "action": "15金",
+        "benefit": "确定收益",
+        "cost": "放弃高阶配件",
+        "risk": "无成长新来源",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "领取随机S后按实际效果决定。",
+    "prediction": "应获得一件S配件，现金不变70；不预设可装。"
+  }
+}

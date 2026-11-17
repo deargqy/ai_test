@@ -1,0 +1,13 @@
+{
+  "observed": "第二次拖动上沿1578,790→930,790成功插入背到首位，其余四桥随相邻装备保留；S长第一目标1053失败。第二目标1149动作报人工输入，刷新时S长已正确连接背右1053—甲右1245，背4.2K甲7.2K，手3.5K肩4.8K/95坚固51电、无人机64，空仓14金。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-back-first-second.jpg",
+    "playtest-2026-11-16-run05/day10-defense-long-equipped.jpg",
+    "playtest-2026-11-16-run05/day10-reorder-interruption.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "最终布局和数值支持预测，但最后桥安装工具报人工输入，无法判定自动动作或人工完成，不计完全自主装配成功。",
+  "nextAction": "检查敌方详情并先存预测后战斗"
+}

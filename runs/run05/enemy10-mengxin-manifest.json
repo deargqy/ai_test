@@ -1,0 +1,245 @@
+{
+  "batchId": "enemy10-mengxin",
+  "expectedSize": [
+    1920,
+    1080
+  ],
+  "context": {
+    "name": "萌新",
+    "hp": 80000,
+    "rerolls": 0,
+    "gold": 14
+  },
+  "entries": [
+    {
+      "id": "drone",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-drone.jpg",
+      "box": [
+        250,
+        210,
+        890,
+        790
+      ]
+    },
+    {
+      "id": "hand",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-hand.jpg",
+      "box": [
+        390,
+        210,
+        1030,
+        790
+      ]
+    },
+    {
+      "id": "shoulder",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-shoulder.jpg",
+      "box": [
+        533,
+        210,
+        1173,
+        790
+      ]
+    },
+    {
+      "id": "armor",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-armor.jpg",
+      "box": [
+        677,
+        210,
+        1317,
+        790
+      ]
+    },
+    {
+      "id": "back",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-back.jpg",
+      "box": [
+        819,
+        210,
+        1459,
+        790
+      ]
+    },
+    {
+      "id": "tech1",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-tech1.jpg",
+      "box": [
+        213,
+        90,
+        833,
+        550
+      ]
+    },
+    {
+      "id": "tech2",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-tech2.jpg",
+      "box": [
+        306,
+        90,
+        926,
+        550
+      ]
+    },
+    {
+      "id": "tech3",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-tech3.jpg",
+      "box": [
+        400,
+        90,
+        1020,
+        550
+      ]
+    },
+    {
+      "id": "tech4",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-tech4.jpg",
+      "box": [
+        496,
+        90,
+        1116,
+        550
+      ]
+    },
+    {
+      "id": "tech5",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-tech5.jpg",
+      "box": [
+        589,
+        90,
+        1209,
+        550
+      ]
+    },
+    {
+      "id": "bridge1",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-bridge1.jpg",
+      "box": [
+        340,
+        220,
+        960,
+        750
+      ]
+    },
+    {
+      "id": "bridge2",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-bridge2.jpg",
+      "box": [
+        556,
+        220,
+        1176,
+        750
+      ]
+    },
+    {
+      "id": "bridge3",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-bridge3.jpg",
+      "box": [
+        629,
+        220,
+        1249,
+        750
+      ]
+    },
+    {
+      "id": "bridge4",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-bridge4.jpg",
+      "box": [
+        701,
+        220,
+        1321,
+        750
+      ]
+    },
+    {
+      "id": "socket1",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket1.jpg",
+      "box": [
+        198,
+        220,
+        818,
+        750
+      ]
+    },
+    {
+      "id": "socket2",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket2.jpg",
+      "box": [
+        268,
+        220,
+        888,
+        750
+      ]
+    },
+    {
+      "id": "socket3",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket3.jpg",
+      "box": [
+        198,
+        220,
+        818,
+        750
+      ]
+    },
+    {
+      "id": "socket4",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket4.jpg",
+      "box": [
+        485,
+        220,
+        1105,
+        750
+      ]
+    },
+    {
+      "id": "socket5",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket5.jpg",
+      "box": [
+        485,
+        220,
+        1105,
+        750
+      ]
+    },
+    {
+      "id": "socket6",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket6.jpg",
+      "box": [
+        699,
+        220,
+        1319,
+        750
+      ]
+    },
+    {
+      "id": "socket7",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket7.jpg",
+      "box": [
+        773,
+        220,
+        1393,
+        750
+      ]
+    },
+    {
+      "id": "socket8",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket8.jpg",
+      "box": [
+        844,
+        220,
+        1464,
+        750
+      ]
+    },
+    {
+      "id": "socket9",
+      "source": "../../docs/playtest-2026-11-16-run05/day10-mengxin-socket9.jpg",
+      "box": [
+        844,
+        220,
+        1464,
+        750
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 8,
+  "id": "run05-d08-04",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T14:14:51.950Z",
+  "before": {
+    "state": "93金Lv9HP60000，恢复后XP0/8且tooltip一致，原4/30；未知是否实际进度重置。库存短桥不适配，已装双核心600%+辅助100%。",
+    "goal": "提升生命与商店质量，并核实异常经验成本",
+    "evidence": [
+      "playtest-2026-11-16-run05/day08-xp-detail.jpg",
+      "playtest-2026-11-16-run05/day08-shop-b-bridge.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "余额和即时生存比较"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "验证扣费与进度再继续"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "留存莫瑟成长成本"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买经验至Lv10",
+        "benefit": "+16000HP确定可见，下级商店改善",
+        "cost": "UI预计8金但旧进度需28金；先1次核实预算上限28",
+        "risk": "显示可能重绘改变",
+        "unknown": "真正所需经验"
+      },
+      {
+        "action": "直接刷新买核心",
+        "benefit": "有机会升肩/甲背品质",
+        "cost": "随机刷新与新装备失去成长",
+        "risk": "可能无合适词条",
+        "unknown": "商品分布"
+      },
+      {
+        "action": "留93吃息",
+        "benefit": "10利息",
+        "cost": "超过50多余余额不再增息",
+        "risk": "当前60kHP可能不足",
+        "unknown": "下一敌链未知"
+      }
+    ],
+    "chosenAction": "先买1次4金看实际XP，再按新图决定补到Lv10；预算28，不额外冲级。之后最多3次2金刷新找肩/甲/背链升级。",
+    "prediction": "第一次93→89，经验增加4；若0/8真实则第二次85金Lv10/76000HP；若重绘回8/30则另需24金到Lv10。升级不提高现有装备阶级。"
+  }
+}

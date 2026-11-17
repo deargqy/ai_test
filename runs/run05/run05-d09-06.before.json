@@ -1,0 +1,75 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-06",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T14:36:33.427Z",
+  "before": {
+    "state": "首领战斗型异变塞玛Lv3，HP预览未知，无科技/配件。SS手5.5s600×3/5力每击并削最大HP=自身力200%；S肩10.5s460×4/19力，CD结束此装+40力；SS甲11s1800盾120力耗30%力换15%减伤cap90%；S背6.5s290盾58力全体减速2s，物伤按力生盾；S无人机7.5s部署48力/35伤10力。己76k HP、103金，375初始力+8/s，手5s四击3870静态，肩9s三击4712静态，三桥共享；0负。",
+    "goal": "用先手爆发压制首领后续叠层，验证真实首击及首领结算口径",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-boss-hand-active.jpg",
+      "playtest-2026-11-16-run05/day09-boss-shoulder.jpg",
+      "playtest-2026-11-16-run05/day09-boss-armor.jpg",
+      "playtest-2026-11-16-run05/day09-boss-back.jpg",
+      "playtest-2026-11-16-run05/day09-boss-drone.jpg",
+      "playtest-2026-11-16-run05/day09-third-bridge-core.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较首次有效出手与对方11s减伤启动"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌平铺力来源，非按命中百分比闭环；HP未知限制时长预测"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按词条确认手削最大HP不是治疗"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "首领按玩家不掉命先验参加，不故意输"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "分开首领与正式战计数"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "现配置出战",
+        "benefit": "开场375力、50%加速3s，手约3.5s先攻击；桥倍率全在核心",
+        "cost": "不升HP，首领HP未知",
+        "risk": "长战敌减伤和削最大HP累积",
+        "unknown": "首领HP及隐藏阶段机制未显示；失败不扣命是玩家先验"
+      },
+      {
+        "action": "先32金升Lv11",
+        "benefit": "预计+19000HP容错",
+        "cost": "金币103→71，仍满利息",
+        "risk": "HP不修复被动或启动问题",
+        "unknown": "首领是否需要额外生存未知"
+      }
+    ],
+    "chosenAction": "当前配置出战，不为未见威胁先买HP；所有被动已核，观察首次命中、剩血、三表及胜负是否计官方。",
+    "prediction": "方向偏胜但HP未知不报概率；手首次有效命中3–5秒，肩约7.5–9秒；若首领HP≤150k预计20秒内结束；剩血>60000；手与肩主导伤害，背供盾。首领计数不预设。"
+  }
+}

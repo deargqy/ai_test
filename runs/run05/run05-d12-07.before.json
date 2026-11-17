@@ -1,0 +1,68 @@
+{
+  "runId": "run05",
+  "day": 12,
+  "id": "run05-d12-07",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T16:28:56.686Z",
+  "before": {
+    "state": "最终darkhunter24497k：开场375寒冷；手3.2秒6击面板2.1k、雷电额外触发，S1200%雷霆桥双端手/无人机，背4.9双施法全慢2秒雷电等额盾；甲9.9双施法5.9k盾；敌我都有随机3秒充能。无递归、无持续禁用。",
+    "goal": "用首轮爆发穿过控制与雷电护盾，不再盲升等级",
+    "evidence": [
+      "playtest-2026-11-16-run05/day12-enemy-final.jpg",
+      "playtest-2026-11-16-run05/day12-ec-g2.jpg",
+      "playtest-2026-11-16-run05/day12-ec-g3.jpg",
+      "playtest-2026-11-16-run05/day12-ec-t3.jpg",
+      "playtest-2026-11-16-run05/day12-ec-p7.jpg",
+      "playtest-2026-11-16-run05/day12-ec-p9.jpg"
+    ],
+    "memorySearch": "按opponent阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "寒冷按CD增加而非硬控，慢全体与随机充能分开"
+      },
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "识别1200%共享桥+6击而非看基础150"
+      },
+      {
+        "id": "M07",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "前战9秒纠正时长，保留可反驳区间"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "没有存活缺口证据不再升级"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "直接打",
+        "benefit": "139k缓冲，手肩三桥爆发；保持57满息",
+        "cost": "承受375寒冷和双背减速",
+        "risk": "随机充能落点/持续慢可能拖长",
+        "unknown": "敌无人机实际攻击频率和寒冷额外触发口径不明"
+      },
+      {
+        "action": "再买经验升级",
+        "benefit": "多基础HP",
+        "cost": "至少48金，现无证据139k不够",
+        "risk": "只买血不解控制，利息下降",
+        "unknown": "无对照无法证明必要性"
+      }
+    ],
+    "chosenAction": "保持装备Lv13直接战斗；使用可用最高速度",
+    "prediction": "方向偏胜但中低把握；我方首次有效伤害6–10秒，10–20秒结束，剩HP>50000；敌手或无人机为主伤，我手肩主伤；若20秒仍未结束则本模型低估减速与雷电护盾反馈"
+  }
+}

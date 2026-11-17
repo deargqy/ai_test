@@ -1,0 +1,63 @@
+{
+  "runId": "run05",
+  "day": 10,
+  "id": "run05-d10-03",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T15:41:28.529Z",
+  "before": {
+    "state": "112金XP6/34，Lv10生命76000；上场剩20571，现金充裕；先提高商店质量再见商店。",
+    "goal": "补充生命缓冲，同时留足核心购物与利息",
+    "evidence": [
+      "playtest-2026-11-16-run05/day10-tech-selected.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "先比较已知28金且仍保留最高利息"
+      },
+      {
+        "id": "M09",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "升级不增加现有装备阶级，莫瑟成长保留"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核实等级金币再继续"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买28经验升Lv11",
+        "benefit": "预计95000生命、提高商店高阶概率",
+        "cost": "28金，余84仍10利息",
+        "risk": "已有装备不升阶，不能替代启动强化",
+        "unknown": "实际Lv11概率与HP待核"
+      },
+      {
+        "action": "直接升两级",
+        "benefit": "更多生命",
+        "cost": "第二级费用尚未现场读，可能低于50利息线",
+        "risk": "机械升级挤占配件预算",
+        "unknown": "Lv12成本未知"
+      },
+      {
+        "action": "不升",
+        "benefit": "保留112金",
+        "cost": "放弃当前生命和概率改善",
+        "risk": "上场高承伤再次出现",
+        "unknown": "后续敌人未知"
+      }
+    ],
+    "chosenAction": "先买7次4经验共28，停在Lv11后检查，不自动继续第二级",
+    "prediction": "金币112→84，XP6+28=34升Lv11，HP76000→预计95000；已有装备数值保持，概率现场核实"
+  }
+}

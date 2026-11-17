@@ -1,0 +1,13 @@
+{
+  "observed": "免费1→0，金币6。新敌百越西戎1500HP/Lv1，C寒冷枪6秒3×160/3×3寒冷；C寒冷甲13.5秒510盾/34寒冷，两件均无被动。旧详情标题仍未更新。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-reroll2.jpg",
+    "playtest-2026-11-16-run05/day01-enemy3-weapon.jpg",
+    "playtest-2026-11-16-run05/day01-enemy3-armor.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "新敌没有已见的成长充能链，可用于正式战判断；未战的20k对手优劣仍无验证。",
+  "nextAction": "保留6金出战"
+}

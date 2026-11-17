@@ -1,0 +1,48 @@
+{
+  "runId": "run04",
+  "day": 8,
+  "id": "run04-d08-02",
+  "phase": "shop",
+  "before": {
+    "state": "97金，Lv12/2/42XP；可跳商店+10，核心连续六战获胜，三S连接完整。",
+    "goal": "稳健提高前期生命，保满利息并缩短购物流程。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day08-shop-options.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "97+10-40=67仍满利息，40经验正好升一级。"
+      },
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "基础生命防启动前被秒，保留已有强后段。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "跳店并升Lv13",
+        "benefit": "明确生命提高，余67",
+        "cost": "40金，放弃商品",
+        "risk": "未获得S装备升级",
+        "unknown": "Lv13生命"
+      },
+      {
+        "action": "入店购物",
+        "benefit": "可能核心同被动升级",
+        "cost": "少10且耗钱",
+        "risk": "可能只有不适配货",
+        "unknown": "商品"
+      }
+    ],
+    "chosenAction": "跳店+10，10次经验到Lv13。",
+    "prediction": "余67，Lv13/0XP，生命提高；三桥不变。"
+  }
+}

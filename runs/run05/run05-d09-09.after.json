@@ -1,0 +1,11 @@
+{
+  "observed": "A附魔中心1120,72→1101,923成功，跨甲与肩：甲16感电，肩51感电（16×3.16向上显示），肩95坚固保持，55金。新证据：元素216%也放大附魔感电。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day09-enchant-single-shoulder.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "换不同布局兑现A，不把顶部原失败删除；甲是否使用也施加感电仍待战报。",
+  "nextAction": "旧B尝试上排不同配件，若失败继续战斗"
+}

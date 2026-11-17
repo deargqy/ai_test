@@ -1,0 +1,56 @@
+{
+  "runId": "run04",
+  "day": 3,
+  "id": "run04-d03-02",
+  "phase": "opponent",
+  "before": {
+    "state": "我方30000HP，双成长武器+双盾+燃烧触发寄生。Trueman12500HP，3件：C甲450盾30，SS刀420×3/5，B寒肩450×3/18；无已见配件。两次悬停未出装备词条，启动时间与被动未知。",
+    "goal": "用现成生存优势验证新联动，不因SS品质直接高估。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day03-opponent.jpg",
+      "playtest-2026-11-16-run04/day03-shared-build.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "输出启动与被动未知，不虚报精确胜率。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "比较30000对12500、2160/720双盾与持续成长。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "SS刀卡面是420×3，不是1280；原尺寸核实。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "迎战",
+        "benefit": "已有成长与生存优势",
+        "cost": "失败损失1生命",
+        "risk": "SS被动未知",
+        "unknown": "启动和终局输出"
+      },
+      {
+        "action": "免费换敌",
+        "benefit": "可能找弱敌",
+        "cost": "放弃当前低生命对手",
+        "risk": "可能更强",
+        "unknown": "下一敌"
+      }
+    ],
+    "chosenAction": "直接迎战，进入战场立即加速。",
+    "prediction": "倾向获胜，中等信心；燃烧和寄生总量应明显高于第二天，新甲贡献盾至少一次。"
+  }
+}

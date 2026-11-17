@@ -1,0 +1,11 @@
+{
+  "observed": "进入黑市，84金不变，S长48/S短32/B无人机8/A甲特价8/A背16/S力量背32/消耗品8。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day10-shop.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "商品揭晓，下一步整组读取新说明",
+  "nextAction": "集中采集配件与候选说明"
+}

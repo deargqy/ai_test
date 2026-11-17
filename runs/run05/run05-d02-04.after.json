@@ -1,0 +1,14 @@
+{
+  "observed": "力量背209/38，未继承旧背+50成长；旧背卖2，刷新2后20金。正式战背部盾3410，力量114=3次38；仅主动基础盾约627，额外盾明确存在。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day02-back-equipped.jpg",
+    "playtest-2026-11-16-run05/day02-refreshed.jpg",
+    "playtest-2026-11-16-run05/day02-defense.jpg",
+    "playtest-2026-11-16-run05/day02-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "新背换掉旧背并兑现攻击产盾；不能将所有3410都当减少的实际伤害。",
+  "nextAction": "保留背部作为当前力量核心"
+}

@@ -1,0 +1,64 @@
+{
+  "runId": "run05",
+  "day": 14,
+  "id": "run05-d14-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T16:49:21.623Z",
+  "before": {
+    "state": "140金，商店S+6段长桥24售24、S+3段短32；肩Rmid1437空但现长桥横过、手Rmid1633被10%CD占用。",
+    "goal": "检验额外长桥能否与600%伤害长桥交错共存",
+    "evidence": [
+      "playtest-2026-11-16-run05/day14-s0-p1.jpg",
+      "playtest-2026-11-16-run05/day14-s0-p0-read.jpg"
+    ],
+    "memorySearch": "按build阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 7,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较交错桥端点而非颜色"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次失败换策略"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已核卖价24，试装不承诺零时间成本"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买+6长并移单孔CD到背",
+        "benefit": "如能接肩Rmid—手Rmid则肩3→9手4→10，保留原伤桥",
+        "cost": "24金，可售24；手暂4.5→5背7→6.3",
+        "risk": "同排交叠可能无效",
+        "unknown": "实际装配限制需核对"
+      },
+      {
+        "action": "买+3短替甲肩200%伤害桥",
+        "benefit": "肩3→6，牺牲200%伤害净首轮仍提升",
+        "cost": "32金且仅肩受益",
+        "risk": "没加快第一下",
+        "unknown": "长桥若成功更优"
+      },
+      {
+        "action": "直接刷",
+        "benefit": "搜CD/充能",
+        "cost": "错过零买卖差价+6长",
+        "risk": "放弃很强连击收益",
+        "unknown": "新货随机"
+      }
+    ],
+    "chosenAction": "买24金+6长桥，最多两次不同落点试装；CD移背；如不兼容保留明确替换方案再比较",
+    "prediction": "140→116；兼容则肩9手10且伤害7.5K/4.6K保持，手CD5背6.3；装不上不算改善。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 1,
+  "id": "run05-d01-10",
+  "phase": "opponent",
+  "rawSavedAt": "2026-11-16T09:00:59.553Z",
+  "before": {
+    "state": "我8500HP/B力量甲+C剑+C背+C力量无人机、6金；敌6500HP，B感电甲11.5秒660盾/45感电，被动燃烧/寒冷/寄生也触发感电；B剑4.9秒3×80/3×10感电，雷电伤害令全感电装备+1；C肩250×2/15感电，C燃烧无人机20/3。免费重随2。",
+    "goal": "避开已成型感电循环，不能按血量优势留敌",
+    "evidence": [
+      "playtest-2026-11-16-run05/day01-enemy-detail.jpg",
+      "playtest-2026-11-16-run05/day01-enemy-sword-passive.jpg",
+      "playtest-2026-11-16-run05/day01-enemy-armor-passive.jpg"
+    ],
+    "memorySearch": "按 opponent 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较早期启动与完整触发链"
+      },
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "敌燃烧触发感电并反向增长，低面板不能代表低威胁"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两个B被动已实读，不凭颜色判断"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "核实对手姓名/配置更新，留意旧BUG001"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "免费重随",
+        "benefit": "有机会去掉燃烧→感电→全装备成长链",
+        "cost": "耗1次免费机会",
+        "risk": "新敌可能更强且不能回选",
+        "unknown": "新敌未知"
+      },
+      {
+        "action": "保留当前敌",
+        "benefit": "留2次机会但本战无价值",
+        "cost": "面对三输出与成长循环",
+        "risk": "敌4.9秒先手，我6秒背/剑、8.5秒部署、12秒甲；倾向不利",
+        "unknown": "雷电频率/配件细节未全读"
+      }
+    ],
+    "chosenAction": "使用第一次免费重随",
+    "prediction": "免费次数2→1，金币保持6，对手配置应更新；不会用未发生战斗验证原对手必败。"
+  }
+}

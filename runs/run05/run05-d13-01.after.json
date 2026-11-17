@@ -1,0 +1,15 @@
+{
+  "observed": "未升级，入店125金，两次有效刷新后121金，首击刷新只关掉锁定详情未扣钱；没有购买。S单孔实际是每日成长冷却-2%而非-10%；消耗品仅无人机伤害+4，未买。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day13-shop.jpg",
+    "playtest-2026-11-16-run05/day13-roll1-done.jpg",
+    "playtest-2026-11-16-run05/day13-roll2-done.jpg",
+    "playtest-2026-11-16-run05/day13-s2-cd.jpg",
+    "playtest-2026-11-16-run05/day13-s2-consume.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "先读文字避免按图标误认；缺有效双端/剩余局程短，保持预算",
+  "nextAction": "保持现装直接去选敌"
+}

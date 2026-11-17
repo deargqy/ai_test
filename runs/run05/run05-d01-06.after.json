@@ -1,0 +1,12 @@
+{
+  "observed": "背已装备，28→26；两份经验后Lv3/4500HP/2/6XP、18金，解锁第三件商品。初甲480、剑145仍C。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day01-back-purchased.jpg",
+    "playtest-2026-11-16-run05/day01-level3.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "预算和等级预测准确，英雄升级未升装备。",
+  "nextAction": "买力量无人机并只刷新一次找输出"
+}

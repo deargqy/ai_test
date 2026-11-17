@@ -1,0 +1,63 @@
+{
+  "runId": "run04",
+  "day": 1,
+  "id": "run04-d01-00",
+  "phase": "observe",
+  "preStartRecordedAt": "2026-11-16T06:42:35.490Z",
+  "before": {
+    "state": "第三局按玩家要求停止0胜2负，当前第四局选角，胡班·本·帕尔文：开局额外30金币，3次失败。莫瑟4命每日主属性+50、德米特里4命每日3免费刷新可选。",
+    "goal": "用确定的启动资金同时满足升级与装备，避免上局开局生命不足。",
+    "evidence": [
+      "playtest-2026-11-16-run04/pilot-huban.jpg"
+    ],
+    "memorySearch": "observe: 角色前提；shop: 经济与升级",
+    "memories": [
+      {
+        "id": "M09",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "角色决定资源和生命；不再假设不同猫只有外观差异。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "30额外现金可用于确定生命增益与适配装备，保留预算对比。"
+      },
+      {
+        "id": "M05",
+        "revision": 3,
+        "origin": "player",
+        "use": "applied",
+        "reason": "玩家再次要求换序利用高品质装备槽位；本局每次升级装备重新比较全排。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "胡班开局30金币",
+        "benefit": "可同时升级与补齐配件/装备，直接缓解生命差",
+        "cost": "仅3次失败",
+        "risk": "若前期乱花，长期没有持续被动",
+        "unknown": "本局商店供给"
+      },
+      {
+        "action": "莫瑟",
+        "benefit": "4次失败及每日主属性成长",
+        "cost": "少30初始资金",
+        "risk": "前期升级和装配仍争预算",
+        "unknown": "当日装备适配"
+      },
+      {
+        "action": "德米特里",
+        "benefit": "4次失败，每日省6金币刷新",
+        "cost": "资金收益分散多天",
+        "risk": "未必有钱买刷新出的物品",
+        "unknown": "商店质量"
+      }
+    ],
+    "chosenAction": "选择胡班开始新局；按实际商店和插槽选择构筑，不预先锁定寒冷；第一日优先比较Lv6生命与完整装配的预算。",
+    "prediction": "新局应0胜0负、第1天、开局30金币，3条命；实际升级与胜负需后续核对。"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "observed": "选科技金币93未变；战斗2秒帧391力量（375+2×8）；增益统计突进375、余烬88。支持开场即时供给，无法隔离无科技反事实。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day08-tech-chosen.jpg",
+    "playtest-2026-11-16-run05/day08-combat-10.jpg",
+    "playtest-2026-11-16-run05/day08-buffs.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "supported",
+  "memoryDecision": "retain",
+  "reason": "375准确兑现已有物理与转盾链；并非所有自选科技都必胜或优于40金。",
+  "nextAction": "继续按核心选择科技"
+}

@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 6,
+  "id": "run05-d06-02",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T09:57:25.634Z",
+  "before": {
+    "state": "A三选：+120%进攻伤、每秒8力量、燃烧50%+4坚固；现有无燃烧。",
+    "goal": "用可持续力量加成同时服务输出与深红背护盾",
+    "evidence": [
+      "playtest-2026-11-16-run05/day06-tech-left.jpg",
+      "playtest-2026-11-16-run05/day06-tech-middle.jpg",
+      "playtest-2026-11-16-run05/day06-tech-right.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M02",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较启动与持续链"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "围绕现有核心选科技"
+      },
+      {
+        "id": "M07",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "保留力量层伤系数未知"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "余烬III每秒8力",
+        "benefit": "开局即增长，供两主攻和背物伤触发护盾",
+        "cost": "放弃静态+120%伤",
+        "risk": "极短战斗可能静态伤更优",
+        "unknown": "祸津神额外层伤精确系数仍未知；力量计时取整"
+      },
+      {
+        "action": "力量核心III+120%伤",
+        "benefit": "即时提升手约21%、肩约24%，无人机约57%（加算假设）",
+        "cost": "已有400%稀释相对收益，无背盾联动",
+        "risk": "百分比乘区若不同估算会错",
+        "unknown": "科技与配件加法尚未独立测"
+      },
+      {
+        "action": "背水一战III",
+        "benefit": "未来燃烧来源可产坚固",
+        "cost": "当前无燃烧无效",
+        "risk": "为科技改主流成本高",
+        "unknown": "后续燃烧附魔未知"
+      }
+    ],
+    "chosenAction": "选择中间余烬核心III，不为第三项另换燃烧。",
+    "prediction": "非战斗静态面板不变，64金；战斗力量从0开始每秒+8，10秒约80、15秒约120科技来源，战报应出现独立科技力量贡献；同等命中下提高深红背产盾。"
+  }
+}

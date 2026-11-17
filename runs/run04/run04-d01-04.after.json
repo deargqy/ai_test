@@ -1,0 +1,13 @@
+{
+  "observed": "NPC事件获胜，+25金至43；手武810、感电192伤害，装甲450盾、寄生90回复。获得C寄生肩炮，尚在仓库。事件胜利不计正式胜场。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day01-event-result.jpg",
+    "playtest-2026-11-16-run04/day01-event-damage.jpg",
+    "playtest-2026-11-16-run04/day01-event-defense.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "4段武器与感电额外伤害、寄生回复均有统计；仅NPC样本不代表对人胜率。最高速度已启用。",
+  "nextAction": "装上免费肩炮，在43金币预算内优先升级并查看商店联动。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

@@ -1,0 +1,14 @@
+{
+  "observed": "胜利3胜1负，+39=34收入5利息，余额65，4/26XP。肩13192、A手10173、燃烧5223、感电4590、无人机2358。寄生+47976，甲盾4320、背盾2880；A手施加寄生456与寒冷28。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day04-result.jpg",
+    "playtest-2026-11-16-run04/day04-damage.jpg",
+    "playtest-2026-11-16-run04/day04-defense.jpg",
+    "playtest-2026-11-16-run04/day04-buffs.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "胜负与A手附魔触发支持；寄生显著增长同时有新甲、新手、新科技，不能单独归因一项。",
+  "nextAction": "第5天补强主力、核查旧手出售；利息上限50金币。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

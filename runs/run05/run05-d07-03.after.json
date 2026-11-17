@@ -1,0 +1,15 @@
+{
+  "observed": "600%双端一次替换成功：手2.5K肩3.8K背924机91，旧军械库回仓库。旧A燼售8、军械库售12，72金。B短桥两种拖售均失败，仍在库存，停止重复。另仓库旧A跨日仍370，未增加50。",
+  "evidence": [
+    "playtest-2026-11-16-run05/day07-long-equipped.jpg",
+    "playtest-2026-11-16-run05/day07-inventory.jpg",
+    "playtest-2026-11-16-run05/day07-sell-old-hand2.jpg",
+    "playtest-2026-11-16-run05/day07-sell-old-long2.jpg",
+    "playtest-2026-11-16-run05/day07-sell-short2.jpg"
+  ],
+  "operationResult": "succeeded",
+  "predictionResult": "refuted",
+  "memoryDecision": "narrow",
+  "reason": "核心输出预测成立；现金76目标未实现，因B短桥未售，实72。原预测保留，按72分配。",
+  "nextAction": "升Lv9并限额搜索"
+}

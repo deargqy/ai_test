@@ -1,0 +1,31 @@
+{
+  "artifact": "docs/play-flow.html",
+  "localReferencesChecked": 17,
+  "sectionIds": [
+    "daily",
+    "batches",
+    "hard",
+    "rsi",
+    "experiment",
+    "changes"
+  ],
+  "errors": [],
+  "visualRenderVerified": false,
+  "baseline": {
+    "scope": "run05 day09 incomplete; includes boss, pauses, discussion and capture retries",
+    "savedJpgFiles": 94,
+    "recordedDecisions": 10,
+    "completedDecisionOutcomes": 10,
+    "modelRoundTrips": null,
+    "activePlaySeconds": null,
+    "note": "Artifact counts only; no speed improvement inferred."
+  },
+  "run05": {
+    "wins": 8,
+    "losses": 0,
+    "day": 9,
+    "goldLastObserved": 55,
+    "bossWinsSeparate": 1
+  },
+  "speedImprovementVerified": false
+}

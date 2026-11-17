@@ -1,0 +1,63 @@
+{
+  "runId": "run03",
+  "day": 2,
+  "id": "run03-d02-02",
+  "phase": "shop",
+  "before": {
+    "state": "25金币；B冷甲半价4，13.5秒780盾52寒冷，被动使用时所有寒冷装备+15寒冷；B感电背部8，5.5秒130盾26感电全体减速1秒，感电伤害1点获1盾。C旧力甲可卖2。",
+    "goal": "建立寒冷成长和感电护盾循环，补第5装备。",
+    "evidence": [
+      "playtest-2026-11-16-run03/day02-cold-armor.jpg",
+      "playtest-2026-11-16-run03/day02-shock-back.jpg"
+    ],
+    "memorySearch": "shop阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "购买12并卖旧2，最终15金币保留3利息。"
+      },
+      {
+        "id": "M05",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "B冷甲被动作用2冷输出+冷无人机，感电背部与霸主科技有联动。"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "点击价格区，每次读取余额和仓库，纠正上一购买未成功。"
+      },
+      {
+        "id": "M02",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "损失32力量成长，换取寒冷增幅与感电转盾，需要战后核对。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "买B冷甲与B感电背部，卖旧力甲",
+        "benefit": "寒冷成长、多一个减速与感电转盾来源",
+        "cost": "净10金币及原力量收益",
+        "risk": "冷甲13.5秒仍慢；对持续伤害护盾有效性未知",
+        "unknown": "感电伤害转盾实际贡献"
+      },
+      {
+        "action": "只买背部留力甲",
+        "benefit": "保留力量多段增益",
+        "cost": "8金币",
+        "risk": "错过4金币B寒冷被动",
+        "unknown": "两种成长强弱"
+      }
+    ],
+    "chosenAction": "买B冷甲4、B背部8，替换力甲并卖旧2；装配后重读完整插槽。",
+    "prediction": "现金25→21→13→15；五件齐全，首轮甲约6.75秒、背部2.75秒；科技预计由感电触发额外寒冷。"
+  }
+}

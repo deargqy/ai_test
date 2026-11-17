@@ -1,0 +1,57 @@
+{
+  "runId": "run05",
+  "day": 3,
+  "id": "run05-d03-02",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T09:18:05.716Z",
+  "before": {
+    "state": "28金，B潜伏者库存卖4；Lv4XP4/10，11500HP；核心C剑，当前五件已成联动",
+    "goal": "变现不适用补给，升Lv5解锁第二配件位置并提高品质，再找核心",
+    "evidence": [
+      "playtest-2026-11-16-run05/day03-reward-detail.jpg",
+      "playtest-2026-11-16-run05/day03-reward-received.jpg"
+    ],
+    "memorySearch": "按 shop 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M06",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "已有库存先处理，售款实收"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不投资无人机雷电配套"
+      },
+      {
+        "id": "M09",
+        "revision": 2,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "主属性成长已放大，品质升级需另算"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "进店，卖B潜伏者4，买2次XP共8",
+        "benefit": "Lv5+5000HP，开放第二配件商品，24金继续购买",
+        "cost": "放弃跳过5金；花8",
+        "risk": "仍未升级核心",
+        "unknown": "货池内容"
+      },
+      {
+        "action": "跳过+5并留库存",
+        "benefit": "33现金+4可卖",
+        "cost": "无核心搜寻机会",
+        "risk": "低阶输出后期可能不足",
+        "unknown": "后续事件"
+      }
+    ],
+    "chosenAction": "进店，卖潜伏者，买8XP到Lv5；不再盲升",
+    "prediction": "28+4-8=24金，Lv5 XP2/14（阈值现场为准），16500HP；现有阶级和双攻连接保持"
+  }
+}

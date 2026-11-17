@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-04",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:33:44.756Z",
+  "before": {
+    "state": "8胜0负，103金，甲-手-肩-背-无人机；手3195肩4712。A600%双核心已生效，B50%短桥仅肩，仓库空。用户提醒换肩位置共享配件。",
+    "goal": "零成本扩展短桥受益者并保留原长桥",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-resume-layout.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "player",
+        "use": "applied",
+        "reason": "玩家提示推动整体布局，先换序再购买"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "两次不同失败后换策略"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "必须数值及两端验证"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "交换手肩，甲-肩-手-背-无人机",
+        "benefit": "两桥均跨手肩；手+225静态伤害",
+        "cost": "零金币，重接配件操作时间",
+        "risk": "拖拽换序失败或桥断开",
+        "unknown": "换序入口与锚点未掌握"
+      },
+      {
+        "action": "保留原序",
+        "benefit": "原600%双核及肩50%可靠",
+        "cost": "手少225伤害",
+        "risk": "浪费可利用槽位",
+        "unknown": "无"
+      }
+    ],
+    "chosenAction": "先开仓库确认编辑界面，交换手肩；每一装配两次不同失败后改变策略，核实两个核心端点。",
+    "prediction": "成功后手3420，肩4712，长桥600%及短桥50%双核心；背无人机100%不变。"
+  }
+}

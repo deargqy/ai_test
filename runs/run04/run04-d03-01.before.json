@@ -1,0 +1,64 @@
+{
+  "runId": "run04",
+  "day": 3,
+  "id": "run04-d03-01",
+  "phase": "build",
+  "before": {
+    "state": "31金+免费B寄生甲720盾48寄生/13秒，寄生现在也可由燃烧/寒冷/雷电伤害触发，L下R上。店内半价A燃无人机8：6秒部署，40攻击5燃烧/0.5秒/持续6.5秒，部署立即结算燃烧2次，L中L下R中。A短桥16：防御装备盾+200%。旧甲感电R下、旧背寄生R中R下、燃肩L下R下、锯L下。",
+    "goal": "保留双武器S成长，接入燃烧—寄生生命增长，同时提高双防御。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day03-parasite-armor.jpg",
+      "playtest-2026-11-16-run04/day03-burn-drone.jpg",
+      "playtest-2026-11-16-run04/day03-defense-bridge.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新排无人机—背—甲—燃肩—锯：A短桥背R下→甲L下；S短桥肩R下→锯L下；旧长桥无人机R中→背R中，仅背有护盾收益，明确不计无人机收益。"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "跳过S寄生肩：每损失100最大生命伤害+1，与当前生命增长不同；槽仅上/中，破坏S桥连接。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "8+16=24；旧C甲与C无人机各卖2，预期剩11，旧长桥继续用。"
+      },
+      {
+        "id": "M07",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "寄生是生命上限增长，不把所有+号称治疗；核对新旧配件叠加到底加算或乘算。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "换免费B甲、买A燃无人机与A双盾桥，重排五件",
+        "benefit": "燃烧触发寄生、部署爆发、双盾增强且保留双武器成长",
+        "cost": "24金，旧感电甲和无人机的感电来源消失",
+        "risk": "长桥对无人机无盾收益，叠加方式未知",
+        "unknown": "背盾720还是1200、寄生生命收益"
+      },
+      {
+        "action": "花32买S肩",
+        "benefit": "高基础960×2",
+        "cost": "需变现且失去燃烧按层伤害",
+        "risk": "槽位破坏现有S共享，损失最大生命条件不匹配",
+        "unknown": "是否净输出提升"
+      }
+    ],
+    "chosenAction": "买A燃无人机8与A盾短桥16；用B寄生甲替C甲，旧C甲/无人机出售；按五件目标顺序接三件配件。",
+    "prediction": "预期11金，甲盾至少2160，背480并受旧长桥进一步加成（加算720或乘算1200待核）；S仍同时连燃肩和锯。战后核对燃烧与寄生生命增长，不预设一定赢。"
+  }
+}

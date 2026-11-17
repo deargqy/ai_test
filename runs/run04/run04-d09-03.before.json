@@ -1,0 +1,70 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-03",
+  "phase": "build",
+  "before": {
+    "state": "131金，店S电肩ARM-GL00雷锥32：9秒550×2/38感电，感电每层额外+1雷电伤害，L上中下/R下。S肃卫短桥32：使用镶嵌装备时敌人增益层数-16%。现B燃肩L下/R下，甲R上空闲，S800肩L下→手L下。",
+    "goal": "主动削弱敌方力量增长，并提高肩部第一轮基础输出；保留寄生与SS寒冷主轴。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-buff-removal-bridge.jpg",
+      "playtest-2026-11-16-run04/day06-s-element-loop.jpg"
+    ],
+    "memorySearch": "build阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "上一战漏算力量增益爆发；肃卫提供主动减层，电肩9秒比旧9.5略早，仍需回避过快敌。"
+      },
+      {
+        "id": "M02",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "电肩固定800%后4950×2，旧肩630×4；失燃烧按层被动与燃烧→感电科技触发，换基础伤害与电伤放大。"
+      },
+      {
+        "id": "M05",
+        "revision": 4,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "新电肩L上允许甲R上→肩L上短桥共享肃卫；L下仍连800长桥，保其余两S与SS冰桥。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "32+32=64，余67；旧B肩卖4后71，仍满利息。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "S电肩+肃卫共享甲肩",
+        "benefit": "更高首轮输出，两件触发降敌增益，四S网络",
+        "cost": "64金，失燃烧轴与相应科技利用",
+        "risk": "16%减层不足阻快速爆发，需实测",
+        "unknown": "减层作用所有哪些增益"
+      },
+      {
+        "action": "只买肃卫装SS自身",
+        "benefit": "低成本单触发",
+        "cost": "32，取代SS冰桥150%伤害",
+        "risk": "每7秒单触发较慢",
+        "unknown": "召唤消层语义"
+      },
+      {
+        "action": "保留原B燃肩",
+        "benefit": "已知燃烧联动",
+        "cost": "错过反增益控制",
+        "risk": "再遇力量爆发",
+        "unknown": "下一敌"
+      }
+    ],
+    "chosenAction": "买S电肩与S肃卫；换肩后恢复800长桥，肃卫接甲R上→肩L上；卖B燃肩。",
+    "prediction": "现金71，电肩4950×2，三原S连接完整且新增甲肩肃卫。后续优先选避快力量敌，不把减层当无敌。"
+  }
+}

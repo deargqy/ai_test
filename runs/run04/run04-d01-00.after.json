@@ -1,0 +1,11 @@
+{
+  "observed": "第四局已开始：胡班·本·帕尔文，第1天0胜0负，Lv1，1500生命，30金币，3次失败上限，正在领取初始装甲。",
+  "evidence": [
+    "playtest-2026-11-16-run04/day01-start.jpg"
+  ],
+  "predictionResult": "supported",
+  "reason": "机师额外30金币与新局状态均确认；选角原始文件在开始按钮前保存，确认新局后才按runbook建立和导入记录，导入时间不是原始决策时间。",
+  "nextAction": "按新的全排槽位比较规则选择初始装甲和主武，不预先锁定寒冷。",
+  "operationResult": "succeeded",
+  "memoryDecision": "retain"
+}

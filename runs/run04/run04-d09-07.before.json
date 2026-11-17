@@ -1,0 +1,57 @@
+{
+  "runId": "run04",
+  "day": 9,
+  "id": "run04-d09-07",
+  "phase": "opponent",
+  "before": {
+    "state": "对手神秘135000HP，A甲58/970、SS手310×4/9、S肩924×4/36、S背73/310、S无人机165/14；多桥。已读科技：开战寄生150、充能1.5秒、CD-4%、主属性+100。免费重随0。己135000HP/2/46XP/71金，四S连接与新SS寒冷机待实测。",
+    "goal": "先提高启动期生存，再检验寒冷控制、消层与寄生。",
+    "evidence": [
+      "playtest-2026-11-16-run04/day09-final-opponent.jpg",
+      "playtest-2026-11-16-run04/day09-enemy-start-charge.jpg",
+      "playtest-2026-11-16-run04/day09-four-s-build.jpg"
+    ],
+    "memorySearch": "opponent阶段经验与本局实测",
+    "memories": [
+      {
+        "id": "M01",
+        "revision": 2,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "敌充能1.5秒与CD-4%提前首轮；花44升Lv14，不把后段寄生算开局保障。未见已知力量指数刀链，但完整被动仍未知。"
+      },
+      {
+        "id": "M02",
+        "revision": 3,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "四S中肃卫与SS寒冷新增控制，效果待实战；先提升初始生命。"
+      },
+      {
+        "id": "M06",
+        "revision": 1,
+        "use": "applied",
+        "origin": "autonomous",
+        "reason": "71-44=27，牺牲5利息换当前生命余量，最后一命优先活过本战。"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "升一级后迎战",
+        "benefit": "更高初始生命、完整控制/成长方案",
+        "cost": "44金、较低利息",
+        "risk": "未知被动或控制未及时启动",
+        "unknown": "准确首轮时间与敌各被动"
+      },
+      {
+        "action": "不升级迎战",
+        "benefit": "保71满利息",
+        "cost": "少一级生命",
+        "risk": "启动期余量更低",
+        "unknown": "同上"
+      }
+    ],
+    "chosenAction": "11次经验升Lv14，核值后迎战；记录中段与最终统计。",
+    "prediction": "预计余额27、Lv14/0XP，生命高于135k；战斗倾向胜但低信心，重点看首甲是否出盾、寒冷是否实质施加与敌增益是否被削减。"
+  }
+}

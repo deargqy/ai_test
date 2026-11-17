@@ -1,0 +1,56 @@
+{
+  "runId": "run05",
+  "day": 9,
+  "id": "run05-d09-10",
+  "phase": "build",
+  "rawSavedAt": "2026-11-16T14:43:27.103Z",
+  "before": {
+    "state": "A已在甲肩下排，肩51感电/95坚固。S元素肩手下排，600%中排，100%手背。库存B雷霆50/感电150；肩右上1245与手左上1340可见空孔，同处A曾两次失败，B不同配件未试。",
+    "goal": "用旧库存给带感电的肩150%并给手50%，无新购买",
+    "evidence": [
+      "playtest-2026-11-16-run05/day09-enchant-single-shoulder.jpg"
+    ],
+    "memorySearch": "按 build 阶段检索 data/playtest.json；结合现场，仅采用条件匹配条目",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 5,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "按每端属性分别50与150，不机械同倍率"
+      },
+      {
+        "id": "M04",
+        "revision": 3,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "不同配件分支一次为限"
+      },
+      {
+        "id": "M08",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "数值校验成功再使用"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "B中心1313,169→1293,820一次",
+        "benefit": "肩预计5332手3870，原桥不动",
+        "cost": "零金，一次操作",
+        "risk": "A在相同孔位失败，不能假设B必成",
+        "unknown": "不同配件真实槽约束未明"
+      },
+      {
+        "action": "保留库存",
+        "benefit": "省操作",
+        "cost": "失去当前可能加成",
+        "risk": "未兑现B",
+        "unknown": "未来槽变化未知"
+      }
+    ],
+    "chosenAction": "B上排仅中心一次，失败即保留，不再试这个位置。",
+    "prediction": "如成功肩4.4K→5.3K手3.6K→3.9K，坚固95/13和肩感电51不变。"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "runId": "run05",
+  "day": 13,
+  "id": "run05-d13-02",
+  "phase": "shop",
+  "rawSavedAt": "2026-11-16T16:33:41.536Z",
+  "before": {
+    "state": "121金，两次刷新完成；成长冷却起始仅-2%，A200%伤害短桥、无人机+4消耗品。",
+    "goal": "结束无目标购物，保留现金应对实战缺口",
+    "evidence": [
+      "playtest-2026-11-16-run05/day13-roll2-done.jpg",
+      "playtest-2026-11-16-run05/day13-s2-cd.jpg",
+      "playtest-2026-11-16-run05/day13-s2-consume.jpg"
+    ],
+    "memorySearch": "按shop阶段检索，复用当前修订",
+    "memories": [
+      {
+        "id": "M05",
+        "revision": 6,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "比较净桥收益，不填空孔而买"
+      },
+      {
+        "id": "M03",
+        "revision": 1,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "无人机不是主输出，专属+4低收益"
+      },
+      {
+        "id": "M09",
+        "revision": 4,
+        "origin": "autonomous",
+        "use": "applied",
+        "reason": "剩余局程短则成长配件折价"
+      }
+    ],
+    "candidates": [
+      {
+        "action": "不买离店",
+        "benefit": "三桥强核心和长大盾保持；减少无收益操作",
+        "cost": "放弃2%冷却和无人机4伤",
+        "risk": "可能下一敌需补强",
+        "unknown": "未穷举所有重新排列"
+      },
+      {
+        "action": "买每日-2%冷却单孔16",
+        "benefit": "背7→6.86，后两日到6.58",
+        "cost": "16金占孔，三胜即可结束",
+        "risk": "收益小不解真正启动问题",
+        "unknown": "后续失败会延长局程"
+      },
+      {
+        "action": "A200伤害短桥16替元素/充能",
+        "benefit": "双核加200伤害",
+        "cost": "丢216%坚固+感电或2秒互充",
+        "risk": "短局核心链可能变弱",
+        "unknown": "无同敌对照"
+      }
+    ],
+    "chosenAction": "不买不升级离店",
+    "prediction": "121金和原桥保持；下战仅按实际敌人再考虑升级"
+  }
+}

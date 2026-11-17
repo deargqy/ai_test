@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "batchId": "d12-r2",
+  "createdAt": "2026-11-16T16:22:45.961433+00:00",
+  "recognition": "pending-assistant-visual",
+  "context": {},
+  "entries": [
+    {
+      "id": "p1",
+      "label": "p1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-p1.jpg",
+      "sourceSha256": "3550edea74f11dfba64ddae777e593f5c8866f563bb944140eccbca38baa6b35",
+      "box": [
+        665,
+        125,
+        1070,
+        420
+      ],
+      "crop": "crop-01.png",
+      "cropSha256": "99576d1182a2b006a849151cea5a6c8c64be103fd1c6d82c4b5aa1af2cecc416",
+      "reading": null
+    },
+    {
+      "id": "p2",
+      "label": "p2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-p2.jpg",
+      "sourceSha256": "92a3fff36576b737baf38a8503e27b72b362707dea634fc08605e698ba11d8a6",
+      "box": [
+        985,
+        125,
+        1400,
+        430
+      ],
+      "crop": "crop-02.png",
+      "cropSha256": "a654bc60ae3571dc37b06e8a3797d9baac0140e24f89450f85fbaaf3a1dfa947",
+      "reading": null
+    },
+    {
+      "id": "g1",
+      "label": "g1",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-g1.jpg",
+      "sourceSha256": "71017a47f87ab3f432b91abed4fc9d70c62ee8240505955acf4997ece9357ae3",
+      "box": [
+        510,
+        300,
+        1000,
+        760
+      ],
+      "crop": "crop-03.png",
+      "cropSha256": "bed7fc88ca6a531b65339ebd0cd4c864b687fffa3284df59fac82a11b4570e22",
+      "reading": null
+    },
+    {
+      "id": "g2",
+      "label": "g2",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-g2.jpg",
+      "sourceSha256": "c060b8f117e0f2fcb436060caaefef040fe554bbaad90db221f7393ba4bd3a65",
+      "box": [
+        740,
+        300,
+        1220,
+        760
+      ],
+      "crop": "crop-04.png",
+      "cropSha256": "2395d4deca728bdc24372ceae06c1d83fe586ba9d5e0e9bf8c2b6f92da2f76ad",
+      "reading": null
+    },
+    {
+      "id": "g3",
+      "label": "g3",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-g3.jpg",
+      "sourceSha256": "5dc090dcc37cc5f754d3c767aeba123df478811494def45bf600a3584cc18de4",
+      "box": [
+        960,
+        300,
+        1450,
+        760
+      ],
+      "crop": "crop-05.png",
+      "cropSha256": "e468e4f3c72dc2368ef5266881eb9654c801d2b205c44e0f2d1c0315a7b37a5d",
+      "reading": null
+    },
+    {
+      "id": "g4",
+      "label": "g4",
+      "source": "E:\\document\\work\\code\\ai_test\\docs\\playtest-2026-11-16-run05\\day12-r2-g4.jpg",
+      "sourceSha256": "227aff1ece430e03d47707816c2684714da73a309e162cddb86f50eee05fd596",
+      "box": [
+        1200,
+        300,
+        1680,
+        760
+      ],
+      "crop": "crop-06.png",
+      "cropSha256": "ccc1edb25e1cd90d25c6576f76dd963ca3b525b6395cbe8582240d6b753d185f",
+      "reading": null
+    }
+  ],
+  "sheets": [
+    "contact-01.jpg",
+    "contact-02.jpg"
+  ],
+  "metrics": {
+    "inputImages": 6,
+    "uniqueCrops": 6,
+    "packSeconds": 0.542
+  },
+  "notes": [
+    "Exact pixel deduplication only; no semantic matching.",
+    "Context is a supplied snapshot, not a fresh observation.",
+    "Use original screenshots for coordinates and uncertain text."
+  ]
+}

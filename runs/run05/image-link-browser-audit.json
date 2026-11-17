@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "browser": "Edge headless",
+  "staticPages": 15,
+  "renderedViews": 82,
+  "uniqueLocalTargets": 1021,
+  "missing": [],
+  "errors": []
+}

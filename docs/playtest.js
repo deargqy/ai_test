@@ -50,8 +50,8 @@ function runPage(id, number) {
  (d.before?'<div class="columns"><div><h3>当时的行动与判断</h3>'+para(d.before)+'</div><div><h3>结果与疑问</h3>'+para(d.after)+'</div></div>':"")+
  '<div class="notice"><h3>当时用到了哪些经验</h3>'+para(d.legacyUsage||"逐条引用见下方决策记录。")+'</div>'+
  (related.length?'<h3>由这段记录整理的经验</h3>'+related.map(m=>'<p>'+link("#memory/"+m.id,m.title)+" · "+esc(m.status)+'</p>').join(""):"")+
- '<details><summary>完整当天记录与原始截图</summary>'+d.detailHtml+
- (d.decisions.length?"":'<p>'+d.images.map(i=>link(i.src,i.label)).join(" · ")+'</p>')+'</details><p class="small">'+d.sources.map(s=>link(s,"原始复盘")).join(" · ")+'</p></article>'+
+ '<details><summary>完整当天记录与原始截图</summary>'+(d.detailHtml||"")+
+ (d.decisions.length?"":'<p>'+(d.images||[]).map(i=>link(i.src,i.label)).join(" · ")+'</p>')+'</details><p class="small">'+(d.sources||[]).map(s=>link(s,"原始复盘")).join(" · ")+'</p></article>'+
  d.decisions.map(decisionHtml).join("")+'<section class="panel"><h3>当天关联的 Bug 与异常</h3>'+
  (issues.length?issues.map(i=>'<p>'+link("#bugs/"+i.id,i.id+" · "+i.title)+' <span class="badge">'+esc(i.status)+'</span></p>').join(""):para("当前归档没有关联到这一天的异常报告。"))+'</section></div></div>';
 }

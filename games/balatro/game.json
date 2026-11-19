@@ -1,0 +1,8 @@
+{
+  "name": "小丑牌",
+  "version": null,
+  "steam": {"appId": "2379780", "nativeProcessNames": ["Balatro"], "titles": ["Balatro", "小丑牌"]},
+  "phases": {"blind": "选择盲注", "hand": "出牌或弃牌", "shop": "商店", "result": "结算"},
+  "models": {},
+  "views": {}
+}

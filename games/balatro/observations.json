@@ -1,0 +1,109 @@
+{
+  "blind": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "blind",
+          "target",
+          "reward",
+          "restrictions"
+        ],
+        "label": "当前界面全景"
+      }
+    },
+    "actions": [
+      "查看限制",
+      "选择盲注后重新截图"
+    ]
+  },
+  "hand": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "hand",
+          "jokers",
+          "score",
+          "target",
+          "handsLeft",
+          "discardsLeft"
+        ],
+        "label": "当前界面全景"
+      },
+      "joker": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "effect",
+          "modifiers"
+        ],
+        "locate": "按当前牌列逐张悬停，同名牌记录实例与顺序；在本帧定位提示框",
+        "cacheReading": true,
+        "label": "持有的小丑牌"
+      },
+      "card": {
+        "mode": "hover",
+        "fields": [
+          "rank",
+          "suit",
+          "modifiers"
+        ],
+        "locate": "按当前手牌数量定位对应牌并展开说明",
+        "label": "手牌"
+      }
+    },
+    "actions": [
+      "悬停牌",
+      "选牌",
+      "出牌或弃牌后重新截图"
+    ]
+  },
+  "shop": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "money",
+          "availableSlots",
+          "inventory",
+          "items",
+          "prices"
+        ],
+        "label": "当前界面全景"
+      },
+      "offer": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "price",
+          "effect"
+        ],
+        "locate": "核实商品位置后悬停，记录这一件的提示框",
+        "cacheReading": true,
+        "label": "在售商品"
+      }
+    },
+    "actions": [
+      "悬停商品",
+      "购买、出售或刷新后重新截图"
+    ]
+  },
+  "result": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "playedCards",
+          "actualScore",
+          "reward",
+          "outcome"
+        ],
+        "label": "当前界面全景"
+      }
+    },
+    "actions": [
+      "核对得分与奖励"
+    ]
+  }
+}

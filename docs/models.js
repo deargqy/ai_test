@@ -81,6 +81,15 @@
   $('upgrades').innerHTML=D.upgrades.priority.map((u,i)=>`<article class="upgrade"><div class="eyebrow">候选 ${i+1} · 待验证</div><h4>${esc(u.target)}</h4><p><b>落点：</b>${esc(u.placement)}</p><p><b>代价：</b>${esc(u.cost)}</p><p class="fine"><b>战后检查：</b>${esc(u.test)}</p></article>`).join('');
   const tabs=[...document.querySelectorAll('[data-tab]')];
   function showTab(id,focus=false){tabs.forEach(b=>{const yes=b.dataset.tab===id;b.setAttribute('aria-selected',yes);b.tabIndex=yes?0:-1;$(b.dataset.tab).hidden=!yes;if(yes&&focus)b.focus();});}
+  function openLinkedTab(){
+    const target = document.getElementById(location.hash.slice(1));
+    const panel = target?.closest('[role="tabpanel"]');
+    if (!panel) return;
+    showTab(panel.id);
+    target.scrollIntoView({block:'start'});
+  }
+  window.addEventListener('hashchange', openLinkedTab);
   tabs.forEach((b,i)=>{b.addEventListener('click',()=>showTab(b.dataset.tab));b.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();showTab(tabs[n].dataset.tab,true);}});});
   renderLayout();renderCombat();renderCase();
+  openLinkedTab();
 })();

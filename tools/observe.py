@@ -95,7 +95,7 @@ def pack(manifest_path, output):
     return bundle
 
 
-def annotate(bundle_path, readings_path):
+def annotate(bundle_path, readings_path, *, save_bundle=save):
     bundle_path = Path(bundle_path)
     bundle, readings = read(bundle_path), read(readings_path)
     by_id = {e['id']: e for e in bundle['entries']}
@@ -109,7 +109,7 @@ def annotate(bundle_path, readings_path):
         e['reading'] = {**r, 'method': 'assistant-visual', 'evidenceSha256': e['sourceSha256'],
                         'readAt': datetime.now(timezone.utc).isoformat()}
     bundle['recognition'] = 'assistant-visual-complete' if all(e['reading'] for e in by_id.values()) else 'assistant-visual-partial'
-    save(bundle_path, bundle)
+    save_bundle(bundle_path, bundle)
     return bundle
 
 

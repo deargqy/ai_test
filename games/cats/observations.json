@@ -1,0 +1,318 @@
+{
+  "observe": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "day",
+          "health",
+          "gold",
+          "screen"
+        ],
+        "label": "当前界面全景"
+      }
+    },
+    "actions": [
+      "检查当前界面与版本"
+    ]
+  },
+  "shop": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "gold",
+          "stock",
+          "inventory"
+        ],
+        "label": "当前界面全景"
+      },
+      "long": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "price",
+          "stats",
+          "effect"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "box": [
+          580,
+          80,
+          1220,
+          620
+        ],
+        "locate": "悬停顶行左侧长配件中央，等名称和词条出现。",
+        "cacheReading": true,
+        "label": "长桥",
+        "hoverAt": [
+          1104,
+          183
+        ],
+        "samples": [
+          {
+            "label": "第一次裁图，详情尚未出现",
+            "path": "../../runs/run05/observations/shop10/crop-01.png"
+          },
+          {
+            "label": "补拍后可读的长桥词条",
+            "path": "../../runs/run05/observations/shop10b/crop-01.png"
+          }
+        ]
+      },
+      "short": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "price",
+          "stats",
+          "effect"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "box": [
+          910,
+          80,
+          1550,
+          620
+        ],
+        "locate": "悬停顶行中间短配件中央，读取提示框和货架价格。",
+        "cacheReading": true,
+        "label": "短桥",
+        "hoverAt": [
+          1429,
+          183
+        ],
+        "samples": [
+          {
+            "label": "实际裁图",
+            "path": "../../runs/run05/observations/shop10/crop-02.png"
+          }
+        ]
+      },
+      "consumable": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "price",
+          "stats",
+          "effect"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "box": [
+          1240,
+          80,
+          1880,
+          620
+        ],
+        "locate": "悬停顶行右侧紫色消耗品，读取出售触发条件以及货架价格。",
+        "cacheReading": true,
+        "label": "消耗品",
+        "hoverAt": [
+          1742,
+          185
+        ],
+        "samples": [
+          {
+            "label": "实际裁图",
+            "path": "../../runs/run05/observations/shop10/crop-03.png"
+          }
+        ]
+      }
+    },
+    "actions": [
+      "先确认顶行三个货位和当前余额。",
+      "依次悬停长桥、短桥、消耗品。每次等对应提示框出现再截图，三张裁图合并读取。",
+      "购买、出售或刷新会改变现场，操作后从新全景开始下一批。"
+    ],
+    "reference": {
+      "image": "examples/shop-shelf.jpg",
+      "bounds": [
+        900,
+        95,
+        1864,
+        270
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "alt": "商店顶行从左到右为长桥、短桥和消耗品",
+      "note": "第 10 天商店的点位取自 1920 × 1080 历史画面中的图标中心。实际操作前需重新确认窗口和布局。"
+    },
+    "sheet": {
+      "label": "查看三张首次裁图的实际拼图",
+      "path": "../../runs/run05/observations/shop10/contact-01.jpg"
+    }
+  },
+  "build": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "gear",
+          "order",
+          "ports",
+          "balances"
+        ],
+        "label": "当前界面全景"
+      },
+      "part": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "endpoints",
+          "effect"
+        ],
+        "locate": "实际端点与装备槽，从当前全图定位",
+        "label": "配件端点与装备槽"
+      }
+    },
+    "actions": [
+      "检查槽位",
+      "装配后核对端点"
+    ]
+  },
+  "opponent": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "opponents",
+          "health"
+        ],
+        "label": "当前界面全景"
+      },
+      "gear": {
+        "mode": "hover",
+        "fields": [
+          "name",
+          "stats",
+          "passive"
+        ],
+        "locate": "逐个悬停当前敌方装备",
+        "label": "对手装备"
+      }
+    },
+    "actions": [
+      "检查装备与科技",
+      "确认选择"
+    ]
+  },
+  "result": {
+    "targets": {
+      "scene": {
+        "mode": "frame",
+        "fields": [
+          "outcome",
+          "reward"
+        ],
+        "label": "当前界面全景"
+      },
+      "stats": {
+        "mode": "frame",
+        "fields": [
+          "damage",
+          "shield",
+          "buffs"
+        ],
+        "label": "当前已打开的统计全景",
+        "locate": "保存当前已选统计页的全景，只填写这一页可见的字段。需要对照三页时，依次采集下方三个目标。"
+      },
+      "damage": {
+        "label": "伤害页",
+        "mode": "click",
+        "fields": [
+          "damage"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "clickAt": [
+          115,
+          196
+        ],
+        "box": [
+          40,
+          230,
+          1880,
+          810
+        ],
+        "locate": "点击战报左上第一个图标，页签高亮后截双方伤害条目。"
+      },
+      "defense": {
+        "label": "防御页",
+        "mode": "click",
+        "fields": [
+          "defense"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "clickAt": [
+          259,
+          196
+        ],
+        "box": [
+          40,
+          230,
+          1880,
+          810
+        ],
+        "locate": "点击左上第二个加号图标，页签高亮后截双方防御条目。"
+      },
+      "buffs": {
+        "label": "增益页",
+        "mode": "click",
+        "fields": [
+          "buffs"
+        ],
+        "size": [
+          1920,
+          1080
+        ],
+        "clickAt": [
+          404,
+          196
+        ],
+        "box": [
+          40,
+          230,
+          1880,
+          810
+        ],
+        "locate": "点击左上第三个圆形图标，页签高亮后截双方增益条目。"
+      }
+    },
+    "actions": [
+      "打开本场战报，确认双方和胜负。",
+      "左上三个统计页签逐个切换，每次确认选中后截取中央统计区；已选中的页签直接截图。",
+      "三页采全后统一比较。"
+    ],
+    "reference": {
+      "image": "examples/result-tabs.jpg",
+      "bounds": [
+        40,
+        157,
+        477,
+        225
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "alt": "战报左上角的伤害、防御、增益页签",
+      "note": "第 16 天战报的点位取自 1920 × 1080 历史画面中的图标中心。实际操作前需重新确认窗口和布局。"
+    }
+  }
+}

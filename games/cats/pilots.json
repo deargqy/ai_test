@@ -1,0 +1,167 @@
+{
+  "pilots": {
+    "mose": {
+      "name": "莫瑟",
+      "lives": 4,
+      "skill": "实战演练",
+      "ability": "每日开始时全部装备主属性 +50，无人机 +5。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-mose.jpg",
+      "focus": {
+        "build": "换装时比较已积累的主属性与新装备的被动、孔位和启动条件。",
+        "shop": "比较即时购买收益与换掉旧件时会损失的积累。"
+      },
+      "observations": [
+        {
+          "text": "第五局第 6 天，旧肩炮已积累 +200 主属性。商店比较新肩炮时，换装成本里计入了这 +200 和旧肩炮的坚固增伤。",
+          "source": "../../runs/run05/run05-d06-03.after.json"
+        }
+      ],
+      "toVerify": [
+        "记录跨日时装备栏和库存的同一件装备，区分基础成长、配件倍率及副属性。"
+      ]
+    },
+    "ruoqian": {
+      "name": "若茜",
+      "lives": 3,
+      "skill": "先人一步",
+      "ability": "战斗开始时，所有装备充能 50%。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-ruoqian.jpg",
+      "focus": {
+        "opponent": "分别记面板冷却、就绪时间与实际首击，对照开场禁用窗口。",
+        "build": "比较不同核心能否把开场充能转成首轮有效触发。"
+      },
+      "observations": [
+        {
+          "text": "第三局开局确认 3 次失败上限及角色技能图标。该记录未测得首击时间。",
+          "source": "../../runs/run03/run03-d01-00.after.json"
+        }
+      ],
+      "toVerify": [
+        "核对双方首击和控制时序；后续循环另行观察。"
+      ]
+    },
+    "huban": {
+      "name": "胡班·本·帕尔文",
+      "lives": 3,
+      "skill": "黄金法则",
+      "ability": "游戏开始时额外获得 30 金币。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-huban.jpg",
+      "focus": {
+        "shop": "首日分别核算升级、补装备和留钱后的余额，记录实际支出。"
+      },
+      "observations": [
+        {
+          "text": "第四局开局实测 30 金币和 3 次失败上限。",
+          "source": "../../runs/run04/run04-d01-00.after.json"
+        }
+      ],
+      "toVerify": [
+        "比较首日资金分配对接下来几天的生存与构筑缺口的影响。"
+      ]
+    },
+    "eve": {
+      "name": "孤女伊芙",
+      "lives": 4,
+      "skill": "出发！",
+      "ability": "发现一件 SS 级装备。技能图标标价 80 金币。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-eve.jpg",
+      "focus": {
+        "shop": "同时记录存钱等技能与当下补强的代价；使用时核对实际扣费和候选。"
+      },
+      "observations": [],
+      "toVerify": [
+        "记录技能可用条件、候选范围和实际扣费。"
+      ]
+    },
+    "ian": {
+      "name": "伊恩",
+      "lives": 4,
+      "skill": "巧手修补",
+      "ability": "在左起第一件装备上额外钻 1 个镶嵌槽。技能图标标价 40 金币。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-ian.jpg",
+      "focus": {
+        "build": "开孔前核对最左装备，比较新增孔能连接哪些现有配件。"
+      },
+      "observations": [],
+      "toVerify": [
+        "记录实际扣费、孔位位置、后续换序是否保留。"
+      ]
+    },
+    "dimitri": {
+      "name": "德米特里",
+      "lives": 4,
+      "skill": "全副武装",
+      "ability": "每天获得 3 次免费刷新。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-dimitri.jpg",
+      "focus": {
+        "shop": "区分免费次数和付费刷新；找到目标后仍要核算购买资金。"
+      },
+      "observations": [],
+      "toVerify": [
+        "记录隔日免费次数是否累积及适用商店。"
+      ]
+    },
+    "fire": {
+      "name": "火种",
+      "lives": 4,
+      "skill": "来之不易的智慧",
+      "ability": "每花费 20 金币，获得 5 点经验值。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-fire.jpg",
+      "focus": {
+        "shop": "记录每次消费前后的进度条和经验，比较升级是否提前。"
+      },
+      "observations": [],
+      "toVerify": [
+        "分别核对购买、刷新和购买经验是否计入花费，以及跨日进度。"
+      ]
+    },
+    "figaro": {
+      "name": "费加罗",
+      "lives": 3,
+      "skill": "开秀回报",
+      "ability": "掷出 1–9 点，获得英雄等级乘骰子点数的金币，冷却 3 天。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-figaro.jpg",
+      "focus": {
+        "shop": "比较立即取钱的用途与升级后再使用的收益，保留随机点数范围。"
+      },
+      "observations": [],
+      "toVerify": [
+        "核对掷点、实际金币增量及冷却重置时点。"
+      ]
+    },
+    "ragnar": {
+      "name": "拉格纳",
+      "lives": 4,
+      "skill": "强者为尊",
+      "ability": "出售装备或配件时，额外获得 2 枚金币。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-ragnar.jpg",
+      "focus": {
+        "shop": "按实际到账比较转卖与留件价值，同时考虑拆件损失的连接。"
+      },
+      "observations": [],
+      "toVerify": [
+        "分别记录装备、配件及其他类别的售价、到账和附加金币。"
+      ]
+    },
+    "zhuoya": {
+      "name": "卓娅",
+      "lives": 4,
+      "skill": "要就拿走",
+      "ability": "每天免费购买一件消耗品。",
+      "source": "../../docs/playtest-2026-11-16-run03/pilot-zhuoya.jpg",
+      "focus": {
+        "shop": "查看今日剩余次数、可选消耗品及其效果，判断何时使用。"
+      },
+      "observations": [],
+      "toVerify": [
+        "记录免费资格何时重置，购买前后核对余额。"
+      ]
+    }
+  },
+  "recordedRuns": {
+    "run02": "mose",
+    "run03": "ruoqian",
+    "run04": "huban",
+    "run05": "mose"
+  }
+}

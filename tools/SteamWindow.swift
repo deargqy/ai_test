@@ -73,34 +73,55 @@ final class ClickTrace {
     }
 }
 
+struct GameSettings: Decodable {
+    struct Steam: Decodable {
+        let appId: String
+        let titles: [String]
+        let nativeProcessNames: [String]?
+        let warningReference: String?
+        let warningCrop: [Double]?
+        let remoteDesktopRecovery: Bool?
+    }
+    let name: String
+    let steam: Steam
+}
+
 @main
 struct SteamWindow {
-    static func targetIfPresent() async throws -> SCWindow? {
+    let game: GameSettings
+    let profileURL: URL
+
+    func targetIfPresent() async throws -> SCWindow? {
         let content = try await SCShareableContent.excludingDesktopWindows(true, onScreenWindowsOnly: false)
         let candidates = content.windows.filter { window in
             guard let app = window.owningApplication,
                   window.windowLayer == 0, window.frame.width >= 320, window.frame.height >= 180
             else { return false }
             let name = NSRunningApplication(processIdentifier: app.processID)?.executableURL?.lastPathComponent
+            if let name, game.steam.nativeProcessNames?.contains(name) == true, isGame(window.title) { return true }
             return app.bundleIdentifier == "com.valvesoftware.steam.streamingclient" || name == "streaming_client"
         }
         let visible = candidates.filter(\.isOnScreen)
-        let matches = visible.isEmpty ? candidates : visible
+        let available = visible.isEmpty ? candidates : visible
+        let named = available.filter { isGame($0.title) }
+        let allowRecovery = game.steam.remoteDesktopRecovery == true
+        let matches = named.isEmpty && allowRecovery ? available : named
         guard matches.count <= 1 else { throw WindowError("找到多个串流窗口，请只保留目标游戏的串流。") }
         return matches.first
     }
 
-    static func target() async throws -> SCWindow {
+    func target() async throws -> SCWindow {
         guard let window = try await targetIfPresent() else { throw WindowError("等待 Steam 游戏串流窗口。") }
         return window
     }
 
-    static func matchesWarning(_ image: CGImage, reference: URL) -> Bool {
+    func matchesWarning(_ image: CGImage, reference: URL) -> Bool {
         guard let source = CGImageSourceCreateWithURL(reference as CFURL, nil),
               let example = CGImageSourceCreateImageAtIndex(source, 0, nil) else { return false }
-        // The reference is the panel cropped from the original 1600 x 900 stream.
-        let sx = CGFloat(image.width) / 1600, sy = CGFloat(image.height) / 900
-        let rect = CGRect(x: 80 * sx, y: 134 * sy, width: 1440 * sx, height: 596 * sy)
+        guard let box = game.steam.warningCrop, box.count == 4 else { return false }
+        let width = Double(image.width), height = Double(image.height)
+        let rect = CGRect(x: box[0] * width, y: box[1] * height,
+                          width: box[2] * width, height: box[3] * height)
         guard let panel = image.cropping(to: rect.integral) else { return false }
         func grayscale(_ source: CGImage) -> [UInt8]? {
             let width = 144, height = 60
@@ -120,7 +141,7 @@ struct SteamWindow {
         return difference < 6 * actual.count
     }
 
-    static func capture(_ window: SCWindow, in directory: URL, requireGame: Bool = false) throws -> Frame {
+    func capture(_ window: SCWindow, in directory: URL, requireGame: Bool = false) throws -> Frame {
         guard let app = window.owningApplication else { throw WindowError("串流进程已退出。") }
         let raw = directory.appendingPathComponent("capture-\(UUID().uuidString).png")
         defer { try? FileManager.default.removeItem(at: raw) }
@@ -138,8 +159,8 @@ struct SteamWindow {
         guard let image = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary)
         else { throw WindowError("无法解码串流窗口截图。") }
         if requireGame && !isGame(window.title) {
-            let reference = directory.deletingLastPathComponent().appendingPathComponent("runs/001-warning.png")
-            guard matchesWarning(image, reference: reference) else {
+            guard let reference = game.steam.warningReference,
+                  matchesWarning(image, reference: profileURL.deletingLastPathComponent().appendingPathComponent(reference)) else {
                 throw WindowError("标题未匹配，当前画面也未识别为已知游戏提示页。")
             }
         }
@@ -153,17 +174,17 @@ struct SteamWindow {
                      bounds: window.frame, width: image.width, height: image.height, taken: Date())
     }
 
-    static func isGame(_ title: String?) -> Bool {
+    func isGame(_ title: String?) -> Bool {
         let name = (title ?? "").lowercased().replacingOccurrences(of: " ", with: "")
-        return name.contains("catsintheshell") || name.contains("猫壳机动队")
+        return game.steam.titles.contains { name.contains($0.lowercased().replacingOccurrences(of: " ", with: "")) }
     }
 
-    static func remoteTitle(_ title: String?) -> String {
+    func remoteTitle(_ title: String?) -> String {
         (title ?? "").replacingOccurrences(of: "[Streaming]", with: "")
             .trimmingCharacters(in: .whitespaces)
     }
 
-    static func postKey(_ code: CGKeyCode, flags: CGEventFlags = [], to pid: pid_t) async throws {
+    func postKey(_ code: CGKeyCode, flags: CGEventFlags = [], to pid: pid_t) async throws {
         guard let source = CGEventSource(stateID: .hidSystemState),
               let down = CGEvent(keyboardEventSource: source, virtualKey: code, keyDown: true),
               let up = CGEvent(keyboardEventSource: source, virtualKey: code, keyDown: false)
@@ -176,7 +197,7 @@ struct SteamWindow {
         try await Task.sleep(for: .milliseconds(35))
     }
 
-    static func readLabels(from image: URL, frame: Frame, to output: URL) throws {
+    func readLabels(from image: URL, frame: Frame, to output: URL) throws {
         let request = VNRecognizeTextRequest()
         request.recognitionLevel = .accurate
         request.recognitionLanguages = ["zh-Hans", "en-US"]
@@ -193,7 +214,7 @@ struct SteamWindow {
             .write(to: output, options: .atomic)
     }
 
-    static func input(_ request: Request, frame: Frame?, window: SCWindow, trace: ClickTrace? = nil) async throws {
+    func input(_ request: Request, frame: Frame?, window: SCWindow, trace: ClickTrace? = nil) async throws {
         guard let f = frame, f.id == request.frame, Date().timeIntervalSince(f.taken) < 90,
               f.pid == window.owningApplication?.processID, f.windowID == window.windowID,
               f.bounds == window.frame, f.title == (window.title ?? "") else {
@@ -215,6 +236,11 @@ struct SteamWindow {
         guard focused.windowID == f.windowID, focused.owningApplication?.processID == f.pid,
               focused.frame == f.bounds, focused.isOnScreen, f.title == (focused.title ?? "") else {
             throw WindowError("窗口状态已变化，请重新截图。")
+        }
+        let recovery = game.steam.remoteDesktopRecovery == true
+        let gameActions = ["trace-click", "click", "click-window", "click-hold", "hover", "enter", "escape", "space", "tab"]
+        if !recovery && (!isGame(focused.title) || !gameActions.contains(request.action)) {
+            throw WindowError("当前窗口或操作与所选游戏不符，请重新核对现场。")
         }
         if request.action == "previous-window" || request.action == "window-picker" {
             guard !isGame(focused.title), f.title.hasSuffix("[Streaming]") else {
@@ -342,7 +368,7 @@ struct SteamWindow {
         try await sendClick(at: location, pid: f.pid, windowID: f.windowID, mode: request.action, trace: trace)
     }
 
-    static func isTopWindow(at location: CGPoint, pid: pid_t, windowID: CGWindowID) -> Bool {
+    func isTopWindow(at location: CGPoint, pid: pid_t, windowID: CGWindowID) -> Bool {
         guard let windows = CGWindowListCopyWindowInfo([.optionOnScreenOnly, .excludeDesktopElements], kCGNullWindowID)
               as? [[String: Any]] else { return false }
         for info in windows {
@@ -356,7 +382,7 @@ struct SteamWindow {
         return false
     }
 
-    static func sendClick(at location: CGPoint, pid: pid_t, windowID: CGWindowID, mode: String, trace: ClickTrace?) async throws {
+    func sendClick(at location: CGPoint, pid: pid_t, windowID: CGWindowID, mode: String, trace: ClickTrace?) async throws {
         guard isTopWindow(at: location, pid: pid, windowID: windowID) else {
             throw WindowError("点击位置被其他窗口覆盖，已暂停。")
         }
@@ -393,7 +419,7 @@ struct SteamWindow {
         post(up)
     }
 
-    static func run(in directory: URL) async throws {
+    func run(in directory: URL) async throws {
         let lock = open(directory.appendingPathComponent("session.lock").path, O_CREAT | O_RDWR, 0o600)
         guard lock >= 0 else { throw WindowError("无法创建运行锁。") }
         defer { close(lock) }
@@ -403,7 +429,7 @@ struct SteamWindow {
         let statusURL = directory.appendingPathComponent("status.json")
         let frameURL = directory.appendingPathComponent("frame.png")
         func report(_ message: String, frame: Frame? = nil, state: String? = nil) throws {
-            var value: [String: Any] = ["message": message, "time": ISO8601DateFormatter().string(from: Date())]
+            var value: [String: Any] = ["message": message, "time": ISO8601DateFormatter().string(from: Date()), "game": game.name]
             if let state { value["state"] = state }
             if let f = frame {
                 value["frame"] = f.id
@@ -452,11 +478,11 @@ struct SteamWindow {
                                 app.executableURL?.lastPathComponent == "streaming_client"
                         }
                         if possibleWindow == nil && (!running || reconnect) {
-                            let launchURL = URL(string: "steam://rungameid/4822560")!
+                            let launchURL = URL(string: "steam://rungameid/\(game.steam.appId)")!
                             guard NSWorkspace.shared.open(launchURL) else {
-                                throw WindowError("系统未能把 Demo 启动请求交给 Steam。")
+                                throw WindowError("系统未能把游戏启动请求交给 Steam。")
                             }
-                            try report("已向 Steam 请求启动《猫壳机动队 Demo》，等待游戏串流窗口。")
+                            try report("已向 Steam 请求启动《\(game.name)》，等待游戏窗口。")
                             frame = nil
                             try await Task.sleep(for: .seconds(2))
                             continue
@@ -506,11 +532,23 @@ struct SteamWindow {
     }
 
     static func main() async {
-        guard CommandLine.arguments.count == 2 else {
-            print("请从项目根目录打开 Steam-Window.command。")
+        let args = CommandLine.arguments
+        guard (2...3).contains(args.count) else {
+            print("请从项目根目录打开 Steam-Window.command [游戏标识]。")
             return
         }
-        do { try await run(in: URL(fileURLWithPath: CommandLine.arguments[1], isDirectory: true)) }
-        catch { FileHandle.standardError.write(Data((error.localizedDescription + "\n").utf8)); exit(1) }
+        do {
+            let directory = URL(fileURLWithPath: args[1], isDirectory: true)
+            let url = args.count == 3 ? URL(fileURLWithPath: args[2]) :
+                directory.deletingLastPathComponent().appendingPathComponent("games/cats/game.json")
+            let config = try JSONDecoder().decode(GameSettings.self, from: Data(contentsOf: url))
+            guard config.steam.appId.range(of: #"^[0-9]+$"#, options: .regularExpression) != nil,
+                  !config.steam.titles.isEmpty,
+                  config.steam.titles.allSatisfy({ !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }) else {
+                throw WindowError("请在游戏配置中填写 Steam 编号和可识别的窗口标题。")
+            }
+            if args[1] == "--check-profile" { print(config.name); return }
+            try await SteamWindow(game: config, profileURL: url).run(in: directory)
+        } catch { FileHandle.standardError.write(Data((error.localizedDescription + "\n").utf8)); exit(1) }
     }
 }

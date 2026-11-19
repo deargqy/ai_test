@@ -1,5 +1,9 @@
 /.stream-control/
+/.local/work-logs/
 
 # Python runtime caches
 __pycache__/
 *.py[cod]
+
+# Regenerable, version-scoped offline state caches
+/games/*/.cache/

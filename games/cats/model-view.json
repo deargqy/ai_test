@@ -1,0 +1,8 @@
+{
+  "actual": "runs/run05/day17-actual-loadout.json",
+  "catalog": "runs/run05/day17-loadout-input.json",
+  "cases": "data/opponents.json",
+  "tech": "runs/run05/day16-player-loss.json",
+  "upgrades": "runs/run05/day17-upgrade-targets.json",
+  "scope": "run05第17天最后验收快照；用户报告本局结束，终局胜负和新配置战报未知。"
+}

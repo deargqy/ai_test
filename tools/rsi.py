@@ -15,9 +15,8 @@ import tempfile
 from urllib.parse import unquote, urlsplit
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / "docs"
-PHASES = ("observe", "shop", "build", "opponent", "result")
+from game_profile import GameProfile, ROOT
+from game_pilots import for_run, select
 
 
 def require(condition, message):
@@ -62,27 +61,33 @@ def read_data(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def local_reference(reference):
+def local_reference(reference, game):
     require(isinstance(reference, str) and reference.strip(), "证据路径不能为空")
     parts = urlsplit(reference)
     require(parts.scheme in ("", "https", "http"), f"不支持的链接 {reference}")
     if parts.scheme or not parts.path:
         return
-    target = (DOCS / unquote(parts.path)).resolve()
-    require(target.is_relative_to(ROOT), f"引用超出项目目录 {reference}")
+    target = (game.docs / unquote(parts.path)).resolve()
+    scope = game.folder if game.docs.is_relative_to(game.folder) else ROOT
+    require(target.is_relative_to(scope), f"引用超出项目目录 {reference}")
     require(target.is_file(), f"文件不存在 {reference}")
 
 
 class References(HTMLParser):
+    def __init__(self, game):
+        super().__init__()
+        self.game = game
+
     def handle_starttag(self, tag, attrs):
         require(tag not in ("script", "iframe", "object"), f"记录正文含不支持的元素 {tag}")
         for key, value in attrs:
             require(not key.startswith("on"), "记录正文不能包含事件处理器")
             if key in ("href", "src") and value:
-                local_reference(value)
+                local_reference(value, self.game)
 
 
-def validate(data):
+def validate(data, game):
+    require(data.get("game") == game.name, "数据与所选游戏不符")
     require(data.get("schemaVersion") == 1, "不支持的数据版本")
     memories = {memory["id"]: memory for memory in data["memories"]}
     require(len(memories) == len(data["memories"]), "经验编号重复")
@@ -93,46 +98,50 @@ def validate(data):
     decisions = set()
     day_keys = set()
     for run in data["runs"]:
+        if "pilotId" in run:
+            require(run["pilotId"] in game.pilots.get("pilots", {}), "局记录使用了未登记的机师标识")
         numbers = [day["day"] for day in run["days"]]
         require(len(numbers) == len(set(numbers)), f"{run['id']} 游戏日重复")
         if run["status"] == "complete":
-            require(sorted(numbers) == list(range(1, max(numbers) + 1)), f"{run['id']} 缺游戏日")
+            require(sorted(numbers) == list(range(1, max(numbers, default=0) + 1)), f"{run['id']} 缺游戏日")
         for day in run["days"]:
             require(isinstance(day["day"], int) and day["day"] > 0, "游戏日需为正整数")
             day_keys.add((run["id"], day["day"]))
             for ref in day.get("sources", []):
-                local_reference(ref)
+                local_reference(ref, game)
             for image in day.get("images", []):
-                local_reference(image["src"])
-            References().feed(day.get("detailHtml", ""))
+                local_reference(image["src"], game)
+            References(game).feed(day.get("detailHtml", ""))
             for decision in day.get("decisions", []):
                 require(decision["id"] not in decisions, "决策编号重复")
                 decisions.add(decision["id"])
-                validate_before(decision, memories)
+                validate_before(decision, memories, game)
                 if decision.get("after"):
-                    validate_after(decision["after"])
+                    validate_after(decision["after"], game)
     for memory in data["memories"]:
+        if "pilotId" in memory:
+            require(memory["pilotId"] in game.pilots.get("pilots", {}), "经验使用了未登记的机师标识")
         require(memory["revision"] > 0 and memory["phases"], "经验需有修订号和适用阶段")
-        require(all(phase in PHASES for phase in memory["phases"]), "未知经验阶段")
+        require(all(phase in game.phases for phase in memory["phases"]), "未知经验阶段")
         for evidence in memory["evidence"]:
             require((evidence["runId"], evidence["day"]) in day_keys, "经验来源日不存在")
             if evidence.get("href"):
-                local_reference(evidence["href"])
+                local_reference(evidence["href"], game)
     for issue in data["issues"]:
-        local_reference(issue["source"])
-        References().feed(issue["detailHtml"])
+        local_reference(issue["source"], game)
+        References(game).feed(issue["detailHtml"])
         for occurrence in issue["occurrences"]:
             require((occurrence["runId"], occurrence["day"]) in day_keys, "问题关联日不存在")
 
 
-def validate_before(decision, memories):
-    require(decision.get("id") and decision.get("phase") in PHASES, "决策需有编号及有效阶段")
+def validate_before(decision, memories, game):
+    require(decision.get("id") and decision.get("phase") in game.phases, "决策需有编号及有效阶段")
     before = decision["before"]
     for key in ("state", "goal", "memorySearch", "chosenAction", "prediction"):
         require(isinstance(before.get(key), str) and before[key].strip(), f"决策前字段未填写 {key}")
     require(before.get("evidence"), "决策前需有现场截图路径")
     for ref in before["evidence"]:
-        local_reference(ref)
+        local_reference(ref, game)
     require(before.get("candidates"), "至少记录一个实际可行的动作")
     for option in before["candidates"]:
         for key in ("action", "benefit", "cost", "risk", "unknown"):
@@ -149,27 +158,30 @@ def validate_before(decision, memories):
         require(use.get("reason"), "需说明采用或未采用经验的原因")
 
 
-def validate_after(after):
+def validate_after(after, game):
     require(after.get("observed") and after.get("nextAction"), "结果与下一步不能为空")
     require(after.get("evidence"), "结果需附截图或原始记录")
     for ref in after["evidence"]:
-        local_reference(ref)
+        local_reference(ref, game)
     require(after["operationResult"] in ("succeeded", "failed", "unknown"), "操作结果无效")
     require(after["predictionResult"] in ("supported", "refuted", "unknown"), "预测核对结果无效")
     require(after["memoryDecision"] in ("retain", "narrow", "revise", "pending"), "经验处理结果无效")
     require(after.get("reason"), "需记录结果解释及限制")
 
 
-def build(data, path):
-    validate(data)
+def build(data, path, game):
+    validate(data, game)
     text = json.dumps(data, ensure_ascii=False, indent=2)
     write_atomic(path, "// Generated from data/playtest.json by tools/rsi.py build.\nwindow.PLAYTEST_DATA = " + text + ";\n")
 
 
 def persist(data, args):
-    validate(data)
+    validate(data, args.game)
     write_atomic(args.data, json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-    build(data, args.output)
+    build(data, args.output, args.game)
+    if args.data.resolve() == args.game.data and args.output.resolve() == args.game.docs / "playtest-data.js":
+        from game_report import report
+        report(args.game, data)
 
 
 def find_run(data, run_id):
@@ -195,7 +207,9 @@ def mutate(args):
         data = read_data(args.data)
         if args.command == "start-run":
             require(not any(run["id"] == args.id for run in data["runs"]), "局号已经存在")
+            pilot = select(args.game.pilots, args.pilot)["id"] if args.pilot else None
             data["runs"].append({
+                **({"pilotId": pilot} if pilot else {}),
                 "id": args.id, "title": args.title, "status": "active",
                 "date": args.date, "endedAt": None, "durationMinutes": None,
                 "gameVersion": args.game_version, "build": args.build,
@@ -203,16 +217,41 @@ def mutate(args):
                 "finalImage": None, "sources": [], "days": [],
                 "protocolVersion": data["protocol"]["version"],
             })
+        elif args.command == "memory":
+            item = read_data(args.input)
+            for key in ("id", "title", "condition", "action", "expected", "caveat", "status", "gameVersion"):
+                require(isinstance(item.get(key), str) and item[key].strip(), f"经验字段未填写 {key}")
+            require(isinstance(item.get("tags"), list) and item.get("evidence"), "经验需要标签列表与实测来源")
+            history = item["history"]
+            versions = [h["revision"] for h in history]
+            require(versions == list(range(1, item["revision"] + 1)), "需保留连续修订历史")
+            old = next((m for m in data["memories"] if m["id"] == item["id"]), None)
+            if old is None:
+                require(item["revision"] == 1, "新经验从修订 1 开始")
+                data["memories"].append(item)
+            elif item != old:
+                require(item["revision"] == old["revision"] + 1 and history[:-1] == old["history"],
+                        "经验修订须保留旧历史，并递增一个版本")
+                require(all(ev in item["evidence"] for ev in old["evidence"]), "需保留原经验证据")
+                data["memories"][data["memories"].index(old)] = item
+        elif args.command == "issue":
+            item = read_data(args.input)
+            require(all(item.get(k) for k in ("id", "title", "status", "source", "occurrences")), "问题缺少字段或证据")
+            item.setdefault("detailHtml", "")
+            old = next((i for i in data["issues"] if i["id"] == item["id"]), None)
+            require(old is None or old == item, "同编号已有不同的问题记录")
+            if old is None:
+                data["issues"].append(item)
         elif args.command == "prepare":
             incoming = read_data(args.input)
             run = find_run(data, incoming["runId"])
             require(run["status"] == "active", "只向进行中的对局追加新决策")
             require(not incoming.get("after"), "prepare 记录点击前的判断，请用 finish 回填结果")
-            validate_before(incoming, {m["id"]: m for m in data["memories"]})
+            validate_before(incoming, {m["id"]: m for m in data["memories"]}, args.game)
             existing = next((item for r in data["runs"] for d in r["days"] for item in d.get("decisions", []) if item["id"] == incoming["id"]), None)
             if existing:
                 require(existing["runId"] == incoming["runId"] and existing["day"] == incoming["day"] and existing["phase"] == incoming["phase"] and existing["before"] == incoming["before"], "该编号已有不同的战前记录，请保留原判断并使用新的编号")
-                build(data, args.output)
+                build(data, args.output, args.game)
                 print("该决策已记录，原判断已保留。")
                 return
             day = next((day for day in run["days"] if day["day"] == incoming["day"]), None)
@@ -231,7 +270,7 @@ def mutate(args):
             day["decisions"].append(incoming)
         elif args.command == "finish":
             after = read_data(args.input)
-            validate_after(after)
+            validate_after(after, args.game)
             record = next((item for r in data["runs"] for d in r["days"] for item in d.get("decisions", []) if item["id"] == args.id), None)
             require(record is not None, "请先用 prepare 保存决策前的判断")
             if record["after"]:
@@ -243,35 +282,45 @@ def mutate(args):
     print("已保存，并更新离线网页数据。")
 
 
-def main():
+def main(argv=None, game=None):
+    game = game or GameProfile("cats")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--data", type=Path, default=ROOT / "data/playtest.json")
-    parser.add_argument("--output", type=Path, default=DOCS / "playtest-data.js")
+    parser.add_argument("--data", type=Path, default=game.data)
+    parser.add_argument("--output", type=Path, default=game.docs / "playtest-data.js")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("build", help="校验数据并更新离线页面")
     sub.add_parser("check", help="核对来源、编号、决策和结果")
     memories = sub.add_parser("memories", help="读取当前阶段的经验；关键词只改变排序")
-    memories.add_argument("--phase", choices=PHASES, required=True)
+    memories.add_argument("--phase", choices=game.phases, required=True)
+    memories.add_argument("--run", help="在本局上下文中读取该机师专属模型")
     memories.add_argument("--tags", nargs="*", default=[])
-    memories.add_argument("--game-version", default="1.0.0.2218")
+    memories.add_argument("--game-version", default=game.version)
     template = sub.add_parser("decision-template", help="输出点击前的记录模板")
     template.add_argument("--run", required=True)
     template.add_argument("--day", type=int, required=True)
-    template.add_argument("--phase", choices=PHASES, required=True)
+    template.add_argument("--phase", choices=game.phases, required=True)
     sub.add_parser("outcome-template", help="输出动作后的核对模板")
     start = sub.add_parser("start-run", help="确认现场已开始新局后建立记录")
     start.add_argument("--id", required=True)
     start.add_argument("--title", required=True)
     start.add_argument("--date", required=True)
     start.add_argument("--game-version", required=True)
+    if game.pilots:
+        start.add_argument("--pilot", help="选角确认后的机师标识或显示名")
+    start.set_defaults(pilot=None)
     start.add_argument("--build", default="待现场确认")
     prepare = sub.add_parser("prepare", help="点击前保存决定，原判断按编号保留")
     prepare.add_argument("--input", type=Path, required=True)
     finish = sub.add_parser("finish", help="回填操作结果和预测核对")
     finish.add_argument("--id", required=True)
     finish.add_argument("--input", type=Path, required=True)
-    args = parser.parse_args()
-    if args.command in ("start-run", "prepare", "finish"):
+    for name, help_text in (("memory", "保存新经验或带历史的修订"), ("issue", "登记带现场证据的问题单")):
+        sub.add_parser(name, help=help_text).add_argument("--input", required=True, type=Path)
+    args = parser.parse_args(argv)
+    args.game = game
+    if args.command in ("start-run", "prepare", "finish", "memory", "issue", "build", "memories", "check"):
+        require(args.data.is_file(), f"未找到 {args.data}，请先运行对应游戏的 init")
+    if args.command in ("start-run", "prepare", "finish", "memory", "issue"):
         mutate(args)
     elif args.command == "decision-template":
         print(json.dumps(run_template(args.run, args.day, args.phase), ensure_ascii=False, indent=2))
@@ -284,9 +333,14 @@ def main():
     else:
         data = read_data(args.data)
         if args.command == "memories":
+            require(data.get("game") == game.name, "数据与所选游戏不符")
             matches = [memory for memory in data["memories"] if args.phase in memory["phases"]]
+            pilot = for_run(game, find_run(data, args.run), args.phase) if args.run else None
+            if args.run:
+                matches = [m for m in matches if "pilotId" not in m or pilot and m["pilotId"] == pilot["id"]]
             matches.sort(key=lambda item: -sum(tag in " ".join(item["tags"]) for tag in args.tags))
             print(json.dumps({
+                **({"pilot": pilot} if args.run and game.pilots else {}),
                 "protocol": data["protocol"],
                 "gameVersion": args.game_version,
                 "versionCheck": "条件仍需与现场核对",
@@ -294,10 +348,10 @@ def main():
             }, ensure_ascii=False, indent=2))
         elif args.command == "build":
             with data_lock(args.data):
-                build(read_data(args.data), args.output)
+                build(read_data(args.data), args.output, game)
             print("数据校验通过，离线页面已更新。")
         else:
-            validate(data)
+            validate(data, game)
             print(f"校验通过，{len(data['memories'])} 条经验、{sum(len(run['days']) for run in data['runs'])} 个游戏日、{len(data['issues'])} 份问题报告。")
 
 

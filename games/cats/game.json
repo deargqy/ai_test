@@ -1,0 +1,13 @@
+{
+  "name": "猫壳机动队",
+  "version": "1.0.0.2218",
+  "steam": {"appId": "4822560", "titles": ["Cats In The Shell", "猫壳机动队"], "remoteDesktopRecovery": true, "warningCrop": [0.05, 0.1488888889, 0.9, 0.6622222222], "warningReference": "../../runs/001-warning.png"},
+  "phases": {"observe": "现场观察", "shop": "商店", "build": "构筑", "opponent": "选敌", "result": "战后核对"},
+  "knowledge": "knowledge.md",
+  "data": "../../data/playtest.json",
+  "report": "../../docs/game-report.html",
+  "pilots": "pilots.json",
+  "models": {"pilot": {"entry": "models/pilot.py", "revision": "1", "dependencies": ["pilots.json", "../../tools/game_pilots.py"]}, "loadout": {"entry": "models/loadout.py", "revision": "1", "cache": false, "settings": {"beam": 5, "limit": 48}, "dependencies": ["models/equipment.py"]}},
+  "methods": "methods.json",
+  "views": {"配装搜索": "../../docs/loadout-lab.html", "对手案例": "../../docs/opponent-library.html", "原始 RSI 与问题记录": "../../docs/rsi-workflow.html"}
+}

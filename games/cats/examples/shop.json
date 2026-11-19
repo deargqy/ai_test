@@ -1,0 +1,17 @@
+{
+  "batchId": "run05-d10-shop-attachments",
+  "entries": [
+    {
+      "target": "long",
+      "source": "../../../docs/playtest-2026-11-16-run05/day10-shop-long.jpg"
+    },
+    {
+      "target": "short",
+      "source": "../../../docs/playtest-2026-11-16-run05/day10-shop-short.jpg"
+    },
+    {
+      "target": "consumable",
+      "source": "../../../docs/playtest-2026-11-16-run05/day10-shop-consumable.jpg"
+    }
+  ]
+}
